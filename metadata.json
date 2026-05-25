@@ -1,0 +1,8 @@
+{
+  "name": "Blue Ocean Hub: Strategic Financial Intelligence for South Asia",
+  "description": "Institutional-grade financial intelligence for South Asian founders, startup operators, and professionals building cross-border wealth.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
