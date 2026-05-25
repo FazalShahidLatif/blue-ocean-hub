@@ -41,6 +41,7 @@ export default function Footer() {
             <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-500">
               <li><Link to="/page/about-us" className="hover:text-cyan transition-colors block">About Us</Link></li>
               <li><Link to="/page/contact" className="hover:text-cyan transition-colors block">Contact</Link></li>
+              <li><Link to="/page/advertise" className="hover:text-cyan transition-colors block text-cyan">Advertise With Us</Link></li>
               <li><Link to="/page/privacy-policy" className="hover:text-cyan transition-colors block">Privacy Policy</Link></li>
               <li><Link to="/page/gdpr-compliance" className="hover:text-cyan transition-colors block">GDPR Compliance</Link></li>
               <li><Link to="/page/editorial-policy" className="hover:text-cyan transition-colors block">Editorial Policy</Link></li>
