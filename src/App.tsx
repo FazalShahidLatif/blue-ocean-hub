@@ -79,8 +79,8 @@ function HomePage() {
   return (
     <>
       <SEO 
-        title="Blue Ocean Hub: Personal Wealth Allocation and Dollar Revenue Strategies for South Asian Founders"
-        description="Strategic financial intelligence for South Asian entrepreneurs. Expert analysis on PSX stock dividends, dollar-denominated export revenue, and high-yield saving strategies."
+        title="Blue Ocean Hub | South Asian Financial Intelligence"
+        description="South Asia's premier financial publication. Strategic insights on passive income, PSX stocks, dollar exports, and corporate asset allocation."
         canonicalUrl="https://blueoceanhub.info/"
         jsonLd={homeJsonLd}
       />

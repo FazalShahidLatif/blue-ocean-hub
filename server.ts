@@ -291,10 +291,210 @@ async function startServer() {
     next();
   });
 
-  // 3. Cache Control for sitemap.xml
-  app.get('/sitemap.xml', (req, res, next) => {
-    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
-    next();
+  // 3. Dynamic XML and RSS Feed Pipeline Custom Implementation
+  
+  // Custom XML Escaping/Formatting helper
+  function cleanXmlText(text: string): string {
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&apos;");
+  }
+
+  // Master & Category RSS Feed Generator
+  const rssHandler = (req: express.Request, res: express.Response) => {
+    try {
+      const todayStr = new Date().toISOString().split("T")[0];
+      // Only distribute published articles
+      const publishedArticles = ARTICLES.filter(a => a.pubDate <= todayStr)
+        .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+
+      // Check category filter
+      const categoryParam = req.params.category; // e.g., 'passive-income'
+      let filteredArticles = publishedArticles;
+      let categoryTitle = "";
+
+      if (categoryParam) {
+        const cleanCategoryParam = categoryParam.replace(".xml", "").toLowerCase();
+        const categoryMatch = CATEGORIES.find(c => c.id === cleanCategoryParam);
+        if (categoryMatch) {
+          categoryTitle = categoryMatch.seoTitle || categoryMatch.title;
+          filteredArticles = publishedArticles.filter(art => 
+            art.category.toLowerCase().replace(/\s+/g, "-") === cleanCategoryParam
+          );
+        } else {
+          return res.status(404).send("Category not found");
+        }
+      }
+
+      const requestUrl = categoryParam ? `/feed/${categoryParam}` : "/feed.xml";
+      const lastBuildDate = new Date().toUTCString();
+
+      const itemsXml = filteredArticles.map(article => {
+        const itemLink = `https://blueoceanhub.info/article/${article.id}`;
+        // Clean excerpt / description
+        const cleanDesc = cleanXmlText(article.metaDescription || article.description || "");
+        const pubDateRfc822 = new Date(article.pubDate).toUTCString();
+
+        return `
+    <item>
+      <title><![CDATA[${article.title}]]></title>
+      <link>${itemLink}</link>
+      <guid isPermaLink="true">${itemLink}</guid>
+      <pubDate>${pubDateRfc822}</pubDate>
+      <category><![CDATA[${article.category}]]></category>
+      <author><![CDATA[${article.author || 'Blue Ocean Hub Editorial'}]]></author>
+      <description><![CDATA[${cleanDesc}]]></description>
+      <content:encoded><![CDATA[
+        <p>${cleanDesc}</p>
+        <p><em>Read the full research and tactical guidelines on <a href="${itemLink}">Blue Ocean Hub</a>.</em></p>
+      ]]></content:encoded>
+    </item>`;
+      }).join("");
+
+      const channelTitle = categoryTitle 
+        ? `${categoryTitle} | Blue Ocean Hub`
+        : "Blue Ocean Hub | Strategic Financial Intelligence";
+
+      const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[${channelTitle}]]></title>
+    <link>https://blueoceanhub.info/</link>
+    <atom:link href="https://blueoceanhub.info${requestUrl}" rel="self" type="application/rss+xml" />
+    <description><![CDATA[South Asia's premier strategic financial magazine and intelligence publication. Delivering elite cashflow allocation and currency hedging blueprints.]]></description>
+    <language>en</language>
+    <managingEditor>hello@blueoceanhub.info (Blue Ocean Hub Editorial Team)</managingEditor>
+    <webMaster>hello@blueoceanhub.info (Blue Ocean Hub Technical Team)</webMaster>
+    <copyright><![CDATA[Copyright 2026 Blue Ocean Hub. All Rights Reserved.]]></copyright>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
+    <ttl>60</ttl>
+    <image>
+      <url>https://blueoceanhub.info/favicon.svg</url>
+      <title><![CDATA[Blue Ocean Hub]]></title>
+      <link>https://blueoceanhub.info/</link>
+    </image>
+    ${itemsXml}
+  </channel>
+</rss>`;
+
+      res.setHeader("Content-Type", "application/xml; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate");
+      res.status(200).send(rssXml);
+    } catch (error) {
+      console.error("Failed to generate RSS feed:", error);
+      res.status(500).send("Internal Server Error");
+    }
+  };
+
+  // Master RSS Feed Routes
+  app.get('/feed.xml', rssHandler);
+  app.get('/feed', rssHandler);
+
+  // Category RSS Feed Routes
+  app.get('/feed/:category.xml', rssHandler);
+  app.get('/feed/:category', rssHandler);
+
+  // Dynamic Standard XML Sitemap Handler
+  app.get('/sitemap.xml', (req, res) => {
+    try {
+      const todayDateStr = new Date().toISOString().split('T')[0];
+      const todayStr = new Date().toISOString().split("T")[0];
+      const published = ARTICLES.filter(a => a.pubDate <= todayStr);
+
+      const categoryUrls = CATEGORIES.map(category => `
+  <url>
+    <loc>https://blueoceanhub.info/${category.id}</loc>
+    <lastmod>${todayDateStr}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`).join("");
+
+      const legalUrls = LEGAL_PAGES.map(page => `
+  <url>
+    <loc>https://blueoceanhub.info/page/${page.id}</loc>
+    <lastmod>${page.pubDate || todayDateStr}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>`).join("");
+
+      const articleUrls = published.map(art => `
+  <url>
+    <loc>https://blueoceanhub.info/article/${art.id}</loc>
+    <lastmod>${art.pubDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join("");
+
+      const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Brand Homepage -->
+  <url>
+    <loc>https://blueoceanhub.info/</loc>
+    <lastmod>${todayDateStr}</lastmod>
+    <changefreq>always</changefreq>
+    <priority>1.0</priority>
+  </url>
+  ${categoryUrls}
+  ${legalUrls}
+  ${articleUrls}
+</urlset>`;
+
+      res.setHeader("Content-Type", "application/xml; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate");
+      res.status(200).send(sitemapXml);
+    } catch (e) {
+      console.error("Failed to generate standard sitemap:", e);
+      res.status(500).send("Internal Server Error");
+    }
+  });
+
+  // Dynamic Google News XML Sitemap Handler (Separate required endpoint)
+  app.get('/news-sitemap.xml', (req, res) => {
+    try {
+      const todayStr = new Date().toISOString().split("T")[0];
+      const published = ARTICLES.filter(a => a.pubDate <= todayStr)
+        .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+
+      // Target last 48 hours for Google News
+      const today = new Date();
+      const fortyEightHoursAgo = new Date(today.getTime() - (48 * 60 * 60 * 1000));
+      const fortyEightHoursAgoStr = fortyEightHoursAgo.toISOString().split("T")[0];
+
+      let newsArticles = published.filter(a => a.pubDate >= fortyEightHoursAgoStr);
+      if (newsArticles.length === 0) {
+        // Fallback to the 10 most recent published articles
+        newsArticles = published.slice(0, 10);
+      }
+
+      const newsUrlsXml = newsArticles.map(art => `
+  <url>
+    <loc>https://blueoceanhub.info/article/${art.id}</loc>
+    <news:news>
+      <news:publication>
+        <news:name><![CDATA[Blue Ocean Hub]]></news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>${art.pubDate}T00:00:00Z</news:publication_date>
+      <news:title><![CDATA[${art.title}]]></news:title>
+    </news:news>
+  </url>`).join("");
+
+      const newsSitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  ${newsUrlsXml}
+</urlset>`;
+
+      res.setHeader("Content-Type", "application/xml; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=1800, stale-while-revalidate");
+      res.status(200).send(newsSitemapXml);
+    } catch (e) {
+      console.error("Failed to generate Google News sitemap:", e);
+      res.status(500).send("Internal Server Error");
+    }
   });
 
   // Vite middleware for development
