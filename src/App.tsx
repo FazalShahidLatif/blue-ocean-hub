@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import ArticleListing from "./components/ArticleListing";
+import MagazineGrid from "./components/MagazineGrid";
 import ArticleView from "./components/ArticleView";
 import Toolkit from "./components/Toolkit";
 import Newsletter from "./components/Newsletter";
@@ -27,6 +28,8 @@ function ScrollToTop() {
 }
 
 function HomePage() {
+  const [viewMode, setViewMode] = useState<"magazine" | "feed">("magazine");
+
   const homeJsonLd = [
     {
       "@context": "https://schema.org",
@@ -92,7 +95,35 @@ function HomePage() {
         transition={{ duration: 0.5 }}
       >
         <Hero />
-        <ArticleListing />
+        
+        {/* Toggle Controls */}
+        <div className="container mx-auto px-6 -mt-10 mb-16 flex justify-center relative z-20">
+          <div className="inline-flex rounded-full bg-ocean-900 border border-ocean-800 p-1.5 shadow-xl shadow-black/40">
+            <button
+              onClick={() => setViewMode("magazine")}
+              className={`px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer ${
+                viewMode === "magazine"
+                  ? "bg-cyan text-ocean-950 font-extrabold shadow-lg shadow-cyan/25"
+                  : "text-slate-400 hover:text-white"
+              }`}
+            >
+              Magazine Edition
+            </button>
+            <button
+              onClick={() => setViewMode("feed")}
+              className={`px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer ${
+                viewMode === "feed"
+                  ? "bg-cyan text-ocean-950 font-extrabold shadow-lg shadow-cyan/25"
+                  : "text-slate-400 hover:text-white"
+              }`}
+            >
+              Chronological Feed
+            </button>
+          </div>
+        </div>
+
+        {viewMode === "magazine" ? <MagazineGrid /> : <ArticleListing />}
+        
         <Toolkit />
         <FAQSection items={HOMEPAGE_FAQS} />
         <Newsletter />
