@@ -62,6 +62,10 @@ export default function ArticleView() {
   }
 
   // Construct structured data object (JSON-LD)
+  const wordCount = article.content ? article.content.split(/\s+/).filter(Boolean).length : undefined;
+  const keywords = 'tags' in article && Array.isArray(article.tags) ? article.tags.join(", ") : undefined;
+  const articleSection = 'category' in article ? article.category : undefined;
+
   const jsonLdBase = {
     "@context": "https://schema.org",
     "@type": schemaType,
@@ -87,7 +91,10 @@ export default function ArticleView() {
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": url
-    }
+    },
+    ...(wordCount !== undefined ? { "wordCount": wordCount } : {}),
+    ...(keywords !== undefined ? { "keywords": keywords } : {}),
+    ...(articleSection !== undefined ? { "articleSection": articleSection } : {})
   };
 
   // Check and append FAQPage schema if available for the pillar article

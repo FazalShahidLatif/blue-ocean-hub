@@ -1,6 +1,7 @@
 import { ARTICLES_PART2 } from "./articles_part2";
 import { ARTICLES_PART3 } from "./articles_part3";
 import { ARTICLES_SCHEDULED } from "./articles_scheduled";
+import { ARTICLES_PART4 } from "./articles_part4";
 
 export interface Article {
   id: string;
@@ -823,4 +824,4 @@ Stop thinking about "making money online" and start thinking about "building an 
   }
 ];
 
-export const ARTICLES: Article[] = [...CORE_ARTICLES, ...ARTICLES_PART2, ...ARTICLES_PART3, ...ARTICLES_SCHEDULED];
+export const ARTICLES: Article[] = [...CORE_ARTICLES, ...ARTICLES_PART2, ...ARTICLES_PART3, ...ARTICLES_SCHEDULED, ...ARTICLES_PART4];
