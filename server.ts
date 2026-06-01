@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import fs from "fs/promises";
 import { createServer as createViteServer } from "vite";
+import { JWT } from "google-auth-library";
 import { ARTICLES } from "./src/data/articles";
 import { LEGAL_PAGES } from "./src/data/legal";
 import { CATEGORIES } from "./src/data/categories";
@@ -271,6 +272,8 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
+  app.use(express.json());
+
   console.log(`Starting server in ${process.env.NODE_ENV || 'development'} mode`);
 
   // 1. Redirects
@@ -494,6 +497,195 @@ async function startServer() {
     } catch (e) {
       console.error("Failed to generate Google News sitemap:", e);
       res.status(500).send("Internal Server Error");
+    }
+  });
+
+  // Google Indexing & Search Console Integration API
+  function getGoogleAuthClient() {
+    let credentialsJSON: any = null;
+
+    if (process.env.GOOGLE_SERVICE_ACCOUNT_JSON) {
+      try {
+        credentialsJSON = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+      } catch (e) {
+        console.error("Failed to parse GOOGLE_SERVICE_ACCOUNT_JSON:", e);
+      }
+    }
+
+    const clientEmail = credentialsJSON?.client_email || process.env.GOOGLE_CLIENT_EMAIL;
+    let privateKey = credentialsJSON?.private_key || process.env.GOOGLE_PRIVATE_KEY;
+
+    if (!clientEmail || !privateKey) {
+      return null;
+    }
+
+    if (typeof privateKey === "string") {
+      privateKey = privateKey.replace(/\\n/g, "\n");
+    }
+
+    return new JWT({
+      email: clientEmail,
+      key: privateKey,
+      scopes: [
+        "https://www.googleapis.com/auth/indexing",
+        "https://www.googleapis.com/auth/webmasters"
+      ]
+    });
+  }
+
+  // Get Indexing & Config Status: checks setup and lists eligible index URLs
+  app.get("/api/google-indexing/status", (req, res) => {
+    const authClient = getGoogleAuthClient();
+    const isConfigured = authClient !== null;
+    let fallbackClientEmail = "";
+
+    if (process.env.GOOGLE_SERVICE_ACCOUNT_JSON) {
+      try {
+        const parsed = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
+        fallbackClientEmail = parsed.client_email || "";
+      } catch (_) {}
+    } else if (process.env.GOOGLE_CLIENT_EMAIL) {
+      fallbackClientEmail = process.env.GOOGLE_CLIENT_EMAIL;
+    }
+
+    // Compile list of eligible URLs from our data model
+    const todayStr = new Date().toISOString().split("T")[0];
+    const published = ARTICLES.filter(a => a.pubDate <= todayStr);
+
+    const urls = [
+      "https://blueoceanhub.info/",
+      ...CATEGORIES.map(c => `https://blueoceanhub.info/${c.id}`),
+      ...LEGAL_PAGES.map(p => `https://blueoceanhub.info/page/${p.id}`),
+      ...published.map(a => `https://blueoceanhub.info/article/${a.id}`)
+    ];
+
+    res.json({
+      success: true,
+      isConfigured,
+      clientEmail: fallbackClientEmail ? `${fallbackClientEmail.slice(0, 4)}...${fallbackClientEmail.slice(-12)}` : null,
+      urls
+    });
+  });
+
+  // Submit Individual URL directly to Google Indexing API
+  app.post("/api/google-indexing/submit-url", async (req, res) => {
+    const { url, type } = req.body;
+    if (!url) {
+      return res.status(400).json({ success: false, error: "URL is required" });
+    }
+
+    const authClient = getGoogleAuthClient();
+    if (!authClient) {
+      return res.status(400).json({
+        success: false,
+        configMissing: true,
+        error: "Google API credentials are not configured",
+        details: "Please configure GOOGLE_SERVICE_ACCOUNT_JSON in environment variables and ensure the service account email is added as an Owner in Google Search Console."
+      });
+    }
+
+    try {
+      const response = await authClient.request({
+        url: "https://indexing.googleapis.com/v3/urlNotifications:publish",
+        method: "POST",
+        data: {
+          url: url,
+          type: type || "URL_UPDATED"
+        }
+      });
+      res.json({
+        success: true,
+        data: response.data
+      });
+    } catch (err: any) {
+      console.error("Google Indexing API Error:", err?.response?.data || err.message);
+      res.status(500).json({
+        success: false,
+        error: err.message,
+        details: err?.response?.data || "No additional server logs found"
+      });
+    }
+  });
+
+  // Submit Bulk / Custom Sitemap URLs or Submit Search Console Sitemap Ping
+  app.post("/api/google-indexing/submit-sitemap", async (req, res) => {
+    const { action } = req.body; // "submit_sitemap_ping" | "bulk_index_urls"
+    const authClient = getGoogleAuthClient();
+
+    if (!authClient) {
+      return res.status(400).json({
+        success: false,
+        configMissing: true,
+        error: "Google API credentials are not configured"
+      });
+    }
+
+    if (action === "submit_sitemap_ping") {
+      try {
+        await authClient.request({
+          url: "https://www.googleapis.com/webmasters/v3/sites/https%3A%2F%2Fblueoceanhub.info%2F/sitemaps/https%3A%2F%2Fblueoceanhub.info%2Fsitemap.xml",
+          method: "PUT"
+        });
+        
+        return res.json({
+          success: true,
+          message: "Standard sitemap.xml successfully submitted directly to Google Search Console API."
+        });
+      } catch (err: any) {
+        console.error("GSC Sitemap Submit Error:", err?.response?.data || err.message);
+        return res.status(500).json({
+          success: false,
+          error: err.message,
+          details: err?.response?.data || "Failed to put sitemap resource"
+        });
+      }
+    } else if (action === "bulk_index_urls") {
+      try {
+        const todayStr = new Date().toISOString().split("T")[0];
+        const published = ARTICLES.filter(a => a.pubDate <= todayStr);
+
+        const urlsToSubmit = [
+          "https://blueoceanhub.info/",
+          ...CATEGORIES.map(c => `https://blueoceanhub.info/${c.id}`),
+          ...LEGAL_PAGES.map(p => `https://blueoceanhub.info/page/${p.id}`),
+          ...published.map(a => `https://blueoceanhub.info/article/${a.id}`)
+        ];
+
+        const batchResults: Array<{ url: string; success: boolean; error?: string }> = [];
+
+        // Concurrently handle submissions sequentially to prevent strict API rate limits / heavy loads
+        for (const url of urlsToSubmit) {
+          try {
+            await authClient.request({
+              url: "https://indexing.googleapis.com/v3/urlNotifications:publish",
+              method: "POST",
+              data: {
+                url,
+                type: "URL_UPDATED"
+              }
+            });
+            batchResults.push({ url, success: true });
+          } catch (itemErr: any) {
+            batchResults.push({
+              url,
+              success: false,
+              error: itemErr?.response?.data?.error?.message || itemErr.message
+            });
+          }
+        }
+
+        return res.json({
+          success: true,
+          results: batchResults
+        });
+      } catch (err: any) {
+        return res.status(500).json({
+          success: false,
+          error: err.message
+        });
+      }
+    } else {
+      return res.status(400).json({ success: false, error: "Invalid action type" });
     }
   });
 

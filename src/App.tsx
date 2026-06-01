@@ -14,6 +14,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { CATEGORIES } from "./data/categories";
 import { ARTICLES } from "./data/articles";
 import SEO from "./components/SEO";
+import IndexingConsole from "./components/IndexingConsole";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 
@@ -206,6 +207,7 @@ export default function App() {
               <Route path="/freelancing" element={<CategoryPage />} />
               <Route path="/saving-money" element={<CategoryPage />} />
               <Route path="/dollar-earning" element={<CategoryPage />} />
+              <Route path="/indexing-console" element={<IndexingConsole />} />
               <Route path="*" element={<div className="pt-40 text-center text-white text-2xl">404 - Page Not Found</div>} />
             </Routes>
           </AnimatePresence>

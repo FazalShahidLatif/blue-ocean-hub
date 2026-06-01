@@ -56,7 +56,8 @@ export default function Footer() {
             <span className="hidden md:block">|</span>
             <a href="https://saasskul.com" target="_blank" rel="nofollow noopener noreferrer" className="hover:text-cyan transition-colors uppercase">Developed by SaaSSkul Pakistan</a>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-8 items-center">
+            <Link to="/indexing-console" className="hover:text-cyan text-cyan transition-colors font-bold uppercase tracking-widest text-[9.5px] border border-cyan/25 px-2.5 py-1 rounded">Google Indexing</Link>
             <Link to="/page/system-status" className="hover:text-white transition-colors">Status</Link>
             <Link to="/page/terms-of-service" className="hover:text-white transition-colors">Terms</Link>
             <button onClick={() => document.getElementById('newsletter')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors uppercase">Newsletter</button>
