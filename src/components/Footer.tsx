@@ -54,7 +54,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center gap-4">
             <p>© 2026 Blue Ocean Hub. All rights reserved.</p>
             <span className="hidden md:block">|</span>
-            <a href="https://saasskul.com" target="_blank" rel="nofollow noopener noreferrer" className="hover:text-cyan transition-colors uppercase">Developed by SaaSSkul Pakistan</a>
+            <a href="https://saasskul.com" target="_blank" rel="nofollow noopener noreferrer" className="hover:text-cyan transition-colors uppercase">Product of SaaSSkul</a>
           </div>
           <div className="flex gap-8 items-center">
             <Link to="/indexing-console" className="hover:text-cyan text-cyan transition-colors font-bold uppercase tracking-widest text-[9.5px] border border-cyan/25 px-2.5 py-1 rounded">Google Indexing</Link>
