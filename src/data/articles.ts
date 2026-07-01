@@ -2,6 +2,7 @@ import { ARTICLES_PART2 } from "./articles_part2";
 import { ARTICLES_PART3 } from "./articles_part3";
 import { ARTICLES_SCHEDULED } from "./articles_scheduled";
 import { ARTICLES_PART4 } from "./articles_part4";
+import { ARTICLES_PART5 } from "./articles_part5";
 
 export interface Article {
   id: string;
@@ -72,6 +73,8 @@ Most Pakistani banks offer a "Saving Account" that barely covers inflation. Inst
 1. Explore our [Passive Income](/article/10-passive-income-ideas-pakistan) pillar page for a birds-eye view of wealth systems.
 2. See our sibling guide on [Saving Strategies](/article/saving-strategies-pakistan-inflation) to protect your principal from devaluation.
 3. Learn the mechanics of execution in our [Freelancing Pillar](/article/freelancing-guide-pakistan-2026).
+4. Scale high-yield global income streams with our guide on [Global Niche Content Sites Portfolio Building](/article/global-niche-content-sites-portfolio-building).
+5. Build long-term tax-shielded compound wealth using [SECP Voluntary Pension Schemes (VPS)](/article/voluntary-pension-schemes-vps-guide-pakistan).
 
 ## Common Mistakes to Avoid
 - **Chasing "Guaranteed" Returns**: If an app promises 2% daily profit, it is a Ponzi scheme.
@@ -814,6 +817,8 @@ Moving money across borders is the #1 friction point.
 1. Master our [Dollar Earning Category](/article/founders-guide-dollar-revenue-south-asia) for global founders.
 2. Sibling report: [Payoneer vs Wise Breakdown](/article/payoneer-vs-wise-pakistan-comparison) for fee analysis.
 3. Reinvest your USD surplus using our [PSX Investment Pillar](/article/how-to-invest-in-psx-as-a-beginner-2026).
+4. Transition your service agency to high-margin recurring subscriptions with the [Productized Services Playbook](/article/productized-services-agency-model-usd-revenue).
+5. Claim 0% US withholding tax under the tax treaty using our [W-8BEN-E Compliance Guide](/article/w8ben-compliance-double-taxation-avoidance-pakistan).
 
 ## The Bottom Line
 Stop thinking about "making money online" and start thinking about "building an international revenue engine." Your competition isn't the shop next door; it's an agency in Eastern Europe or South East Asia. Optimize your stack for USD today, and the rest follows.
@@ -824,4 +829,4 @@ Stop thinking about "making money online" and start thinking about "building an 
   }
 ];
 
-export const ARTICLES: Article[] = [...CORE_ARTICLES, ...ARTICLES_PART2, ...ARTICLES_PART3, ...ARTICLES_SCHEDULED, ...ARTICLES_PART4];
+export const ARTICLES: Article[] = [...CORE_ARTICLES, ...ARTICLES_PART2, ...ARTICLES_PART3, ...ARTICLES_SCHEDULED, ...ARTICLES_PART4, ...ARTICLES_PART5];

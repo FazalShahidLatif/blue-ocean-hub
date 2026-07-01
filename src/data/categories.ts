@@ -28,6 +28,7 @@ For a South Asian founder, your primary business is your high-alpha bet, but you
 - **Real Estate & Alternatives**: Leveraged cashflow for the elite Pakistani and Indian diaspora.
 
 ### Featured Articles
+- [Global Niche Content Sites Portfolio Building](/article/global-niche-content-sites-portfolio-building)
 - [10 Passive Income Ideas for Pakistan 2026](/article/10-passive-income-ideas-pakistan)
 - [How to Invest in PSX as a Beginner](/article/how-to-invest-in-psx-as-a-beginner-2026)
 - [Fractional Land Ownership & Real Estate Crowdfunding in Pakistan](/article/real-estate-crowdfunding-pakistan)
@@ -59,6 +60,7 @@ The difference between a founder who ends up wealthy and one who ends up with a 
 - **Founder Portfolios**: How the region's top operators manage their private wealth.
 
 ### Featured Articles
+- [The Pakistan VPS Retirement Guide: SECP Voluntary Pension Schemes](/article/voluntary-pension-schemes-vps-guide-pakistan)
 - [How to invest in PSX as a beginner 2026](/article/how-to-invest-in-psx-as-a-beginner-2026)
 - [How to open CDC account Pakistan](/article/how-to-open-cdc-account-pakistan)
 - [Saving Strategies to beat inflation](/article/saving-strategies-pakistan-inflation)
@@ -93,6 +95,7 @@ In 2026, the most effective hedge for a South Asian founder is a Dollar-denomina
 - **Client Acquisition**: B2B strategies for North American and GCC targets.
 
 ### Featured Articles
+- [Productized Services Playbook: Transitioning to Monthly Subscriptions](/article/productized-services-agency-model-usd-revenue)
 - [Freelancing Guide Pakistan 2026](/article/freelancing-guide-pakistan-2026)
 - [Payoneer vs Wise Pakistan Comparison](/article/payoneer-vs-wise-pakistan-comparison)
 - [Founder's guide to Dollar revenue](/article/founders-guide-dollar-revenue-south-asia)
@@ -126,6 +129,7 @@ Saving in 2026 is an active war against inflation. For a South Asian operator, '
 - **Founder Cashflow**: How to manage founder salary for maximum tax efficiency and growth.
 
 ### Featured Articles
+- [Shariah-Compliant Corporate Treasury: Optimizing Cash Reserves with Islamic Money Market Funds](/article/shariah-compliant-corporate-treasury-optimization)
 - [Saving strategies Pakistan inflation](/article/saving-strategies-pakistan-inflation)
 - [10 Passive income ideas for founders](/article/10-passive-income-ideas-pakistan)
 - [Direct Treasury Bills (T-Bills) Buying vs Mutual Funds in Pakistan: Optimal Returns](/article/gop-t-bills-direct-investment)
@@ -158,6 +162,7 @@ For a South Asian founder, earning in PKR or INR is a local necessity, but earni
 - **Global Compliance**: Managing tax and legal requirements for cross-border revenue.
 
 ### Featured Articles
+- [W-8BEN-E Compliance Guide: Eliminating US Withholding Tax for Pakistani Agencies](/article/w8ben-compliance-double-taxation-avoidance-pakistan)
 - [The Founder's Guide to Dollar Revenue](/article/founders-guide-dollar-revenue-south-asia)
 - [Payoneer vs Wise Breakdown](/article/payoneer-vs-wise-pakistan-comparison)
 - [Wyoming vs Delaware US LLC: Cost & Annual Filings Comparison for Pakistanis](/article/wyoming-vs-delaware-llc-nonresident)
