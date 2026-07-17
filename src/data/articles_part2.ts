@@ -177,6 +177,7 @@ Many blue-chip names on the PSX pass all KMI-30 screens while offering robust yi
 
 ## Internal Links
 - Ready to buy your first stock? Review [How to Open a CDC Account Pakistan](/article/how-to-open-cdc-account-pakistan).
+- Learn the complete 6 strict balance-sheet screening filters in [The PSX Shariah Screening Guide and KMI-30 Portfolio Checklist](/article/psx-shariah-screening-kmi30-halal-investing).
 - View global asset management concepts on the [Blue Ocean Hub Homepage](/).
 - Compare equities with sovereign instruments in [Naya Pakistan Sukuk Analysis](/article/gop-ijara-sukuk-mutual-funds).
 

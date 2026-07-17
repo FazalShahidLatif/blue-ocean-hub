@@ -312,6 +312,7 @@ Setting up a Private Limited company protects your personal assets, but it does 
 - Register details on local guides: [SECP Incorporation Checklist for digital agencies](/article/b2b-digital-freelance-agency-registration).
 - Save locally via [Beat 20% Inflation via Institutional Savings Plans](/article/saving-strategies-pakistan-inflation).
 - Set up international processing via [Direct Credit Card collection from US/EU clients](/article/billing-global-clients-credit-cards).
+- Understand individual FBR tax filings and Form 116 reporting inside [The Freelancer FBR Tax Filing and Wealth Statement Guide](/article/fbr-freelancer-wealth-statement-filing-guide).
 - Review all financial options on the [Blue Ocean Hub Homepage](/).
 `
   },

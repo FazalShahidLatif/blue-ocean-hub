@@ -3,6 +3,8 @@ import { ARTICLES_PART3 } from "./articles_part3";
 import { ARTICLES_SCHEDULED } from "./articles_scheduled";
 import { ARTICLES_PART4 } from "./articles_part4";
 import { ARTICLES_PART5 } from "./articles_part5";
+import { ARTICLES_PART6 } from "./articles_part6";
+
 
 export interface Article {
   id: string;
@@ -829,4 +831,4 @@ Stop thinking about "making money online" and start thinking about "building an 
   }
 ];
 
-export const ARTICLES: Article[] = [...CORE_ARTICLES, ...ARTICLES_PART2, ...ARTICLES_PART3, ...ARTICLES_SCHEDULED, ...ARTICLES_PART4, ...ARTICLES_PART5];
+export const ARTICLES: Article[] = [...CORE_ARTICLES, ...ARTICLES_PART2, ...ARTICLES_PART3, ...ARTICLES_SCHEDULED, ...ARTICLES_PART4, ...ARTICLES_PART5, ...ARTICLES_PART6];
