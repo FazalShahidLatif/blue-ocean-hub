@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-bold text-white mb-6 uppercase text-[10px] tracking-[0.3em]">Insights</h4>
+            <p className="font-bold text-white mb-6 uppercase text-[10px] tracking-[0.3em]">Insights</p>
             <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-500">
               <li><Link to="/passive-income" className="hover:text-cyan transition-colors block">Passive Income</Link></li>
               <li><Link to="/investing" className="hover:text-cyan transition-colors block">Investing</Link></li>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-1">
-            <h4 className="font-bold text-white mb-6 uppercase text-[10px] tracking-[0.3em]">Company</h4>
+            <p className="font-bold text-white mb-6 uppercase text-[10px] tracking-[0.3em]">Company</p>
             <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-500">
               <li><Link to="/page/about-us" className="hover:text-cyan transition-colors block">About Us</Link></li>
               <li><Link to="/page/contact" className="hover:text-cyan transition-colors block">Contact</Link></li>

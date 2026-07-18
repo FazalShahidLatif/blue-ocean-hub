@@ -27,7 +27,7 @@ export default function CookieBanner() {
             <ShieldCheck className="w-5 h-5 text-cyan" />
           </div>
           <div className="flex-grow">
-            <h4 className="text-white font-bold text-sm mb-1 uppercase tracking-wider">Cookie Intelligence</h4>
+            <p className="text-white font-bold text-sm mb-1 uppercase tracking-wider">Cookie Intelligence</p>
             <p className="text-slate-400 text-xs leading-relaxed">
               We use cookies to analyze traffic and optimize your strategic reading experience. By continuing, you agree to our <button onClick={() => window.dispatchEvent(new CustomEvent('navigate', {detail: 'cookie-policy'}))} className="text-cyan underline">Cookie Policy</button>.
             </p>
