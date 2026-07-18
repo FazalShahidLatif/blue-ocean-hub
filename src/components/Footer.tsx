@@ -17,10 +17,10 @@ export default function Footer() {
               South Asia's premier **Financial Magazine Publication**. We provide strategic intelligence and institutional-grade research for educational and informational purposes only.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-400 hover:bg-cyan hover:text-ocean-950 transition-all">
+              <a href="#" aria-label="Twitter Profile" className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-400 hover:bg-cyan hover:text-ocean-950 transition-all">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-400 hover:bg-cyan hover:text-ocean-950 transition-all">
+              <a href="#" aria-label="Contact Email" className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-400 hover:bg-cyan hover:text-ocean-950 transition-all">
                 <Mail className="w-5 h-5" />
               </a>
             </div>

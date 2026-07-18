@@ -286,6 +286,7 @@ export default function ArticleView() {
                 onClick={handleShare}
                 className="p-2 text-slate-500 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all"
                 title="Copy Link to Clipboard"
+                aria-label="Copy link to clipboard"
               >
                 <Share2 className="w-4 h-4" />
               </button>
@@ -293,6 +294,7 @@ export default function ArticleView() {
                 className="p-2 text-slate-500 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all" 
                 onClick={() => window.print()}
                 title="Print Report"
+                aria-label="Print report"
               >
                 <Printer className="w-4 h-4" />
               </button>

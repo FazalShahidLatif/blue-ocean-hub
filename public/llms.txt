@@ -1,0 +1,22 @@
+# Blue Ocean Hub: Strategic Financial Intelligence
+
+> South Asia's premier financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.
+
+Explore our comprehensive guides, research papers, and strategic action plans for navigating complex tax codes and compounding international revenues.
+
+## Core Intelligence Categories
+
+- [Passive Income](/passive-income) - Leveraged cashflow strategies, digital niche assets, and physical estate comparison blueprints.
+- [Investing](/investing) - Strategic local equity selection (PSX), Shariah-compliant mutual funds, Voluntary Pension Schemes, and gold.
+- [Freelancing](/freelancing) - Technical agency scaling, international client billing structures, contract engineer option pools, and B2B client acquisition.
+- [Saving Money](/saving-money) - FBR tax filing guides, employee provident fund structures, tax rebates, and wealth statement filings.
+- [Dollar Earning](/dollar-earning) - Onshore US business banking setup, foreign entities, Stripe integration alternatives (Lemon Squeezy, Paddle), and GCC SaaS monetization.
+
+## Key Publications & Compliance Resources
+
+- [About Our Mission](/page/about-us) - Elite financial research methodology and advisory board background.
+- [Contact Editorial Desk](/page/contact) - Contact details for licensing, content contributions, and press inquiries.
+- [Editorial Integrity Policy](/page/editorial-policy) - Our strict standards for institutional-grade, conflict-free research.
+- [GDPR Data Compliance](/page/gdpr-compliance) - General Data Protection Regulation disclosures and customer protection frameworks.
+- [Cookie Intelligence Disclosures](/page/cookie-policy) - Complete transparency on our traffic analysis cookies and user consent telemetry.
+- [Google Search Console Indexing Console](/indexing-console) - Real-time indexing pipelines and API diagnostic interfaces.
