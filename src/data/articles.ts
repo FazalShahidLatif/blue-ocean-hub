@@ -4,6 +4,13 @@ import { ARTICLES_SCHEDULED } from "./articles_scheduled";
 import { ARTICLES_PART4 } from "./articles_part4";
 import { ARTICLES_PART5 } from "./articles_part5";
 import { ARTICLES_PART6 } from "./articles_part6";
+import { ARTICLES_FILL_JUNE } from "./articles_fill_june";
+import { ARTICLES_FILL_JULY_P1 } from "./articles_fill_july_p1";
+import { ARTICLES_FILL_JULY_P2 } from "./articles_fill_july_p2";
+import { ARTICLES_SCHEDULED_AUGUST } from "./articles_scheduled_august";
+import { ARTICLES_SCHEDULED_AUGUST_PART2 } from "./articles_scheduled_august_part2";
+import { ARTICLES_SCHEDULED_AUGUST_PART3 } from "./articles_scheduled_august_part3";
+import { ARTICLES_SCHEDULED_AUGUST_PART4 } from "./articles_scheduled_august_part4";
 
 
 export interface Article {
@@ -831,4 +838,19 @@ Stop thinking about "making money online" and start thinking about "building an 
   }
 ];
 
-export const ARTICLES: Article[] = [...CORE_ARTICLES, ...ARTICLES_PART2, ...ARTICLES_PART3, ...ARTICLES_SCHEDULED, ...ARTICLES_PART4, ...ARTICLES_PART5, ...ARTICLES_PART6];
+export const ARTICLES: Article[] = [
+  ...CORE_ARTICLES,
+  ...ARTICLES_PART2,
+  ...ARTICLES_PART3,
+  ...ARTICLES_SCHEDULED,
+  ...ARTICLES_PART4,
+  ...ARTICLES_PART5,
+  ...ARTICLES_PART6,
+  ...ARTICLES_FILL_JUNE,
+  ...ARTICLES_FILL_JULY_P1,
+  ...ARTICLES_FILL_JULY_P2,
+  ...ARTICLES_SCHEDULED_AUGUST,
+  ...ARTICLES_SCHEDULED_AUGUST_PART2,
+  ...ARTICLES_SCHEDULED_AUGUST_PART3,
+  ...ARTICLES_SCHEDULED_AUGUST_PART4
+];

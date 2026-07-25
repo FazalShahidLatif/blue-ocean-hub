@@ -448,7 +448,7 @@ export default function IndexingConsole() {
                     })}
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-ocean-800 flex items-center justify-between text-[11px] font-bold text-slate-400">
+                  <div className="mt-6 pt-4 border-t border-ocean-800 flex items-center justify-between text-[11px] font-bold text-slate-400 gap-2 flex-wrap">
                     <a 
                       href="/sitemap.xml" 
                       target="_blank" 
@@ -456,6 +456,24 @@ export default function IndexingConsole() {
                       className="text-cyan hover:underline hover:text-cyan/80 flex items-center gap-1.5"
                     >
                       View Live Sitemap
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                    <a 
+                      href="/all.txt" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-emerald-400 hover:underline hover:text-emerald-300 flex items-center gap-1.5"
+                    >
+                      View all.txt Feed
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                    <a 
+                      href="/llms.txt" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-amber-400 hover:underline hover:text-amber-300 flex items-center gap-1.5"
+                    >
+                      View llms.txt
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>

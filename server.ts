@@ -500,6 +500,44 @@ async function startServer() {
     }
   });
 
+  // Dynamic Plain-Text Indexing & Citation Feed (/all.txt & /llms.txt)
+  const plainTextHandler = (req: express.Request, res: express.Response) => {
+    try {
+      const todayStr = new Date().toISOString().split("T")[0];
+      const published = ARTICLES.filter(a => a.pubDate <= todayStr)
+        .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+
+      let textContent = `# Blue Ocean Hub: Strategic Financial Intelligence\n`;
+      textContent += `> South Asia's premier financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.\n\n`;
+      textContent += `Published Indexable Resources as of ${todayStr} (${published.length} Live Articles):\n\n`;
+      
+      textContent += `## Core Categories\n`;
+      CATEGORIES.forEach(c => {
+        textContent += `- [${c.title}](https://blueoceanhub.info/${c.id}) - ${c.description}\n`;
+      });
+      
+      textContent += `\n## Legal & Policy Frameworks\n`;
+      LEGAL_PAGES.forEach(p => {
+        textContent += `- [${p.title}](https://blueoceanhub.info/page/${p.id})\n`;
+      });
+
+      textContent += `\n## Published Financial Intelligence Publications (${published.length} Nodes)\n`;
+      published.forEach(art => {
+        textContent += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Published: ${art.pubDate})\n  Summary: ${art.description}\n`;
+      });
+
+      res.setHeader("Content-Type", "text/plain; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate");
+      res.status(200).send(textContent);
+    } catch (e) {
+      console.error("Failed to generate all.txt / llms.txt:", e);
+      res.status(500).send("Internal Server Error");
+    }
+  };
+
+  app.get('/all.txt', plainTextHandler);
+  app.get('/llms.txt', plainTextHandler);
+
   // Google Indexing & Search Console Integration API
   function getGoogleAuthClient() {
     let credentialsJSON: any = null;
