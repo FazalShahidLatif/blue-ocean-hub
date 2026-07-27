@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { 
@@ -14,7 +14,11 @@ import {
   Shield, 
   ExternalLink, 
   ZoomIn, 
-  ZoomOut 
+  List,
+  Mail,
+  Send,
+  TrendingUp,
+  FileText
 } from "lucide-react";
 import { ARTICLES } from "../data/articles";
 import { LEGAL_PAGES } from "../data/legal";
@@ -32,6 +36,8 @@ export default function ArticleView() {
   const [scrollPercent, setScrollPercent] = useState(0);
   const [fontSize, setFontSize] = useState<"base" | "lg" | "xl">("lg");
   const [copied, setCopied] = useState(false);
+  const [leadSubmitted, setLeadSubmitted] = useState(false);
+  const [leadEmail, setLeadEmail] = useState("");
 
   // Monitor layout scrolling for real-time reading progress
   useEffect(() => {
@@ -44,6 +50,45 @@ export default function ArticleView() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Extract Table of Contents headings from markdown content
+  const tocHeadings = useMemo(() => {
+    if (!article || !article.content) return [];
+    const lines = article.content.split("\n");
+    const headings: { id: string; text: string; level: number }[] = [];
+    lines.forEach(line => {
+      const match = line.match(/^(#{2,3})\s+(.+)$/);
+      if (match) {
+        const level = match[1].length;
+        const text = match[2].trim().replace(/\*/g, "");
+        const headingId = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        headings.push({ id: headingId, text, level });
+      }
+    });
+    return headings;
+  }, [article]);
+
+  // Find related articles (same category or overlapping tags, excluding current)
+  const relatedArticles = useMemo(() => {
+    if (!article) return [];
+    const todayStr = new Date().toISOString().split("T")[0];
+    const pool = ARTICLES.filter(a => a.id !== article.id && a.pubDate <= todayStr);
+    
+    // Sort by relevance
+    return pool
+      .map(a => {
+        let score = 0;
+        if ('category' in article && a.category === article.category) score += 5;
+        if ('tags' in article && Array.isArray(article.tags) && Array.isArray(a.tags)) {
+          const common = a.tags.filter(t => article.tags.includes(t));
+          score += common.length * 2;
+        }
+        return { article: a, score };
+      })
+      .sort((a, b) => b.score - a.score || new Date(b.article.pubDate).getTime() - new Date(a.article.pubDate).getTime())
+      .slice(0, 3)
+      .map(item => item.article);
+  }, [article]);
 
   if (!article) return <div className="pt-40 text-center text-white text-2xl font-bold">Article not found.</div>;
 
@@ -97,9 +142,35 @@ export default function ArticleView() {
     ...(articleSection !== undefined ? { "articleSection": articleSection } : {})
   };
 
+  // Breadcrumb schema JSON-LD for Search Engine Sitelinks & SGE
+  const jsonLdBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://blueoceanhub.info/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": articleSection || "Articles",
+        "item": `https://blueoceanhub.info/#magazine-hq`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": article.title,
+        "item": url
+      }
+    ]
+  };
+
   // Check and append FAQPage schema if available for the pillar article
   const articleFaqs = article.id ? PILLAR_FAQS[article.id] : undefined;
-  const jsonLdSchemas: any[] = [jsonLdBase];
+  const jsonLdSchemas: any[] = [jsonLdBase, jsonLdBreadcrumb];
 
   if (articleFaqs && articleFaqs.length > 0) {
     jsonLdSchemas.push({
@@ -352,6 +423,29 @@ export default function ArticleView() {
               </div>
             </div>
 
+            {/* Table of Contents Index (Jump Links for Sitelinks & SERP Ranking) */}
+            {tocHeadings.length > 1 && (
+              <div className="mb-10 p-6 rounded-xl bg-ocean-900/60 border border-ocean-800">
+                <div className="flex items-center gap-2 mb-3 text-cyan font-bold text-xs uppercase tracking-widest">
+                  <List className="w-4 h-4" />
+                  Executive Index (Table of Contents)
+                </div>
+                <ul className="space-y-2 text-sm text-slate-300">
+                  {tocHeadings.map((h, i) => (
+                    <li key={i} style={{ paddingLeft: `${(h.level - 2) * 12}px` }}>
+                      <a 
+                        href={`#${h.id}`} 
+                        className="hover:text-cyan transition-colors flex items-center gap-2 py-0.5 text-xs md:text-sm font-medium"
+                      >
+                        <span className="text-cyan/60 font-mono text-[10px]">{i + 1}.</span>
+                        <span>{h.text}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             {/* Main Article Text Container (Pristine Readability Controls Attached) */}
             <div className={`markdown-body prose prose-invert prose-cyan max-w-none 
               ${fontSize === "xl" ? "prose-p:text-xl prose-p:leading-[1.9] prose-li:text-lg" : 
@@ -362,6 +456,16 @@ export default function ArticleView() {
               <ReactMarkdown 
                 remarkPlugins={[remarkGfm]}
                 components={{
+                  h2: ({ node, ...props }) => {
+                    const text = String(props.children).replace(/\*/g, "");
+                    const headingId = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+                    return <h2 id={headingId} className="scroll-mt-32" {...props} />;
+                  },
+                  h3: ({ node, ...props }) => {
+                    const text = String(props.children).replace(/\*/g, "");
+                    const headingId = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+                    return <h3 id={headingId} className="scroll-mt-32" {...props} />;
+                  },
                   a: ({ node, ...props }) => {
                     const isInternal = props.href?.startsWith('/');
                     if (isInternal) {
@@ -380,6 +484,59 @@ export default function ArticleView() {
               >
                 {article.content!}
               </ReactMarkdown>
+            </div>
+
+            {/* HIGH-CONVERTING INLINE LEAD MAGNET CTA BOX */}
+            <div className="my-14 p-8 rounded-2xl bg-gradient-to-br from-cyan/15 via-ocean-900 to-ocean-950 border border-cyan/30 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+                <FileText className="w-48 h-48 text-cyan" />
+              </div>
+              <div className="relative z-10 max-w-2xl">
+                <span className="px-3 py-1 bg-cyan text-ocean-950 text-[10px] font-bold uppercase tracking-widest rounded mb-4 inline-block">
+                  Free Tactical Download
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight font-display">
+                  Download the 2026 Pakistan Freelancer & Tech Founder Compliance Master Kit
+                </h3>
+                <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+                  Get our complete PDF blueprint covering 0.25% PSEB tax filing, SBP PRC bank clearance scripts, and step-by-step SECP SMC-Pvt entity incorporation checklist.
+                </p>
+
+                {leadSubmitted ? (
+                  <div className="p-4 bg-cyan/20 border border-cyan/40 rounded-xl text-cyan text-sm font-bold flex items-center gap-3 animate-in fade-in">
+                    <Check className="w-5 h-5 text-cyan stroke-[3]" />
+                    <span>Success! Your 2026 Master Compliance PDF blueprint has been dispatched to your inbox.</span>
+                  </div>
+                ) : (
+                  <form 
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      if (leadEmail) setLeadSubmitted(true);
+                    }}
+                    className="flex flex-col sm:flex-row gap-3"
+                  >
+                    <input 
+                      type="email" 
+                      placeholder="Enter your email address" 
+                      value={leadEmail}
+                      onChange={(e) => setLeadEmail(e.target.value)}
+                      required
+                      className="px-4 py-3 bg-ocean-950 border border-ocean-700 rounded-xl text-white text-sm focus:border-cyan focus:outline-none flex-grow"
+                    />
+                    <button 
+                      type="submit" 
+                      className="px-6 py-3 bg-cyan text-ocean-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-cyan/90 transition-all flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-cyan/20"
+                    >
+                      <span>Get Free PDF</span>
+                      <Send className="w-4 h-4" />
+                    </button>
+                  </form>
+                )}
+                <div className="mt-3 text-[10px] text-slate-500 flex items-center gap-2 font-medium">
+                  <Shield className="w-3 h-3 text-cyan" />
+                  <span>100% Free. No spam. Join 12,500+ tech founders & remote earners.</span>
+                </div>
+              </div>
             </div>
 
             {/* 3. EEAT & GEO Anchor: Trust Map & Generative Verification Indexes */}
@@ -481,6 +638,52 @@ export default function ArticleView() {
           </>
         )}
 
+        {/* RELATED INTELLIGENCE REPORTS (INTERNAL LINKING ENGINE) */}
+        {relatedArticles.length > 0 && (
+          <div className="mt-16 pt-12 border-t border-ocean-800">
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-2">
+                <TrendingUp className="w-5 h-5 text-cyan" />
+                <h3 className="text-xl md:text-2xl font-bold text-white font-display">
+                  Related Intelligence Briefings
+                </h3>
+              </div>
+              <Link 
+                to="/#magazine-hq" 
+                className="text-cyan text-xs uppercase font-bold tracking-wider hover:underline"
+              >
+                Browse All Reports →
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedArticles.map(rel => (
+                <Link 
+                  key={rel.id} 
+                  to={`/article/${rel.id}`}
+                  className="p-5 rounded-xl bg-ocean-900 border border-ocean-800 hover:border-cyan/40 transition-all group flex flex-col justify-between"
+                >
+                  <div>
+                    <span className="text-[9px] font-bold uppercase tracking-wider text-cyan mb-2 inline-block">
+                      {rel.category}
+                    </span>
+                    <h4 className="font-bold text-white text-sm group-hover:text-cyan transition-colors leading-snug mb-3 line-clamp-2">
+                      {rel.title}
+                    </h4>
+                    <p className="text-xs text-slate-400 line-clamp-2 mb-4 leading-relaxed">
+                      {rel.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between text-[10px] text-slate-500 pt-3 border-t border-ocean-800/60">
+                    <span>{new Date(rel.pubDate).toLocaleDateString()}</span>
+                    <span className="text-cyan font-semibold group-hover:translate-x-1 transition-transform">Read Brief →</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
         {article.tags && article.tags.length > 0 && (
           <div className="mt-16 pt-12 border-t border-ocean-800 flex flex-wrap gap-2 items-center">
             <span className="text-xs text-slate-500 font-bold uppercase tracking-wider mr-2">Intelligence Tags:</span>
@@ -496,3 +699,4 @@ export default function ArticleView() {
     </>
   );
 }
+
