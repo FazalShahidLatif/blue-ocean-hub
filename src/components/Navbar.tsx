@@ -67,7 +67,7 @@ export default function Navbar() {
           <div className="flex animate-marquee gap-12 items-center">
             {[...tickerItems, ...tickerItems].map((item, i) => (
               <div key={i} className="flex items-center gap-2 px-4 border-r border-ocean-800 last:border-none">
-                <span className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">{item.label}</span>
+                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">{item.label}</span>
                 <span className="text-[10px] font-mono text-cyan">{item.value}</span>
               </div>
             ))}
@@ -82,22 +82,23 @@ export default function Navbar() {
               </div>
               <span className="text-xl font-bold text-white tracking-tight uppercase">BlueOcean<span className="text-cyan">Hub</span></span>
             </div>
-            <span className="text-[8px] text-slate-500 font-medium uppercase tracking-[0.4em] mt-1 ml-1 group-hover:text-cyan/60 transition-colors">Strategic Financial Intelligence</span>
+            <span className="text-[8px] text-slate-400 font-medium uppercase tracking-[0.4em] mt-1 ml-1 group-hover:text-cyan/80 transition-colors">Strategic Financial Intelligence</span>
           </Link>
 
           <div className="flex items-center gap-4">
             {/* Search Trigger Button */}
             <button 
               onClick={() => setSearchOpen(true)}
-              className="flex items-center gap-2 bg-ocean-900 border border-ocean-800 hover:border-cyan/40 px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all text-xs"
+              aria-label="Search financial intelligence briefings"
+              className="flex items-center gap-2 bg-ocean-900 border border-ocean-800 hover:border-cyan/40 px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition-all text-xs"
               title="Search 238+ Intelligence Reports (Ctrl+K)"
             >
               <Search className="w-3.5 h-3.5 text-cyan" />
               <span className="hidden md:inline text-[11px] font-medium">Search Briefings...</span>
-              <kbd className="hidden sm:inline-block px-1.5 py-0.5 bg-ocean-950 text-[9px] font-mono rounded text-slate-500 border border-ocean-800">⌘K</kbd>
+              <kbd className="hidden sm:inline-block px-1.5 py-0.5 bg-ocean-950 text-[9px] font-mono rounded text-slate-400 border border-ocean-800">⌘K</kbd>
             </button>
 
-            <button className="text-[10px] uppercase tracking-widest font-bold text-slate-400 border border-ocean-800 px-3 py-1 rounded hover:text-cyan hover:border-cyan transition-all hidden sm:block">Volume 8.2</button>
+            <button aria-label="Publication Volume 8.2" className="text-[10px] uppercase tracking-widest font-bold text-slate-300 border border-ocean-800 px-3 py-1 rounded hover:text-cyan hover:border-cyan transition-all hidden sm:block">Volume 8.2</button>
             <div className="w-2 h-2 rounded-full bg-cyan animate-pulse"></div>
             <span className="text-[10px] uppercase tracking-widest font-bold text-cyan hidden xs:inline">Live Hub</span>
           </div>
@@ -116,23 +117,25 @@ export default function Navbar() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 autoFocus
-                className="w-full bg-transparent text-white font-medium focus:outline-none placeholder:text-slate-500 text-sm"
+                className="w-full bg-transparent text-white font-medium focus:outline-none placeholder:text-slate-400 text-sm"
               />
               <button 
                 onClick={() => setSearchOpen(false)}
-                className="p-1 text-slate-500 hover:text-white transition-colors"
+                aria-label="Close search dialog"
+                className="p-1 text-slate-400 hover:text-white transition-colors flex items-center justify-center"
               >
                 <X className="w-5 h-5" />
+                <span className="sr-only">Close search dialog</span>
               </button>
             </div>
 
             <div className="p-4 max-h-[60vh] overflow-y-auto space-y-3">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500 px-2">
+              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-400 px-2">
                 {query.trim() ? `Search Results (${searchResults.length})` : 'Popular Briefings'}
               </div>
 
               {searchResults.length === 0 ? (
-                <div className="text-center py-8 text-slate-500 text-sm">
+                <div className="text-center py-8 text-slate-400 text-sm">
                   No matching briefings found for "{query}". Try keywords like <span className="text-cyan">tax</span>, <span className="text-cyan">PSEB</span>, or <span className="text-cyan">PSX</span>.
                 </div>
               ) : (
@@ -150,20 +153,20 @@ export default function Navbar() {
                       <span className="text-[9px] font-bold uppercase tracking-wider text-cyan mb-1 inline-block">
                         {a.category}
                       </span>
-                      <h4 className="text-sm font-bold text-white group-hover:text-cyan transition-colors leading-snug">
+                      <h3 className="text-sm font-bold text-white group-hover:text-cyan transition-colors leading-snug">
                         {a.title}
-                      </h4>
-                      <p className="text-xs text-slate-400 line-clamp-1 mt-1 font-light">
+                      </h3>
+                      <p className="text-xs text-slate-300 line-clamp-1 mt-1 font-light">
                         {a.description}
                       </p>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-2" />
+                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-2" />
                   </button>
                 ))
               )}
             </div>
 
-            <div className="p-3 bg-ocean-950 border-t border-ocean-800 text-[10px] text-slate-500 flex justify-between items-center px-4">
+            <div className="p-3 bg-ocean-950 border-t border-ocean-800 text-[10px] text-slate-400 flex justify-between items-center px-4">
               <span>238 Active Financial Intelligence Reports Indexed</span>
               <span>Press <kbd className="font-mono text-cyan">ESC</kbd> to exit</span>
             </div>

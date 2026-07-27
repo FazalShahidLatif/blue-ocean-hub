@@ -59,9 +59,9 @@ export default function Hero() {
               { label: "Revenue Potential", value: "$10M+", icon: TrendingUp },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <stat.icon className="w-5 h-5 mx-auto mb-3 text-slate-500" />
+                <stat.icon className="w-5 h-5 mx-auto mb-3 text-cyan/70" />
                 <div className="text-2xl font-bold text-white tracking-tight">{stat.value}</div>
-                <div className="text-xs uppercase tracking-widest text-slate-500 font-medium">{stat.label}</div>
+                <div className="text-xs uppercase tracking-widest text-slate-400 font-medium">{stat.label}</div>
               </div>
             ))}
           </motion.div>

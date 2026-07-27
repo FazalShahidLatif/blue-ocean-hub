@@ -17,18 +17,30 @@ export default function Footer() {
               South Asia's premier **Financial Magazine Publication**. We provide strategic intelligence and institutional-grade research for educational and informational purposes only.
             </p>
             <div className="flex gap-4">
-              <a href="#" aria-label="Twitter Profile" className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-400 hover:bg-cyan hover:text-ocean-950 transition-all">
-                <Twitter className="w-5 h-5" />
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Blue Ocean Hub Twitter Profile" 
+                className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-300 hover:bg-cyan hover:text-ocean-950 transition-all"
+              >
+                <Twitter className="w-5 h-5" aria-hidden="true" />
+                <span className="sr-only">Twitter Profile</span>
               </a>
-              <a href="#" aria-label="Contact Email" className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-400 hover:bg-cyan hover:text-ocean-950 transition-all">
-                <Mail className="w-5 h-5" />
+              <a 
+                href="mailto:contact@blueoceanhub.info" 
+                aria-label="Send email to Blue Ocean Hub Editorial Desk" 
+                className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-300 hover:bg-cyan hover:text-ocean-950 transition-all"
+              >
+                <Mail className="w-5 h-5" aria-hidden="true" />
+                <span className="sr-only">Contact Email</span>
               </a>
             </div>
           </div>
           
           <div>
-            <p className="font-bold text-white mb-6 uppercase text-[10px] tracking-[0.3em]">Insights</p>
-            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-500">
+            <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Insights</h2>
+            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
               <li><Link to="/passive-income" className="hover:text-cyan transition-colors block">Passive Income</Link></li>
               <li><Link to="/investing" className="hover:text-cyan transition-colors block">Investing</Link></li>
               <li><Link to="/freelancing" className="hover:text-cyan transition-colors block">Freelancing</Link></li>
@@ -37,8 +49,8 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-1">
-            <p className="font-bold text-white mb-6 uppercase text-[10px] tracking-[0.3em]">Company</p>
-            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-500">
+            <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Company</h2>
+            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
               <li><Link to="/page/about-us" className="hover:text-cyan transition-colors block">About Us</Link></li>
               <li><Link to="/page/contact" className="hover:text-cyan transition-colors block">Contact</Link></li>
               <li><Link to="/page/advertise" className="hover:text-cyan transition-colors block text-cyan">Advertise With Us</Link></li>
@@ -50,7 +62,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-ocean-800 text-xs text-slate-500 uppercase tracking-widest gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-ocean-800 text-xs text-slate-400 uppercase tracking-widest gap-4">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <p>© 2026 Blue Ocean Hub. All rights reserved.</p>
             <span className="hidden md:block">|</span>

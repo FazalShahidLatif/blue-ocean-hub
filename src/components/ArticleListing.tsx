@@ -42,8 +42,8 @@ export default function ArticleListing({ filterCategory }: { filterCategory?: st
                     <span className="px-2 py-1 bg-cyan/10 text-cyan text-[10px] font-bold uppercase tracking-widest rounded border border-cyan/20">
                       {article.category}
                     </span>
-                    <div className="flex items-center gap-2 text-xs text-slate-500">
-                      <Clock className="w-3 h-3" />
+                    <div className="flex items-center gap-2 text-xs text-slate-400">
+                      <Clock className="w-3 h-3 text-slate-400" />
                       {article.readingTime} min read
                     </div>
                   </div>
@@ -52,13 +52,13 @@ export default function ArticleListing({ filterCategory }: { filterCategory?: st
                     {article.title}
                   </h3>
                   
-                  <p className="text-slate-400 mb-8 flex-grow leading-relaxed">
+                  <p className="text-slate-300 mb-8 flex-grow leading-relaxed">
                     {article.description}
                   </p>
                   
                   <div className="pt-6 border-t border-ocean-800 flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-[10px] text-slate-500 font-semibold uppercase tracking-widest">
-                      <Calendar className="w-3 h-3" />
+                    <div className="flex items-center gap-2 text-[10px] text-slate-400 font-semibold uppercase tracking-widest">
+                      <Calendar className="w-3 h-3 text-slate-400" />
                       {new Date(article.pubDate).toLocaleDateString()}
                     </div>
                     <div className="flex items-center gap-1 text-cyan text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0">
@@ -74,7 +74,7 @@ export default function ArticleListing({ filterCategory }: { filterCategory?: st
 
         {filteredArticles.length === 0 && (
           <div className="text-center py-20 border border-dashed border-ocean-800 rounded-3xl">
-            <p className="text-slate-500 italic">No articles found in this category yet. Check back soon for fresh intel.</p>
+            <p className="text-slate-400 italic">No articles found in this category yet. Check back soon for fresh intel.</p>
           </div>
         )}
       </div>

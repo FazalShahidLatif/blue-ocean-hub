@@ -1,4 +1,4 @@
-# Blue Ocean Hub: Strategic Financial Intelligence
+# Blue Ocean Hub
 
 > South Asia's premier financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.
 
@@ -6,17 +6,17 @@ Explore our comprehensive guides, research papers, and strategic action plans fo
 
 ## Core Intelligence Categories
 
-- [Passive Income](/passive-income) - Leveraged cashflow strategies, digital niche assets, and physical estate comparison blueprints.
-- [Investing](/investing) - Strategic local equity selection (PSX), Shariah-compliant mutual funds, Voluntary Pension Schemes, and gold.
-- [Freelancing](/freelancing) - Technical agency scaling, international client billing structures, contract engineer option pools, and B2B client acquisition.
-- [Saving Money](/saving-money) - FBR tax filing guides, employee provident fund structures, tax rebates, and wealth statement filings.
-- [Dollar Earning](/dollar-earning) - Onshore US business banking setup, foreign entities, Stripe integration alternatives (Lemon Squeezy, Paddle), and GCC SaaS monetization.
+- [Passive Income](https://blueoceanhub.info/passive-income): Leveraged cashflow strategies, digital niche assets, and physical estate comparison blueprints.
+- [Investing](https://blueoceanhub.info/investing): Strategic local equity selection (PSX), Shariah-compliant mutual funds, Voluntary Pension Schemes, and gold.
+- [Freelancing](https://blueoceanhub.info/freelancing): Technical agency scaling, international client billing structures, contract engineer option pools, and B2B client acquisition.
+- [Saving Money](https://blueoceanhub.info/saving-money): FBR tax filing guides, employee provident fund structures, tax rebates, and wealth statement filings.
+- [Dollar Earning](https://blueoceanhub.info/dollar-earning): Onshore US business banking setup, foreign entities, Stripe integration alternatives (Lemon Squeezy, Paddle), and GCC SaaS monetization.
 
 ## Key Publications & Compliance Resources
 
-- [About Our Mission](/page/about-us) - Elite financial research methodology and advisory board background.
-- [Contact Editorial Desk](/page/contact) - Contact details for licensing, content contributions, and press inquiries.
-- [Editorial Integrity Policy](/page/editorial-policy) - Our strict standards for institutional-grade, conflict-free research.
-- [GDPR Data Compliance](/page/gdpr-compliance) - General Data Protection Regulation disclosures and customer protection frameworks.
-- [Cookie Intelligence Disclosures](/page/cookie-policy) - Complete transparency on our traffic analysis cookies and user consent telemetry.
-- [Google Search Console Indexing Console](/indexing-console) - Real-time indexing pipelines and API diagnostic interfaces.
+- [About Our Mission](https://blueoceanhub.info/page/about-us): Elite financial research methodology and advisory board background.
+- [Contact Editorial Desk](https://blueoceanhub.info/page/contact): Contact details for licensing, content contributions, and press inquiries.
+- [Editorial Integrity Policy](https://blueoceanhub.info/page/editorial-policy): Our strict standards for institutional-grade, conflict-free research.
+- [GDPR Data Compliance](https://blueoceanhub.info/page/gdpr-compliance): General Data Protection Regulation disclosures and customer protection frameworks.
+- [Cookie Intelligence Disclosures](https://blueoceanhub.info/page/cookie-policy): Complete transparency on our traffic analysis cookies and user consent telemetry.
+- [Google Search Console Indexing Console](https://blueoceanhub.info/indexing-console): Real-time indexing pipelines and API diagnostic interfaces.

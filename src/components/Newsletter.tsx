@@ -44,7 +44,7 @@ export default function Newsletter() {
                   </button>
                 </form>
                 
-                <p className="mt-6 text-xs text-slate-500 uppercase tracking-widest">
+                <p className="mt-6 text-xs text-slate-400 uppercase tracking-widest">
                   Join 12,542+ subscribers already getting the edge.
                 </p>
               </>

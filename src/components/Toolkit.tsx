@@ -129,7 +129,7 @@ export default function Toolkit() {
                 <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Gross Annual Income</span>
                 <span className="text-lg font-bold text-white font-mono">
                   PKR {annualPkr.toLocaleString('en-PK')}
-                  <span className="text-xs text-slate-500 font-normal ml-1">(${ (usdIncome * 12).toLocaleString() })</span>
+                  <span className="text-xs text-slate-400 font-normal ml-1">(${ (usdIncome * 12).toLocaleString() })</span>
                 </span>
               </div>
 
@@ -186,7 +186,7 @@ export default function Toolkit() {
                   </div>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-bold text-white tracking-tight">{tool.name}</h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">{tool.status}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">{tool.status}</span>
                   </div>
                   <p className="text-sm text-slate-400 leading-relaxed">
                     {tool.desc}
@@ -204,7 +204,7 @@ export default function Toolkit() {
                   </div>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-bold text-white tracking-tight group-hover:text-cyan transition-colors">{tool.name}</h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">{tool.status}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">{tool.status}</span>
                   </div>
                   <p className="text-sm text-slate-400 leading-relaxed">
                     {tool.desc}
@@ -217,7 +217,7 @@ export default function Toolkit() {
                   </div>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-bold text-white tracking-tight">{tool.name}</h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">{tool.status}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">{tool.status}</span>
                   </div>
                   <p className="text-sm text-slate-400 leading-relaxed">
                     {tool.desc}

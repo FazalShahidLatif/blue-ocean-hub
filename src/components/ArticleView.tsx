@@ -269,7 +269,7 @@ export default function ArticleView() {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-ocean-900">
           <button 
             onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-slate-500 hover:text-cyan transition-colors uppercase text-xs font-bold tracking-widest group"
+            className="flex items-center gap-2 text-slate-400 hover:text-cyan transition-colors uppercase text-xs font-bold tracking-widest group"
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
             Back to Directory
@@ -277,7 +277,7 @@ export default function ArticleView() {
 
           {/* Reading Density Toggles */}
           <div className="flex items-center gap-4 bg-ocean-900 border border-ocean-800 rounded-lg p-1.5 text-xs text-slate-400">
-            <span className="font-semibold text-slate-500 tracking-wider uppercase pl-2 text-[10px]">Read Size:</span>
+            <span className="font-semibold text-slate-400 tracking-wider uppercase pl-2 text-[10px]">Read Size:</span>
             <button 
               className={`px-2.5 py-1 rounded font-bold transition-all ${fontSize === "base" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"}`}
               onClick={() => setFontSize("base")}
@@ -307,7 +307,7 @@ export default function ArticleView() {
             <span className="px-3 py-1 bg-cyan text-ocean-950 text-[10px] font-bold uppercase tracking-widest rounded shadow-sm shadow-cyan/10">
               {article.category}
             </span>
-            <div className="flex items-center gap-6 text-xs text-slate-500 font-medium">
+            <div className="flex items-center gap-6 text-xs text-slate-400 font-medium">
               <span className="flex items-center gap-2 leading-none">
                 <Calendar className="w-3.5 h-3.5 text-cyan" />
                 Published: {new Date(article.pubDate).toLocaleDateString()}
@@ -349,25 +349,27 @@ export default function ArticleView() {
                     article.author || "Blue Ocean Hub Editorial"
                   )}
                 </div>
-                <div className="text-[10px] text-slate-500 uppercase tracking-widest leading-none font-medium">Finance & Asset Architecture</div>
+                <div className="text-[10px] text-slate-400 uppercase tracking-widest leading-none font-medium">Finance & Asset Architecture</div>
               </div>
             </div>
             <div className="flex gap-4">
               <button 
                 onClick={handleShare}
-                className="p-2 text-slate-500 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all"
+                className="p-2 text-slate-400 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all"
                 title="Copy Link to Clipboard"
                 aria-label="Copy link to clipboard"
               >
-                <Share2 className="w-4 h-4" />
+                <Share2 className="w-4 h-4" aria-hidden="true" />
+                <span className="sr-only">Copy link to clipboard</span>
               </button>
               <button 
-                className="p-2 text-slate-500 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all" 
+                className="p-2 text-slate-400 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all" 
                 onClick={() => window.print()}
                 title="Print Report"
                 aria-label="Print report"
               >
-                <Printer className="w-4 h-4" />
+                <Printer className="w-4 h-4" aria-hidden="true" />
+                <span className="sr-only">Print report</span>
               </button>
             </div>
           </div>
@@ -417,7 +419,7 @@ export default function ArticleView() {
                   );
                 })}
               </ul>
-              <div className="mt-5 flex items-center justify-between border-t border-ocean-800 pt-3 text-[10px] text-slate-500 font-bold uppercase tracking-wider">
+              <div className="mt-5 flex items-center justify-between border-t border-ocean-800 pt-3 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
                 <span>Verification Scope: Federal & SBP manual</span>
                 <span className="text-cyan font-display font-medium tracking-normal">GEO - Search Generative Eligible</span>
               </div>
@@ -532,7 +534,7 @@ export default function ArticleView() {
                     </button>
                   </form>
                 )}
-                <div className="mt-3 text-[10px] text-slate-500 flex items-center gap-2 font-medium">
+                <div className="mt-3 text-[10px] text-slate-400 flex items-center gap-2 font-medium">
                   <Shield className="w-3 h-3 text-cyan" />
                   <span>100% Free. No spam. Join 12,500+ tech founders & remote earners.</span>
                 </div>
@@ -543,9 +545,9 @@ export default function ArticleView() {
             <div className="mt-14 p-6 rounded-xl bg-ocean-900 border border-ocean-800">
               <div className="flex items-center gap-2 mb-4">
                 <Shield className="w-5 h-5 text-cyan" />
-                <h4 className="text-sm font-bold text-white uppercase tracking-widest font-sans">
+                <h3 className="text-sm font-bold text-white uppercase tracking-widest font-sans">
                   Generative Index & Trust Reference Map
-                </h4>
+                </h3>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed mb-6">
                 This document utilizes legal and operational standards directly matching verification channels on State Bank of Pakistan (SBP), Federal Board of Revenue (FBR), Pakistan Software Export Board (PSEB), and registrar policies.
@@ -667,14 +669,14 @@ export default function ArticleView() {
                     <span className="text-[9px] font-bold uppercase tracking-wider text-cyan mb-2 inline-block">
                       {rel.category}
                     </span>
-                    <h4 className="font-bold text-white text-sm group-hover:text-cyan transition-colors leading-snug mb-3 line-clamp-2">
+                    <h3 className="font-bold text-white text-sm group-hover:text-cyan transition-colors leading-snug mb-3 line-clamp-2">
                       {rel.title}
-                    </h4>
+                    </h3>
                     <p className="text-xs text-slate-400 line-clamp-2 mb-4 leading-relaxed">
                       {rel.description}
                     </p>
                   </div>
-                  <div className="flex items-center justify-between text-[10px] text-slate-500 pt-3 border-t border-ocean-800/60">
+                  <div className="flex items-center justify-between text-[10px] text-slate-400 pt-3 border-t border-ocean-800/60">
                     <span>{new Date(rel.pubDate).toLocaleDateString()}</span>
                     <span className="text-cyan font-semibold group-hover:translate-x-1 transition-transform">Read Brief →</span>
                   </div>
@@ -686,7 +688,7 @@ export default function ArticleView() {
 
         {article.tags && article.tags.length > 0 && (
           <div className="mt-16 pt-12 border-t border-ocean-800 flex flex-wrap gap-2 items-center">
-            <span className="text-xs text-slate-500 font-bold uppercase tracking-wider mr-2">Intelligence Tags:</span>
+            <span className="text-xs text-slate-400 font-bold uppercase tracking-wider mr-2">Intelligence Tags:</span>
             {article.tags.map(tag => (
               <span key={tag} className="px-3 py-1 bg-ocean-900 border border-ocean-800 text-slate-400 text-xs rounded-full hover:border-cyan/20 hover:text-slate-300 transition-colors">
                 #{tag}

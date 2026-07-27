@@ -32,8 +32,9 @@ export default function CookieBanner() {
               We use cookies to analyze traffic and optimize your strategic reading experience. By continuing, you agree to our <button onClick={() => window.dispatchEvent(new CustomEvent('navigate', {detail: 'cookie-policy'}))} className="text-cyan underline">Cookie Policy</button>.
             </p>
           </div>
-          <button onClick={() => setIsVisible(false)} className="text-slate-500 hover:text-white transition-colors" aria-label="Dismiss cookie notice">
-            <X className="w-4 h-4" />
+          <button onClick={() => setIsVisible(false)} className="text-slate-400 hover:text-white transition-colors p-1" aria-label="Dismiss cookie notice">
+            <X className="w-4 h-4" aria-hidden="true" />
+            <span className="sr-only">Dismiss cookie notice</span>
           </button>
         </div>
         <div className="flex gap-3">

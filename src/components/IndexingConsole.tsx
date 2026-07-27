@@ -193,7 +193,7 @@ export default function IndexingConsole() {
           <div className="flex items-center gap-2 mb-8 pb-4 border-b border-ocean-900">
             <button 
               onClick={() => navigate("/")}
-              className="flex items-center gap-2 text-slate-500 hover:text-cyan transition-colors uppercase text-xs font-bold tracking-widest group"
+              className="flex items-center gap-2 text-slate-400 hover:text-cyan transition-colors uppercase text-xs font-bold tracking-widest group"
             >
               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
               Back to Home
@@ -260,7 +260,7 @@ export default function IndexingConsole() {
                   {/* 2. Interactive Controls (Active only if authenticated) */}
                   {status?.isConfigured ? (
                     <div className="pt-6 space-y-6">
-                      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500">Pipeline Controls</h3>
+                      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">Pipeline Controls</h3>
                       
                       <div className="flex flex-wrap gap-4">
                         <button 
@@ -284,7 +284,7 @@ export default function IndexingConsole() {
 
                       {/* Custom input submission */}
                       <form onSubmit={handleSingleSubmit} className="mt-6 pt-6 border-t border-ocean-800/60">
-                        <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Submit Custom Individual URL</label>
+                        <label className="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Submit Custom Individual URL</label>
                         <div className="flex gap-2">
                           <input 
                             type="url" 
@@ -369,7 +369,7 @@ export default function IndexingConsole() {
                     </div>
                     <button 
                       onClick={clearLogs}
-                      className="text-[10px] text-slate-500 hover:text-cyan font-semibold uppercase tracking-wider uppercase transition-colors"
+                      className="text-[10px] text-slate-400 hover:text-cyan font-semibold uppercase tracking-wider transition-colors"
                     >
                       Clear Terminal
                     </button>
@@ -378,7 +378,7 @@ export default function IndexingConsole() {
                   <div className="h-48 mt-4 overflow-y-auto bg-ocean-950 p-4 rounded-xl border border-ocean-850 font-mono text-[11px] leading-relaxed flex flex-col-reverse gap-2 text-slate-300">
                     <AnimatePresence>
                       {logs.length === 0 ? (
-                        <div className="text-slate-600 text-center py-10 italic">Awaiting action commands. Terminal is clear.</div>
+                        <div className="text-slate-500 text-center py-10 italic">Awaiting action commands. Terminal is clear.</div>
                       ) : (
                         logs.map((log, index) => (
                           <motion.div 
@@ -387,7 +387,7 @@ export default function IndexingConsole() {
                             animate={{ opacity: 1, x: 0 }}
                             className="flex items-start gap-2"
                           >
-                            <span className="text-slate-600 shrink-0">[{log.time}]</span>
+                            <span className="text-slate-500 shrink-0">[{log.time}]</span>
                             <span className={`shrink-0 font-bold uppercase text-[10px] ${
                               log.type === "success" ? "text-emerald-400" :
                               log.type === "error" ? "text-red-400" :
@@ -401,7 +401,7 @@ export default function IndexingConsole() {
                       )}
                     </AnimatePresence>
                   </div>
-                  <div className="mt-3 flex justify-between items-center ultra-data text-[10px] text-slate-500 font-bold uppercase tracking-wider">
+                  <div className="mt-3 flex justify-between items-center ultra-data text-[10px] text-slate-400 font-bold uppercase tracking-wider">
                     <span>Protocol: HTTPS URL_UPDATED Webmaster REST</span>
                     <span className="flex items-center gap-1"><Flame className="w-3.5 h-3.5 text-cyan animate-pulse" /> SGE / SEO Engines Compatible</span>
                   </div>
@@ -419,7 +419,7 @@ export default function IndexingConsole() {
                     </h3>
                   </div>
 
-                  <p className="text-xs text-slate-500 leading-relaxed mt-3 mb-4">
+                  <p className="text-xs text-slate-400 leading-relaxed mt-3 mb-4">
                     The following URLs represent all active resources mapped directly in your standard dynamically generated sitemap.
                   </p>
 
