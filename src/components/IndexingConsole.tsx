@@ -378,7 +378,7 @@ export default function IndexingConsole() {
                   <div className="h-48 mt-4 overflow-y-auto bg-ocean-950 p-4 rounded-xl border border-ocean-850 font-mono text-[11px] leading-relaxed flex flex-col-reverse gap-2 text-slate-300">
                     <AnimatePresence>
                       {logs.length === 0 ? (
-                        <div className="text-slate-500 text-center py-10 italic">Awaiting action commands. Terminal is clear.</div>
+                        <div className="text-slate-400 text-center py-10 italic">Awaiting action commands. Terminal is clear.</div>
                       ) : (
                         logs.map((log, index) => (
                           <motion.div 
@@ -387,7 +387,7 @@ export default function IndexingConsole() {
                             animate={{ opacity: 1, x: 0 }}
                             className="flex items-start gap-2"
                           >
-                            <span className="text-slate-500 shrink-0">[{log.time}]</span>
+                            <span className="text-slate-400 shrink-0">[{log.time}]</span>
                             <span className={`shrink-0 font-bold uppercase text-[10px] ${
                               log.type === "success" ? "text-emerald-400" :
                               log.type === "error" ? "text-red-400" :
