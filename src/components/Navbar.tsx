@@ -67,8 +67,8 @@ export default function Navbar() {
           <div className="flex animate-marquee gap-12 items-center">
             {[...tickerItems, ...tickerItems].map((item, i) => (
               <div key={i} className="flex items-center gap-2 px-4 border-r border-ocean-800 last:border-none">
-                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">{item.label}</span>
-                <span className="text-[10px] font-mono text-cyan">{item.value}</span>
+                <span className="text-[10px] uppercase tracking-widest text-slate-300 font-bold">{item.label}</span>
+                <span className="text-[10px] font-mono text-cyan font-semibold">{item.value}</span>
               </div>
             ))}
           </div>
@@ -82,28 +82,35 @@ export default function Navbar() {
           >
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded bg-cyan flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg shadow-cyan/20">
-                <Compass className="text-ocean-950 w-5 h-5" />
+                <Compass className="text-ocean-950 w-5 h-5" aria-hidden="true" />
               </div>
               <span className="text-xl font-bold text-white tracking-tight uppercase">BlueOcean<span className="text-cyan">Hub</span></span>
             </div>
-            <span className="text-[8px] text-slate-400 font-medium uppercase tracking-[0.4em] mt-1 ml-1 group-hover:text-cyan/80 transition-colors">Strategic Financial Intelligence</span>
+            <span className="text-[8px] text-slate-300 font-semibold uppercase tracking-[0.4em] mt-1 ml-1 group-hover:text-cyan transition-colors">Strategic Financial Intelligence</span>
           </Link>
 
           <div className="flex items-center gap-4">
             {/* Search Trigger Button */}
             <button 
+              type="button"
               onClick={() => setSearchOpen(true)}
               aria-label="Search financial intelligence briefings"
-              className="flex items-center gap-2 bg-ocean-900 border border-ocean-800 hover:border-cyan/40 px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition-all text-xs"
+              className="flex items-center gap-2 bg-ocean-900 border border-ocean-800 hover:border-cyan/40 px-3.5 py-1.5 rounded-lg text-slate-200 hover:text-white transition-all text-xs cursor-pointer"
               title="Search 238+ Intelligence Reports (Ctrl+K)"
             >
-              <Search className="w-3.5 h-3.5 text-cyan" />
-              <span className="hidden md:inline text-[11px] font-medium">Search Briefings...</span>
-              <kbd className="hidden sm:inline-block px-1.5 py-0.5 bg-ocean-950 text-[9px] font-mono rounded text-slate-400 border border-ocean-800">⌘K</kbd>
+              <Search className="w-3.5 h-3.5 text-cyan" aria-hidden="true" />
+              <span className="hidden md:inline text-[11px] font-semibold">Search Briefings...</span>
+              <kbd className="hidden sm:inline-block px-1.5 py-0.5 bg-ocean-950 text-[9px] font-mono rounded text-slate-300 border border-ocean-800">⌘K</kbd>
             </button>
 
-            <button aria-label="Publication Volume 8.2" className="text-[10px] uppercase tracking-widest font-bold text-slate-300 border border-ocean-800 px-3 py-1 rounded hover:text-cyan hover:border-cyan transition-all hidden sm:block">Volume 8.2</button>
-            <div className="w-2 h-2 rounded-full bg-cyan animate-pulse"></div>
+            <button 
+              type="button"
+              aria-label="Publication Edition Volume 8.2" 
+              className="text-[10px] uppercase tracking-widest font-bold text-slate-200 border border-ocean-800 px-3 py-1 rounded hover:text-cyan hover:border-cyan transition-all hidden sm:block"
+            >
+              Volume 8.2
+            </button>
+            <div className="w-2 h-2 rounded-full bg-cyan animate-pulse" aria-hidden="true"></div>
             <span className="text-[10px] uppercase tracking-widest font-bold text-cyan hidden xs:inline">Live Hub</span>
           </div>
         </div>

@@ -28,8 +28,8 @@ export default function CookieBanner() {
           </div>
           <div className="flex-grow">
             <p className="text-white font-bold text-sm mb-1 uppercase tracking-wider">Cookie Intelligence</p>
-            <p className="text-slate-400 text-xs leading-relaxed">
-              We use cookies to analyze traffic and optimize your strategic reading experience. By continuing, you agree to our <button onClick={() => window.dispatchEvent(new CustomEvent('navigate', {detail: 'cookie-policy'}))} className="text-cyan underline">Cookie Policy</button>.
+            <p className="text-slate-300 text-xs leading-relaxed">
+              We use cookies to analyze traffic and optimize your strategic reading experience. By continuing, you agree to our <button type="button" aria-label="Read our full Cookie Policy" onClick={() => window.dispatchEvent(new CustomEvent('navigate', {detail: 'cookie-policy'}))} className="text-cyan hover:underline font-semibold cursor-pointer">Cookie Policy</button>.
             </p>
           </div>
           <button 

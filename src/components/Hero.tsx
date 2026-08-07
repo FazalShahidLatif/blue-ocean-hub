@@ -30,18 +30,22 @@ export default function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button 
+                type="button"
                 onClick={() => document.getElementById('intel-grid')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-primary flex items-center justify-center gap-3 !px-8 !py-4 font-bold uppercase tracking-widest text-sm shadow-2xl shadow-cyan/20"
+                aria-label="Explore financial intelligence insights and articles"
+                className="btn-primary flex items-center justify-center gap-3 !px-8 !py-4 font-bold uppercase tracking-widest text-sm shadow-2xl shadow-cyan/20 cursor-pointer"
               >
-                Explore Insights
-                <ArrowRight className="w-4 h-4" />
+                <span>Explore Insights</span>
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </button>
               <button 
+                type="button"
                 onClick={() => document.getElementById('toolkit')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-outline flex items-center justify-center gap-3 !px-8 !py-4 font-bold uppercase tracking-widest text-sm"
+                aria-label="Navigate to strategic financial calculator and toolkits"
+                className="btn-outline flex items-center justify-center gap-3 !px-8 !py-4 font-bold uppercase tracking-widest text-sm cursor-pointer"
               >
-                <Search className="w-4 h-4" />
-                Strategic Toolkit
+                <Search className="w-4 h-4" aria-hidden="true" />
+                <span>Strategic Toolkit</span>
               </button>
             </div>
           </motion.div>
@@ -59,9 +63,9 @@ export default function Hero() {
               { label: "Revenue Potential", value: "$10M+", icon: TrendingUp },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <stat.icon className="w-5 h-5 mx-auto mb-3 text-cyan/70" />
+                <stat.icon className="w-5 h-5 mx-auto mb-3 text-cyan" aria-hidden="true" />
                 <div className="text-2xl font-bold text-white tracking-tight">{stat.value}</div>
-                <div className="text-xs uppercase tracking-widest text-slate-400 font-medium">{stat.label}</div>
+                <div className="text-xs uppercase tracking-widest text-slate-300 font-semibold">{stat.label}</div>
               </div>
             ))}
           </motion.div>

@@ -18,7 +18,7 @@ export default function ArticleListing({ filterCategory }: { filterCategory?: st
           <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
             {filterCategory ? `${filterCategory} Intel` : "Latest Intelligence"}
           </h2>
-          <p className="text-slate-400 max-w-xl text-lg">
+          <p className="text-slate-300 max-w-xl text-lg">
             Untapped income streams and financial guides tailored for the South Asian professional.
           </p>
         </div>
@@ -43,9 +43,9 @@ export default function ArticleListing({ filterCategory }: { filterCategory?: st
                     <span className="px-2 py-1 bg-cyan/10 text-cyan text-[10px] font-bold uppercase tracking-widest rounded border border-cyan/20">
                       {article.category}
                     </span>
-                    <div className="flex items-center gap-2 text-xs text-slate-400">
-                      <Clock className="w-3 h-3 text-slate-400" />
-                      {article.readingTime} min read
+                    <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                      <Clock className="w-3 h-3 text-slate-300" aria-hidden="true" />
+                      <span>{article.readingTime} min read</span>
                     </div>
                   </div>
                   
@@ -58,13 +58,13 @@ export default function ArticleListing({ filterCategory }: { filterCategory?: st
                   </p>
                   
                   <div className="pt-6 border-t border-ocean-800 flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-[10px] text-slate-400 font-semibold uppercase tracking-widest">
-                      <Calendar className="w-3 h-3 text-slate-400" />
-                      {new Date(article.pubDate).toLocaleDateString()}
+                    <div className="flex items-center gap-2 text-[10px] text-slate-300 font-semibold uppercase tracking-widest">
+                      <Calendar className="w-3 h-3 text-slate-300" aria-hidden="true" />
+                      <span>{new Date(article.pubDate).toLocaleDateString()}</span>
                     </div>
                     <div className="flex items-center gap-1 text-cyan text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0">
-                      Read Intel
-                      <ArrowRight className="w-4 h-4" />
+                      <span>Read Intel</span>
+                      <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </div>
                   </div>
                 </Link>
@@ -75,7 +75,7 @@ export default function ArticleListing({ filterCategory }: { filterCategory?: st
 
         {filteredArticles.length === 0 && (
           <div className="text-center py-20 border border-dashed border-ocean-800 rounded-3xl">
-            <p className="text-slate-400 italic">No articles found in this category yet. Check back soon for fresh intel.</p>
+            <p className="text-slate-300 italic">No articles found in this category yet. Check back soon for fresh intel.</p>
           </div>
         )}
       </div>

@@ -268,19 +268,21 @@ export default function ArticleView() {
         {/* Navigation & Sizing Controls Bar (Readability Optimization) */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-ocean-900">
           <button 
+            type="button"
             onClick={() => navigate(-1)}
             aria-label="Back to Previous Directory Page"
-            className="flex items-center gap-2 text-slate-400 hover:text-cyan transition-colors uppercase text-xs font-bold tracking-widest group"
+            className="flex items-center gap-2 text-slate-300 hover:text-cyan transition-colors uppercase text-xs font-bold tracking-widest group cursor-pointer"
           >
-            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-            Back to Directory
+            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
+            <span>Back to Directory</span>
           </button>
 
           {/* Reading Density Toggles */}
-          <div className="flex items-center gap-4 bg-ocean-900 border border-ocean-800 rounded-lg p-1.5 text-xs text-slate-400">
-            <span className="font-semibold text-slate-400 tracking-wider uppercase pl-2 text-[10px]">Read Size:</span>
+          <div className="flex items-center gap-4 bg-ocean-900 border border-ocean-800 rounded-lg p-1.5 text-xs text-slate-300">
+            <span className="font-semibold text-slate-300 tracking-wider uppercase pl-2 text-[10px]">Read Size:</span>
             <button 
-              className={`px-2.5 py-1 rounded font-bold transition-all ${fontSize === "base" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"}`}
+              type="button"
+              className={`px-2.5 py-1 rounded font-bold transition-all cursor-pointer ${fontSize === "base" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"}`}
               onClick={() => setFontSize("base")}
               aria-label="Set reading text size to standard"
               title="Standard Text Size"
@@ -288,20 +290,22 @@ export default function ArticleView() {
               A
             </button>
             <button 
-              className={`px-2.5 py-1 rounded font-bold transition-all ${fontSize === "lg" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"} flex items-center gap-0.5`}
+              type="button"
+              className={`px-2.5 py-1 rounded font-bold transition-all cursor-pointer ${fontSize === "lg" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"} flex items-center gap-0.5`}
               onClick={() => setFontSize("lg")}
               aria-label="Set reading text size to medium"
               title="Medium Text Size"
             >
-              A<ZoomIn className="w-3 h-3" />
+              A<ZoomIn className="w-3 h-3" aria-hidden="true" />
             </button>
             <button 
-              className={`px-2.5 py-1 rounded font-bold transition-all ${fontSize === "xl" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"} flex items-center gap-0.5`}
+              type="button"
+              className={`px-2.5 py-1 rounded font-bold transition-all cursor-pointer ${fontSize === "xl" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"} flex items-center gap-0.5`}
               onClick={() => setFontSize("xl")}
               aria-label="Set reading text size to large"
               title="Large Text Size"
             >
-              A<ZoomIn className="w-3.5 h-3.5" />
+              A<ZoomIn className="w-3.5 h-3.5" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -311,18 +315,18 @@ export default function ArticleView() {
             <span className="px-3 py-1 bg-cyan text-ocean-950 text-[10px] font-bold uppercase tracking-widest rounded shadow-sm shadow-cyan/10">
               {article.category}
             </span>
-            <div className="flex items-center gap-6 text-xs text-slate-400 font-medium">
+            <div className="flex items-center gap-6 text-xs text-slate-300 font-medium">
               <span className="flex items-center gap-2 leading-none">
-                <Calendar className="w-3.5 h-3.5 text-cyan" />
+                <Calendar className="w-3.5 h-3.5 text-cyan" aria-hidden="true" />
                 Published: {new Date(article.pubDate).toLocaleDateString()}
               </span>
-              <span className="flex items-center gap-2 leading-none text-slate-400">
-                <Check className="w-3.5 h-3.5 text-emerald-400 stroke-[3]" />
+              <span className="flex items-center gap-2 leading-none text-slate-300">
+                <Check className="w-3.5 h-3.5 text-emerald-400 stroke-[3]" aria-hidden="true" />
                 Compliance Verified: 2026 Stable
               </span>
               {article.readingTime && (
                 <span className="flex items-center gap-2 leading-none">
-                  <Clock className="w-3.5 h-3.5" />
+                  <Clock className="w-3.5 h-3.5 text-slate-300" aria-hidden="true" />
                   {article.readingTime} Min Read
                 </span>
               )}
@@ -359,27 +363,29 @@ export default function ArticleView() {
                     article.author || "Blue Ocean Hub Editorial"
                   )}
                 </div>
-                <div className="text-[10px] text-slate-400 uppercase tracking-widest leading-none font-medium">Finance & Asset Architecture</div>
+                <div className="text-[10px] text-slate-300 uppercase tracking-widest leading-none font-semibold">Finance & Asset Architecture</div>
               </div>
             </div>
             <div className="flex gap-4">
               <button 
+                type="button"
                 onClick={handleShare}
-                className="p-2 text-slate-400 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all"
+                className="p-2 text-slate-300 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all cursor-pointer"
                 title="Copy Link to Clipboard"
-                aria-label="Copy link to clipboard"
+                aria-label="Copy article link to clipboard"
               >
                 <Share2 className="w-4 h-4" aria-hidden="true" />
-                <span className="sr-only">Copy link to clipboard</span>
+                <span className="sr-only">Copy article link to clipboard</span>
               </button>
               <button 
-                className="p-2 text-slate-400 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all" 
+                type="button"
+                className="p-2 text-slate-300 hover:text-cyan bg-ocean-900 hover:bg-ocean-800 border border-ocean-800 rounded-lg transition-all cursor-pointer" 
                 onClick={() => window.print()}
                 title="Print Report"
-                aria-label="Print report"
+                aria-label="Print article report"
               >
                 <Printer className="w-4 h-4" aria-hidden="true" />
-                <span className="sr-only">Print report</span>
+                <span className="sr-only">Print article report</span>
               </button>
             </div>
           </div>
@@ -537,10 +543,11 @@ export default function ArticleView() {
                     />
                     <button 
                       type="submit" 
-                      className="px-6 py-3 bg-cyan text-ocean-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-cyan/90 transition-all flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-cyan/20"
+                      aria-label="Download free compliance PDF blueprint"
+                      className="px-6 py-3 bg-cyan text-ocean-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-cyan/90 transition-all flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-cyan/20 cursor-pointer"
                     >
                       <span>Get Free PDF</span>
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4" aria-hidden="true" />
                     </button>
                   </form>
                 )}

@@ -192,11 +192,13 @@ export default function IndexingConsole() {
           
           <div className="flex items-center gap-2 mb-8 pb-4 border-b border-ocean-900">
             <button 
+              type="button"
               onClick={() => navigate("/")}
-              className="flex items-center gap-2 text-slate-400 hover:text-cyan transition-colors uppercase text-xs font-bold tracking-widest group"
+              aria-label="Back to Home Page"
+              className="flex items-center gap-2 text-slate-300 hover:text-cyan transition-colors uppercase text-xs font-bold tracking-widest group cursor-pointer"
             >
-              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-              Back to Home
+              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
+              <span>Back to Home</span>
             </button>
           </div>
 
@@ -204,15 +206,15 @@ export default function IndexingConsole() {
             <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4 font-display">
               Google Indexing <span className="text-cyan">Ecosystem Console</span>
             </h1>
-            <p className="text-base md:text-lg text-slate-400 max-w-3xl leading-relaxed">
+            <p className="text-base md:text-lg text-slate-300 max-w-3xl leading-relaxed">
               Real-time submission pipeline for search engines. Instantly request indexing for newly published South Asian financial reports to secure high spots in GEO engine bots.
             </p>
           </header>
 
           {loading ? (
             <div className="flex flex-col items-center justify-center py-20 bg-ocean-900 border border-ocean-800 rounded-2xl mb-8">
-              <RefreshCw className="w-8 h-8 text-cyan animate-spin mb-4" />
-              <p className="text-sm font-semibold uppercase tracking-wider text-slate-400">Loading Indexing Pipelines...</p>
+              <RefreshCw className="w-8 h-8 text-cyan animate-spin mb-4" aria-hidden="true" />
+              <p className="text-sm font-semibold uppercase tracking-wider text-slate-300">Loading Indexing Pipelines...</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -228,9 +230,9 @@ export default function IndexingConsole() {
                     <div className="flex items-center gap-4">
                       <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-lg ${status?.isConfigured ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" : "bg-amber-500/10 text-amber-400 border border-amber-500/20"}`}>
                         {status?.isConfigured ? (
-                          <ShieldCheck className="w-6 h-6 stroke-[2]" />
+                          <ShieldCheck className="w-6 h-6 stroke-[2]" aria-hidden="true" />
                         ) : (
-                          <ShieldAlert className="w-6 h-6 stroke-[2]" />
+                          <ShieldAlert className="w-6 h-6 stroke-[2]" aria-hidden="true" />
                         )}
                       </div>
                       <div>
@@ -240,7 +242,7 @@ export default function IndexingConsole() {
                             {status?.isConfigured ? "CONNECTED" : "UNCONFIGURED"}
                           </span>
                         </div>
-                        <p className="text-xs text-slate-400 mt-1">
+                        <p className="text-xs text-slate-300 mt-1">
                           {status?.isConfigured 
                             ? `Authenticated: ${status.clientEmail}` 
                             : "Awaiting Google Service Account keys configuration"}
@@ -249,46 +251,53 @@ export default function IndexingConsole() {
                     </div>
 
                     <button 
+                      type="button"
                       onClick={() => fetchStatus(false)}
-                      className="px-4 py-2 bg-ocean-850 hover:bg-ocean-800 border border-ocean-800 rounded-lg text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2 transition-all self-start md:self-auto shadow-sm"
+                      aria-label="Re-check Google API pipeline status"
+                      className="px-4 py-2 bg-ocean-850 hover:bg-ocean-800 border border-ocean-800 rounded-lg text-xs font-bold uppercase tracking-wider text-slate-200 flex items-center gap-2 transition-all self-start md:self-auto shadow-sm cursor-pointer"
                     >
-                      <RefreshCw className="w-3.5 h-3.5" />
-                      Re-Check
+                      <RefreshCw className="w-3.5 h-3.5" aria-hidden="true" />
+                      <span>Re-Check</span>
                     </button>
                   </div>
 
                   {/* 2. Interactive Controls (Active only if authenticated) */}
                   {status?.isConfigured ? (
                     <div className="pt-6 space-y-6">
-                      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">Pipeline Controls</h3>
+                      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-300">Pipeline Controls</h3>
                       
                       <div className="flex flex-wrap gap-4">
                         <button 
+                          type="button"
                           onClick={triggerBulkIndexing}
                           disabled={isSubmittingSitemap}
-                          className="px-5 py-3 bg-cyan hover:bg-cyan/90 disabled:opacity-50 text-ocean-950 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-all shadow-md shadow-cyan/10"
+                          aria-label={`Bulk Index Sitemap: ${status.urls.length} URLs`}
+                          className="px-5 py-3 bg-cyan hover:bg-cyan/90 disabled:opacity-50 text-ocean-950 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-all shadow-md shadow-cyan/10 cursor-pointer"
                         >
-                          <Play className="w-4 h-4 text-ocean-950 fill-ocean-950" />
-                          Bulk Index Sitemap ({status.urls.length} URLs)
+                          <Play className="w-4 h-4 text-ocean-950 fill-ocean-950" aria-hidden="true" />
+                          <span>Bulk Index Sitemap ({status.urls.length} URLs)</span>
                         </button>
 
                         <button 
+                          type="button"
                           onClick={triggerSitemapPing}
                           disabled={isSubmittingSitemap}
-                          className="px-5 py-3 bg-ocean-850 hover:bg-ocean-800 disabled:opacity-50 border border-ocean-800 text-slate-300 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-all"
+                          aria-label="Submit Sitemap To Search Console Webmaster endpoint"
+                          className="px-5 py-3 bg-ocean-850 hover:bg-ocean-800 disabled:opacity-50 border border-ocean-800 text-slate-200 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer"
                         >
-                          <Globe className="w-4 h-4 text-cyan" />
-                          Submit Sitemap To Search Console PUT
+                          <Globe className="w-4 h-4 text-cyan" aria-hidden="true" />
+                          <span>Submit Sitemap To Search Console PUT</span>
                         </button>
                       </div>
 
                       {/* Custom input submission */}
                       <form onSubmit={handleSingleSubmit} className="mt-6 pt-6 border-t border-ocean-800/60">
-                        <label className="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Submit Custom Individual URL</label>
+                        <label className="block text-xs font-bold uppercase tracking-widest text-slate-300 mb-2">Submit Custom Individual URL</label>
                         <div className="flex gap-2">
                           <input 
                             type="url" 
                             required
+                            aria-label="URL to submit for indexing"
                             placeholder="e.g. https://blueoceanhub.info/article/pseb-registration" 
                             value={customUrl}
                             onChange={(e) => setCustomUrl(e.target.value)}
@@ -297,10 +306,11 @@ export default function IndexingConsole() {
                           <button 
                             type="submit"
                             disabled={isSubmittingUrl}
-                            className="px-4 bg-ocean-800 hover:bg-ocean-700 disabled:opacity-50 border border-ocean-700 text-cyan rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-2 transition-all"
+                            aria-label="Notify Google Indexing API of this URL"
+                            className="px-4 bg-ocean-800 hover:bg-ocean-700 disabled:opacity-50 border border-ocean-700 text-cyan rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-2 transition-all cursor-pointer"
                           >
-                            <Send className="w-3.5 h-3.5" />
-                            Notify
+                            <Send className="w-3.5 h-3.5" aria-hidden="true" />
+                            <span>Notify</span>
                           </button>
                         </div>
                       </form>
@@ -380,12 +390,14 @@ export default function IndexingConsole() {
                 <div className="p-6 rounded-2xl bg-ocean-900 border border-ocean-800 shadow-xl">
                   <div className="flex justify-between items-center pb-4 border-b border-ocean-800">
                     <div className="flex items-center gap-2">
-                      <Terminal className="w-4 h-4 text-cyan" />
-                      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">Pipeline Terminal Logging</h3>
+                      <Terminal className="w-4 h-4 text-cyan" aria-hidden="true" />
+                      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-300">Pipeline Terminal Logging</h3>
                     </div>
                     <button 
+                      type="button"
                       onClick={clearLogs}
-                      className="text-[10px] text-slate-400 hover:text-cyan font-semibold uppercase tracking-wider transition-colors"
+                      aria-label="Clear telemetry terminal logs"
+                      className="text-[10px] text-slate-300 hover:text-cyan font-semibold uppercase tracking-wider transition-colors cursor-pointer"
                     >
                       Clear Terminal
                     </button>
@@ -430,12 +442,12 @@ export default function IndexingConsole() {
                 <div className="p-6 rounded-2xl bg-ocean-900 border border-ocean-800 shadow-xl h-full flex flex-col">
                   <div className="flex items-center gap-2 pb-4 border-b border-ocean-800">
                     <List className="w-4 h-4 text-cyan" />
-                    <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400">
+                    <h3 className="text-xs font-bold uppercase tracking-widest text-slate-300">
                       Sitemap URL Registry ({status ? status.urls.length : 0})
                     </h3>
                   </div>
 
-                  <p className="text-xs text-slate-400 leading-relaxed mt-3 mb-4">
+                  <p className="text-xs text-slate-300 leading-relaxed mt-3 mb-4">
                     The following URLs represent all active resources mapped directly in your standard dynamically generated sitemap.
                   </p>
 
@@ -451,11 +463,13 @@ export default function IndexingConsole() {
                             {relativeUrl === "" ? "/" : relativeUrl}
                           </span>
                           <button 
+                            type="button"
                             onClick={() => {
                               setCustomUrl(url);
                               addLog("info", `Selected URL: ${url} (Ready for single push notification)`);
                             }}
-                            className="bg-ocean-900 hover:bg-cyan hover:text-ocean-950 text-cyan px-2 py-0.5 rounded transition-all flex items-center gap-0.5 text-[8px]"
+                            aria-label={`Select URL for indexing: ${relativeUrl || '/'}`}
+                            className="bg-ocean-900 hover:bg-cyan hover:text-ocean-950 text-cyan px-2 py-0.5 rounded transition-all flex items-center gap-0.5 text-[8px] cursor-pointer"
                           >
                             SELECT
                           </button>

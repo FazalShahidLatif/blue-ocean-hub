@@ -100,21 +100,25 @@ function HomePage() {
         <div className="container mx-auto px-6 -mt-10 mb-16 flex justify-center relative z-20">
           <div className="inline-flex rounded-full bg-ocean-900 border border-ocean-800 p-1.5 shadow-xl shadow-black/40">
             <button
+              type="button"
               onClick={() => setViewMode("magazine")}
+              aria-label="Switch to Magazine Edition layout view"
               className={`px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer ${
                 viewMode === "magazine"
                   ? "bg-cyan text-ocean-950 font-extrabold shadow-lg shadow-cyan/25"
-                  : "text-slate-400 hover:text-white"
+                  : "text-slate-300 hover:text-white"
               }`}
             >
               Magazine Edition
             </button>
             <button
+              type="button"
               onClick={() => setViewMode("feed")}
+              aria-label="Switch to Chronological Feed layout view"
               className={`px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer ${
                 viewMode === "feed"
                   ? "bg-cyan text-ocean-950 font-extrabold shadow-lg shadow-cyan/25"
-                  : "text-slate-400 hover:text-white"
+                  : "text-slate-300 hover:text-white"
               }`}
             >
               Chronological Feed
@@ -187,11 +191,12 @@ function CategoryPage() {
               <ReactMarkdown 
                 components={{
                   h1: (props) => <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tight" {...props} />,
-                  p: (props) => <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-3xl" {...props} />,
+                  h2: (props) => <h2 className="text-2xl md:text-3xl font-bold text-white mt-10 mb-4 tracking-tight" {...props} />,
+                  p: (props) => <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-3xl" {...props} />,
                   h3: (props) => <h3 className="text-xl font-bold text-cyan mt-12 mb-6 uppercase tracking-widest border-b border-ocean-800 pb-2" {...props} />,
                   ul: (props) => <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12" {...props} />,
                   li: (props) => (
-                    <li className="flex items-start gap-3 text-slate-300">
+                    <li className="flex items-start gap-3 text-slate-200">
                       <span className="text-cyan mt-1.5">•</span>
                       <span>{props.children}</span>
                     </li>
