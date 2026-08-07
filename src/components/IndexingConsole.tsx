@@ -331,14 +331,30 @@ export default function IndexingConsole() {
                           <span className="w-5 h-5 rounded-full bg-ocean-950 border border-cyan/30 text-cyan flex items-center justify-center shrink-0 font-bold">1</span>
                           <div>
                             <strong className="text-slate-300 block mb-0.5">Generate Google Service Account Credentials</strong>
-                            Go to <a href="https://console.cloud.google.com/" target="_blank" rel="noopener noreferrer" className="text-cyan hover:underline inline-flex items-center gap-0.5 font-bold">Google Cloud Console <ExternalLink className="w-3 h-3" /></a>, enable the <strong>Webmaster / Search Console API</strong> and <strong>Indexing API</strong>, create a Service Account, and download its <strong>JSON Credentials Private Key</strong> file.
+                            Go to <a 
+                              href="https://console.cloud.google.com/" 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              aria-label="Open Google Cloud Console in a new tab"
+                              className="text-cyan hover:underline inline-flex items-center gap-0.5 font-bold"
+                            >
+                              Google Cloud Console <ExternalLink className="w-3 h-3" aria-hidden="true" />
+                            </a>, enable the <strong>Webmaster / Search Console API</strong> and <strong>Indexing API</strong>, create a Service Account, and download its <strong>JSON Credentials Private Key</strong> file.
                           </div>
                         </li>
                         <li className="flex gap-3 leading-relaxed">
                           <span className="w-5 h-5 rounded-full bg-ocean-950 border border-cyan/30 text-cyan flex items-center justify-center shrink-0 font-bold">2</span>
                           <div>
                             <strong className="text-slate-300 block mb-0.5">Register as Search Console Owner</strong>
-                            Open your website property on <a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer" className="text-cyan hover:underline inline-flex items-center gap-0.5 font-bold">Google Search Console <ExternalLink className="w-3 h-3" /></a>. Add the Service Account's email address (e.g., <code>your-sc-acct@gcp-project.iam.gserviceaccount.com</code>) under Settings &rarr; Users & Permissions as an <strong>Owner</strong>.
+                            Open your website property on <a 
+                              href="https://search.google.com/search-console" 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              aria-label="Open Google Search Console in a new tab"
+                              className="text-cyan hover:underline inline-flex items-center gap-0.5 font-bold"
+                            >
+                              Google Search Console <ExternalLink className="w-3 h-3" aria-hidden="true" />
+                            </a>. Add the Service Account's email address (e.g., <code>your-sc-acct@gcp-project.iam.gserviceaccount.com</code>) under Settings &rarr; Users & Permissions as an <strong>Owner</strong>.
                           </div>
                         </li>
                         <li className="flex gap-3 leading-relaxed">

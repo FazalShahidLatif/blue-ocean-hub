@@ -38,9 +38,13 @@ export default function Newsletter() {
                     className="flex-grow px-6 py-4 rounded-xl bg-ocean-950 border border-ocean-800 focus:border-cyan outline-none text-white transition-colors"
                     required
                   />
-                  <button className="btn-primary flex items-center justify-center gap-2 whitespace-nowrap">
-                    Get Early Access
-                    <Send className="w-4 h-4" />
+                  <button 
+                    type="submit" 
+                    aria-label="Subscribe to weekly intelligence reports"
+                    className="btn-primary flex items-center justify-center gap-2 whitespace-nowrap"
+                  >
+                    <span>Get Early Access</span>
+                    <Send className="w-4 h-4" aria-hidden="true" />
                   </button>
                 </form>
                 

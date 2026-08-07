@@ -32,16 +32,32 @@ export default function CookieBanner() {
               We use cookies to analyze traffic and optimize your strategic reading experience. By continuing, you agree to our <button onClick={() => window.dispatchEvent(new CustomEvent('navigate', {detail: 'cookie-policy'}))} className="text-cyan underline">Cookie Policy</button>.
             </p>
           </div>
-          <button onClick={() => setIsVisible(false)} className="text-slate-400 hover:text-white transition-colors p-1" aria-label="Dismiss cookie notice">
+          <button 
+            type="button"
+            onClick={() => setIsVisible(false)} 
+            className="text-slate-400 hover:text-white transition-colors p-1" 
+            aria-label="Dismiss cookie notice"
+            title="Dismiss cookie notice"
+          >
             <X className="w-4 h-4" aria-hidden="true" />
             <span className="sr-only">Dismiss cookie notice</span>
           </button>
         </div>
         <div className="flex gap-3">
-          <button onClick={accept} className="btn-primary flex-grow !py-2 text-[10px] uppercase tracking-[0.2em] font-bold">
+          <button 
+            type="button"
+            onClick={accept} 
+            aria-label="Accept all cookies"
+            className="btn-primary flex-grow !py-2 text-[10px] uppercase tracking-[0.2em] font-bold"
+          >
             Accept All
           </button>
-          <button onClick={() => setIsVisible(false)} className="btn-outline flex-grow !py-2 text-[10px] uppercase tracking-[0.2em] font-bold">
+          <button 
+            type="button"
+            onClick={() => setIsVisible(false)} 
+            aria-label="Dismiss cookie settings"
+            className="btn-outline flex-grow !py-2 text-[10px] uppercase tracking-[0.2em] font-bold"
+          >
             Settings
           </button>
         </div>

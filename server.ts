@@ -6,6 +6,7 @@ import { JWT } from "google-auth-library";
 import { ARTICLES } from "./src/data/articles";
 import { LEGAL_PAGES } from "./src/data/legal";
 import { CATEGORIES } from "./src/data/categories";
+import { HOMEPAGE_FAQS, PILLAR_FAQS } from "./src/data/faqs";
 
 function getSEOForUrl(urlPath: string) {
   // strip query params or hashes
@@ -31,23 +32,40 @@ function getSEOForUrl(urlPath: string) {
       },
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "NewsMediaOrganization",
         "name": "Blue Ocean Hub",
         "url": "https://blueoceanhub.info/",
-        "logo": "https://blueoceanhub.info/favicon.svg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://blueoceanhub.info/favicon.svg"
+        },
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "hello@blueoceanhub.info",
           "contactType": "editorial support"
         },
         "sameAs": [
+          "https://twitter.com",
           "https://linkedin.com/company/blue-ocean-hub"
         ],
         "areaServed": {
           "@type": "AdministrativeArea",
           "name": "South Asia"
         },
+        "publishingPrinciples": "https://blueoceanhub.info/page/editorial-policy",
         "description": "South Asia's premier strategic financial magazine and intelligence publication. Delivering elite cashflow allocation and currency hedging blueprints."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": HOMEPAGE_FAQS.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
       }
     ];
     return {
@@ -66,20 +84,30 @@ function getSEOForUrl(urlPath: string) {
     const article = ARTICLES.find(a => a.id === id);
     if (article) {
       const canonical = `https://blueoceanhub.info/article/${article.id}`;
-      const jsonLd = {
+      const articleSection = article.category || "Financial Intelligence";
+      
+      const jsonLdArticle: any = {
         "@context": "https://schema.org",
-        "@type": article.schema || "Article",
+        "@type": article.schema || "NewsArticle",
         "headline": article.title,
         "description": article.metaDescription || article.description,
+        "image": [
+          "https://blueoceanhub.info/favicon.svg"
+        ],
         "datePublished": article.pubDate,
+        "dateModified": article.pubDate,
+        "articleSection": articleSection,
+        "keywords": (article.tags || []).join(", "),
         "author": {
           "@type": "Person",
           "name": article.author || "Blue Ocean Hub Editorial",
-          "url": article.authorLinkedIn || undefined
+          "jobTitle": "Financial Analyst",
+          "url": article.authorLinkedIn || "https://blueoceanhub.info/page/about-us"
         },
         "publisher": {
           "@type": "Organization",
           "name": "Blue Ocean Hub",
+          "url": "https://blueoceanhub.info/",
           "logo": {
             "@type": "ImageObject",
             "url": "https://blueoceanhub.info/favicon.svg"
@@ -88,14 +116,63 @@ function getSEOForUrl(urlPath: string) {
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": canonical
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".executive-summary", ".article-lead"]
         }
       };
+
+      const jsonLdBreadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://blueoceanhub.info/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": articleSection,
+            "item": `https://blueoceanhub.info/${article.category?.toLowerCase().replace(/\s+/g, '-') || 'passive-income'}`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": article.title,
+            "item": canonical
+          }
+        ]
+      };
+
+      const schemas: any[] = [jsonLdArticle, jsonLdBreadcrumb];
+
+      // Add FAQ schema if this article has structured FAQs
+      const articleFaqs = PILLAR_FAQS[article.id];
+      if (articleFaqs && articleFaqs.length > 0) {
+        schemas.push({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": articleFaqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        });
+      }
+
       return {
         title: `${article.title} | Blue Ocean Hub`,
         description: article.metaDescription || article.description,
         url: canonical,
         ogType: "article",
-        jsonLd
+        jsonLd: schemas
       };
     }
   }
@@ -111,7 +188,7 @@ function getSEOForUrl(urlPath: string) {
       if (page.id === "about-us") schemaType = "AboutPage";
       else if (page.id === "contact") schemaType = "ContactPage";
 
-      const jsonLd = {
+      const jsonLdPage = {
         "@context": "https://schema.org",
         "@type": schemaType,
         "headline": page.title,
@@ -134,12 +211,32 @@ function getSEOForUrl(urlPath: string) {
           "@id": canonical
         }
       };
+
+      const jsonLdBreadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://blueoceanhub.info/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": page.title,
+            "item": canonical
+          }
+        ]
+      };
+
       return {
         title: `${page.title} | Blue Ocean Hub`,
         description: page.metaDescription || page.description || "",
         url: canonical,
         ogType: "website",
-        jsonLd
+        jsonLd: [jsonLdPage, jsonLdBreadcrumb]
       };
     }
   }
@@ -152,7 +249,7 @@ function getSEOForUrl(urlPath: string) {
     const categoryArticles = ARTICLES.filter(art => 
       art.category.toLowerCase().replace(/\s+/g, "-") === categoryId
     );
-    const jsonLd = {
+    const jsonLdCollection = {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": `${categoryData.seoTitle} | Blue Ocean Hub`,
@@ -169,12 +266,32 @@ function getSEOForUrl(urlPath: string) {
         }))
       }
     };
+
+    const jsonLdBreadcrumb = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://blueoceanhub.info/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": categoryData.title.split("—")[0].trim(),
+          "item": canonical
+        }
+      ]
+    };
+
     return {
       title: `${categoryData.seoTitle} | Blue Ocean Hub`,
       description: categoryData.seoDescription,
       url: canonical,
       ogType: "website",
-      jsonLd
+      jsonLd: [jsonLdCollection, jsonLdBreadcrumb]
     };
   }
 
@@ -258,6 +375,14 @@ function injectMeta(
     /<meta property="twitter:url" content="[^]*?"\s*\/?>/,
     `<meta property="twitter:url" content="${meta.url}" />`
   );
+
+  // Replace google-site-verification if set in environment
+  if (process.env.GOOGLE_SITE_VERIFICATION) {
+    result = result.replace(
+      /<meta name="google-site-verification" content="[^]*?"\s*\/?>/,
+      `<meta name="google-site-verification" content="${esc(process.env.GOOGLE_SITE_VERIFICATION)}" />`
+    );
+  }
 
   // Inject JSON-LD immediately before </head>
   if (meta.jsonLd) {
@@ -500,14 +625,57 @@ async function startServer() {
     }
   });
 
-  // Dynamic Plain-Text Indexing & Citation Feed (/all.txt & /llms.txt)
-  const plainTextHandler = (req: express.Request, res: express.Response) => {
+  // Dynamic Standard LLMs.txt Handler (https://llmstxt.org)
+  app.get('/llms.txt', (req, res) => {
+    try {
+      const llmsContent = `# Blue Ocean Hub
+
+> South Asia's premier strategic financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.
+
+Blue Ocean Hub publishes institutional-grade research, financial analysis, regulatory breakdowns, and operational blueprints. Our editorial mission focuses on high-yield saving, foreign currency invoicing, and corporate compliance for professionals in emerging markets.
+
+## Core Categories
+
+- [Passive Income](https://blueoceanhub.info/passive-income): Leveraged cashflow strategies, digital niche assets, and physical real estate comparison blueprints.
+- [Investing](https://blueoceanhub.info/investing): Strategic local equity selection on the Pakistan Stock Exchange (PSX), Shariah-compliant mutual funds, Voluntary Pension Schemes, and gold hedging.
+- [Freelancing](https://blueoceanhub.info/freelancing): Technical agency scaling, international client billing structures, contractor equity option pools, and B2B enterprise client acquisition.
+- [Saving Money](https://blueoceanhub.info/saving-money): FBR tax filing guides, employee provident fund structures, export tax rebates, and wealth statement declarations.
+- [Dollar Earning](https://blueoceanhub.info/dollar-earning): Onshore US LLC banking setup, foreign entities, Stripe alternatives, and GCC cross-border SaaS monetization.
+
+## Key Publications & Policy Resources
+
+- [About Our Mission](https://blueoceanhub.info/page/about-us): Institutional financial research methodology and editorial advisory board standards.
+- [Contact Editorial Desk](https://blueoceanhub.info/page/contact): Inquiries for licensing, syndicated research, and editorial contributions.
+- [Editorial Integrity Policy](https://blueoceanhub.info/page/editorial-policy): Standards for objective, conflict-free financial journalism and disclosure practices.
+- [GDPR Compliance Framework](https://blueoceanhub.info/page/gdpr-compliance): Data protection disclosures, privacy rights, and security protocols.
+- [Cookie Intelligence Disclosures](https://blueoceanhub.info/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
+- [Google Indexing Console](https://blueoceanhub.info/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.
+
+## Optional
+
+- [Dynamic Plaintext Feed](https://blueoceanhub.info/all.txt): Full plain-text archive of all published financial intelligence reports.
+- [XML Sitemap](https://blueoceanhub.info/sitemap.xml): Complete search engine sitemap index.
+- [Google News Sitemap](https://blueoceanhub.info/news-sitemap.xml): Dynamic 48-hour Google News sitemap.
+- [RSS News Feed](https://blueoceanhub.info/feed.xml): Real-time syndicated RSS 2.0 XML feed.
+`;
+
+      res.setHeader("Content-Type", "text/plain; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate");
+      res.status(200).send(llmsContent);
+    } catch (e) {
+      console.error("Failed to generate llms.txt:", e);
+      res.status(500).send("Internal Server Error");
+    }
+  });
+
+  // Dynamic Full Plain-Text Archive (/all.txt & /llms-full.txt)
+  const fullTextHandler = (req: express.Request, res: express.Response) => {
     try {
       const todayStr = new Date().toISOString().split("T")[0];
       const published = ARTICLES.filter(a => a.pubDate <= todayStr)
         .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
 
-      let textContent = `# Blue Ocean Hub: Strategic Financial Intelligence\n`;
+      let textContent = `# Blue Ocean Hub: Full Plaintext Financial Archive\n`;
       textContent += `> South Asia's premier financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.\n\n`;
       textContent += `Published Indexable Resources as of ${todayStr} (${published.length} Live Articles):\n\n`;
       
@@ -530,13 +698,13 @@ async function startServer() {
       res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate");
       res.status(200).send(textContent);
     } catch (e) {
-      console.error("Failed to generate all.txt / llms.txt:", e);
+      console.error("Failed to generate all.txt:", e);
       res.status(500).send("Internal Server Error");
     }
   };
 
-  app.get('/all.txt', plainTextHandler);
-  app.get('/llms.txt', plainTextHandler);
+  app.get('/all.txt', fullTextHandler);
+  app.get('/llms-full.txt', fullTextHandler);
 
   // Google Indexing & Search Console Integration API
   function getGoogleAuthClient() {

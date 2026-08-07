@@ -1,0 +1,23 @@
+# Blue Ocean Hub: Full Plaintext Financial Archive
+
+> South Asia's premier financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.
+
+## Core Categories
+
+- [Passive Income](https://blueoceanhub.info/passive-income) - High-yield cashflow, real estate REITs, and digital assets
+- [Investing](https://blueoceanhub.info/investing) - PSX equities, mutual funds, Sukuk bonds, and commodities
+- [Freelancing](https://blueoceanhub.info/freelancing) - Technical agency scaling, enterprise client acquisition, and USD contracts
+- [Saving Money](https://blueoceanhub.info/saving-money) - FBR tax deductions, wealth statements, and provident fund optimization
+- [Dollar Earning](https://blueoceanhub.info/dollar-earning) - Onshore business structures, global payroll, and foreign remittance channels
+
+## Legal & Compliance Policies
+
+- [About Us](https://blueoceanhub.info/page/about-us)
+- [Contact Editorial Desk](https://blueoceanhub.info/page/contact)
+- [Editorial Policy](https://blueoceanhub.info/page/editorial-policy)
+- [GDPR Compliance](https://blueoceanhub.info/page/gdpr-compliance)
+- [Cookie Policy](https://blueoceanhub.info/page/cookie-policy)
+- [Terms of Service](https://blueoceanhub.info/page/terms-of-service)
+- [Privacy Policy](https://blueoceanhub.info/page/privacy-policy)
+- [System Status](https://blueoceanhub.info/page/system-status)
+- [Advertise With Us](https://blueoceanhub.info/page/advertise)
