@@ -156,6 +156,7 @@ export default function Toolkit() {
 
               <Link 
                 to="/article/pseb-registration-tax-filer-guide-2026" 
+                aria-label="Read PSEB 2026 Registration and 0.25% Tax Exemption Guide"
                 className="w-full py-3 bg-cyan text-ocean-950 font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-cyan/90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan/20"
               >
                 <span>Read PSEB 2026 Registration Guide</span>
@@ -179,6 +180,7 @@ export default function Toolkit() {
               {tool.link ? (
                 <Link 
                   to={tool.link}
+                  aria-label={`Open ${tool.name}: ${tool.desc}`}
                   className="p-6 rounded-2xl bg-ocean-900 border border-ocean-800 transition-all group cursor-pointer hover:border-cyan/50 hover:bg-ocean-800/50 block h-full"
                 >
                   <div className="w-12 h-12 rounded-xl bg-cyan/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -197,6 +199,7 @@ export default function Toolkit() {
                   href={tool.extLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Visit external portal for ${tool.name}: ${tool.desc}`}
                   className="p-6 rounded-2xl bg-ocean-900 border border-ocean-800 transition-all group cursor-pointer hover:border-cyan/50 hover:bg-ocean-800/50 block h-full text-left"
                 >
                   <div className="w-12 h-12 rounded-xl bg-cyan/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">

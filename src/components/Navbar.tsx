@@ -75,7 +75,11 @@ export default function Navbar() {
         </div>
         
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex flex-col cursor-pointer group">
+          <Link 
+            to="/" 
+            aria-label="Blue Ocean Hub Strategic Financial Intelligence Home"
+            className="flex flex-col cursor-pointer group"
+          >
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded bg-cyan flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg shadow-cyan/20">
                 <Compass className="text-ocean-950 w-5 h-5" />

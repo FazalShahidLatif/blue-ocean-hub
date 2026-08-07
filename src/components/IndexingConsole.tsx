@@ -453,28 +453,31 @@ export default function IndexingConsole() {
                       href="/sitemap.xml" 
                       target="_blank" 
                       rel="noopener noreferrer" 
+                      aria-label="View Live XML Sitemap in a new tab"
                       className="text-cyan hover:underline hover:text-cyan/80 flex items-center gap-1.5"
                     >
                       View Live Sitemap
-                      <ExternalLink className="w-3 h-3" />
+                      <ExternalLink className="w-3 h-3" aria-hidden="true" />
                     </a>
                     <a 
                       href="/all.txt" 
                       target="_blank" 
                       rel="noopener noreferrer" 
+                      aria-label="View all.txt Feed in a new tab"
                       className="text-emerald-400 hover:underline hover:text-emerald-300 flex items-center gap-1.5"
                     >
                       View all.txt Feed
-                      <ExternalLink className="w-3 h-3" />
+                      <ExternalLink className="w-3 h-3" aria-hidden="true" />
                     </a>
                     <a 
                       href="/llms.txt" 
                       target="_blank" 
                       rel="noopener noreferrer" 
+                      aria-label="View llms.txt in a new tab"
                       className="text-amber-400 hover:underline hover:text-amber-300 flex items-center gap-1.5"
                     >
                       View llms.txt
-                      <ExternalLink className="w-3 h-3" />
+                      <ExternalLink className="w-3 h-3" aria-hidden="true" />
                     </a>
                   </div>
 

@@ -88,6 +88,7 @@ export default function MagazineGrid() {
                   
                   <Link 
                     to={`/${category.id}`}
+                    aria-label={`View entire desk for ${category.title.split("—")[0].trim()}`}
                     className="inline-flex items-center gap-2 text-cyan font-bold uppercase tracking-widest text-xs hover:text-white transition-colors group"
                   >
                     View Entire Desk
@@ -102,6 +103,7 @@ export default function MagazineGrid() {
                   <div className="lg:col-span-6 flex flex-col">
                     <Link 
                       to={`/${latestPost.postType || 'article'}/${latestPost.id}`}
+                      aria-label={`Read full insight: ${latestPost.title}`}
                       className="glass-card flex-grow flex flex-col justify-between group p-8 lg:p-10 border border-white/5 hover:border-cyan/30 hover:shadow-2xl hover:shadow-cyan/5 transition-all duration-300 relative overflow-hidden"
                     >
                       {/* Ambient background glow inside cards */}
@@ -147,6 +149,7 @@ export default function MagazineGrid() {
                   <div className="lg:col-span-3 flex flex-col">
                     <Link 
                       to={`/${previousPost.postType || 'article'}/${previousPost.id}`}
+                      aria-label={`Read brief: ${previousPost.title}`}
                       className="glass-card flex-grow flex flex-col justify-between group p-6 border border-white/5 hover:border-cyan/30 hover:shadow-2xl hover:shadow-cyan/5 transition-all duration-300 relative overflow-hidden"
                     >
                       <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-slate-500/5 blur-[50px] pointer-events-none"></div>
@@ -190,6 +193,7 @@ export default function MagazineGrid() {
                     {/* Views Choice Card */}
                     <Link 
                       to={`/${viewsChoice.postType || 'article'}/${viewsChoice.id}`}
+                      aria-label={`Read views choice briefing: ${viewsChoice.title}`}
                       className="glass-card flex-grow flex flex-col justify-between group p-6 border border-white/5 hover:border-cyan/20 transition-all duration-300 bg-gradient-to-br from-ocean-900/40 to-ocean-950/60"
                     >
                       <div>
@@ -215,6 +219,7 @@ export default function MagazineGrid() {
                     {/* Editors Choice Card */}
                     <Link 
                       to={`/${editorsChoice.postType || 'article'}/${editorsChoice.id}`}
+                      aria-label={`Read editors choice briefing: ${editorsChoice.title}`}
                       className="glass-card flex-grow flex flex-col justify-between group p-6 border border-white/5 hover:border-cyan/20 transition-all duration-300 bg-gradient-to-br from-ocean-900/40 to-ocean-950/60"
                     >
                       <div>

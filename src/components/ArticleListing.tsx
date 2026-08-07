@@ -36,6 +36,7 @@ export default function ArticleListing({ filterCategory }: { filterCategory?: st
               >
                 <Link 
                   to={`/${article.postType || 'article'}/${article.id}`}
+                  aria-label={`Read intelligence briefing: ${article.title}`}
                   className="glass-card h-full flex flex-col border-opacity-50 hover:border-opacity-100 hover:shadow-2xl hover:shadow-cyan/5 transition-all block group"
                 >
                   <div className="flex items-center gap-4 mb-6">

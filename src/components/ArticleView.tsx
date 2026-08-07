@@ -269,6 +269,7 @@ export default function ArticleView() {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-ocean-900">
           <button 
             onClick={() => navigate(-1)}
+            aria-label="Back to Previous Directory Page"
             className="flex items-center gap-2 text-slate-400 hover:text-cyan transition-colors uppercase text-xs font-bold tracking-widest group"
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
@@ -281,6 +282,7 @@ export default function ArticleView() {
             <button 
               className={`px-2.5 py-1 rounded font-bold transition-all ${fontSize === "base" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"}`}
               onClick={() => setFontSize("base")}
+              aria-label="Set reading text size to standard"
               title="Standard Text Size"
             >
               A
@@ -288,6 +290,7 @@ export default function ArticleView() {
             <button 
               className={`px-2.5 py-1 rounded font-bold transition-all ${fontSize === "lg" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"} flex items-center gap-0.5`}
               onClick={() => setFontSize("lg")}
+              aria-label="Set reading text size to medium"
               title="Medium Text Size"
             >
               A<ZoomIn className="w-3 h-3" />
@@ -295,6 +298,7 @@ export default function ArticleView() {
             <button 
               className={`px-2.5 py-1 rounded font-bold transition-all ${fontSize === "xl" ? "bg-cyan text-ocean-950 shadow" : "hover:text-cyan"} flex items-center gap-0.5`}
               onClick={() => setFontSize("xl")}
+              aria-label="Set reading text size to large"
               title="Large Text Size"
             >
               A<ZoomIn className="w-3.5 h-3.5" />
@@ -341,9 +345,15 @@ export default function ArticleView() {
               <div>
                 <div className="text-sm font-bold text-white leading-none mb-1">
                   {'authorLinkedIn' in article && article.authorLinkedIn ? (
-                    <a href={article.authorLinkedIn} target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors flex items-center gap-1.5">
+                    <a 
+                      href={article.authorLinkedIn} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      aria-label={`View ${article.author}'s LinkedIn Profile`}
+                      className="hover:text-cyan transition-colors flex items-center gap-1.5"
+                    >
                       {article.author}
-                      <ExternalLink className="w-3 h-3 text-cyan" />
+                      <ExternalLink className="w-3 h-3 text-cyan" aria-hidden="true" />
                     </a>
                   ) : (
                     article.author || "Blue Ocean Hub Editorial"
@@ -573,9 +583,10 @@ export default function ArticleView() {
                           href="https://pseb.org.pk/" 
                           target="_blank" 
                           rel="noopener noreferrer" 
+                          aria-label="Visit official Pakistan Software Export Board (PSEB) verification portal"
                           className="inline-flex items-center gap-1 text-cyan hover:underline font-bold"
                         >
-                          pseb.org.pk <ExternalLink className="w-3 h-3" />
+                          pseb.org.pk <ExternalLink className="w-3 h-3" aria-hidden="true" />
                         </a>
                       </td>
                     </tr>
@@ -588,9 +599,10 @@ export default function ArticleView() {
                           href="https://fbr.gov.pk/" 
                           target="_blank" 
                           rel="noopener noreferrer" 
+                          aria-label="Visit official Federal Board of Revenue (FBR) portal"
                           className="inline-flex items-center gap-1 text-cyan hover:underline font-bold"
                         >
-                          fbr.gov.pk <ExternalLink className="w-3 h-3" />
+                          fbr.gov.pk <ExternalLink className="w-3 h-3" aria-hidden="true" />
                         </a>
                       </td>
                     </tr>
@@ -603,9 +615,10 @@ export default function ArticleView() {
                           href="https://www.secp.gov.pk/" 
                           target="_blank" 
                           rel="noopener noreferrer" 
+                          aria-label="Visit official Securities and Exchange Commission of Pakistan (SECP) portal"
                           className="inline-flex items-center gap-1 text-cyan hover:underline font-bold"
                         >
-                          secp.gov.pk <ExternalLink className="w-3 h-3" />
+                          secp.gov.pk <ExternalLink className="w-3 h-3" aria-hidden="true" />
                         </a>
                       </td>
                     </tr>
@@ -618,9 +631,10 @@ export default function ArticleView() {
                           href="https://www.sbp.org.pk/" 
                           target="_blank" 
                           rel="noopener noreferrer" 
+                          aria-label="Visit official State Bank of Pakistan (SBP) portal"
                           className="inline-flex items-center gap-1 text-cyan hover:underline font-bold"
                         >
-                          sbp.org.pk <ExternalLink className="w-3 h-3" />
+                          sbp.org.pk <ExternalLink className="w-3 h-3" aria-hidden="true" />
                         </a>
                       </td>
                     </tr>
@@ -652,6 +666,7 @@ export default function ArticleView() {
               </div>
               <Link 
                 to="/#magazine-hq" 
+                aria-label="Browse all intelligence reports"
                 className="text-cyan text-xs uppercase font-bold tracking-wider hover:underline"
               >
                 Browse All Reports →
@@ -663,6 +678,7 @@ export default function ArticleView() {
                 <Link 
                   key={rel.id} 
                   to={`/article/${rel.id}`}
+                  aria-label={`Read related intelligence briefing: ${rel.title}`}
                   className="p-5 rounded-xl bg-ocean-900 border border-ocean-800 hover:border-cyan/40 transition-all group flex flex-col justify-between"
                 >
                   <div>
