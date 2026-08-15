@@ -1,0 +1,29 @@
+# Blue Ocean Hub
+
+> South Asia's premier strategic financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.
+
+Blue Ocean Hub publishes institutional-grade research, financial analysis, regulatory breakdowns, and operational blueprints. Our editorial mission focuses on high-yield saving, foreign currency invoicing, and corporate compliance for professionals in emerging markets.
+
+## Core Categories
+
+- [Passive Income](https://blueoceanhub.info/passive-income): Leveraged cashflow strategies, digital niche assets, and physical real estate comparison blueprints.
+- [Investing](https://blueoceanhub.info/investing): Strategic local equity selection on the Pakistan Stock Exchange (PSX), Shariah-compliant mutual funds, Voluntary Pension Schemes, and gold hedging.
+- [Freelancing](https://blueoceanhub.info/freelancing): Technical agency scaling, international client billing structures, contractor equity option pools, and B2B enterprise client acquisition.
+- [Saving Money](https://blueoceanhub.info/saving-money): FBR tax filing guides, employee provident fund structures, export tax rebates, and wealth statement declarations.
+- [Dollar Earning](https://blueoceanhub.info/dollar-earning): Onshore US LLC banking setup, foreign entities, Stripe alternatives, and GCC cross-border SaaS monetization.
+
+## Key Publications & Policy Resources
+
+- [About Our Mission](https://blueoceanhub.info/page/about-us): Institutional financial research methodology and editorial advisory board standards.
+- [Contact Editorial Desk](https://blueoceanhub.info/page/contact): Inquiries for licensing, syndicated research, and editorial contributions.
+- [Editorial Integrity Policy](https://blueoceanhub.info/page/editorial-policy): Standards for objective, conflict-free financial journalism and disclosure practices.
+- [GDPR Compliance Framework](https://blueoceanhub.info/page/gdpr-compliance): Data protection disclosures, privacy rights, and security protocols.
+- [Cookie Intelligence Disclosures](https://blueoceanhub.info/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
+- [Google Indexing Console](https://blueoceanhub.info/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.
+
+## Feeds & Archives
+
+- [Dynamic Plaintext Feed](https://blueoceanhub.info/all.txt): Full plain-text archive of all published financial intelligence reports.
+- [XML Sitemap](https://blueoceanhub.info/sitemap.xml): Complete search engine sitemap index.
+- [Google News Sitemap](https://blueoceanhub.info/news-sitemap.xml): Dynamic 48-hour Google News sitemap.
+- [RSS News Feed](https://blueoceanhub.info/feed.xml): Real-time syndicated RSS 2.0 XML feed.
