@@ -6,6 +6,19 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Blue Ocean Hub | South Asian Financial Intelligence</title>
     
+    <!-- Preconnect hints for critical origins (Performance & Network latency optimization) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Google Fonts: Non-blocking asynchronous loading with font-display=swap -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" />
+    </noscript>
+
     <!-- Primary Meta Tags -->
     <meta name="title" content="Blue Ocean Hub | South Asian Financial Intelligence" />
     <meta name="description" content="South Asia's premier financial publication. Strategic insights on passive income, PSX stocks, dollar exports, and corporate asset allocation." />
@@ -17,14 +30,37 @@
     <link rel="alternate" type="application/rss+xml" title="Blue Ocean Hub RSS Feed" href="https://blueoceanhub.info/feed.xml" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="https://blueoceanhub.info/sitemap.xml" />
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VRM3B1Z42"></script>
+    <!-- Google tag (gtag.js) - Defer to prevent render blocking -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-7VRM3B1Z42');
+
+      (function() {
+        var gtmLoaded = false;
+        function loadGTM() {
+          if (gtmLoaded) return;
+          gtmLoaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7VRM3B1Z42';
+          document.head.appendChild(s);
+        }
+
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(function() {
+            setTimeout(loadGTM, 1500);
+          });
+        } else {
+          window.addEventListener('load', function() {
+            setTimeout(loadGTM, 1500);
+          });
+        }
+        ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function(ev) {
+          window.addEventListener(ev, loadGTM, { once: true, passive: true });
+        });
+      })();
     </script>
 
     <!-- Open Graph / Facebook -->

@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import fs from "fs/promises";
+import compression from "compression";
 import { createServer as createViteServer } from "vite";
 import { JWT } from "google-auth-library";
 import { ARTICLES } from "./src/data/articles";
@@ -397,6 +398,8 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
+  // Enable gzip/deflate compression for all requests
+  app.use(compression());
   app.use(express.json());
 
   console.log(`Starting server in ${process.env.NODE_ENV || 'development'} mode`);
@@ -1019,14 +1022,20 @@ Language: English
       }
     });
   } else {
-    // In production, serve static files from /dist
+    // In production, serve static files from /dist with high-performance caching
     const distPath = path.join(process.cwd(), 'dist');
     
-    // Serve static assets with correct headers
+    // Serve static assets with correct headers & immutable caching for hashed bundles
     app.use(express.static(distPath, {
+      maxAge: '1y',
+      immutable: true,
       setHeaders: (res, filePath) => {
-        if (filePath.endsWith('sitemap.xml')) {
-           res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+        if (filePath.endsWith('.html')) {
+          res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
+        } else if (filePath.endsWith('sitemap.xml') || filePath.endsWith('news-sitemap.xml') || filePath.endsWith('robots.txt') || filePath.endsWith('llms.txt') || filePath.endsWith('all.txt')) {
+          res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+        } else if (filePath.match(/\.(js|css|woff2?|svg|png|jpg|jpeg|webp|ico)$/)) {
+          res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
         }
       }
     }));
