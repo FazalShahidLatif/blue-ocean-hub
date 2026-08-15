@@ -123,9 +123,9 @@ export default function MagazineGrid() {
                         </div>
 
                         {/* Title & Description */}
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 group-hover:text-cyan transition-colors leading-[1.25] font-sans tracking-tight">
+                        <h4 className="text-2xl md:text-3xl font-bold text-white mb-6 group-hover:text-cyan transition-colors leading-[1.25] font-sans tracking-tight">
                           {latestPost.title}
-                        </h3>
+                        </h4>
                         
                         <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-8 max-w-2xl font-light">
                           {latestPost.description}
@@ -166,9 +166,9 @@ export default function MagazineGrid() {
                         </div>
 
                         {/* Title & Description */}
-                        <h3 className="text-lg font-bold text-slate-100 mb-4 group-hover:text-cyan transition-colors leading-[1.3] tracking-tight">
+                        <h4 className="text-lg font-bold text-slate-100 mb-4 group-hover:text-cyan transition-colors leading-[1.3] tracking-tight">
                           {previousPost.title}
-                        </h3>
+                        </h4>
                         
                         <p className="text-slate-300 text-xs leading-relaxed mb-6 font-light line-clamp-3">
                           {previousPost.description}
@@ -206,9 +206,9 @@ export default function MagazineGrid() {
                             POPULAR INTEL
                           </span>
                         </div>
-                        <h3 className="text-sm font-bold text-slate-100 group-hover:text-cyan transition-colors leading-[1.3] line-clamp-2">
+                        <h4 className="text-sm font-bold text-slate-100 group-hover:text-cyan transition-colors leading-[1.3] line-clamp-2">
                           {viewsChoice.title}
-                        </h3>
+                        </h4>
                       </div>
                       <div className="pt-3 mt-4 border-t border-ocean-900/50 flex items-center justify-between text-[10px]">
                         <span className="text-slate-400 font-mono uppercase">RETRIEVAL KEY</span>
@@ -232,9 +232,9 @@ export default function MagazineGrid() {
                             RECOMMENDED
                           </span>
                         </div>
-                        <h3 className="text-sm font-bold text-slate-100 group-hover:text-cyan transition-colors leading-[1.3] line-clamp-2">
+                        <h4 className="text-sm font-bold text-slate-100 group-hover:text-cyan transition-colors leading-[1.3] line-clamp-2">
                           {editorsChoice.title}
-                        </h3>
+                        </h4>
                       </div>
                       <div className="pt-3 mt-4 border-t border-ocean-900/50 flex items-center justify-between text-[10px]">
                         <span className="text-slate-400 font-mono uppercase">SECP METRIC</span>

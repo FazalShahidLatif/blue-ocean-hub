@@ -164,9 +164,9 @@ export default function Navbar() {
                       <span className="text-[9px] font-bold uppercase tracking-wider text-cyan mb-1 inline-block">
                         {a.category}
                       </span>
-                      <h3 className="text-sm font-bold text-white group-hover:text-cyan transition-colors leading-snug">
+                      <span className="block text-sm font-bold text-white group-hover:text-cyan transition-colors leading-snug">
                         {a.title}
-                      </h3>
+                      </span>
                       <p className="text-xs text-slate-300 line-clamp-1 mt-1 font-light">
                         {a.description}
                       </p>
