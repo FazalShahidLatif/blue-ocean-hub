@@ -21,7 +21,7 @@ Blue Ocean Hub publishes institutional-grade research, financial analysis, regul
 - [Cookie Intelligence Disclosures](https://blueoceanhub.info/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
 - [Google Indexing Console](https://blueoceanhub.info/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.
 
-## Optional
+## Feeds & Archives
 
 - [Dynamic Plaintext Feed](https://blueoceanhub.info/all.txt): Full plain-text archive of all published financial intelligence reports.
 - [XML Sitemap](https://blueoceanhub.info/sitemap.xml): Complete search engine sitemap index.

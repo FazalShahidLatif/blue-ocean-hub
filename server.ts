@@ -525,36 +525,31 @@ async function startServer() {
   app.get('/feed/:category.xml', rssHandler);
   app.get('/feed/:category', rssHandler);
 
-  // Dynamic Standard XML Sitemap Handler
-  app.get('/sitemap.xml', (req, res) => {
+  // Dynamic Standard XML Sitemap Handler (Supports /sitemap.xml, /sitemap, /sitemap_index.xml, /sitemaps.xml)
+  const sitemapHandler = (req: express.Request, res: express.Response) => {
     try {
       const todayDateStr = new Date().toISOString().split('T')[0];
-      const todayStr = new Date().toISOString().split("T")[0];
-      const published = ARTICLES.filter(a => a.pubDate <= todayStr);
 
-      const categoryUrls = CATEGORIES.map(category => `
-  <url>
+      const categoryUrls = CATEGORIES.map(category => `  <url>
     <loc>https://blueoceanhub.info/${category.id}</loc>
     <lastmod>${todayDateStr}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>`).join("");
+  </url>`).join("\n");
 
-      const legalUrls = LEGAL_PAGES.map(page => `
-  <url>
+      const legalUrls = LEGAL_PAGES.map(page => `  <url>
     <loc>https://blueoceanhub.info/page/${page.id}</loc>
     <lastmod>${page.pubDate || todayDateStr}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>`).join("");
+  </url>`).join("\n");
 
-      const articleUrls = published.map(art => `
-  <url>
+      const articleUrls = ARTICLES.map(art => `  <url>
     <loc>https://blueoceanhub.info/article/${art.id}</loc>
     <lastmod>${art.pubDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>`).join("");
+  </url>`).join("\n");
 
       const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -565,22 +560,31 @@ async function startServer() {
     <changefreq>always</changefreq>
     <priority>1.0</priority>
   </url>
-  ${categoryUrls}
-  ${legalUrls}
-  ${articleUrls}
+${categoryUrls}
+${legalUrls}
+${articleUrls}
 </urlset>`;
 
       res.setHeader("Content-Type", "application/xml; charset=utf-8");
-      res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate");
-      res.status(200).send(sitemapXml);
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+      res.status(200).send(sitemapXml.trim() + "\n");
     } catch (e) {
       console.error("Failed to generate standard sitemap:", e);
       res.status(500).send("Internal Server Error");
     }
-  });
+  };
+
+  app.get('/sitemap.xml', sitemapHandler);
+  app.get('/sitemap', sitemapHandler);
+  app.get('/sitemap_index.xml', sitemapHandler);
+  app.get('/sitemaps.xml', sitemapHandler);
+  app.get('/sitemap-index.xml', sitemapHandler);
+  app.get('/sitemap/', sitemapHandler);
+  app.get('/sitemap.xml/', sitemapHandler);
 
   // Dynamic Google News XML Sitemap Handler (Separate required endpoint)
-  app.get('/news-sitemap.xml', (req, res) => {
+  const newsSitemapHandler = (req: express.Request, res: express.Response) => {
     try {
       const todayStr = new Date().toISOString().split("T")[0];
       const published = ARTICLES.filter(a => a.pubDate <= todayStr)
@@ -597,36 +601,64 @@ async function startServer() {
         newsArticles = published.slice(0, 10);
       }
 
-      const newsUrlsXml = newsArticles.map(art => `
-  <url>
+      const newsUrlsXml = newsArticles.map(art => `  <url>
     <loc>https://blueoceanhub.info/article/${art.id}</loc>
     <news:news>
       <news:publication>
-        <news:name><![CDATA[Blue Ocean Hub]]></news:name>
+        <news:name>Blue Ocean Hub</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>${art.pubDate}T00:00:00Z</news:publication_date>
-      <news:title><![CDATA[${art.title}]]></news:title>
+      <news:title>${cleanXmlText(art.title)}</news:title>
     </news:news>
-  </url>`).join("");
+  </url>`).join("\n");
 
       const newsSitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-  ${newsUrlsXml}
+${newsUrlsXml}
 </urlset>`;
 
       res.setHeader("Content-Type", "application/xml; charset=utf-8");
-      res.setHeader("Cache-Control", "public, max-age=1800, stale-while-revalidate");
-      res.status(200).send(newsSitemapXml);
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      res.setHeader("Cache-Control", "public, max-age=1800, stale-while-revalidate=86400");
+      res.status(200).send(newsSitemapXml.trim() + "\n");
     } catch (e) {
       console.error("Failed to generate Google News sitemap:", e);
       res.status(500).send("Internal Server Error");
     }
-  });
+  };
+
+  app.get('/news-sitemap.xml', newsSitemapHandler);
+  app.get('/news-sitemap', newsSitemapHandler);
+  app.get('/news_sitemap.xml', newsSitemapHandler);
+  app.get('/news-sitemap/', newsSitemapHandler);
+  app.get('/google-news-sitemap.xml', newsSitemapHandler);
+
+  // Dynamic robots.txt Handler
+  const robotsHandler = (req: express.Request, res: express.Response) => {
+    const robotsTxt = `User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+Sitemap: https://blueoceanhub.info/sitemap.xml
+Sitemap: https://blueoceanhub.info/news-sitemap.xml
+`;
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate=86400");
+    res.status(200).send(robotsTxt);
+  };
+
+  app.get('/robots.txt', robotsHandler);
+  app.get('/robots', robotsHandler);
+  app.get('/robots.txt/', robotsHandler);
 
   // Dynamic Standard LLMs.txt Handler (https://llmstxt.org)
-  app.get('/llms.txt', (req, res) => {
+  const llmsHandler = (req: express.Request, res: express.Response) => {
     try {
       const llmsContent = `# Blue Ocean Hub
 
@@ -651,7 +683,7 @@ Blue Ocean Hub publishes institutional-grade research, financial analysis, regul
 - [Cookie Intelligence Disclosures](https://blueoceanhub.info/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
 - [Google Indexing Console](https://blueoceanhub.info/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.
 
-## Optional
+## Feeds & Archives
 
 - [Dynamic Plaintext Feed](https://blueoceanhub.info/all.txt): Full plain-text archive of all published financial intelligence reports.
 - [XML Sitemap](https://blueoceanhub.info/sitemap.xml): Complete search engine sitemap index.
@@ -660,13 +692,19 @@ Blue Ocean Hub publishes institutional-grade research, financial analysis, regul
 `;
 
       res.setHeader("Content-Type", "text/plain; charset=utf-8");
-      res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate");
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate=86400");
       res.status(200).send(llmsContent);
     } catch (e) {
       console.error("Failed to generate llms.txt:", e);
       res.status(500).send("Internal Server Error");
     }
-  });
+  };
+
+  app.get('/llms.txt', llmsHandler);
+  app.get('/llms', llmsHandler);
+  app.get('/llm.txt', llmsHandler);
+  app.get('/.well-known/llms.txt', llmsHandler);
 
   // Dynamic Full Plain-Text Archive (/all.txt & /llms-full.txt)
   const fullTextHandler = (req: express.Request, res: express.Response) => {
@@ -675,9 +713,9 @@ Blue Ocean Hub publishes institutional-grade research, financial analysis, regul
       const published = ARTICLES.filter(a => a.pubDate <= todayStr)
         .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
 
-      let textContent = `# Blue Ocean Hub: Full Plaintext Financial Archive\n`;
+      let textContent = `# Blue Ocean Hub: Full Plaintext Financial Archive\n\n`;
       textContent += `> South Asia's premier financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.\n\n`;
-      textContent += `Published Indexable Resources as of ${todayStr} (${published.length} Live Articles):\n\n`;
+      textContent += `Published Indexable Resources as of ${todayStr} (${published.length} Live Articles, ${ARTICLES.length} Total Pipeline):\n\n`;
       
       textContent += `## Core Categories\n`;
       CATEGORIES.forEach(c => {
@@ -689,13 +727,14 @@ Blue Ocean Hub publishes institutional-grade research, financial analysis, regul
         textContent += `- [${p.title}](https://blueoceanhub.info/page/${p.id})\n`;
       });
 
-      textContent += `\n## Published Financial Intelligence Publications (${published.length} Nodes)\n`;
-      published.forEach(art => {
-        textContent += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Published: ${art.pubDate})\n  Summary: ${art.description}\n`;
+      textContent += `\n## All Financial Intelligence Articles (${ARTICLES.length} Total Nodes)\n`;
+      ARTICLES.forEach(art => {
+        textContent += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Scheduled/PubDate: ${art.pubDate})\n  Summary: ${art.description}\n`;
       });
 
       res.setHeader("Content-Type", "text/plain; charset=utf-8");
-      res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate");
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate=86400");
       res.status(200).send(textContent);
     } catch (e) {
       console.error("Failed to generate all.txt:", e);
@@ -704,7 +743,61 @@ Blue Ocean Hub publishes institutional-grade research, financial analysis, regul
   };
 
   app.get('/all.txt', fullTextHandler);
+  app.get('/all', fullTextHandler);
   app.get('/llms-full.txt', fullTextHandler);
+  app.get('/llms-full', fullTextHandler);
+  app.get('/.well-known/llms-full.txt', fullTextHandler);
+
+  // Dynamic ads.txt Handler
+  const adsHandler = (req: express.Request, res: express.Response) => {
+    const adsTxt = `# Blue Ocean Hub - ads.txt
+# Authorized Digital Sellers
+# Contact: hello@blueoceanhub.info
+`;
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate=86400");
+    res.status(200).send(adsTxt);
+  };
+  app.get('/ads.txt', adsHandler);
+  app.get('/ads', adsHandler);
+
+  // Dynamic security.txt Handler
+  const securityHandler = (req: express.Request, res: express.Response) => {
+    const securityTxt = `Contact: mailto:security@blueoceanhub.info
+Contact: https://blueoceanhub.info/page/contact
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://blueoceanhub.info/.well-known/security.txt
+Policy: https://blueoceanhub.info/page/editorial-policy
+`;
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate=86400");
+    res.status(200).send(securityTxt);
+  };
+  app.get('/security.txt', securityHandler);
+  app.get('/.well-known/security.txt', securityHandler);
+
+  // Dynamic humans.txt Handler
+  const humansHandler = (req: express.Request, res: express.Response) => {
+    const humansTxt = `/* TEAM */
+Publisher: Blue Ocean Hub Editorial Board
+Contact: hello@blueoceanhub.info
+Location: South Asia / Global
+
+/* SITE */
+Standards: HTML5, CSS3, ES6+, TypeScript, React
+Software: Express, Vite, Tailwind CSS
+Language: English
+`;
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate=86400");
+    res.status(200).send(humansTxt);
+  };
+  app.get('/humans.txt', humansHandler);
+  app.get('/humans', humansHandler);
 
   // Google Indexing & Search Console Integration API
   function getGoogleAuthClient() {
