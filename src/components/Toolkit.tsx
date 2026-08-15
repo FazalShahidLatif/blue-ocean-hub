@@ -62,7 +62,7 @@ export default function Toolkit() {
             Proprietary Intelligence Engines
           </span>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white font-display">Strategic Tool Hub</h2>
-          <p className="text-slate-400 max-w-xl mx-auto text-base">
+          <p className="text-slate-300 max-w-xl mx-auto text-base">
             Tactical calculators and intelligence tools designed to give South Asian founders and remote earners an unfair tax & compliance advantage.
           </p>
         </div>
@@ -83,13 +83,13 @@ export default function Toolkit() {
                   2026 PSEB Tax & Remittance Savings Estimator
                 </h3>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-300 text-sm leading-relaxed">
                 Estimate how much tax you save legally by registering with PSEB and filing under FBR Section 154A (0.25% export tax credit) vs default withholding.
               </p>
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-xs uppercase font-bold tracking-wider text-slate-400 mb-2">
+                  <label className="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-2">
                     Monthly USD Inward Remittance ($)
                   </label>
                   <div className="relative">
@@ -105,10 +105,10 @@ export default function Toolkit() {
 
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <label className="text-xs uppercase font-bold tracking-wider text-slate-400">
+                    <label className="text-xs uppercase font-bold tracking-wider text-slate-300">
                       USD / PKR Exchange Rate
                     </label>
-                    <span className="text-xs text-cyan font-mono">1 USD = {exchangeRate} PKR</span>
+                    <span className="text-xs text-cyan font-mono font-semibold">1 USD = {exchangeRate} PKR</span>
                   </div>
                   <input 
                     type="range" 
@@ -126,20 +126,20 @@ export default function Toolkit() {
             {/* Live Calculation Output Column */}
             <div className="lg:col-span-6 bg-ocean-950/80 p-6 md:p-8 rounded-xl border border-ocean-800 space-y-6">
               <div className="flex items-center justify-between border-b border-ocean-800 pb-4">
-                <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Gross Annual Income</span>
+                <span className="text-xs text-slate-300 font-bold uppercase tracking-wider">Gross Annual Income</span>
                 <span className="text-lg font-bold text-white font-mono">
                   PKR {annualPkr.toLocaleString('en-PK')}
-                  <span className="text-xs text-slate-400 font-normal ml-1">(${ (usdIncome * 12).toLocaleString() })</span>
+                  <span className="text-xs text-slate-300 font-normal ml-1">(${ (usdIncome * 12).toLocaleString() })</span>
                 </span>
               </div>
 
               <div className="space-y-3">
                 <div className="flex justify-between items-center text-xs">
-                  <span className="text-slate-400">Standard Non-PSEB Tax Burden (~12.5%):</span>
+                  <span className="text-slate-300">Standard Non-PSEB Tax Burden (~12.5%):</span>
                   <span className="text-red-400 font-mono font-bold">PKR {defaultTaxAnnualPkr.toLocaleString('en-PK')}</span>
                 </div>
                 <div className="flex justify-between items-center text-xs">
-                  <span className="text-slate-400">PSEB Registered Export Tax (0.25%):</span>
+                  <span className="text-slate-300">PSEB Registered Export Tax (0.25%):</span>
                   <span className="text-emerald-400 font-mono font-bold">PKR {psebTaxAnnualPkr.toLocaleString('en-PK')}</span>
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function Toolkit() {
                 <div className="text-2xl md:text-3xl font-extrabold text-white tracking-tight font-display text-cyan">
                   PKR {annualSavingsPkr.toLocaleString('en-PK')}
                 </div>
-                <span className="text-xs text-slate-300 font-semibold block mt-1">
+                <span className="text-xs text-slate-200 font-semibold block mt-1">
                   ≈ ${Math.round(annualSavingsUsd).toLocaleString()} USD kept in your pocket every year!
                 </span>
               </div>
@@ -188,9 +188,9 @@ export default function Toolkit() {
                   </div>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-bold text-white tracking-tight">{tool.name}</h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">{tool.status}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-300">{tool.status}</span>
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed">
+                  <p className="text-sm text-slate-300 leading-relaxed">
                     {tool.desc}
                   </p>
                 </Link>
@@ -207,9 +207,9 @@ export default function Toolkit() {
                   </div>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-bold text-white tracking-tight group-hover:text-cyan transition-colors">{tool.name}</h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">{tool.status}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-300">{tool.status}</span>
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed">
+                  <p className="text-sm text-slate-300 leading-relaxed">
                     {tool.desc}
                   </p>
                 </a>
@@ -220,9 +220,9 @@ export default function Toolkit() {
                   </div>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-bold text-white tracking-tight">{tool.name}</h3>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">{tool.status}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-300">{tool.status}</span>
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed">
+                  <p className="text-sm text-slate-300 leading-relaxed">
                     {tool.desc}
                   </p>
                 </div>

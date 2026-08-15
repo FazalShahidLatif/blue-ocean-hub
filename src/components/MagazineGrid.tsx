@@ -55,7 +55,7 @@ export default function MagazineGrid() {
           <h2 className="text-4xl md:text-6xl font-bold text-white mt-6 mb-6 tracking-tight leading-[1.1]">
             The Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-blue-400">Magazine</span>
           </h2>
-          <p className="text-slate-400 text-lg md:text-xl font-light">
+          <p className="text-slate-300 text-lg md:text-xl font-light">
             Curated market logs, structured into specialized intelligence desks. Designed for high-contrast legibility and deep insight.
           </p>
         </div>

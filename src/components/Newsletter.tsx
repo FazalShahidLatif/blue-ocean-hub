@@ -24,7 +24,7 @@ export default function Newsletter() {
             ) : (
               <>
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">Join the 1% of Strategic Founders</h2>
-                <p className="text-slate-400 text-lg mb-10">
+                <p className="text-slate-200 text-lg mb-10">
                   Get weekly "Blue Ocean" reports delivered to your inbox. No fluff, just untapped gaps and implementation guides.
                 </p>
                 
@@ -41,14 +41,14 @@ export default function Newsletter() {
                   <button 
                     type="submit" 
                     aria-label="Subscribe to weekly intelligence reports"
-                    className="btn-primary flex items-center justify-center gap-2 whitespace-nowrap"
+                    className="btn-primary flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer"
                   >
                     <span>Get Early Access</span>
                     <Send className="w-4 h-4" aria-hidden="true" />
                   </button>
                 </form>
                 
-                <p className="mt-6 text-xs text-slate-400 uppercase tracking-widest">
+                <p className="mt-6 text-xs text-slate-300 uppercase tracking-widest font-semibold">
                   Join 12,542+ subscribers already getting the edge.
                 </p>
               </>

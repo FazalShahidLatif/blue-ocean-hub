@@ -40,7 +40,7 @@ export default function Footer() {
           
           <div>
             <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Insights</h2>
-            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
+            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-300">
               <li><Link to="/passive-income" className="hover:text-cyan transition-colors block">Passive Income</Link></li>
               <li><Link to="/investing" className="hover:text-cyan transition-colors block">Investing</Link></li>
               <li><Link to="/freelancing" className="hover:text-cyan transition-colors block">Freelancing</Link></li>
@@ -50,7 +50,7 @@ export default function Footer() {
 
           <div className="md:col-span-1">
             <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Company</h2>
-            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
+            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-300">
               <li><Link to="/page/about-us" className="hover:text-cyan transition-colors block">About Us</Link></li>
               <li><Link to="/page/contact" className="hover:text-cyan transition-colors block">Contact</Link></li>
               <li><Link to="/page/advertise" className="hover:text-cyan transition-colors block text-cyan">Advertise With Us</Link></li>
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-ocean-800 text-xs text-slate-400 uppercase tracking-widest gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-ocean-800 text-xs text-slate-300 uppercase tracking-widest gap-4">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <p>© 2026 Blue Ocean Hub. All rights reserved.</p>
             <span className="hidden md:block">|</span>
@@ -99,9 +99,10 @@ export default function Footer() {
               Terms
             </Link>
             <button 
+              type="button"
               onClick={() => document.getElementById('newsletter')?.scrollIntoView({ behavior: 'smooth' })} 
               aria-label="Scroll to newsletter subscription form"
-              className="hover:text-white transition-colors uppercase"
+              className="hover:text-white transition-colors uppercase cursor-pointer"
             >
               Newsletter
             </button>

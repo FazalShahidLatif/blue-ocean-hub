@@ -24,7 +24,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-8xl font-bold mb-8 leading-[1.05] tracking-tight">
               Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan">Intelligence</span> for the South Asian Founder
             </h1>
-            <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl mx-auto leading-[1.6]">
+            <p className="text-xl md:text-2xl text-slate-200 mb-12 max-w-2xl mx-auto leading-[1.6]">
               A non-transactional financial publication providing institutional-grade research on income streams, PSX trends, and dollar-earning strategies for **educational purposes only**.
             </p>
             
