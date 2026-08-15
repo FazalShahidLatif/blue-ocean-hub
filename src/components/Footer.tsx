@@ -22,6 +22,7 @@ export default function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Blue Ocean Hub Twitter Profile" 
+                title="Blue Ocean Hub Twitter Profile"
                 className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-300 hover:bg-cyan hover:text-ocean-950 transition-all"
               >
                 <Twitter className="w-5 h-5" aria-hidden="true" />
@@ -30,6 +31,7 @@ export default function Footer() {
               <a 
                 href="mailto:contact@blueoceanhub.info" 
                 aria-label="Send email to Blue Ocean Hub Editorial Desk" 
+                title="Send email to Blue Ocean Hub Editorial Desk"
                 className="w-10 h-10 rounded-full bg-ocean-800 flex items-center justify-center text-slate-300 hover:bg-cyan hover:text-ocean-950 transition-all"
               >
                 <Mail className="w-5 h-5" aria-hidden="true" />
