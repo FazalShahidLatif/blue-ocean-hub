@@ -427,5 +427,66 @@ To lock in your visual real estate or request a custom bespoke package:
 
 Our partnerships team will respond within 1 business day with current open inventory schedules and onboarding details.
 `
+  },
+  {
+    id: "affiliate-disclosure",
+    postType: 'page',
+    title: "Affiliate & Partner Disclosure",
+    description: "Full compliance statement regarding affiliate partnerships, performance marketing, and editorial integrity.",
+    metaDescription: "Blue Ocean Hub affiliate disclosure policy. In compliance with FTC guidelines and international advertising standards, learn how we maintain editorial independence while utilizing partner links.",
+    pubDate: "2026-08-29",
+    author: "Compliance & Editorial Board",
+    category: "Legal",
+    content: `
+# Affiliate Disclosure & Commercial Partnership Policy
+
+Effective Date: August 29, 2026
+
+At **Blue Ocean Hub** (blueoceanhub.info), transparency, institutional integrity, and reader trust are our highest priorities. In accordance with the **Federal Trade Commission (FTC) 16 CFR Part 255 ("Guides Concerning the Use of Endorsements and Testimonials in Advertising")**, the **UK Advertising Standards Authority (ASA)**, and global compliance regulations, this page outlines our affiliate partnerships, commercial relationships, and monetization practices.
+
+---
+
+### 1. The Nature of Affiliate Relationships
+
+To keep our financial intelligence reports, algorithmic calculators, and market datasets free and accessible to our global readership, Blue Ocean Hub participates in affiliate marketing networks and partner programs, including **Travelpayouts (Emerald Travel / emrldtp.cc)**, financial service referral networks, and direct fintech integrations.
+
+When you click on certain links, banners, or comparison widgets on our website and subsequently make a purchase, subscription, or booking (such as eSIM data packages, international flight tickets, hotel reservations, car rentals, flight delay compensation claims, or travel insurance policies), Blue Ocean Hub may receive a small referral commission at **no additional cost to you**. In many instances, our partnership arrangements allow us to provide readers with exclusive discount vouchers, promo codes, and preferred pricing.
+
+---
+
+### 2. Strict Editorial Independence
+
+Our editorial team and market analysts operate with strict independence. Commercial and affiliate relationships do not dictate our research findings, product evaluations, comparison scoring, or strategic conclusions:
+
+- **Unbiased Research**: We only recommend platforms, tools, and services that pass our rigorous editorial criteria for safety, transparency, speed, and real-world value.
+- **Equal Assessment**: If a tool or service does not meet our institutional benchmarks, we will state its drawbacks clearly—regardless of whether an affiliate relationship exists.
+- **No Sponsored Bias**: Advertisers and affiliate partners are strictly prohibited from dictating article headlines, modifying data matrices, or previewing editorial reports prior to publication.
+
+---
+
+### 3. Primary Partner Networks & Services
+
+Our primary commercial and affiliate partners include, but are not limited to:
+- **Connectivity & eSIM Providers**: Saily, Airalo, Yesim, Drimsim.
+- **Travel Logistics & Ground Transport**: Localrent, EconomyBookings, QEEQ, GetTransfer, Intui.travel, Auto Europe, BikesBooking.
+- **Flight Restitution & Passenger Rights**: AirHelp, Compensair.
+- **Accommodation & Experience Passes**: Expedia, Klook, Go City Passes, WeGoTrip.
+- **Nomad Security & Utility**: NordVPN, World Nomads, Ekta Traveling Insurance, Radical Storage, Wise.
+- **Network Clearinghouses**: Travelpayouts / Emerald Travel (\`emrldtp.cc\`, \`tpk.lu\`, \`tp.media\`).
+
+---
+
+### 4. Direct Financial & Investment Disclaimer
+
+Blue Ocean Hub is an **educational and informational publication, not a licensed financial advisory service**. Content published on this website does not constitute personalized investment, tax, legal, or financial advice. All financial commitments carry inherent risk, and readers are strongly encouraged to perform independent due diligence or consult with certified professionals before executing financial transactions.
+
+---
+
+### 5. Inquiries & Contact
+
+If you have questions regarding our affiliate relationships, disclosures, or data privacy practices, please contact our compliance desk:
+- **Email**: [compliance@blueoceanhub.info](mailto:compliance@blueoceanhub.info) or [hello@blueoceanhub.info](mailto:hello@blueoceanhub.info)
+- **Mailing Desk**: Blue Ocean Hub Editorial & Compliance Office
+`
   }
 ];
