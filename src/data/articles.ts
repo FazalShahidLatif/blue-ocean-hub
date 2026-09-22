@@ -12,6 +12,8 @@ import { ARTICLES_SCHEDULED_AUGUST_PART2 } from "./articles_scheduled_august_par
 import { ARTICLES_SCHEDULED_AUGUST_PART3 } from "./articles_scheduled_august_part3";
 import { ARTICLES_SCHEDULED_AUGUST_PART4 } from "./articles_scheduled_august_part4";
 import { ARTICLES_SCHEDULED_SEPTEMBER } from "./articles_scheduled_september";
+import { ARTICLES_SCHEDULED_OCTOBER } from "./articles_scheduled_october";
+import { ARTICLES_SCHEDULED_NOVEMBER } from "./articles_scheduled_november";
 import { ARTICLES_TRAVEL_MONETIZATION } from "./articles_travel_monetization";
 
 
@@ -856,5 +858,7 @@ export const ARTICLES: Article[] = [
   ...ARTICLES_SCHEDULED_AUGUST_PART3,
   ...ARTICLES_SCHEDULED_AUGUST_PART4,
   ...ARTICLES_SCHEDULED_SEPTEMBER,
+  ...ARTICLES_SCHEDULED_OCTOBER,
+  ...ARTICLES_SCHEDULED_NOVEMBER,
   ...ARTICLES_TRAVEL_MONETIZATION
 ];
