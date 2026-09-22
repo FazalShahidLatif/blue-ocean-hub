@@ -77,7 +77,7 @@ export default function MagazineGrid() {
                   <div>
                     <div className="flex items-center gap-3 mb-2">
                       <span className="w-1.5 h-6 bg-cyan rounded-full"></span>
-                      <span className="text-slate-400 text-xs font-mono tracking-widest uppercase">
+                      <span className="text-slate-300 text-xs font-mono tracking-widest uppercase font-semibold">
                         DESK 0{idx + 1}
                       </span>
                     </div>
@@ -116,8 +116,8 @@ export default function MagazineGrid() {
                             <BookOpen className="w-3 h-3" />
                             LATEST INTEL
                           </span>
-                          <span className="text-[10px] text-slate-400 font-mono flex items-center gap-1">
-                            <Clock className="w-3.5 h-3.5 text-slate-400" />
+                          <span className="text-[10px] text-slate-300 font-mono flex items-center gap-1 font-semibold">
+                            <Clock className="w-3.5 h-3.5 text-slate-300" />
                             {latestPost.readingTime} MIN READ
                           </span>
                         </div>
@@ -134,7 +134,7 @@ export default function MagazineGrid() {
 
                       {/* Footer bar */}
                       <div className="pt-6 border-t border-ocean-800/80 flex items-center justify-between">
-                        <span className="text-xs text-slate-400 font-mono tracking-wider font-semibold uppercase">
+                        <span className="text-xs text-slate-300 font-mono tracking-wider font-semibold uppercase">
                           BY {latestPost.author.toUpperCase()}
                         </span>
                         <div className="flex items-center gap-1.5 text-cyan text-xs font-bold uppercase tracking-widest bg-cyan/5 px-3 py-1.5 rounded group-hover:bg-cyan/10 transition-colors">
@@ -160,7 +160,7 @@ export default function MagazineGrid() {
                           <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-slate-800/80 text-slate-300 text-[9px] font-mono uppercase tracking-wider rounded border border-white/5">
                             PREVIOUS BRIEF
                           </span>
-                          <span className="text-[9px] text-slate-400 font-mono">
+                          <span className="text-[9px] text-slate-300 font-mono font-medium">
                             {previousPost.readingTime} MIN
                           </span>
                         </div>
@@ -177,7 +177,7 @@ export default function MagazineGrid() {
 
                       {/* Footer bar */}
                       <div className="pt-4 border-t border-ocean-900 flex items-center justify-between">
-                        <span className="text-[10px] text-slate-400 font-mono">
+                        <span className="text-[10px] text-slate-300 font-mono font-medium">
                           {new Date(previousPost.pubDate).toLocaleDateString(undefined, {month: 'short', day: 'numeric'})}
                         </span>
                         <span className="text-[10px] text-cyan font-bold uppercase tracking-wider">
@@ -202,7 +202,7 @@ export default function MagazineGrid() {
                             <Eye className="w-2.5 h-2.5" />
                             VIEWS CHOICE
                           </span>
-                          <span className="text-[9px] text-slate-400 font-mono">
+                          <span className="text-[9px] text-slate-300 font-mono font-medium">
                             POPULAR INTEL
                           </span>
                         </div>
@@ -211,7 +211,7 @@ export default function MagazineGrid() {
                         </h4>
                       </div>
                       <div className="pt-3 mt-4 border-t border-ocean-900/50 flex items-center justify-between text-[10px]">
-                        <span className="text-slate-400 font-mono uppercase">RETRIEVAL KEY</span>
+                        <span className="text-slate-300 font-mono uppercase font-semibold">RETRIEVAL KEY</span>
                         <span className="text-cyan font-semibold group-hover:underline uppercase tracking-wide">VIEW</span>
                       </div>
                     </Link>
@@ -228,7 +228,7 @@ export default function MagazineGrid() {
                             <Award className="w-2.5 h-2.5" />
                             EDITORS CHOICE
                           </span>
-                          <span className="text-[9px] text-slate-400 font-mono">
+                          <span className="text-[9px] text-slate-300 font-mono font-medium">
                             RECOMMENDED
                           </span>
                         </div>
@@ -237,7 +237,7 @@ export default function MagazineGrid() {
                         </h4>
                       </div>
                       <div className="pt-3 mt-4 border-t border-ocean-900/50 flex items-center justify-between text-[10px]">
-                        <span className="text-slate-400 font-mono uppercase">SECP METRIC</span>
+                        <span className="text-slate-300 font-mono uppercase font-semibold">SECP METRIC</span>
                         <span className="text-cyan font-semibold group-hover:underline uppercase tracking-wide">VIEW</span>
                       </div>
                     </Link>

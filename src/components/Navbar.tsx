@@ -128,12 +128,12 @@ export default function Navbar() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 autoFocus
-                className="w-full bg-transparent text-white font-medium focus:outline-none placeholder:text-slate-400 text-sm"
+                className="w-full bg-transparent text-white font-medium focus:outline-none placeholder:text-slate-300 text-sm"
               />
               <button 
                 onClick={() => setSearchOpen(false)}
                 aria-label="Close search dialog"
-                className="p-1 text-slate-400 hover:text-white transition-colors flex items-center justify-center"
+                className="p-1 text-slate-300 hover:text-white transition-colors flex items-center justify-center cursor-pointer"
               >
                 <X className="w-5 h-5" />
                 <span className="sr-only">Close search dialog</span>
@@ -141,13 +141,13 @@ export default function Navbar() {
             </div>
 
             <div className="p-4 max-h-[60vh] overflow-y-auto space-y-3">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-400 px-2">
+              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-300 px-2 font-semibold">
                 {query.trim() ? `Search Results (${searchResults.length})` : 'Popular Briefings'}
               </div>
 
               {searchResults.length === 0 ? (
-                <div className="text-center py-8 text-slate-400 text-sm">
-                  No matching briefings found for "{query}". Try keywords like <span className="text-cyan">tax</span>, <span className="text-cyan">PSEB</span>, or <span className="text-cyan">PSX</span>.
+                <div className="text-center py-8 text-slate-300 text-sm font-medium">
+                  No matching briefings found for "{query}". Try keywords like <span className="text-cyan font-bold">tax</span>, <span className="text-cyan font-bold">PSEB</span>, or <span className="text-cyan font-bold">PSX</span>.
                 </div>
               ) : (
                 searchResults.map((a) => (
@@ -158,7 +158,7 @@ export default function Navbar() {
                       setQuery("");
                       navigate(`/article/${a.id}`);
                     }}
-                    className="w-full text-left p-3.5 rounded-xl bg-ocean-950/60 border border-ocean-800 hover:border-cyan/40 hover:bg-ocean-800/50 transition-all flex items-start justify-between gap-4 group"
+                    className="w-full text-left p-3.5 rounded-xl bg-ocean-950/60 border border-ocean-800 hover:border-cyan/40 hover:bg-ocean-800/50 transition-all flex items-start justify-between gap-4 group cursor-pointer"
                   >
                     <div>
                       <span className="text-[9px] font-bold uppercase tracking-wider text-cyan mb-1 inline-block">
@@ -171,15 +171,15 @@ export default function Navbar() {
                         {a.description}
                       </p>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-2" />
+                    <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-2" />
                   </button>
                 ))
               )}
             </div>
 
-            <div className="p-3 bg-ocean-950 border-t border-ocean-800 text-[10px] text-slate-400 flex justify-between items-center px-4">
+            <div className="p-3 bg-ocean-950 border-t border-ocean-800 text-[10px] text-slate-300 flex justify-between items-center px-4 font-medium">
               <span>238 Active Financial Intelligence Reports Indexed</span>
-              <span>Press <kbd className="font-mono text-cyan">ESC</kbd> to exit</span>
+              <span>Press <kbd className="font-mono text-cyan font-bold">ESC</kbd> to exit</span>
             </div>
           </div>
         </div>

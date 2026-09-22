@@ -62,7 +62,7 @@ export default function FAQSection({
                     {item.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full bg-ocean-800 flex items-center justify-center border border-ocean-700/50 text-slate-400 group-hover:text-cyan group-hover:border-cyan/30 transition-all shrink-0 ${
+                    className={`w-8 h-8 rounded-full bg-ocean-800 flex items-center justify-center border border-ocean-700/50 text-slate-300 group-hover:text-cyan group-hover:border-cyan/30 transition-all shrink-0 ${
                       isOpen ? "rotate-180 bg-cyan/10 border-cyan/20 text-cyan" : ""
                     }`}
                   >

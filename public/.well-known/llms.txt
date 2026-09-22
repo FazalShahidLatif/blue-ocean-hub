@@ -1,29 +1,44 @@
 # Blue Ocean Hub
 
-> South Asia's premier strategic financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.
+> Strategic financial intelligence, personal wealth allocation, and foreign currency hedging blueprints for South Asian founders, freelancers, and remote professionals.
 
-Blue Ocean Hub publishes institutional-grade research, financial analysis, regulatory breakdowns, and operational blueprints. Our editorial mission focuses on high-yield saving, foreign currency invoicing, and corporate compliance for professionals in emerging markets.
+Blue Ocean Hub is an institutional-grade financial magazine and tactical intelligence publication. We deliver operational frameworks, regulatory guides (FBR, SBP, SECP, PSEB), dividend analyses, cross-border banking playbooks, and passive income systems designed to give operators a decisive financial edge.
 
 ## Core Categories
 
-- [Passive Income](https://blueoceanhub.info/passive-income): Leveraged cashflow strategies, digital niche assets, and physical real estate comparison blueprints.
-- [Investing](https://blueoceanhub.info/investing): Strategic local equity selection on the Pakistan Stock Exchange (PSX), Shariah-compliant mutual funds, Voluntary Pension Schemes, and gold hedging.
-- [Freelancing](https://blueoceanhub.info/freelancing): Technical agency scaling, international client billing structures, contractor equity option pools, and B2B enterprise client acquisition.
-- [Saving Money](https://blueoceanhub.info/saving-money): FBR tax filing guides, employee provident fund structures, export tax rebates, and wealth statement declarations.
-- [Dollar Earning](https://blueoceanhub.info/dollar-earning): Onshore US LLC banking setup, foreign entities, Stripe alternatives, and GCC cross-border SaaS monetization.
+- [Passive Income](/passive-income): Systematic cashflow strategies, digital niche assets, and high-yield instruments.
+- [Investing](/investing): Equity research on the Pakistan Stock Exchange (PSX), mutual funds, Voluntary Pension Schemes (VPS), and gold hedging.
+- [Freelancing](/freelancing): Global agency scaling, international client billing structures, and foreign currency retention.
+- [Saving Money](/saving-money): Corporate treasury management, FBR Section 154A tax exemptions, and inflation-hedging strategies.
+- [Dollar Earning](/dollar-earning): US LLC formation, international banking (Mercury/Wise), and cross-border SaaS monetization.
+
+## Canonical Category URLs
+
+- [Passive Income Hub](https://blueoceanhub.info/passive-income): Full category archive and strategic briefings.
+- [Investing Hub](https://blueoceanhub.info/investing): Equity selection and capital allocation playbooks.
+- [Freelancing Hub](https://blueoceanhub.info/freelancing): Technical agency and export remittance guides.
+- [Saving Money Hub](https://blueoceanhub.info/saving-money): Wealth preservation and tax filing directories.
+- [Dollar Earning Hub](https://blueoceanhub.info/dollar-earning): Global payment infrastructure and foreign entity setup.
 
 ## Key Publications & Policy Resources
 
-- [About Our Mission](https://blueoceanhub.info/page/about-us): Institutional financial research methodology and editorial advisory board standards.
-- [Contact Editorial Desk](https://blueoceanhub.info/page/contact): Inquiries for licensing, syndicated research, and editorial contributions.
-- [Editorial Integrity Policy](https://blueoceanhub.info/page/editorial-policy): Standards for objective, conflict-free financial journalism and disclosure practices.
-- [GDPR Compliance Framework](https://blueoceanhub.info/page/gdpr-compliance): Data protection disclosures, privacy rights, and security protocols.
-- [Cookie Intelligence Disclosures](https://blueoceanhub.info/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
-- [Google Indexing Console](https://blueoceanhub.info/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.
+- [About Blue Ocean Hub](/page/about-us): Editorial methodology, advisory standards, and institutional research principles.
+- [Contact Editorial Desk](/page/contact): Inquiries for licensing, syndicated research, and editorial contributions.
+- [Editorial Integrity Policy](/page/editorial-policy): Standards for objective, conflict-free financial journalism and disclosure practices.
+- [GDPR Compliance Framework](/page/gdpr-compliance): Data protection disclosures, privacy rights, and security protocols.
+- [Cookie Intelligence Disclosures](/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
+- [Terms of Service](/page/terms-of-service): Terms of service, educational disclaimers, and user agreements.
+- [Strategic Tool Hub](/toolkit): Tactical calculators, PSEB tax savings estimators, and travel logistics engines.
 
 ## Feeds & Archives
 
-- [Dynamic Plaintext Feed](https://blueoceanhub.info/all.txt): Full plain-text archive of all published financial intelligence reports.
-- [XML Sitemap](https://blueoceanhub.info/sitemap.xml): Complete search engine sitemap index.
-- [Google News Sitemap](https://blueoceanhub.info/news-sitemap.xml): Dynamic 48-hour Google News sitemap.
-- [RSS News Feed](https://blueoceanhub.info/feed.xml): Real-time syndicated RSS 2.0 XML feed.
+- [Dynamic Plaintext Feed](/all.txt): Full plain-text archive of all published financial intelligence reports.
+- [XML Sitemap](/sitemap.xml): Complete search engine sitemap index.
+- [Google News Sitemap](/news-sitemap.xml): Dynamic 48-hour Google News sitemap.
+- [Syndicated RSS Feed](/feed.xml): Real-time syndicated RSS 2.0 XML feed.
+- [Agentic AI Catalog](/ai-catalog.json): Machine-readable resource discovery schema (ARD spec).
+- [LLMs Full Deep Archive](/llms-full.txt): Comprehensive deep-crawl plaintext index of all published intelligence reports.
+
+## Optional
+
+- [Google Indexing Console](/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.

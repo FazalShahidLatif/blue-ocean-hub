@@ -98,7 +98,7 @@ export default function Toolkit() {
               className={`px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeEngine === "tax" 
                   ? "bg-cyan text-ocean-950 shadow-md shadow-cyan/20" 
-                  : "text-slate-400 hover:text-white"
+                  : "text-slate-300 hover:text-white"
               }`}
             >
               PSEB Tax & Remittance Engine
@@ -109,7 +109,7 @@ export default function Toolkit() {
               className={`px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeEngine === "travel" 
                   ? "bg-cyan text-ocean-950 shadow-md shadow-cyan/20" 
-                  : "text-slate-400 hover:text-white"
+                  : "text-slate-300 hover:text-white"
               }`}
             >
               Global Nomad Travel & Logistics

@@ -665,36 +665,52 @@ Sitemap: https://blueoceanhub.info/news-sitemap.xml
     try {
       const llmsContent = `# Blue Ocean Hub
 
-> South Asia's premier strategic financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.
+> Strategic financial intelligence, personal wealth allocation, and foreign currency hedging blueprints for South Asian founders, freelancers, and remote professionals.
 
-Blue Ocean Hub publishes institutional-grade research, financial analysis, regulatory breakdowns, and operational blueprints. Our editorial mission focuses on high-yield saving, foreign currency invoicing, and corporate compliance for professionals in emerging markets.
+Blue Ocean Hub is an institutional-grade financial magazine and tactical intelligence publication. We deliver operational frameworks, regulatory guides (FBR, SBP, SECP, PSEB), dividend analyses, cross-border banking playbooks, and passive income systems designed to give operators a decisive financial edge.
 
 ## Core Categories
 
-- [Passive Income](https://blueoceanhub.info/passive-income): Leveraged cashflow strategies, digital niche assets, and physical real estate comparison blueprints.
-- [Investing](https://blueoceanhub.info/investing): Strategic local equity selection on the Pakistan Stock Exchange (PSX), Shariah-compliant mutual funds, Voluntary Pension Schemes, and gold hedging.
-- [Freelancing](https://blueoceanhub.info/freelancing): Technical agency scaling, international client billing structures, contractor equity option pools, and B2B enterprise client acquisition.
-- [Saving Money](https://blueoceanhub.info/saving-money): FBR tax filing guides, employee provident fund structures, export tax rebates, and wealth statement declarations.
-- [Dollar Earning](https://blueoceanhub.info/dollar-earning): Onshore US LLC banking setup, foreign entities, Stripe alternatives, and GCC cross-border SaaS monetization.
+- [Passive Income](/passive-income): Systematic cashflow strategies, digital niche assets, and high-yield instruments.
+- [Investing](/investing): Equity research on the Pakistan Stock Exchange (PSX), mutual funds, Voluntary Pension Schemes (VPS), and gold hedging.
+- [Freelancing](/freelancing): Global agency scaling, international client billing structures, and foreign currency retention.
+- [Saving Money](/saving-money): Corporate treasury management, FBR Section 154A tax exemptions, and inflation-hedging strategies.
+- [Dollar Earning](/dollar-earning): US LLC formation, international banking (Mercury/Wise), and cross-border SaaS monetization.
+
+## Canonical Category URLs
+
+- [Passive Income Hub](https://blueoceanhub.info/passive-income): Full category archive and strategic briefings.
+- [Investing Hub](https://blueoceanhub.info/investing): Equity selection and capital allocation playbooks.
+- [Freelancing Hub](https://blueoceanhub.info/freelancing): Technical agency and export remittance guides.
+- [Saving Money Hub](https://blueoceanhub.info/saving-money): Wealth preservation and tax filing directories.
+- [Dollar Earning Hub](https://blueoceanhub.info/dollar-earning): Global payment infrastructure and foreign entity setup.
 
 ## Key Publications & Policy Resources
 
-- [About Our Mission](https://blueoceanhub.info/page/about-us): Institutional financial research methodology and editorial advisory board standards.
-- [Contact Editorial Desk](https://blueoceanhub.info/page/contact): Inquiries for licensing, syndicated research, and editorial contributions.
-- [Editorial Integrity Policy](https://blueoceanhub.info/page/editorial-policy): Standards for objective, conflict-free financial journalism and disclosure practices.
-- [GDPR Compliance Framework](https://blueoceanhub.info/page/gdpr-compliance): Data protection disclosures, privacy rights, and security protocols.
-- [Cookie Intelligence Disclosures](https://blueoceanhub.info/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
-- [Google Indexing Console](https://blueoceanhub.info/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.
+- [About Blue Ocean Hub](/page/about-us): Editorial methodology, advisory standards, and institutional research principles.
+- [Contact Editorial Desk](/page/contact): Inquiries for licensing, syndicated research, and editorial contributions.
+- [Editorial Integrity Policy](/page/editorial-policy): Standards for objective, conflict-free financial journalism and disclosure practices.
+- [GDPR Compliance Framework](/page/gdpr-compliance): Data protection disclosures, privacy rights, and security protocols.
+- [Cookie Intelligence Disclosures](/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
+- [Terms of Service](/page/terms-of-service): Terms of service, educational disclaimers, and user agreements.
+- [Strategic Tool Hub](/toolkit): Tactical calculators, PSEB tax savings estimators, and travel logistics engines.
 
 ## Feeds & Archives
 
-- [Dynamic Plaintext Feed](https://blueoceanhub.info/all.txt): Full plain-text archive of all published financial intelligence reports.
-- [XML Sitemap](https://blueoceanhub.info/sitemap.xml): Complete search engine sitemap index.
-- [Google News Sitemap](https://blueoceanhub.info/news-sitemap.xml): Dynamic 48-hour Google News sitemap.
-- [RSS News Feed](https://blueoceanhub.info/feed.xml): Real-time syndicated RSS 2.0 XML feed.
+- [Dynamic Plaintext Feed](/all.txt): Full plain-text archive of all published financial intelligence reports.
+- [XML Sitemap](/sitemap.xml): Complete search engine sitemap index.
+- [Google News Sitemap](/news-sitemap.xml): Dynamic 48-hour Google News sitemap.
+- [Syndicated RSS Feed](/feed.xml): Real-time syndicated RSS 2.0 XML feed.
+- [Agentic AI Catalog](/ai-catalog.json): Machine-readable resource discovery schema (ARD spec).
+- [LLMs Full Deep Archive](/llms-full.txt): Comprehensive deep-crawl plaintext index of all published intelligence reports.
+
+## Optional
+
+- [Google Indexing Console](/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.
 `;
 
-      res.setHeader("Content-Type", "text/plain; charset=utf-8");
+      const acceptsPlain = req.headers.accept && req.headers.accept.includes("text/plain");
+      res.setHeader("Content-Type", acceptsPlain ? "text/plain; charset=utf-8" : "text/markdown; charset=utf-8");
       res.setHeader("X-Content-Type-Options", "nosniff");
       res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate=86400");
       res.status(200).send(llmsContent);
@@ -708,6 +724,74 @@ Blue Ocean Hub publishes institutional-grade research, financial analysis, regul
   app.get('/llms', llmsHandler);
   app.get('/llm.txt', llmsHandler);
   app.get('/.well-known/llms.txt', llmsHandler);
+
+  // Dynamic ARD ai-catalog.json Handler (https://agenticresourcediscovery.org)
+  const aiCatalogHandler = (req: express.Request, res: express.Response) => {
+    try {
+      const catalog = {
+        "$schema": "https://agenticresourcediscovery.org/schemas/v1/ai-catalog.json",
+        "specVersion": "1.0",
+        "host": {
+          "displayName": "Blue Ocean Hub",
+          "identifier": "did:web:blueoceanhub.info",
+          "url": "https://blueoceanhub.info",
+          "description": "South Asia's premier strategic financial magazine and intelligence publication."
+        },
+        "entries": [
+          {
+            "identifier": "urn:ai:blueoceanhub.info:tools:pseb-tax-estimator",
+            "displayName": "PSEB Tax & Remittance Optimizer",
+            "description": "Interactive calculator and financial model for Pakistani IT exporters, remote workers, and agencies under FBR Section 154A and PSEB tax frameworks.",
+            "type": "application/json",
+            "url": "https://blueoceanhub.info/toolkit",
+            "representativeQueries": [
+              "Calculate PSEB tax savings on IT remittances",
+              "Estimate withholding tax for freelancing exports in Pakistan",
+              "What is the tax rate on foreign currency IT remittances in Pakistan?"
+            ],
+            "tags": ["finance", "tax", "pseb", "pakistan", "freelancing", "calculator"]
+          },
+          {
+            "identifier": "urn:ai:blueoceanhub.info:publications:financial-intel-feed",
+            "displayName": "Blue Ocean Hub Financial Intelligence Feed",
+            "description": "Institutional-grade financial intelligence reports, corporate structuring guides, cross-border banking insights, and high-yield wealth strategies for emerging markets.",
+            "type": "text/markdown",
+            "url": "https://blueoceanhub.info/all.txt",
+            "representativeQueries": [
+              "Read Pakistani equity market and PSX stock analysis",
+              "How to setup US LLC from South Asia for global payments",
+              "Compare digital nomad tax and bank accounts for Asian founders"
+            ],
+            "tags": ["financial-news", "investing", "psx", "llc", "banking", "wealth"]
+          },
+          {
+            "identifier": "urn:ai:blueoceanhub.info:resources:llms-txt",
+            "displayName": "Blue Ocean Hub LLMs Resource Index",
+            "description": "Standardized LLMs.txt index for large language models, autonomous agents, and search crawlers.",
+            "type": "text/markdown",
+            "url": "https://blueoceanhub.info/llms.txt",
+            "representativeQueries": [
+              "Find all financial intelligence articles from Blue Ocean Hub",
+              "Explore Blue Ocean Hub editorial resources"
+            ],
+            "tags": ["llms-txt", "ai-index", "discovery"]
+          }
+        ]
+      };
+
+      res.setHeader("Content-Type", "application/json; charset=utf-8");
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate=86400");
+      res.status(200).json(catalog);
+    } catch (e) {
+      console.error("Failed to serve ai-catalog.json:", e);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  };
+
+  app.get('/ai-catalog.json', aiCatalogHandler);
+  app.get('/.well-known/ai-catalog.json', aiCatalogHandler);
+  app.get('/ai-catalog', aiCatalogHandler);
 
   // Dynamic Full Plain-Text Archive (/all.txt & /llms-full.txt)
   const fullTextHandler = (req: express.Request, res: express.Response) => {
@@ -1032,7 +1116,7 @@ Language: English
       setHeaders: (res, filePath) => {
         if (filePath.endsWith('.html')) {
           res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
-        } else if (filePath.endsWith('sitemap.xml') || filePath.endsWith('news-sitemap.xml') || filePath.endsWith('robots.txt') || filePath.endsWith('llms.txt') || filePath.endsWith('all.txt')) {
+        } else if (filePath.endsWith('sitemap.xml') || filePath.endsWith('news-sitemap.xml') || filePath.endsWith('robots.txt') || filePath.endsWith('llms.txt') || filePath.endsWith('all.txt') || filePath.endsWith('ai-catalog.json')) {
           res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
         } else if (filePath.match(/\.(js|css|woff2?|svg|png|jpg|jpeg|webp|ico)$/)) {
           res.setHeader("Cache-Control", "public, max-age=31536000, immutable");

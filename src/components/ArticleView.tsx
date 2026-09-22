@@ -397,10 +397,10 @@ export default function ArticleView() {
               <Clock className="w-8 h-8 text-cyan animate-pulse" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-3 font-display uppercase tracking-tight">Incoming Intelligence Briefing</h2>
-            <p className="text-slate-400 mb-6 leading-relaxed">
+            <p className="text-slate-300 mb-6 leading-relaxed">
               This premium financial intelligence report is scheduled for release on <span className="text-cyan font-semibold">{new Date(article.pubDate).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>.
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-ocean-800 rounded-full border border-ocean-700 text-slate-400 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-ocean-800 rounded-full border border-ocean-700 text-slate-300 text-xs font-semibold uppercase tracking-wider">
               Status: Scheduled Release
             </div>
           </div>
@@ -435,7 +435,7 @@ export default function ArticleView() {
                   );
                 })}
               </ul>
-              <div className="mt-5 flex items-center justify-between border-t border-ocean-800 pt-3 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+              <div className="mt-5 flex items-center justify-between border-t border-ocean-800 pt-3 text-[10px] text-slate-300 font-bold uppercase tracking-wider">
                 <span>Verification Scope: Federal & SBP manual</span>
                 <span className="text-cyan font-display font-medium tracking-normal">GEO - Search Generative Eligible</span>
               </div>
@@ -551,7 +551,7 @@ export default function ArticleView() {
                     </button>
                   </form>
                 )}
-                <div className="mt-3 text-[10px] text-slate-400 flex items-center gap-2 font-medium">
+                <div className="mt-3 text-[10px] text-slate-300 flex items-center gap-2 font-medium">
                   <Shield className="w-3 h-3 text-cyan" />
                   <span>100% Free. No spam. Join 12,500+ tech founders & remote earners.</span>
                 </div>
@@ -566,14 +566,14 @@ export default function ArticleView() {
                   Generative Index & Trust Reference Map
                 </h3>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed mb-6">
+              <p className="text-xs text-slate-300 leading-relaxed mb-6">
                 This document utilizes legal and operational standards directly matching verification channels on State Bank of Pakistan (SBP), Federal Board of Revenue (FBR), Pakistan Software Export Board (PSEB), and registrar policies.
               </p>
               
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
-                    <tr className="border-b border-ocean-800 text-slate-400 font-bold uppercase pb-2">
+                    <tr className="border-b border-ocean-800 text-slate-300 font-bold uppercase pb-2">
                       <th className="pb-2">Regulating Authority</th>
                       <th className="pb-2">Standard Subject</th>
                       <th className="pb-2">Legal/Regulatory Citation</th>
@@ -667,9 +667,9 @@ export default function ArticleView() {
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-cyan" />
-                <h3 className="text-xl md:text-2xl font-bold text-white font-display">
+                <h2 className="text-xl md:text-2xl font-bold text-white font-display">
                   Related Intelligence Briefings
-                </h3>
+                </h2>
               </div>
               <Link 
                 to="/#magazine-hq" 
@@ -695,11 +695,11 @@ export default function ArticleView() {
                     <h3 className="font-bold text-white text-sm group-hover:text-cyan transition-colors leading-snug mb-3 line-clamp-2">
                       {rel.title}
                     </h3>
-                    <p className="text-xs text-slate-400 line-clamp-2 mb-4 leading-relaxed">
+                    <p className="text-xs text-slate-300 line-clamp-2 mb-4 leading-relaxed">
                       {rel.description}
                     </p>
                   </div>
-                  <div className="flex items-center justify-between text-[10px] text-slate-400 pt-3 border-t border-ocean-800/60">
+                  <div className="flex items-center justify-between text-[10px] text-slate-300 font-medium pt-3 border-t border-ocean-800/60">
                     <span>{new Date(rel.pubDate).toLocaleDateString()}</span>
                     <span className="text-cyan font-semibold group-hover:translate-x-1 transition-transform">Read Brief →</span>
                   </div>
@@ -711,9 +711,9 @@ export default function ArticleView() {
 
         {article.tags && article.tags.length > 0 && (
           <div className="mt-16 pt-12 border-t border-ocean-800 flex flex-wrap gap-2 items-center">
-            <span className="text-xs text-slate-400 font-bold uppercase tracking-wider mr-2">Intelligence Tags:</span>
+            <span className="text-xs text-slate-300 font-bold uppercase tracking-wider mr-2">Intelligence Tags:</span>
             {article.tags.map(tag => (
-              <span key={tag} className="px-3 py-1 bg-ocean-900 border border-ocean-800 text-slate-400 text-xs rounded-full hover:border-cyan/20 hover:text-slate-300 transition-colors">
+              <span key={tag} className="px-3 py-1 bg-ocean-900 border border-ocean-800 text-slate-300 text-xs rounded-full hover:border-cyan/20 hover:text-white transition-colors">
                 #{tag}
               </span>
             ))}

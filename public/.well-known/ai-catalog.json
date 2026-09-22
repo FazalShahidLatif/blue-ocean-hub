@@ -1,0 +1,68 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/schemas/v1/ai-catalog.json",
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Blue Ocean Hub",
+    "identifier": "did:web:blueoceanhub.info",
+    "url": "https://blueoceanhub.info",
+    "description": "South Asia's premier strategic financial magazine and intelligence publication."
+  },
+  "entries": [
+    {
+      "identifier": "urn:ai:blueoceanhub.info:tools:pseb-tax-estimator",
+      "displayName": "PSEB Tax & Remittance Optimizer",
+      "description": "Interactive calculator and financial model for Pakistani IT exporters, remote workers, and agencies under FBR Section 154A and PSEB tax frameworks.",
+      "type": "application/json",
+      "url": "https://blueoceanhub.info/toolkit",
+      "representativeQueries": [
+        "Calculate PSEB tax savings on IT remittances",
+        "Estimate withholding tax for freelancing exports in Pakistan",
+        "What is the tax rate on foreign currency IT remittances in Pakistan?"
+      ],
+      "tags": [
+        "finance",
+        "tax",
+        "pseb",
+        "pakistan",
+        "freelancing",
+        "calculator"
+      ]
+    },
+    {
+      "identifier": "urn:ai:blueoceanhub.info:publications:financial-intel-feed",
+      "displayName": "Blue Ocean Hub Financial Intelligence Feed",
+      "description": "Institutional-grade financial intelligence reports, corporate structuring guides, cross-border banking insights, and high-yield wealth strategies for emerging markets.",
+      "type": "text/markdown",
+      "url": "https://blueoceanhub.info/all.txt",
+      "representativeQueries": [
+        "Read Pakistani equity market and PSX stock analysis",
+        "How to setup US LLC from South Asia for global payments",
+        "Compare digital nomad tax and bank accounts for Asian founders"
+      ],
+      "tags": [
+        "financial-news",
+        "investing",
+        "psx",
+        "llc",
+        "banking",
+        "wealth"
+      ]
+    },
+    {
+      "identifier": "urn:ai:blueoceanhub.info:resources:llms-txt",
+      "displayName": "Blue Ocean Hub LLMs Resource Index",
+      "description": "Standardized LLMs.txt index for large language models, autonomous agents, and search crawlers.",
+      "type": "text/markdown",
+      "url": "https://blueoceanhub.info/llms.txt",
+      "representativeQueries": [
+        "Find all financial intelligence articles from Blue Ocean Hub",
+        "Explore Blue Ocean Hub editorial resources"
+      ],
+      "tags": [
+        "llms-txt",
+        "ai-index",
+        "discovery"
+      ]
+    }
+  ]
+}

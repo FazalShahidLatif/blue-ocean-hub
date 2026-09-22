@@ -17,7 +17,7 @@ export default function Newsletter() {
                   <CheckCircle2 className="w-10 h-10 text-cyan" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold mb-4">Strategic Intel Confirmed</h2>
-                <p className="text-slate-400 text-lg">
+                <p className="text-slate-300 text-lg">
                   Welcome to the Hub. Your first report is being processed.
                 </p>
               </div>
@@ -35,6 +35,7 @@ export default function Newsletter() {
                   <input 
                     type="email" 
                     placeholder="Enter your email" 
+                    aria-label="Email address for newsletter subscription"
                     className="flex-grow px-6 py-4 rounded-xl bg-ocean-950 border border-ocean-800 focus:border-cyan outline-none text-white transition-colors"
                     required
                   />
