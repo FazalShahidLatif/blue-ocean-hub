@@ -23,7 +23,7 @@ export default function CategoryPage() {
     art.category.toLowerCase().replace(/\s+/g, "-") === categoryId
   );
 
-  const jsonLd = {
+  const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": `${categoryData.seoTitle} | Blue Ocean Hub`,
@@ -40,6 +40,25 @@ export default function CategoryPage() {
       }))
     }
   };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://blueoceanhub.info/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": categoryData.title.split("—")[0].trim(),
+        "item": `https://blueoceanhub.info/${categoryData.id}`
+      }
+    ]
+  };
   
   return (
     <>
@@ -47,7 +66,7 @@ export default function CategoryPage() {
         title={`${categoryData.seoTitle} | Blue Ocean Hub`}
         description={categoryData.seoDescription}
         canonicalUrl={`https://blueoceanhub.info/${categoryData.id}`}
-        jsonLd={jsonLd}
+        jsonLd={[collectionJsonLd, breadcrumbJsonLd]}
       />
       <motion.div
         initial={{ opacity: 0 }}

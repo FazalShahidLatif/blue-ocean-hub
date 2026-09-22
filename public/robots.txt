@@ -1,9 +1,68 @@
-User-agent: *
+# ==============================================================================
+# BLUE OCEAN HUB - ROBOTS DIRECTIVES FOR WEB & AI INDEXING
+# ==============================================================================
+
+# Search Engine Indexers & AI Foundation Models
+User-agent: Googlebot
 Allow: /
 
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# AI Crawlers, Large Language Models & AI Overviews
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Global Crawler Rules
+User-agent: *
+Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
 
+# Sitemaps
 Sitemap: https://blueoceanhub.info/sitemap.xml
 Sitemap: https://blueoceanhub.info/news-sitemap.xml
+

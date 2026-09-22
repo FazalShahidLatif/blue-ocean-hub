@@ -38,8 +38,11 @@ function getSEOForUrl(urlPath: string) {
         "url": "https://blueoceanhub.info/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://blueoceanhub.info/favicon.svg"
+          "url": "https://blueoceanhub.info/favicon.svg",
+          "width": 512,
+          "height": 512
         },
+        "image": "https://blueoceanhub.info/og-image.jpg",
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "hello@blueoceanhub.info",
@@ -54,6 +57,9 @@ function getSEOForUrl(urlPath: string) {
           "name": "South Asia"
         },
         "publishingPrinciples": "https://blueoceanhub.info/page/editorial-policy",
+        "correctionsPolicy": "https://blueoceanhub.info/page/editorial-policy",
+        "ethicsPolicy": "https://blueoceanhub.info/page/editorial-policy",
+        "masthead": "https://blueoceanhub.info/page/about-us",
         "description": "South Asia's premier strategic financial magazine and intelligence publication. Delivering elite cashflow allocation and currency hedging blueprints."
       },
       {
@@ -86,6 +92,7 @@ function getSEOForUrl(urlPath: string) {
     if (article) {
       const canonical = `https://blueoceanhub.info/article/${article.id}`;
       const articleSection = article.category || "Financial Intelligence";
+      const categorySlug = article.category?.toLowerCase().replace(/\s+/g, '-') || 'passive-income';
       
       const jsonLdArticle: any = {
         "@context": "https://schema.org",
@@ -93,10 +100,12 @@ function getSEOForUrl(urlPath: string) {
         "headline": article.title,
         "description": article.metaDescription || article.description,
         "image": [
-          "https://blueoceanhub.info/favicon.svg"
+          "https://blueoceanhub.info/og-image.jpg"
         ],
-        "datePublished": article.pubDate,
-        "dateModified": article.pubDate,
+        "datePublished": `${article.pubDate}T08:00:00+05:00`,
+        "dateModified": `${article.pubDate}T08:00:00+05:00`,
+        "inLanguage": "en-US",
+        "isAccessibleForFree": "true",
         "articleSection": articleSection,
         "keywords": (article.tags || []).join(", "),
         "author": {
@@ -106,12 +115,14 @@ function getSEOForUrl(urlPath: string) {
           "url": article.authorLinkedIn || "https://blueoceanhub.info/page/about-us"
         },
         "publisher": {
-          "@type": "Organization",
+          "@type": "NewsMediaOrganization",
           "name": "Blue Ocean Hub",
           "url": "https://blueoceanhub.info/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://blueoceanhub.info/favicon.svg"
+            "url": "https://blueoceanhub.info/favicon.svg",
+            "width": 512,
+            "height": 512
           }
         },
         "mainEntityOfPage": {
@@ -138,7 +149,7 @@ function getSEOForUrl(urlPath: string) {
             "@type": "ListItem",
             "position": 2,
             "name": articleSection,
-            "item": `https://blueoceanhub.info/${article.category?.toLowerCase().replace(/\s+/g, '-') || 'passive-income'}`
+            "item": `https://blueoceanhub.info/${categorySlug}`
           },
           {
             "@type": "ListItem",
@@ -194,18 +205,22 @@ function getSEOForUrl(urlPath: string) {
         "@type": schemaType,
         "headline": page.title,
         "description": page.metaDescription || page.description,
-        "datePublished": page.pubDate,
+        "datePublished": `${page.pubDate || '2026-05-15'}T08:00:00+05:00`,
+        "inLanguage": "en-US",
         "author": {
           "@type": "Person",
           "name": page.author || "Blue Ocean Hub Editorial"
         },
         "publisher": {
-          "@type": "Organization",
+          "@type": "NewsMediaOrganization",
           "name": "Blue Ocean Hub",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://blueoceanhub.info/favicon.svg"
-          }
+            "url": "https://blueoceanhub.info/favicon.svg",
+            "width": 512,
+            "height": 512
+          },
+          "url": "https://blueoceanhub.info/"
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
@@ -242,7 +257,56 @@ function getSEOForUrl(urlPath: string) {
     }
   }
 
-  // 4. Category Pages
+  // 4. Strategic Tool Hub (/toolkit)
+  if (cleanUrl === "/toolkit" || cleanUrl === "/toolkit/") {
+    const canonical = "https://blueoceanhub.info/toolkit";
+    const toolJsonLd = [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Blue Ocean Strategic Tool Hub",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "url": canonical,
+        "description": "Tactical calculation engines: PSEB IT Remittance Tax Savings Estimator and Global Nomad Travel Logistics Optimizer.",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "softwareVersion": "2026.2",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://blueoceanhub.info/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Strategic Tool Hub",
+            "item": canonical
+          }
+        ]
+      }
+    ];
+
+    return {
+      title: "Strategic Tool Hub: PSEB Tax & Nomad Travel Engines | Blue Ocean Hub",
+      description: "Calculate PSEB 0.25% export tax savings, remittance withholding optimization, and international travel logistics arbitrage with interactive models.",
+      url: canonical,
+      ogType: "website",
+      jsonLd: toolJsonLd
+    };
+  }
+
+  // 5. Category Pages
   const categoryId = cleanUrl.replace(/^\//, ''); // e.g. 'passive-income'
   const categoryData = CATEGORIES.find(c => c.id === categoryId);
   if (categoryData) {
@@ -361,20 +425,20 @@ function injectMeta(
 
   // Replace twitter:title
   result = result.replace(
-    /<meta property="twitter:title" content="[^]*?"\s*\/?>/,
-    `<meta property="twitter:title" content="${esc(meta.title)}" />`
+    /<meta (?:property|name)="twitter:title" content="[^]*?"\s*\/?>/,
+    `<meta name="twitter:title" content="${esc(meta.title)}" />`
   );
 
   // Replace twitter:description
   result = result.replace(
-    /<meta property="twitter:description" content="[^]*?"\s*\/?>/,
-    `<meta property="twitter:description" content="${esc(meta.description)}" />`
+    /<meta (?:property|name)="twitter:description" content="[^]*?"\s*\/?>/,
+    `<meta name="twitter:description" content="${esc(meta.description)}" />`
   );
 
   // Replace twitter:url
   result = result.replace(
-    /<meta property="twitter:url" content="[^]*?"\s*\/?>/,
-    `<meta property="twitter:url" content="${meta.url}" />`
+    /<meta (?:property|name)="twitter:url" content="[^]*?"\s*\/?>/,
+    `<meta name="twitter:url" content="${meta.url}" />`
   );
 
   // Replace google-site-verification if set in environment
@@ -385,8 +449,9 @@ function injectMeta(
     );
   }
 
-  // Inject JSON-LD immediately before </head>
+  // Remove baseline static schema from index.html if custom page-level schema is provided
   if (meta.jsonLd) {
+    result = result.replace(/<script type="application\/ld\+json" id="baseline-schema">[\s\S]*?<\/script>/, '');
     const jsonLdStr = `<script type="application/ld+json" id="json-ld-structured-data">${JSON.stringify(meta.jsonLd)}</script>\n</head>`;
     result = result.replace('</head>', jsonLdStr);
   }
@@ -424,9 +489,10 @@ async function startServer() {
 
   // 3. Dynamic XML and RSS Feed Pipeline Custom Implementation
   
-  // Custom XML Escaping/Formatting helper
+  // Custom XML Escaping/Formatting helper (prevents double escaping)
   function cleanXmlText(text: string): string {
     return text
+      .replace(/&amp;/g, "&")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
@@ -547,6 +613,13 @@ async function startServer() {
     <priority>0.5</priority>
   </url>`).join("\n");
 
+      const toolUrls = `  <url>
+    <loc>https://blueoceanhub.info/toolkit</loc>
+    <lastmod>${todayDateStr}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`;
+
       const articleUrls = ARTICLES.map(art => `  <url>
     <loc>https://blueoceanhub.info/article/${art.id}</loc>
     <lastmod>${art.pubDate}</lastmod>
@@ -564,6 +637,7 @@ async function startServer() {
     <priority>1.0</priority>
   </url>
 ${categoryUrls}
+${toolUrls}
 ${legalUrls}
 ${articleUrls}
 </urlset>`;
@@ -640,13 +714,67 @@ ${newsUrlsXml}
 
   // Dynamic robots.txt Handler
   const robotsHandler = (req: express.Request, res: express.Response) => {
-    const robotsTxt = `User-agent: *
+    const robotsTxt = `# Search Engine Indexers & AI Foundation Models
+User-agent: Googlebot
 Allow: /
 
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# AI Crawlers, Large Language Models & AI Overviews
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Global Crawler Rules
+User-agent: *
+Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
 
+# Sitemaps
 Sitemap: https://blueoceanhub.info/sitemap.xml
 Sitemap: https://blueoceanhub.info/news-sitemap.xml
 `;
@@ -1079,7 +1207,7 @@ Language: English
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
-      appType: "spa",
+      appType: "custom",
     });
     app.use(vite.middlewares);
 

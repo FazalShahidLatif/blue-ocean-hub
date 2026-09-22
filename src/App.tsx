@@ -143,6 +143,59 @@ function HomePage() {
   );
 }
 
+function ToolkitPage() {
+  const toolJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Blue Ocean Strategic Tool Hub",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "url": "https://blueoceanhub.info/toolkit",
+      "description": "Tactical calculation engines: PSEB IT Remittance Tax Savings Estimator and Global Nomad Travel Logistics Optimizer.",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "softwareVersion": "2026.2",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://blueoceanhub.info/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Strategic Tool Hub",
+          "item": "https://blueoceanhub.info/toolkit"
+        }
+      ]
+    }
+  ];
+
+  return (
+    <>
+      <SEO 
+        title="Strategic Tool Hub: PSEB Tax & Nomad Travel Engines | Blue Ocean Hub"
+        description="Calculate PSEB 0.25% export tax savings, remittance withholding optimization, and international travel logistics arbitrage with interactive models."
+        canonicalUrl="https://blueoceanhub.info/toolkit"
+        jsonLd={toolJsonLd}
+      />
+      <div className="pt-24 pb-16">
+        <Toolkit />
+      </div>
+    </>
+  );
+}
+
 export default function App() {
   return (
     <Router>
@@ -156,6 +209,7 @@ export default function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/article/:id" element={<ArticleView />} />
                 <Route path="/page/:id" element={<ArticleView />} />
+                <Route path="/toolkit" element={<ToolkitPage />} />
                 <Route path="/passive-income" element={<CategoryPage />} />
                 <Route path="/investing" element={<CategoryPage />} />
                 <Route path="/freelancing" element={<CategoryPage />} />

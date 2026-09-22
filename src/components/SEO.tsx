@@ -7,6 +7,7 @@ interface SEOProps {
   canonicalUrl?: string;
   ogType?: "website" | "article" | "profile" | "book" | "music";
   robots?: string;
+  imageUrl?: string;
   jsonLd?: Record<string, any> | Record<string, any>[];
 }
 
@@ -16,6 +17,7 @@ export default function SEO({
   canonicalUrl,
   ogType = "website",
   robots = "index, follow",
+  imageUrl = "https://blueoceanhub.info/og-image.jpg",
   jsonLd,
 }: SEOProps) {
   const { pathname } = useLocation();
@@ -62,12 +64,15 @@ export default function SEO({
     metaRobots.setAttribute("content", robots);
 
     // 6. Set Open Graph (OG) Tags
-    const ogTags = {
+    const ogTags: Record<string, string> = {
       "og:title": title,
       "og:description": description,
       "og:url": finalCanonicalUrl,
       "og:type": ogType,
-      "og:image": "https://blueoceanhub.info/favicon.svg",
+      "og:image": imageUrl,
+      "og:image:width": "1200",
+      "og:image:height": "630",
+      "og:site_name": "Blue Ocean Hub",
     };
 
     Object.entries(ogTags).forEach(([property, value]) => {
@@ -81,12 +86,12 @@ export default function SEO({
     });
 
     // 7. Set Twitter Cards Tags
-    const twitterTags = {
+    const twitterTags: Record<string, string> = {
       "twitter:title": title,
       "twitter:description": description,
       "twitter:url": finalCanonicalUrl,
       "twitter:card": "summary_large_image",
-      "twitter:image": "https://blueoceanhub.info/favicon.svg",
+      "twitter:image": imageUrl,
     };
 
     Object.entries(twitterTags).forEach(([name, value]) => {

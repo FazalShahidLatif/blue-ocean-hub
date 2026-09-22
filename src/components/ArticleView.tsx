@@ -110,14 +110,22 @@ export default function ArticleView() {
   const wordCount = article.content ? article.content.split(/\s+/).filter(Boolean).length : undefined;
   const keywords = 'tags' in article && Array.isArray(article.tags) ? article.tags.join(", ") : undefined;
   const articleSection = 'category' in article ? article.category : undefined;
+  const categorySlug = 'category' in article && article.category 
+    ? article.category.toLowerCase().replace(/\s+/g, '-') 
+    : 'passive-income';
 
   const jsonLdBase = {
     "@context": "https://schema.org",
     "@type": schemaType,
     "headline": article.title,
     "description": article.metaDescription || article.description,
-    "datePublished": article.pubDate,
-    "dateModified": article.pubDate, // Sync dates perfectly for AI Overview engines
+    "image": [
+      "https://blueoceanhub.info/og-image.jpg"
+    ],
+    "datePublished": `${article.pubDate}T08:00:00+05:00`,
+    "dateModified": `${article.pubDate}T08:00:00+05:00`, // Sync dates perfectly for AI Overview engines
+    "inLanguage": "en-US",
+    "isAccessibleForFree": "true",
     "author": {
       "@type": "Person",
       "name": article.author || "Blue Ocean Hub Editorial Team",
@@ -125,11 +133,13 @@ export default function ArticleView() {
       "url": 'authorLinkedIn' in article && article.authorLinkedIn ? article.authorLinkedIn : "https://linkedin.com/company/blue-ocean-hub"
     },
     "publisher": {
-      "@type": "Organization",
+      "@type": "NewsMediaOrganization",
       "name": "Blue Ocean Hub",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://blueoceanhub.info/favicon.svg"
+        "url": "https://blueoceanhub.info/favicon.svg",
+        "width": 512,
+        "height": 512
       },
       "url": "https://blueoceanhub.info/"
     },
@@ -156,8 +166,8 @@ export default function ArticleView() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": articleSection || "Articles",
-        "item": `https://blueoceanhub.info/#magazine-hq`
+        "name": articleSection || "Passive Income",
+        "item": `https://blueoceanhub.info/${categorySlug}`
       },
       {
         "@type": "ListItem",
