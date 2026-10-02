@@ -16,22 +16,40 @@ function escapeXml(str: string): string {
     .replace(/'/g, "&apos;");
 }
 
-// 1. Generate sitemap.xml (Include ALL 300 articles)
-const categoryUrls = CATEGORIES.map(category => `  <url>
+// 1. Generate sitemap.xml (Include ONLY live published articles and canonical resources)
+const publishedArticles = ARTICLES.filter(a => a.pubDate <= todayDateStr)
+  .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+
+const latestLiveDate = publishedArticles[0]?.pubDate || todayDateStr;
+
+const categoryUrls = CATEGORIES.map(category => {
+  const catArticles = publishedArticles.filter(art =>
+    art.category.toLowerCase().replace(/\s+/g, "-") === category.id
+  );
+  const catLastmod = catArticles[0]?.pubDate || latestLiveDate;
+  return `  <url>
     <loc>https://blueoceanhub.info/${category.id}</loc>
-    <lastmod>${todayDateStr}</lastmod>
+    <lastmod>${catLastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>`).join("\n");
+  </url>`;
+}).join("\n");
+
+const toolUrls = `  <url>
+    <loc>https://blueoceanhub.info/toolkit</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`;
 
 const legalUrls = LEGAL_PAGES.map(page => `  <url>
     <loc>https://blueoceanhub.info/page/${page.id}</loc>
-    <lastmod>${page.pubDate || todayDateStr}</lastmod>
+    <lastmod>${page.pubDate || "2026-08-29"}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>`).join("\n");
 
-const articleUrls = ARTICLES.map(art => `  <url>
+const articleUrls = publishedArticles.map(art => `  <url>
     <loc>https://blueoceanhub.info/article/${art.id}</loc>
     <lastmod>${art.pubDate}</lastmod>
     <changefreq>monthly</changefreq>
@@ -43,17 +61,18 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   <!-- Brand Homepage -->
   <url>
     <loc>https://blueoceanhub.info/</loc>
-    <lastmod>${todayDateStr}</lastmod>
-    <changefreq>always</changefreq>
+    <lastmod>${latestLiveDate}</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 ${categoryUrls}
+${toolUrls}
 ${legalUrls}
 ${articleUrls}
 </urlset>`;
 
 fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemapXml.trim() + "\n", "utf-8");
-console.log("Updated public/sitemap.xml with", ARTICLES.length, "articles.");
+console.log("Updated public/sitemap.xml with", publishedArticles.length, "live articles.");
 
 // 2. Generate news-sitemap.xml
 const published = ARTICLES.filter(a => a.pubDate <= todayDateStr)

@@ -122,8 +122,8 @@ export default function ArticleView() {
     "image": [
       "https://blueoceanhub.info/og-image.jpg"
     ],
-    "datePublished": `${article.pubDate}T08:00:00+05:00`,
-    "dateModified": `${article.pubDate}T08:00:00+05:00`, // Sync dates perfectly for AI Overview engines
+    "datePublished": `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
+    "dateModified": `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`, // Sync dates perfectly for AI Overview engines
     "inLanguage": "en-US",
     "isAccessibleForFree": "true",
     "author": {
@@ -243,6 +243,7 @@ export default function ArticleView() {
         description={article.metaDescription || article.description || ""}
         canonicalUrl={url}
         ogType={isArticle ? "article" : "website"}
+        robots={isFutureScheduled ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"}
         jsonLd={jsonLdSchemas}
       />
 

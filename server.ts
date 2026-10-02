@@ -90,6 +90,8 @@ function getSEOForUrl(urlPath: string) {
     const id = articleMatch[1];
     const article = ARTICLES.find(a => a.id === id);
     if (article) {
+      const todayStr = new Date().toISOString().split("T")[0];
+      const isFutureScheduled = article.pubDate > todayStr;
       const canonical = `https://blueoceanhub.info/article/${article.id}`;
       const articleSection = article.category || "Financial Intelligence";
       const categorySlug = article.category?.toLowerCase().replace(/\s+/g, '-') || 'passive-income';
@@ -102,8 +104,8 @@ function getSEOForUrl(urlPath: string) {
         "image": [
           "https://blueoceanhub.info/og-image.jpg"
         ],
-        "datePublished": `${article.pubDate}T08:00:00+05:00`,
-        "dateModified": `${article.pubDate}T08:00:00+05:00`,
+        "datePublished": `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
+        "dateModified": `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
         "inLanguage": "en-US",
         "isAccessibleForFree": "true",
         "articleSection": articleSection,
@@ -184,6 +186,7 @@ function getSEOForUrl(urlPath: string) {
         description: article.metaDescription || article.description,
         url: canonical,
         ogType: "article",
+        robots: isFutureScheduled ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
         jsonLd: schemas
       };
     }
@@ -311,8 +314,9 @@ function getSEOForUrl(urlPath: string) {
   const categoryData = CATEGORIES.find(c => c.id === categoryId);
   if (categoryData) {
     const canonical = `https://blueoceanhub.info/${categoryData.id}`;
+    const todayStr = new Date().toISOString().split("T")[0];
     const categoryArticles = ARTICLES.filter(art => 
-      art.category.toLowerCase().replace(/\s+/g, "-") === categoryId
+      art.category.toLowerCase().replace(/\s+/g, "-") === categoryId && art.pubDate <= todayStr
     );
     const jsonLdCollection = {
       "@context": "https://schema.org",
@@ -370,6 +374,7 @@ function injectMeta(
     description: string;
     url: string;
     ogType: string;
+    robots?: string;
     jsonLd?: Record<string, any> | Record<string, any>[];
   }
 ): string {
@@ -392,6 +397,22 @@ function injectMeta(
     /<meta name="description" content="[^]*?"\s*\/?>/,
     `<meta name="description" content="${esc(meta.description)}" />`
   );
+
+  // Replace robots directives if custom robots is specified
+  if (meta.robots) {
+    result = result.replace(
+      /<meta name="robots" content="[^]*?"\s*\/?>/,
+      `<meta name="robots" content="${esc(meta.robots)}" />`
+    );
+    result = result.replace(
+      /<meta name="googlebot" content="[^]*?"\s*\/?>/,
+      `<meta name="googlebot" content="${esc(meta.robots)}" />`
+    );
+    result = result.replace(
+      /<meta name="bingbot" content="[^]*?"\s*\/?>/,
+      `<meta name="bingbot" content="${esc(meta.robots)}" />`
+    );
+  }
 
   // Replace <link rel="canonical" ... />
   result = result.replace(
@@ -605,29 +626,45 @@ async function startServer() {
   const sitemapHandler = (req: express.Request, res: express.Response) => {
     try {
       const todayDateStr = new Date().toISOString().split('T')[0];
+      // Only include live published articles (never schedule drafts with future dates)
+      const publishedArticles = ARTICLES.filter(a => a.pubDate <= todayDateStr)
+        .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
 
-      const categoryUrls = CATEGORIES.map(category => `  <url>
+      // Homepage lastmod: latest live article publication date
+      const latestLiveDate = publishedArticles[0]?.pubDate || todayDateStr;
+
+      // Category hubs: lastmod reflects the date of the most recent article in that specific category
+      const categoryUrls = CATEGORIES.map(category => {
+        const catArticles = publishedArticles.filter(art =>
+          art.category.toLowerCase().replace(/\s+/g, "-") === category.id
+        );
+        const catLastmod = catArticles[0]?.pubDate || latestLiveDate;
+        return `  <url>
     <loc>https://blueoceanhub.info/${category.id}</loc>
-    <lastmod>${todayDateStr}</lastmod>
+    <lastmod>${catLastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>`).join("\n");
+  </url>`;
+      }).join("\n");
 
-      const legalUrls = LEGAL_PAGES.map(page => `  <url>
-    <loc>https://blueoceanhub.info/page/${page.id}</loc>
-    <lastmod>${page.pubDate || todayDateStr}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>`).join("\n");
-
+      // Strategic Tool Hub
       const toolUrls = `  <url>
     <loc>https://blueoceanhub.info/toolkit</loc>
-    <lastmod>${todayDateStr}</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>`;
 
-      const articleUrls = ARTICLES.map(art => `  <url>
+      // Legal & Policy pages with their verified publication and audit dates
+      const legalUrls = LEGAL_PAGES.map(page => `  <url>
+    <loc>https://blueoceanhub.info/page/${page.id}</loc>
+    <lastmod>${page.pubDate || "2026-08-29"}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>`).join("\n");
+
+      // Only live published articles with strictly verified non-future lastmod dates
+      const articleUrls = publishedArticles.map(art => `  <url>
     <loc>https://blueoceanhub.info/article/${art.id}</loc>
     <lastmod>${art.pubDate}</lastmod>
     <changefreq>monthly</changefreq>
@@ -639,8 +676,8 @@ async function startServer() {
   <!-- Brand Homepage -->
   <url>
     <loc>https://blueoceanhub.info/</loc>
-    <lastmod>${todayDateStr}</lastmod>
-    <changefreq>always</changefreq>
+    <lastmod>${latestLiveDate}</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 ${categoryUrls}
@@ -1076,6 +1113,7 @@ Language: English
     const urls = [
       "https://blueoceanhub.info/",
       ...CATEGORIES.map(c => `https://blueoceanhub.info/${c.id}`),
+      "https://blueoceanhub.info/toolkit",
       ...LEGAL_PAGES.map(p => `https://blueoceanhub.info/page/${p.id}`),
       ...published.map(a => `https://blueoceanhub.info/article/${a.id}`)
     ];
@@ -1168,6 +1206,7 @@ Language: English
         const urlsToSubmit = [
           "https://blueoceanhub.info/",
           ...CATEGORIES.map(c => `https://blueoceanhub.info/${c.id}`),
+          "https://blueoceanhub.info/toolkit",
           ...LEGAL_PAGES.map(p => `https://blueoceanhub.info/page/${p.id}`),
           ...published.map(a => `https://blueoceanhub.info/article/${a.id}`)
         ];
