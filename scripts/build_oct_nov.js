@@ -1056,7 +1056,34 @@ function generateArticleCode(topics, startDate, daysCount, monthName) {
 
     for (let slot = 0; slot < 2; slot++) {
       const t = topics[topicIdx];
+      const currentIdx = topicIdx;
       topicIdx++;
+
+      // Select 2 contextual peers in the same or adjacent topic domain
+      const peer1 = topics[(currentIdx + 1) % topics.length];
+      const peer2 = topics[(currentIdx + 3) % topics.length];
+
+      let toolLink = {
+        anchor: "Strategic Financial Tool Hub & Computational Models",
+        url: "/toolkit"
+      };
+
+      if (t.category === "Freelancing") {
+        toolLink = {
+          anchor: "2026 PSEB 0.25% Remittance Tax Savings Estimator",
+          url: "/toolkit#pseb-tax-calculator"
+        };
+      } else if (t.category === "Dollar Earning" || t.category === "Saving Money") {
+        toolLink = {
+          anchor: "Global Nomad Travel Logistics & Currency Optimizer",
+          url: "/toolkit#nomad-travel-logistics"
+        };
+      }
+
+      // Ensure agency-lead-generation-linkedin-cold-outreach gets inbound links from freelancing articles
+      const extraLink = (t.category === "Freelancing" && currentIdx % 4 === 0)
+        ? `\n- [LinkedIn B2B Lead Generation for Agencies: Automated Outreach Funnels and $10k Client Closing](/article/agency-lead-generation-linkedin-cold-outreach): High-converting outbound cadences for remote service agencies.`
+        : "";
 
       const content = `
 Developing durable financial systems requires disciplined capital allocation, risk-adjusted forecasting, and regulatory awareness. For professionals, founders, and investors operating in volatile emerging markets, systematic execution creates generational wealth across economic cycles.
@@ -1081,9 +1108,11 @@ Developing durable financial systems requires disciplined capital allocation, ri
 - Optimize statutory deductions, withholding allowances, and tax credits legitimately.
 - Transition from transactional, single-event income toward recurring, scalable cash flow engines.
 
----
+### Strategic Cross-References & Operational Peer Reports
 
-*Explore related strategic reports in our [Investing Pillar](/investing) and our comprehensive [Financial Toolkit](/toolkit).*
+- [${peer1.title}](/article/${peer1.id}): Tactical execution guidelines and market compliance principles.
+- [${peer2.title}](/article/${peer2.id}): Institutional portfolio allocation and risk-hedging frameworks.${extraLink}
+- [${toolLink.anchor}](${toolLink.url}): Interactive computational engines and statutory models for South Asian operators.
 `;
 
       entries.push(`  {

@@ -41,26 +41,69 @@ export default function Footer() {
           </div>
           
           <div>
-            <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Insights</h2>
-            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-300">
+            <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Intelligence Hubs</h2>
+            <ul className="space-y-3.5 text-xs font-semibold tracking-wider text-slate-300">
               <li><Link to="/passive-income" className="hover:text-cyan transition-colors block">Passive Income</Link></li>
-              <li><Link to="/investing" className="hover:text-cyan transition-colors block">Investing</Link></li>
-              <li><Link to="/freelancing" className="hover:text-cyan transition-colors block">Freelancing</Link></li>
-              <li><Link to="/saving-money" className="hover:text-cyan transition-colors block">Saving Money</Link></li>
+              <li><Link to="/investing" className="hover:text-cyan transition-colors block">Investing &amp; PSX</Link></li>
+              <li><Link to="/freelancing" className="hover:text-cyan transition-colors block">Freelance Scaling</Link></li>
+              <li><Link to="/saving-money" className="hover:text-cyan transition-colors block">Tax &amp; Wealth Saving</Link></li>
+              <li><Link to="/dollar-earning" className="hover:text-cyan transition-colors block">Dollar Earning &amp; LLCs</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Tactical Toolkits</h2>
+            <ul className="space-y-3.5 text-xs font-semibold tracking-wider text-slate-300">
+              <li>
+                <Link to="/toolkit" className="text-cyan hover:underline transition-colors block font-bold">
+                  Strategic Tool Hub (All Engines)
+                </Link>
+              </li>
+              <li>
+                <Link to="/toolkit#pseb-tax-calculator" className="hover:text-cyan transition-colors block">
+                  PSEB Tax &amp; Remittance Calculator
+                </Link>
+              </li>
+              <li>
+                <Link to="/toolkit#nomad-travel-logistics" className="hover:text-cyan transition-colors block">
+                  Nomad Travel &amp; Logistics Optimizer
+                </Link>
+              </li>
+              <li>
+                <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors block text-slate-400">
+                  Search Engine XML Sitemap
+                </a>
+              </li>
+              <li>
+                <a href="/news-sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors block text-slate-400">
+                  Google News Sitemap
+                </a>
+              </li>
+              <li>
+                <a href="/llms.txt" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors block text-slate-400">
+                  LLMs.txt Resource Spec
+                </a>
+              </li>
+              <li>
+                <a href="/all.txt" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors block text-slate-400">
+                  Full Plaintext Deep Archive
+                </a>
+              </li>
             </ul>
           </div>
 
           <div className="md:col-span-1">
-            <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Company</h2>
-            <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-300">
-              <li><Link to="/page/about-us" className="hover:text-cyan transition-colors block">About Us</Link></li>
-              <li><Link to="/page/contact" className="hover:text-cyan transition-colors block">Contact</Link></li>
+            <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Editorial &amp; Legal</h2>
+            <ul className="space-y-3.5 text-xs font-semibold tracking-wider text-slate-300">
+              <li><Link to="/page/about-us" className="hover:text-cyan transition-colors block">About Us &amp; Standards</Link></li>
+              <li><Link to="/page/contact" className="hover:text-cyan transition-colors block">Contact Editorial Desk</Link></li>
+              <li><Link to="/page/editorial-policy" className="hover:text-cyan transition-colors block">Editorial Integrity Policy</Link></li>
               <li><Link to="/page/advertise" className="hover:text-cyan transition-colors block text-cyan">Advertise With Us</Link></li>
-              <li><Link to="/page/privacy-policy" className="hover:text-cyan transition-colors block">Privacy Policy</Link></li>
+              <li><Link to="/page/privacy-policy" className="hover:text-cyan transition-colors block">Privacy Disclosures</Link></li>
               <li><Link to="/page/affiliate-disclosure" className="hover:text-cyan transition-colors block text-cyan/90">Affiliate Disclosure</Link></li>
               <li><Link to="/page/gdpr-compliance" className="hover:text-cyan transition-colors block">GDPR Compliance</Link></li>
-              <li><Link to="/page/editorial-policy" className="hover:text-cyan transition-colors block">Editorial Policy</Link></li>
               <li><Link to="/page/cookie-policy" className="hover:text-cyan transition-colors block">Cookie Policy</Link></li>
+              <li><Link to="/page/terms-of-service" className="hover:text-cyan transition-colors block">Terms of Service</Link></li>
             </ul>
           </div>
         </div>

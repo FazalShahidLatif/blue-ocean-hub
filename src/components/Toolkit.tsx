@@ -1,10 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { TrendingUp, Calculator, Globe, Layers, ArrowRight, DollarSign, CheckCircle2, ShieldCheck, Sparkles, Plane, Wifi, ShieldAlert, Car } from "lucide-react";
+import { TrendingUp, Calculator, Globe, Layers, ArrowRight, DollarSign, CheckCircle2, ShieldCheck, Sparkles, Plane, Wifi, ShieldAlert, Car, Hash, Copy, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Toolkit() {
   const [activeEngine, setActiveEngine] = useState<"tax" | "travel">("tax");
+  const [copiedHash, setCopiedHash] = useState<string | null>(null);
+
+  // Deep-link Hash Navigator: allows direct URL linking to specific tool engines
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash === "#nomad-travel-logistics" || hash === "#travel" || hash === "#nomad") {
+        setActiveEngine("travel");
+      } else if (hash === "#pseb-tax-calculator" || hash === "#tax" || hash === "#pseb") {
+        setActiveEngine("tax");
+      }
+    };
+
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
+
+  const copyAnchorUrl = (anchor: string) => {
+    const fullUrl = `https://blueoceanhub.info/toolkit#${anchor}`;
+    navigator.clipboard.writeText(fullUrl);
+    setCopiedHash(anchor);
+    setTimeout(() => setCopiedHash(null), 2500);
+  };
   
   // Tax Estimator State
   const [usdIncome, setUsdIncome] = useState<number>(2500);
@@ -120,7 +144,7 @@ export default function Toolkit() {
         {/* ACTIVE ENGINE CONTAINER */}
         {activeEngine === "tax" ? (
           /* INTERACTIVE FREELANCER TAX & REMITTANCE SAVINGS CALCULATOR */
-          <div className="mb-16 p-8 md:p-10 rounded-2xl bg-gradient-to-br from-ocean-900 via-ocean-900/90 to-ocean-950 border border-cyan/30 shadow-2xl relative overflow-hidden">
+          <div id="pseb-tax-calculator" className="scroll-mt-32 mb-16 p-8 md:p-10 rounded-2xl bg-gradient-to-br from-ocean-900 via-ocean-900/90 to-ocean-950 border border-cyan/30 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
               <Calculator className="w-72 h-72 text-cyan" />
             </div>
@@ -128,11 +152,31 @@ export default function Toolkit() {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               {/* Input Form Column */}
               <div className="lg:col-span-6 space-y-6">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-cyan animate-pulse" />
-                  <h3 className="text-xl md:text-2xl font-bold text-white font-display">
-                    2026 PSEB Tax & Remittance Savings Estimator
-                  </h3>
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-cyan animate-pulse" />
+                    <h3 className="text-xl md:text-2xl font-bold text-white font-display">
+                      2026 PSEB Tax & Remittance Savings Estimator
+                    </h3>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => copyAnchorUrl("pseb-tax-calculator")}
+                    title="Copy direct deep-link to this calculator"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-ocean-800/80 hover:bg-ocean-800 border border-ocean-700 rounded-lg text-[10px] font-bold uppercase tracking-wider text-slate-300 hover:text-cyan transition-colors cursor-pointer"
+                  >
+                    {copiedHash === "pseb-tax-calculator" ? (
+                      <>
+                        <Check className="w-3 h-3 text-cyan" />
+                        <span className="text-cyan">Anchor Copied</span>
+                      </>
+                    ) : (
+                      <>
+                        <Hash className="w-3 h-3 text-cyan" />
+                        <span>Direct Link</span>
+                      </>
+                    )}
+                  </button>
                 </div>
                 <p className="text-slate-300 text-sm leading-relaxed">
                   Estimate how much tax you save legally by registering with PSEB and filing under FBR Section 154A (0.25% export tax credit) vs default withholding.
@@ -218,7 +262,7 @@ export default function Toolkit() {
           </div>
         ) : (
           /* GLOBAL NOMAD TRAVEL & LOGISTICS COST OPTIMIZER */
-          <div className="mb-16 p-8 md:p-10 rounded-2xl bg-gradient-to-br from-ocean-900 via-ocean-900/90 to-ocean-950 border border-cyan/30 shadow-2xl relative overflow-hidden">
+          <div id="nomad-travel-logistics" className="scroll-mt-32 mb-16 p-8 md:p-10 rounded-2xl bg-gradient-to-br from-ocean-900 via-ocean-900/90 to-ocean-950 border border-cyan/30 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
               <Plane className="w-72 h-72 text-cyan" />
             </div>
@@ -226,11 +270,31 @@ export default function Toolkit() {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               {/* Input Form Column */}
               <div className="lg:col-span-6 space-y-6">
-                <div className="flex items-center gap-2">
-                  <Plane className="w-5 h-5 text-cyan animate-pulse" />
-                  <h3 className="text-xl md:text-2xl font-bold text-white font-display">
-                    2026 Global Nomad Travel Logistics Optimizer
-                  </h3>
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex items-center gap-2">
+                    <Plane className="w-5 h-5 text-cyan animate-pulse" />
+                    <h3 className="text-xl md:text-2xl font-bold text-white font-display">
+                      2026 Global Nomad Travel Logistics Optimizer
+                    </h3>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => copyAnchorUrl("nomad-travel-logistics")}
+                    title="Copy direct deep-link to this optimizer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-ocean-800/80 hover:bg-ocean-800 border border-ocean-700 rounded-lg text-[10px] font-bold uppercase tracking-wider text-slate-300 hover:text-cyan transition-colors cursor-pointer"
+                  >
+                    {copiedHash === "nomad-travel-logistics" ? (
+                      <>
+                        <Check className="w-3 h-3 text-cyan" />
+                        <span className="text-cyan">Anchor Copied</span>
+                      </>
+                    ) : (
+                      <>
+                        <Hash className="w-3 h-3 text-cyan" />
+                        <span>Direct Link</span>
+                      </>
+                    )}
+                  </button>
                 </div>
                 <p className="text-slate-300 text-sm leading-relaxed">
                   Calculate direct cash savings from switching to on-demand eSIMs (Saily/Airalo), dynamic flight+hotel bundling (Expedia), and zero-deposit car rentals (Localrent).

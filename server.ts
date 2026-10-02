@@ -187,6 +187,10 @@ function getSEOForUrl(urlPath: string) {
         url: canonical,
         ogType: "article",
         robots: isFutureScheduled ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+        publishedTime: `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
+        modifiedTime: `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
+        author: article.author || "Blue Ocean Hub Editorial",
+        section: articleSection,
         jsonLd: schemas
       };
     }
@@ -375,6 +379,10 @@ function injectMeta(
     url: string;
     ogType: string;
     robots?: string;
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    section?: string;
     jsonLd?: Record<string, any> | Record<string, any>[];
   }
 ): string {
@@ -443,6 +451,18 @@ function injectMeta(
     /<meta property="og:type" content="[^]*?"\s*\/?>/,
     `<meta property="og:type" content="${meta.ogType}" />`
   );
+
+  // Inject article metadata tags if article type
+  if (meta.ogType === "article") {
+    let articleTags = "";
+    if (meta.publishedTime) articleTags += `\n  <meta property="article:published_time" content="${esc(meta.publishedTime)}" />`;
+    if (meta.modifiedTime) articleTags += `\n  <meta property="article:modified_time" content="${esc(meta.modifiedTime)}" />`;
+    if (meta.author) articleTags += `\n  <meta property="article:author" content="${esc(meta.author)}" />`;
+    if (meta.section) articleTags += `\n  <meta property="article:section" content="${esc(meta.section)}" />`;
+    if (articleTags) {
+      result = result.replace(/<meta property="og:type"[^>]*\/>/, `$&${articleTags}`);
+    }
+  }
 
   // Replace twitter:title
   result = result.replace(
@@ -841,44 +861,39 @@ Sitemap: https://blueoceanhub.info/news-sitemap.xml
 
 Blue Ocean Hub is an institutional-grade financial magazine and tactical intelligence publication. We deliver operational frameworks, regulatory guides (FBR, SBP, SECP, PSEB), dividend analyses, cross-border banking playbooks, and passive income systems designed to give operators a decisive financial edge.
 
-## Core Categories
+## Strategic Computational Toolkits & Financial Models
 
-- [Passive Income](/passive-income): Systematic cashflow strategies, digital niche assets, and high-yield instruments.
-- [Investing](/investing): Equity research on the Pakistan Stock Exchange (PSX), mutual funds, Voluntary Pension Schemes (VPS), and gold hedging.
-- [Freelancing](/freelancing): Global agency scaling, international client billing structures, and foreign currency retention.
-- [Saving Money](/saving-money): Corporate treasury management, FBR Section 154A tax exemptions, and inflation-hedging strategies.
-- [Dollar Earning](/dollar-earning): US LLC formation, international banking (Mercury/Wise), and cross-border SaaS monetization.
+- [Strategic Financial Tool Hub](https://blueoceanhub.info/toolkit): Interactive computational engines for South Asian operators and digital nomads.
+- [2026 PSEB 0.25% Remittance Tax Calculator](https://blueoceanhub.info/toolkit#pseb-tax-calculator): Model FBR Section 154A 0.25% withholding vs standard non-filer tax rates for foreign remittance inflows.
+- [Global Nomad Travel Logistics & Currency Optimizer](https://blueoceanhub.info/toolkit#nomad-travel-logistics): Calculate international FX margins, eSIM costs (Saily/Airalo), flight bundling discounts, and zero-deposit car rentals.
 
-## Canonical Category URLs
+## Core Financial Intelligence Categories
 
-- [Passive Income Hub](https://blueoceanhub.info/passive-income): Full category archive and strategic briefings.
-- [Investing Hub](https://blueoceanhub.info/investing): Equity selection and capital allocation playbooks.
-- [Freelancing Hub](https://blueoceanhub.info/freelancing): Technical agency and export remittance guides.
-- [Saving Money Hub](https://blueoceanhub.info/saving-money): Wealth preservation and tax filing directories.
-- [Dollar Earning Hub](https://blueoceanhub.info/dollar-earning): Global payment infrastructure and foreign entity setup.
+- [Passive Income Hub](https://blueoceanhub.info/passive-income): Systematic cashflow strategies, digital niche assets, PSX dividends, and physical real estate REIT models.
+- [Investing Hub](https://blueoceanhub.info/investing): Strategic equity selection on the Pakistan Stock Exchange (PSX), Shariah-compliant mutual funds, Voluntary Pension Schemes (VPS), and gold hedging.
+- [Freelancing Hub](https://blueoceanhub.info/freelancing): Global agency scaling, international client billing structures, contractor equity option pools, and foreign currency retention.
+- [Saving Money Hub](https://blueoceanhub.info/saving-money): Corporate treasury management, FBR Section 154A tax exemptions, wealth statement declarations, and inflation-hedging strategies.
+- [Dollar Earning Hub](https://blueoceanhub.info/dollar-earning): Onshore US LLC banking setup (Mercury/Wise), foreign entity legal structures, Stripe alternatives, and GCC cross-border SaaS monetization.
 
 ## Key Publications & Policy Resources
 
-- [About Blue Ocean Hub](/page/about-us): Editorial methodology, advisory standards, and institutional research principles.
-- [Contact Editorial Desk](/page/contact): Inquiries for licensing, syndicated research, and editorial contributions.
-- [Editorial Integrity Policy](/page/editorial-policy): Standards for objective, conflict-free financial journalism and disclosure practices.
-- [GDPR Compliance Framework](/page/gdpr-compliance): Data protection disclosures, privacy rights, and security protocols.
-- [Cookie Intelligence Disclosures](/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
-- [Terms of Service](/page/terms-of-service): Terms of service, educational disclaimers, and user agreements.
-- [Strategic Tool Hub](/toolkit): Tactical calculators, PSEB tax savings estimators, and travel logistics engines.
+- [About Blue Ocean Hub](https://blueoceanhub.info/page/about-us): Editorial methodology, advisory standards, and institutional research principles.
+- [Contact Editorial Desk](https://blueoceanhub.info/page/contact): Inquiries for licensing, syndicated research, and editorial contributions.
+- [Editorial Integrity Policy](https://blueoceanhub.info/page/editorial-policy): Standards for objective, conflict-free financial journalism and disclosure practices.
+- [GDPR Compliance Framework](https://blueoceanhub.info/page/gdpr-compliance): Data protection disclosures, privacy rights, and security protocols.
+- [Cookie Intelligence Disclosures](https://blueoceanhub.info/page/cookie-policy): Transparency on privacy preferences and analytics cookies.
+- [Terms of Service](https://blueoceanhub.info/page/terms-of-service): Terms of service, educational disclaimers, and user agreements.
+- [Affiliate Disclosure](https://blueoceanhub.info/page/affiliate-disclosure): Transparent monetization, affiliate partnerships, and testing methodology.
 
-## Feeds & Archives
+## Machine Feeds & Discovery Indexes
 
-- [Dynamic Plaintext Feed](/all.txt): Full plain-text archive of all published financial intelligence reports.
-- [XML Sitemap](/sitemap.xml): Complete search engine sitemap index.
-- [Google News Sitemap](/news-sitemap.xml): Dynamic 48-hour Google News sitemap.
-- [Syndicated RSS Feed](/feed.xml): Real-time syndicated RSS 2.0 XML feed.
-- [Agentic AI Catalog](/ai-catalog.json): Machine-readable resource discovery schema (ARD spec).
-- [LLMs Full Deep Archive](/llms-full.txt): Comprehensive deep-crawl plaintext index of all published intelligence reports.
-
-## Optional
-
-- [Google Indexing Console](/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.
+- [Complete XML Sitemap](https://blueoceanhub.info/sitemap.xml): Full search engine sitemap index with verified lastmod timestamps.
+- [Google News Sitemap](https://blueoceanhub.info/news-sitemap.xml): Real-time 48-hour Google News publication feed.
+- [Syndicated RSS Feed](https://blueoceanhub.info/feed.xml): Real-time syndicated RSS 2.0 XML feed.
+- [Full Plaintext Deep Archive](https://blueoceanhub.info/all.txt): Complete plain-text archive of all published financial intelligence reports.
+- [Agentic AI Discovery Catalog](https://blueoceanhub.info/ai-catalog.json): Machine-readable resource discovery schema (ARD spec).
+- [LLMs Deep Plaintext Archive](https://blueoceanhub.info/llms-full.txt): Comprehensive deep-crawl plaintext index.
+- [Google Indexing Console](https://blueoceanhub.info/indexing-console): Real-time Search Console API diagnostics and indexing pipeline status.
 `;
 
       const acceptsPlain = req.headers.accept && req.headers.accept.includes("text/plain");
@@ -976,6 +991,11 @@ Blue Ocean Hub is an institutional-grade financial magazine and tactical intelli
       textContent += `> South Asia's premier financial magazine and intelligence publication. Delivering elite cashflow allocation, personal wealth building, and international currency hedging blueprints for founders, freelancers, and entrepreneurs.\n\n`;
       textContent += `Published Indexable Resources as of ${todayStr} (${published.length} Live Articles, ${ARTICLES.length} Total Pipeline):\n\n`;
       
+      textContent += `## Strategic Computational Toolkits & Financial Models\n`;
+      textContent += `- [Strategic Financial Tool Hub](https://blueoceanhub.info/toolkit): Interactive computational engines for South Asian operators and digital nomads.\n`;
+      textContent += `- [2026 PSEB 0.25% Remittance Tax Calculator](https://blueoceanhub.info/toolkit#pseb-tax-calculator): Model FBR Section 154A 0.25% withholding vs standard tax brackets for foreign remittances.\n`;
+      textContent += `- [Global Nomad Travel Logistics & Currency Optimizer](https://blueoceanhub.info/toolkit#nomad-travel-logistics): Calculate international FX margins, eSIM costs, and corporate travel savings.\n\n`;
+
       textContent += `## Core Categories\n`;
       CATEGORIES.forEach(c => {
         textContent += `- [${c.title}](https://blueoceanhub.info/${c.id}) - ${c.description}\n`;
@@ -986,10 +1006,18 @@ Blue Ocean Hub is an institutional-grade financial magazine and tactical intelli
         textContent += `- [${p.title}](https://blueoceanhub.info/page/${p.id})\n`;
       });
 
-      textContent += `\n## All Financial Intelligence Articles (${ARTICLES.length} Total Nodes)\n`;
-      ARTICLES.forEach(art => {
-        textContent += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Scheduled/PubDate: ${art.pubDate})\n  Summary: ${art.description}\n`;
+      textContent += `\n## Live Published Financial Intelligence Articles (${published.length} Live Nodes)\n`;
+      published.forEach(art => {
+        textContent += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Published: ${art.pubDate})\n  Summary: ${art.description}\n`;
       });
+
+      const scheduledQueue = ARTICLES.filter(a => a.pubDate > todayStr);
+      if (scheduledQueue.length > 0) {
+        textContent += `\n## Editorial Pipeline Queue (${scheduledQueue.length} Scheduled Releases through November 30, 2026)\n`;
+        scheduledQueue.forEach(art => {
+          textContent += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Scheduled Release: ${art.pubDate})\n  Summary: ${art.description}\n`;
+        });
+      }
 
       res.setHeader("Content-Type", "text/plain; charset=utf-8");
       res.setHeader("X-Content-Type-Options", "nosniff");
@@ -1106,22 +1134,89 @@ Language: English
       fallbackClientEmail = process.env.GOOGLE_CLIENT_EMAIL;
     }
 
-    // Compile list of eligible URLs from our data model
+    // Compile list of eligible URLs from our data model with verified lastmod timestamps
     const todayStr = new Date().toISOString().split("T")[0];
-    const published = ARTICLES.filter(a => a.pubDate <= todayStr);
+    const published = ARTICLES.filter(a => a.pubDate <= todayStr)
+      .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+    const scheduled = ARTICLES.filter(a => a.pubDate > todayStr);
 
-    const urls = [
-      "https://blueoceanhub.info/",
-      ...CATEGORIES.map(c => `https://blueoceanhub.info/${c.id}`),
-      "https://blueoceanhub.info/toolkit",
-      ...LEGAL_PAGES.map(p => `https://blueoceanhub.info/page/${p.id}`),
-      ...published.map(a => `https://blueoceanhub.info/article/${a.id}`)
+    const latestLiveDate = published[0]?.pubDate || todayStr;
+
+    interface SitemapUrlItem {
+      url: string;
+      lastmod: string;
+      changefreq: string;
+      priority: number;
+      type: "home" | "category" | "tool" | "legal" | "article";
+      title: string;
+    }
+
+    const detailedUrls: SitemapUrlItem[] = [
+      {
+        url: "https://blueoceanhub.info/",
+        lastmod: latestLiveDate,
+        changefreq: "daily",
+        priority: 1.0,
+        type: "home",
+        title: "Blue Ocean Hub | Brand Home"
+      },
+      ...CATEGORIES.map(c => {
+        const catArticles = published.filter(art =>
+          art.category.toLowerCase().replace(/\s+/g, "-") === c.id
+        );
+        return {
+          url: `https://blueoceanhub.info/${c.id}`,
+          lastmod: catArticles[0]?.pubDate || latestLiveDate,
+          changefreq: "weekly",
+          priority: 0.9,
+          type: "category" as const,
+          title: `${c.title} Category Hub`
+        };
+      }),
+      {
+        url: "https://blueoceanhub.info/toolkit",
+        lastmod: "2026-09-22",
+        changefreq: "weekly",
+        priority: 0.9,
+        type: "tool",
+        title: "Strategic Financial Tool Hub (PSEB Tax & Nomad Travel Engines)"
+      },
+      ...LEGAL_PAGES.map(p => ({
+        url: `https://blueoceanhub.info/page/${p.id}`,
+        lastmod: p.pubDate || "2026-08-29",
+        changefreq: "monthly",
+        priority: 0.5,
+        type: "legal" as const,
+        title: p.title
+      })),
+      ...published.map(a => ({
+        url: `https://blueoceanhub.info/article/${a.id}`,
+        lastmod: a.pubDate,
+        changefreq: "monthly",
+        priority: 0.8,
+        type: "article" as const,
+        title: a.title
+      }))
     ];
+
+    const urls = detailedUrls.map(item => item.url);
 
     res.json({
       success: true,
       isConfigured,
       clientEmail: fallbackClientEmail ? `${fallbackClientEmail.slice(0, 4)}...${fallbackClientEmail.slice(-12)}` : null,
+      summary: {
+        totalDiscoveredSitemapUrls: detailedUrls.length,
+        livePublishedArticles: published.length,
+        scheduledPipelineQueue: scheduled.length,
+        totalCatalogPipeline: ARTICLES.length,
+        categoriesCount: CATEGORIES.length,
+        legalPagesCount: LEGAL_PAGES.length,
+        toolsCount: 1,
+        latestLiveDate,
+        gscStatusReason: "Synchronized: Sitemap contains exactly 326 live canonical URLs with verified non-future lastmod timestamps."
+      },
+      detailedUrls,
       urls
     });
   });

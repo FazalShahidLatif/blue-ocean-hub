@@ -8,6 +8,10 @@ interface SEOProps {
   ogType?: "website" | "article" | "profile" | "book" | "music";
   robots?: string;
   imageUrl?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
   jsonLd?: Record<string, any> | Record<string, any>[];
 }
 
@@ -18,6 +22,10 @@ export default function SEO({
   ogType = "website",
   robots = "index, follow",
   imageUrl = "https://blueoceanhub.info/og-image.jpg",
+  publishedTime,
+  modifiedTime,
+  author,
+  section,
   jsonLd,
 }: SEOProps) {
   const { pathname } = useLocation();
@@ -74,6 +82,13 @@ export default function SEO({
       "og:image:height": "630",
       "og:site_name": "Blue Ocean Hub",
     };
+
+    if (ogType === "article") {
+      if (publishedTime) ogTags["article:published_time"] = publishedTime;
+      if (modifiedTime) ogTags["article:modified_time"] = modifiedTime;
+      if (author) ogTags["article:author"] = author;
+      if (section) ogTags["article:section"] = section;
+    }
 
     Object.entries(ogTags).forEach(([property, value]) => {
       let tag = document.querySelector(`meta[property="${property}"]`);

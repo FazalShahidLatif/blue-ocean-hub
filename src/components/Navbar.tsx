@@ -1,13 +1,20 @@
-import { Compass, TrendingUp, Zap, Globe, Search, X, BookOpen, ArrowRight } from "lucide-react";
+import { Compass, TrendingUp, Zap, Globe, Search, X, BookOpen, ArrowRight, Menu, Calculator, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ARTICLES } from "../data/articles";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -74,46 +81,147 @@ export default function Navbar() {
           </div>
         </div>
         
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-4">
           <Link 
             to="/" 
             aria-label="Blue Ocean Hub Strategic Financial Intelligence Home"
-            className="flex flex-col cursor-pointer group"
+            className="flex flex-col cursor-pointer group shrink-0"
           >
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded bg-cyan flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg shadow-cyan/20">
                 <Compass className="text-ocean-950 w-5 h-5" aria-hidden="true" />
               </div>
-              <span className="text-xl font-bold text-white tracking-tight uppercase">BlueOcean<span className="text-cyan">Hub</span></span>
+              <span className="text-lg sm:text-xl font-bold text-white tracking-tight uppercase">BlueOcean<span className="text-cyan">Hub</span></span>
             </div>
-            <span className="text-[8px] text-slate-300 font-semibold uppercase tracking-[0.4em] mt-1 ml-1 group-hover:text-cyan transition-colors">Strategic Financial Intelligence</span>
+            <span className="text-[7.5px] sm:text-[8px] text-slate-300 font-semibold uppercase tracking-[0.3em] sm:tracking-[0.4em] mt-0.5 ml-1 group-hover:text-cyan transition-colors">Strategic Financial Intelligence</span>
           </Link>
 
-          <div className="flex items-center gap-4">
+          {/* Desktop Primary Category Links & Toolkit (SEO Interlinking) */}
+          <nav aria-label="Main Navigation" className="hidden xl:flex items-center gap-5 text-xs font-bold uppercase tracking-wider text-slate-300">
+            <Link to="/passive-income" className="hover:text-cyan transition-colors">Passive Income</Link>
+            <Link to="/investing" className="hover:text-cyan transition-colors">Investing</Link>
+            <Link to="/freelancing" className="hover:text-cyan transition-colors">Freelancing</Link>
+            <Link to="/saving-money" className="hover:text-cyan transition-colors">Saving Money</Link>
+            <Link to="/dollar-earning" className="hover:text-cyan transition-colors">Dollar Earning</Link>
+            <Link to="/toolkit" className="text-cyan hover:text-white transition-colors flex items-center gap-1 font-extrabold bg-cyan/10 border border-cyan/30 px-2.5 py-1 rounded-lg">
+              <Calculator className="w-3.5 h-3.5" aria-hidden="true" />
+              <span>Toolkit</span>
+            </Link>
+          </nav>
+
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             {/* Search Trigger Button */}
             <button 
               type="button"
               onClick={() => setSearchOpen(true)}
               aria-label="Search financial intelligence briefings"
-              className="flex items-center gap-2 bg-ocean-900 border border-ocean-800 hover:border-cyan/40 px-3.5 py-1.5 rounded-lg text-slate-200 hover:text-white transition-all text-xs cursor-pointer"
-              title="Search 238+ Intelligence Reports (Ctrl+K)"
+              className="flex items-center gap-2 bg-ocean-900 border border-ocean-800 hover:border-cyan/40 px-2.5 sm:px-3.5 py-1.5 rounded-lg text-slate-200 hover:text-white transition-all text-xs cursor-pointer min-h-[38px]"
+              title="Search Intelligence Reports (Ctrl+K)"
             >
               <Search className="w-3.5 h-3.5 text-cyan" aria-hidden="true" />
-              <span className="hidden md:inline text-[11px] font-semibold">Search Briefings...</span>
-              <kbd className="hidden sm:inline-block px-1.5 py-0.5 bg-ocean-950 text-[9px] font-mono rounded text-slate-300 border border-ocean-800">⌘K</kbd>
+              <span className="hidden md:inline text-[11px] font-semibold">Search...</span>
+              <kbd className="hidden lg:inline-block px-1.5 py-0.5 bg-ocean-950 text-[9px] font-mono rounded text-slate-300 border border-ocean-800">⌘K</kbd>
             </button>
 
-            <button 
-              type="button"
-              aria-label="Publication Edition Volume 8.2" 
-              className="text-[10px] uppercase tracking-widest font-bold text-slate-200 border border-ocean-800 px-3 py-1 rounded hover:text-cyan hover:border-cyan transition-all hidden sm:block"
+            <Link
+              to="/toolkit"
+              aria-label="Open Strategic Tool Hub"
+              className="xl:hidden flex items-center gap-1 text-[11px] uppercase tracking-wider font-bold text-cyan bg-cyan/10 border border-cyan/30 px-2.5 py-1.5 rounded-lg hover:bg-cyan hover:text-ocean-950 transition-all min-h-[38px]"
             >
-              Volume 8.2
+              <Calculator className="w-3.5 h-3.5" />
+              <span className="hidden xs:inline">Tools</span>
+            </Link>
+
+            {/* Mobile Hamburger Menu Toggle */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(prev => !prev)}
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
+              className="xl:hidden p-2 text-slate-300 hover:text-cyan bg-ocean-900 border border-ocean-800 rounded-lg transition-colors cursor-pointer min-h-[38px] min-w-[38px] flex items-center justify-center"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-5 h-5 text-cyan" aria-hidden="true" />
+              ) : (
+                <Menu className="w-5 h-5 text-cyan" aria-hidden="true" />
+              )}
             </button>
-            <div className="w-2 h-2 rounded-full bg-cyan animate-pulse" aria-hidden="true"></div>
-            <span className="text-[10px] uppercase tracking-widest font-bold text-cyan hidden xs:inline">Live Hub</span>
+
+            <div className="hidden sm:flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-cyan animate-pulse" aria-hidden="true"></div>
+              <span className="text-[10px] uppercase tracking-widest font-bold text-cyan hidden md:inline">Live Hub</span>
+            </div>
           </div>
         </div>
+
+        {/* MOBILE RESPONSIVE DRAWER (All Devices Friendly) */}
+        {mobileMenuOpen && (
+          <div className="xl:hidden bg-ocean-950/98 border-b border-ocean-800 backdrop-blur-xl px-6 py-6 animate-in slide-in-from-top-4 duration-200 shadow-2xl">
+            <div className="space-y-4">
+              <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-slate-400 block border-b border-ocean-850 pb-2">
+                Primary Intelligence Hubs
+              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <Link 
+                  to="/passive-income" 
+                  className="flex items-center justify-between p-3 rounded-xl bg-ocean-900/60 border border-ocean-850 text-slate-200 hover:text-cyan hover:border-cyan/30 text-sm font-semibold transition-all min-h-[44px]"
+                >
+                  <span>Passive Income</span>
+                  <ChevronRight className="w-4 h-4 text-cyan/70" />
+                </Link>
+                <Link 
+                  to="/investing" 
+                  className="flex items-center justify-between p-3 rounded-xl bg-ocean-900/60 border border-ocean-850 text-slate-200 hover:text-cyan hover:border-cyan/30 text-sm font-semibold transition-all min-h-[44px]"
+                >
+                  <span>Investing</span>
+                  <ChevronRight className="w-4 h-4 text-cyan/70" />
+                </Link>
+                <Link 
+                  to="/freelancing" 
+                  className="flex items-center justify-between p-3 rounded-xl bg-ocean-900/60 border border-ocean-850 text-slate-200 hover:text-cyan hover:border-cyan/30 text-sm font-semibold transition-all min-h-[44px]"
+                >
+                  <span>Freelancing</span>
+                  <ChevronRight className="w-4 h-4 text-cyan/70" />
+                </Link>
+                <Link 
+                  to="/saving-money" 
+                  className="flex items-center justify-between p-3 rounded-xl bg-ocean-900/60 border border-ocean-850 text-slate-200 hover:text-cyan hover:border-cyan/30 text-sm font-semibold transition-all min-h-[44px]"
+                >
+                  <span>Saving Money</span>
+                  <ChevronRight className="w-4 h-4 text-cyan/70" />
+                </Link>
+                <Link 
+                  to="/dollar-earning" 
+                  className="flex items-center justify-between p-3 rounded-xl bg-ocean-900/60 border border-ocean-850 text-slate-200 hover:text-cyan hover:border-cyan/30 text-sm font-semibold transition-all min-h-[44px]"
+                >
+                  <span>Dollar Earning</span>
+                  <ChevronRight className="w-4 h-4 text-cyan/70" />
+                </Link>
+                <Link 
+                  to="/toolkit" 
+                  className="flex items-center justify-between p-3 rounded-xl bg-cyan/15 border border-cyan/40 text-cyan hover:bg-cyan hover:text-ocean-950 text-sm font-bold transition-all min-h-[44px]"
+                >
+                  <span className="flex items-center gap-2">
+                    <Calculator className="w-4 h-4" /> Strategic Tool Hub
+                  </span>
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+
+              <div className="pt-3 border-t border-ocean-850 flex flex-wrap gap-2 text-xs font-semibold text-slate-400">
+                <Link to="/toolkit#pseb-tax-calculator" className="px-2.5 py-1.5 bg-ocean-900 rounded-lg hover:text-cyan">
+                  # PSEB Tax Calculator
+                </Link>
+                <Link to="/toolkit#nomad-travel-logistics" className="px-2.5 py-1.5 bg-ocean-900 rounded-lg hover:text-cyan">
+                  # Nomad Travel Logistics
+                </Link>
+                <Link to="/indexing-console" className="px-2.5 py-1.5 bg-ocean-900 rounded-lg text-cyan">
+                  # Indexing Console
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* SEARCH MODAL DIALOG */}
