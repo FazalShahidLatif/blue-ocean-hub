@@ -103,9 +103,6 @@ export default function ArticleView() {
 
   if (!article) return <div className="pt-40 text-center text-white text-2xl font-bold">Article not found.</div>;
 
-  const todayStr = new Date().toISOString().split("T")[0];
-  const isFutureScheduled = 'pubDate' in article && article.pubDate > todayStr;
-
   const isArticle = ARTICLES.some(a => a.id === article.id);
   const type = isArticle ? 'article' : 'page';
   const url = `https://blueoceanhub.info/${type}/${article.id}`;
@@ -133,8 +130,8 @@ export default function ArticleView() {
     "image": [
       "https://blueoceanhub.info/og-image.jpg"
     ],
-    "datePublished": `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
-    "dateModified": `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`, // Sync dates perfectly for AI Overview engines
+    "datePublished": `${article.pubDate}T08:00:00+05:00`,
+    "dateModified": `${article.pubDate}T08:00:00+05:00`, // Sync dates perfectly for AI Overview engines
     "inLanguage": "en-US",
     "isAccessibleForFree": "true",
     "author": {
@@ -254,9 +251,9 @@ export default function ArticleView() {
         description={article.metaDescription || article.description || ""}
         canonicalUrl={url}
         ogType={isArticle ? "article" : "website"}
-        robots={isFutureScheduled ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"}
-        publishedTime={`${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`}
-        modifiedTime={`${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`}
+        robots="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        publishedTime={`${article.pubDate}T08:00:00+05:00`}
+        modifiedTime={`${article.pubDate}T08:00:00+05:00`}
         author={article.author || "Blue Ocean Hub Editorial Team"}
         section={'category' in article ? article.category : undefined}
         jsonLd={jsonLdSchemas}
@@ -544,23 +541,8 @@ export default function ArticleView() {
           </div>
         </header>
 
-        {isFutureScheduled ? (
-          <div className="p-8 md:p-12 rounded-2xl bg-ocean-900 border border-ocean-800 text-center max-w-2xl mx-auto my-12 shadow-2xl">
-            <div className="w-16 h-16 rounded-full bg-cyan/10 flex items-center justify-center mx-auto mb-6">
-              <Clock className="w-8 h-8 text-cyan animate-pulse" />
-            </div>
-            <h2 className="text-2xl font-bold text-white mb-3 font-display uppercase tracking-tight">Incoming Intelligence Briefing</h2>
-            <p className="text-slate-300 mb-6 leading-relaxed">
-              This premium financial intelligence report is scheduled for release on <span className="text-cyan font-semibold">{new Date(article.pubDate).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>.
-            </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-ocean-800 rounded-full border border-ocean-700 text-slate-300 text-xs font-semibold uppercase tracking-wider">
-              Status: Scheduled Release
-            </div>
-          </div>
-        ) : (
-          <>
-            {/* 1. GEO Pillar: Sparkling AI SGE Quick Synthesis Capsule */}
-            <div className="mb-10 p-6 md:p-8 rounded-xl bg-gradient-to-r from-ocean-900 to-ocean-850 border border-cyan/20 relative overflow-hidden shadow-xl">
+        {/* 1. GEO Pillar: Sparkling AI SGE Quick Synthesis Capsule */}
+        <div className="mb-10 p-6 md:p-8 rounded-xl bg-gradient-to-r from-ocean-900 to-ocean-850 border border-cyan/20 relative overflow-hidden shadow-xl">
               <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 w-32 h-32 bg-cyan/10 rounded-full blur-2xl pointer-events-none" />
               <div className="flex items-center gap-2.5 mb-4">
                 <Sparkles className="w-5 h-5 text-cyan animate-pulse" />
@@ -896,8 +878,6 @@ export default function ArticleView() {
                 className="mt-16" 
               />
             )}
-          </>
-        )}
 
         {/* RELATED INTELLIGENCE REPORTS (INTERNAL LINKING ENGINE) */}
         {relatedArticles.length > 0 && (

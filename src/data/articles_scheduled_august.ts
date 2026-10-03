@@ -327,7 +327,7 @@ For larger contracts exceeding $10,000, agencies should transition from escrow t
 
 ### Implementation Checklist
 - Invoice overseas clients using USD Direct Contracts to ensure payment protection.
-- Download digital payment vouchers to support [zero-rated IT export tax exemptions](/article/provincial-sales-tax-on-it-exports-securing-zero-rated-sales-exemption-with-pra-srb-and-kpra).
+- Download digital payment vouchers to support [zero-rated IT export tax exemptions](/article/freelancer-provincial-sales-tax-exemptions-pra-srb).
 - Transfer cleared funds to local accounts via [optimized foreign remittance channels](/article/payoneer-withdrawal-fee-optimization).
 `
   },
@@ -362,7 +362,7 @@ Leaving operational startup capital or agency cash reserves in standard commerci
 
 Under FBR tax laws, corporate entities investing in mutual funds face specific withholding tax rates based on ATL status and asset category. Treasury managers must coordinate with certified tax advisers to optimize annual corporate filings. Review our [FBR corporate audit notice defense guide](/article/fbr-tax-notice-response-framework) to protect corporate treasury records.
 
-For non-shariah startup capital, primary sovereign debt offers alternative yields. Read our [startup corporate treasury management guide](/article/corporate-treasury-management-for-startups-deploying-idle-pkr-into-primary-sovereign-t-bills).
+For non-shariah startup capital, primary sovereign debt offers alternative yields. Read our [startup corporate treasury management guide](/article/corporate-treasury-management-t-bills).
 
 ### Corporate Cash Optimization Blueprint
 - Maintain 30 days of operating expenses in primary bank operational accounts.
@@ -413,7 +413,7 @@ Forming a United States Limited Liability Company (LLC) allows international sof
 
 A single-member US LLC owned by a foreign non-resident is classified as a "Disregarded Entity" for US federal tax purposes. While the LLC generally owes 0% US federal income tax on non-US source income, the owner MUST file annual informational IRS Form 5472 and Form 1120.
 
-To safeguard your merchant processing, explore our [Stripe KYC compliance protocol guide](/article/stripe-kyc-compliance-protocol-safeguarding-nonresident-merchant-accounts-from-flags).
+To safeguard your merchant processing, explore our [Stripe KYC compliance protocol guide](/article/stripe-kyc-compliance-nonresident-llc).
 
 ### Essential Steps for Founders
 - Maintain strict separation between personal funds and US LLC corporate bank accounts.

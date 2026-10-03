@@ -1479,7 +1479,7 @@ For software founders accepting payments globally, fraudulent transactions and c
 
 When a dispute occurs, submitting clear evidence—such as user IP logs, account activity records, and terms of service acceptances—helps win merchant dispute reviews.
 
-Maintain Stripe account compliance using our [Stripe KYC verification protocol guide](/article/stripe-kyc-compliance-protocol-safeguarding-nonresident-merchant-accounts-from-flags).
+Maintain Stripe account compliance using our [Stripe KYC verification protocol guide](/article/stripe-kyc-compliance-nonresident-llc).
 
 Explore Merchant of Record alternatives in our [Lemon Squeezy vs Paddle MoR review](/article/lemon-squeezy-paddle-mor-tax-compliance).
 

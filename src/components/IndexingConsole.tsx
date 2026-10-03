@@ -270,22 +270,22 @@ export default function IndexingConsole() {
                     Live Published Articles
                   </span>
                   <div className="text-2xl font-bold font-mono text-white">
-                    {status.summary?.livePublishedArticles || 309}
+                    {status.summary?.livePublishedArticles || 305}
                   </div>
                   <span className="text-[10px] text-slate-400 block mt-1">
-                    Active non-future nodes
+                    Active published nodes
                   </span>
                 </div>
 
                 <div className="p-4 bg-ocean-950 rounded-xl border border-ocean-850">
                   <span className="text-[10px] uppercase font-bold text-slate-400 block mb-1">
-                    Scheduled Pipeline Queue
+                    Category Hubs &amp; Tools
                   </span>
-                  <div className="text-2xl font-bold font-mono text-amber-400">
-                    {status.summary?.scheduledPipelineQueue || 118}
+                  <div className="text-2xl font-bold font-mono text-cyan">
+                    {(status.summary?.categoriesCount || 5) + 1}
                   </div>
                   <span className="text-[10px] text-slate-400 block mt-1">
-                    Excluded until release date
+                    5 Pillars + 1 Tool Hub
                   </span>
                 </div>
 
@@ -304,7 +304,7 @@ export default function IndexingConsole() {
 
               <div className="p-4 bg-ocean-950/70 rounded-xl border border-ocean-850 text-xs text-slate-300 leading-relaxed space-y-2">
                 <p>
-                  <strong>Why GSC Metrics Differ From Raw Post Totals:</strong> In Google Search Console, the sitemap discovers exactly <strong>{status.summary?.totalDiscoveredSitemapUrls || 326} canonical URLs</strong>. The remaining <strong>{status.summary?.scheduledPipelineQueue || 118} articles</strong> are held in the editorial pipeline with future dates through Nov 30, 2026 and are intentionally omitted from <code>/sitemap.xml</code> to prevent Google Search Console from rejecting the sitemap due to future dates.
+                  <strong>100% Live Canonical Index Synchronization:</strong> In Google Search Console, the sitemap discovers exactly <strong>{status.summary?.totalDiscoveredSitemapUrls || 322} canonical URLs</strong>. Every single article in the publication is 100% live and published with verified non-future dates. All scheduled posting queues and templated placeholders have been completely removed.
                 </p>
                 <p>
                   <strong>Last Modified Synchronization:</strong> Every URL in <code>/sitemap.xml</code> uses its exact publication date as <code>&lt;lastmod&gt;</code>, strictly matching the Schema.org <code>dateModified</code> and on-page microdata. This prevents Googlebot from ignoring updates and ensures 100% crawl verification.

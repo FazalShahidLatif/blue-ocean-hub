@@ -1069,7 +1069,7 @@ Under State Bank rules, IT exporters holding Exporters FCY accounts can retain u
 
 Explore State Bank remittance retention rules in our [SBP Foreign Currency Account (FCA) guide](/article/foreign-currency-account-fca-sbp).
 
-Claim zero-rated sales tax on IT exports using our [provincial IT export sales tax guide](/article/freelancer-provancer-sales-tax-compliance).
+Claim zero-rated sales tax on IT exports using our [provincial IT export sales tax guide](/article/freelancer-provincial-sales-tax-compliance).
 
 ### Agency Steps
 - Prepare certified copies of all SECP incorporation forms.

@@ -244,7 +244,7 @@ For niche finance or technical podcasts:
 
 ## Internal Links
 - See our master list of [10 Passive Income Ideas in Pakistan](/article/10-passive-income-ideas-pakistan).
-- Learn tax-effective structures inside [FBR Income Tax Filing Guides](/article/tax-saving-mutual-funds-pakistan).
+- Learn tax-effective structures inside [FBR Income Tax Filing Guides](/article/investing-mutual-funds-pakistan).
 - Explore general wealth-building resources on the [Blue Ocean Hub Homepage](/).
 `
   },
@@ -319,7 +319,7 @@ To maximize your FBR tax credit:
 3. Submit your investment certificate to your employer's payroll office or include it in your direct FBR tax filing.
 
 ## Internal Links
-- Optimize other tax structures with [Section 62 and 63 tax planning using Mutual Funds](/article/tax-saving-mutual-funds-pakistan).
+- Optimize other tax structures with [Section 62 and 63 tax planning using Mutual Funds](/article/meezan-mutual-funds-vs-vps-tax-rebate).
 - Explore sovereign saving asset classes in [Government of Pakistan Ijara Sukuk Guide](/article/gop-ijara-sukuk-mutual-funds).
 - Access comprehensive asset allocation models on the [Blue Ocean Hub Homepage](/).
 `

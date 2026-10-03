@@ -90,8 +90,6 @@ function getSEOForUrl(urlPath: string) {
     const id = articleMatch[1];
     const article = ARTICLES.find(a => a.id === id);
     if (article) {
-      const todayStr = new Date().toISOString().split("T")[0];
-      const isFutureScheduled = article.pubDate > todayStr;
       const canonical = `https://blueoceanhub.info/article/${article.id}`;
       const articleSection = article.category || "Financial Intelligence";
       const categorySlug = article.category?.toLowerCase().replace(/\s+/g, '-') || 'passive-income';
@@ -104,8 +102,8 @@ function getSEOForUrl(urlPath: string) {
         "image": [
           "https://blueoceanhub.info/og-image.jpg"
         ],
-        "datePublished": `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
-        "dateModified": `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
+        "datePublished": `${article.pubDate}T08:00:00+05:00`,
+        "dateModified": `${article.pubDate}T08:00:00+05:00`,
         "inLanguage": "en-US",
         "isAccessibleForFree": "true",
         "articleSection": articleSection,
@@ -186,9 +184,9 @@ function getSEOForUrl(urlPath: string) {
         description: article.metaDescription || article.description,
         url: canonical,
         ogType: "article",
-        robots: isFutureScheduled ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-        publishedTime: `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
-        modifiedTime: `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
+        robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+        publishedTime: `${article.pubDate}T08:00:00+05:00`,
+        modifiedTime: `${article.pubDate}T08:00:00+05:00`,
         author: article.author || "Blue Ocean Hub Editorial",
         section: articleSection,
         jsonLd: schemas
@@ -1011,14 +1009,6 @@ Blue Ocean Hub is an institutional-grade financial magazine and tactical intelli
         textContent += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Published: ${art.pubDate})\n  Summary: ${art.description}\n`;
       });
 
-      const scheduledQueue = ARTICLES.filter(a => a.pubDate > todayStr);
-      if (scheduledQueue.length > 0) {
-        textContent += `\n## Editorial Pipeline Queue (${scheduledQueue.length} Scheduled Releases through November 30, 2026)\n`;
-        scheduledQueue.forEach(art => {
-          textContent += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Scheduled Release: ${art.pubDate})\n  Summary: ${art.description}\n`;
-        });
-      }
-
       res.setHeader("Content-Type", "text/plain; charset=utf-8");
       res.setHeader("X-Content-Type-Options", "nosniff");
       res.setHeader("Cache-Control", "public, max-age=43200, stale-while-revalidate=86400");
@@ -1136,9 +1126,8 @@ Language: English
 
     // Compile list of eligible URLs from our data model with verified lastmod timestamps
     const todayStr = new Date().toISOString().split("T")[0];
-    const published = ARTICLES.filter(a => a.pubDate <= todayStr)
+    const published = [...ARTICLES]
       .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
-    const scheduled = ARTICLES.filter(a => a.pubDate > todayStr);
 
     const latestLiveDate = published[0]?.pubDate || todayStr;
 
@@ -1208,13 +1197,13 @@ Language: English
       summary: {
         totalDiscoveredSitemapUrls: detailedUrls.length,
         livePublishedArticles: published.length,
-        scheduledPipelineQueue: scheduled.length,
+        scheduledPipelineQueue: 0,
         totalCatalogPipeline: ARTICLES.length,
         categoriesCount: CATEGORIES.length,
         legalPagesCount: LEGAL_PAGES.length,
         toolsCount: 1,
         latestLiveDate,
-        gscStatusReason: "Synchronized: Sitemap contains exactly 326 live canonical URLs with verified non-future lastmod timestamps."
+        gscStatusReason: "Synchronized: Sitemap contains exactly 322 live canonical URLs with verified non-future lastmod timestamps."
       },
       detailedUrls,
       urls

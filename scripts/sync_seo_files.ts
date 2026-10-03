@@ -239,14 +239,6 @@ published.forEach(art => {
   fullText += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Published: ${art.pubDate})\n  Summary: ${art.description}\n`;
 });
 
-const scheduledQueue = ARTICLES.filter(a => a.pubDate > todayDateStr);
-if (scheduledQueue.length > 0) {
-  fullText += `\n## Editorial Pipeline Queue (${scheduledQueue.length} Scheduled Releases through November 30, 2026)\n`;
-  scheduledQueue.forEach(art => {
-    fullText += `- [${art.title}](https://blueoceanhub.info/article/${art.id}) (${art.category} | Scheduled Release: ${art.pubDate})\n  Summary: ${art.description}\n`;
-  });
-}
-
 fs.writeFileSync(path.join(publicDir, "llms-full.txt"), fullText, "utf-8");
 fs.writeFileSync(path.join(publicDir, "all.txt"), fullText, "utf-8");
 console.log("Updated public/llms-full.txt and public/all.txt with", ARTICLES.length, "articles.");
