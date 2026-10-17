@@ -1,6 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { CATEGORIES } from "../data/categories";
-import { ARTICLES } from "../data/articles";
+import { ARTICLE_INDEX } from "../data/article-index";
 import SEO from "./SEO";
 import ArticleListing from "./ArticleListing";
 import Newsletter from "./Newsletter";
@@ -18,7 +18,7 @@ export default function CategoryPage() {
 
   // Filter articles matching this category for ItemList JSON-LD
   const todayStr = new Date().toISOString().split("T")[0];
-  const publishedArticles = ARTICLES.filter(a => a.pubDate <= todayStr);
+  const publishedArticles = ARTICLE_INDEX.filter(a => a.pubDate <= todayStr);
   const categoryArticles = publishedArticles.filter(art => 
     art.category.toLowerCase().replace(/\s+/g, "-") === categoryId
   );

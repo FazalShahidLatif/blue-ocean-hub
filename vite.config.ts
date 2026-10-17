@@ -47,9 +47,7 @@ export default defineConfig(({mode}) => {
                 return 'vendor-react';
               }
             }
-            if (id.includes('src/data/')) {
-              return 'data-intel-store';
-            }
+            // Article data is now in a lightweight index — no need for a separate chunk
           },
         },
       },

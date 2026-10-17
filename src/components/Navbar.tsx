@@ -1,7 +1,7 @@
 import { Compass, TrendingUp, Zap, Globe, Search, X, BookOpen, ArrowRight, Menu, Calculator, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { ARTICLES } from "../data/articles";
+import { ARTICLE_INDEX } from "../data/article-index";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -59,13 +59,13 @@ export default function Navbar() {
 
   // Search Results Filter
   const searchResults = query.trim() 
-    ? ARTICLES.filter(a => 
+    ? ARTICLE_INDEX.filter(a => 
         a.title.toLowerCase().includes(query.toLowerCase()) || 
         a.description.toLowerCase().includes(query.toLowerCase()) ||
         a.category.toLowerCase().includes(query.toLowerCase()) ||
         (a.tags && a.tags.some(t => t.toLowerCase().includes(query.toLowerCase())))
       ).slice(0, 6)
-    : ARTICLES.slice(0, 5);
+    : ARTICLE_INDEX.slice(0, 5);
 
   return (
     <>
@@ -290,7 +290,7 @@ export default function Navbar() {
             </div>
 
             <div className="p-3 bg-ocean-950 border-t border-ocean-800 text-[10px] text-slate-300 flex justify-between items-center px-4 font-medium">
-              <span>238 Active Financial Intelligence Reports Indexed</span>
+              <span>{ARTICLE_INDEX.length} Active Financial Intelligence Reports Indexed</span>
               <span>Press <kbd className="font-mono text-cyan font-bold">ESC</kbd> to exit</span>
             </div>
           </div>

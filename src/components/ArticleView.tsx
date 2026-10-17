@@ -26,7 +26,7 @@ import {
   HelpCircle,
   X
 } from "lucide-react";
-import { ARTICLES } from "../data/articles";
+import { ARTICLE_INDEX } from "../data/article-index";
 import { LEGAL_PAGES } from "../data/legal";
 import { PILLAR_FAQS } from "../data/faqs";
 import FAQSection from "./FAQSection";
@@ -38,7 +38,8 @@ import { calculateReadability } from "../utils/readability";
 export default function ArticleView() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const article = ARTICLES.find(a => a.id === id) || LEGAL_PAGES.find(a => a.id === id);
+  const article = ARTICLE_INDEX.find(a => a.id === id) || LEGAL_PAGES.find(a => a.id === id);
+  const isArticle = ARTICLE_INDEX.some(a => a.id === article.id);
 
   const [scrollPercent, setScrollPercent] = useState(0);
   const [fontSize, setFontSize] = useState<"base" | "lg" | "xl">("lg");
@@ -48,7 +49,7 @@ export default function ArticleView() {
   const [showReadabilityModal, setShowReadabilityModal] = useState(false);
 
   // Compute live readability and editorial quality metrics
-  const readability = useMemo(() => calculateReadability(article?.content || ""), [article?.content]);
+  const readability = useMemo(() => calculateReadability((article as any)?.content || ""), [(article as any)?.content]);
 
   // Monitor layout scrolling for real-time reading progress
   useEffect(() => {
@@ -64,8 +65,8 @@ export default function ArticleView() {
 
   // Extract Table of Contents headings from markdown content
   const tocHeadings = useMemo(() => {
-    if (!article || !article.content) return [];
-    const lines = article.content.split("\n");
+    if (!article || !(article as any).content) return [];
+    const lines = (article as any).content.split("\n");
     const headings: { id: string; text: string; level: number }[] = [];
     lines.forEach(line => {
       const match = line.match(/^(#{2,3})\s+(.+)$/);
@@ -83,7 +84,7 @@ export default function ArticleView() {
   const relatedArticles = useMemo(() => {
     if (!article) return [];
     const todayStr = new Date().toISOString().split("T")[0];
-    const pool = ARTICLES.filter(a => a.id !== article.id && a.pubDate <= todayStr);
+    const pool = ARTICLE_INDEX.filter(a => a.id !== article.id && a.pubDate <= todayStr);
     
     // Sort by relevance
     return pool
@@ -103,7 +104,6 @@ export default function ArticleView() {
 
   if (!article) return <div className="pt-40 text-center text-white text-2xl font-bold">Article not found.</div>;
 
-  const isArticle = ARTICLES.some(a => a.id === article.id);
   const type = isArticle ? 'article' : 'page';
   const url = `https://blueoceanhub.info/${type}/${article.id}`;
 

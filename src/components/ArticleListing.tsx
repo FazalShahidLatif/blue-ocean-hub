@@ -1,11 +1,11 @@
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, Clock, Calendar } from "lucide-react";
-import { ARTICLES } from "../data/articles";
+import { ARTICLE_INDEX } from "../data/article-index";
 import { Link } from "react-router-dom";
 
 export default function ArticleListing({ filterCategory }: { filterCategory?: string }) {
   const todayStr = new Date().toISOString().split("T")[0];
-  const publishedArticles = ARTICLES.filter(a => a.pubDate <= todayStr);
+  const publishedArticles = ARTICLE_INDEX.filter(a => a.pubDate <= todayStr);
 
   const filteredArticles = filterCategory && filterCategory !== 'home'
     ? publishedArticles.filter(a => a.category.toLowerCase() === filterCategory.toLowerCase()) 

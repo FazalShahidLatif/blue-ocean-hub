@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
 import { ArrowRight, Clock, Eye, Award, Star, BookOpen, ChevronRight } from "lucide-react";
-import { ARTICLES, Article } from "../data/articles";
+import { ARTICLE_INDEX, ArticleIndex } from "../data/article-index";
 import { CATEGORIES, CategoryData } from "../data/categories";
 import { Link } from "react-router-dom";
 
 export default function MagazineGrid() {
   const todayStr = new Date().toISOString().split("T")[0];
-  const publishedArticles = ARTICLES.filter(a => a.pubDate <= todayStr);
+  const publishedArticles = ARTICLE_INDEX.filter(a => a.pubDate <= todayStr);
 
   // Group and process articles for each category
   const magazineSections = CATEGORIES.map(category => {

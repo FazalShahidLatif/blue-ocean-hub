@@ -10,7 +10,8 @@
     "start": "node dist/server.cjs",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "prebuild:static": "python scripts/generate-article-index.py"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
