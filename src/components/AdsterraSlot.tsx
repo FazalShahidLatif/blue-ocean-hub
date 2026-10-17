@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
 interface AdsterraSlotProps {
-  zone: "rectangle" | "skyscraper";
+  zone: "rectangle" | "skyscraper" | "leaderboard";
   containerId: string;
 }
 
 const ZONE_KEYS: Record<string, { key: string; width: number; height: number }> = {
   rectangle: { key: "18e900a72b10163fd02748af2dead7ab", width: 300, height: 250 },
   skyscraper: { key: "1a3486e574702c647fa882e16155e922", width: 160, height: 600 },
+  leaderboard: { key: "347d90a7831c45b3945479858043a89c", width: 728, height: 90 },
 };
 
 const SCRIPT_URL = "https://ballisticcomainvitation.com/${key}/invoke.js";

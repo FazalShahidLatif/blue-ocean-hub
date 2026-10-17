@@ -542,6 +542,11 @@ export default function ArticleView() {
           </div>
         </header>
 
+        {/* Adsterra Leaderboard Ad */}
+        <div className="mb-8 flex justify-center">
+          <AdsterraSlot zone="leaderboard" containerId="adsterra-leaderboard-article" />
+        </div>
+
         {/* 1. GEO Pillar: Sparkling AI SGE Quick Synthesis Capsule */}
         <div className="mb-10 p-6 md:p-8 rounded-xl bg-gradient-to-r from-ocean-900 to-ocean-850 border border-cyan/20 relative overflow-hidden shadow-xl">
               <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 w-32 h-32 bg-cyan/10 rounded-full blur-2xl pointer-events-none" />
