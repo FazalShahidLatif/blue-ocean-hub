@@ -333,13 +333,13 @@ Build newsletter audiences to share affiliate tools in our [Beehiiv monetization
     schema: "Article",
     authorLinkedIn: "https://linkedin.com/in/blue-ocean-hub",
     content: `
-Monetizing digital content websites through premium ad networks (Mediavine, Raptive) yields $30 to $50 per 1,000 pageviews (RPM), outperforming Google AdSense by 5x. Meeting strict publisher entry requirements is key.
+Monetizing digital content websites through premium ad networks (Mediavine, Raptive) yields $30 to $50 per 1,000 pageviews (RPM), outperforming display ad networks by 5x. Meeting strict publisher entry requirements is key.
 
 ### Premium Ad Network Qualification Requirements
 
 | Ad Network | Minimum Monthly Traffic | Core Traffic Requirement | Expected RPM Yield |
 | :--- | :--- | :--- | :--- |
-| Google AdSense | No minimum threshold | Standard policy compliance | $2.00 - $5.00 RPM |
+| display ad networks | No minimum threshold | Standard policy compliance | $2.00 - $5.00 RPM |
 | Ezoic Platform | No minimum (Access Now) | Original content & clean domain | $8.00 - $18.00 RPM |
 | Mediavine | 50,000 Sessions / month | 50%+ Tier-1 (US/UK/CA) organic traffic | $25.00 - $45.00 RPM |
 | Raptive (AdThrive) | 100,000 Pageviews / month | 60%+ US organic search traffic | $35.00 - $60.00 RPM |

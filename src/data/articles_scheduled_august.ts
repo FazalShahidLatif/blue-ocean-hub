@@ -236,7 +236,7 @@ Digital media publishing remains one of the purest passive income models for con
 
 | Ad Network | Minimum Traffic Threshold | Average RPM Range | Core Advantage |
 | :--- | :--- | :--- | :--- |
-| Google AdSense | No minimum | $3 - $8 | Instant approval, global coverage |
+| display ad networks | No minimum | $3 - $8 | Instant approval, global coverage |
 | Ezoic Access | No minimum | $12 - $25 | AI ad placement optimization |
 | Mediavine | 50,000 sessions/mo | $25 - $45 | Premium B2B brand advertisers |
 | Raptive (AdThrive) | 100,000 pageviews/mo | $35 - $65+ | Industry-leading header bidding yields |
@@ -448,7 +448,7 @@ YouTube Partner Program ad revenue paid in USD remains one of the most scalable 
 | Voiceover | ElevenLabs AI / Professional Voice Actors | $3 - $10 |
 | Video Editing | CapCut / Premiere Pro / Stock Footage | $15 - $30 |
 
-### Monetization Beyond Google AdSense
+### Monetization Beyond display ad networks
 
 While YouTube Partner Program ad payouts generate baseline cashflow, high-performing automation channels maximize earnings by integrating affiliate offers and digital sponsorships.
 

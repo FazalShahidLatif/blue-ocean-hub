@@ -123,7 +123,7 @@ For a detailed breakdown, please see our [Cookie Policy](/page/cookie-policy).
 We do not sell your data. We never have, and we never will. We share anonymized data only with a few trusted service providers essential for our operations:
 - **Hosting**: Our site is hosted on secure, global infrastructure (e.g., Vercel/Cloud Run).
 - **Analytics**: Google Analytics processes anonymized traffic data to provide us with performance reports.
-- **Advertising**: If we display Google AdSense ads, Google may use cookies to serve ads based on your interests.
+- **Advertising**: If we display display ad networks ads, Google may use cookies to serve ads based on your interests.
 
 ### 4. International Data Transfers
 
@@ -168,7 +168,7 @@ Cookies are small text files that are placed on your device when you visit a web
 We use cookies for three specific purposes:
 1. **Essential Functionality**: These are cookies required for the technical operation of our site. For example, they remember if you have accepted our cookie policy so we don't ask you every time you load a new page.
 2. **Analytics and Performance**: We use Google Analytics to monitor how our Publication is being used. This helps us identify which articles are providing value to founders and which sections of the site need optimization. These cookies collect information such as which browser you use, how long you stay on a page, and your general geographic region. 
-3. **Advertising Optimization**: While we do not set marketing cookies ourselves, our advertising partner (Google AdSense) may set cookies to serve advertisements that are more relevant to your professional interests.
+3. **Advertising Optimization**: While we do not set marketing cookies ourselves, our advertising partner (display ad networks) may set cookies to serve advertisements that are more relevant to your professional interests.
 
 ### 3. Managing Your Preferences
 

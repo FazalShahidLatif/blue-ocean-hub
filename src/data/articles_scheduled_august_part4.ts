@@ -1330,7 +1330,7 @@ Maximize ad yields on acquired sites using our [digital publishing RPM optimizat
 
 ### Buyer Checklist
 - Verify Google Analytics / Search Console data via direct read-only access.
-- Audit merchant payment processor accounts (Stripe, AdSense, Ezoic) via screen shares.
+- Audit merchant payment processor accounts (Stripe, ad network, Ezoic) via screen shares.
 - Reinvest asset payouts into [micro-SaaS Stripe monetization products](/article/micro-saas-stripe-monetization-playbook).
 `
   },

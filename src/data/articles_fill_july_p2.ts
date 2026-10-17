@@ -468,7 +468,7 @@ Acquiring existing, cash-flowing digital content websites on Flippa or Empire Fl
 | Verification Scope | Analysis Action | Red Flags to Avoid |
 | :--- | :--- | :--- |
 | Organic Traffic Audit | Verify Google Analytics / Search Console data directly | Sudden 80% traffic drops caused by Google algorithm updates |
-| Revenue Proof Audit | Live screen-share review of AdSense / Mediavine dashboards | P&L statements relying on manual, unverified Excel sheets |
+| Revenue Proof Audit | Live screen-share review of ad network / Mediavine dashboards | P&L statements relying on manual, unverified Excel sheets |
 | Backlink Health Audit | Ahrefs / SEMrush backlink profile toxicity check | Spammy PBN (Private Blog Network) links subject to penalty |
 
 ### Calculating SDE Multiples & Expected ROI
