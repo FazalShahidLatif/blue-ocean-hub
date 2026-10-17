@@ -88,9 +88,13 @@ export default function Navbar() {
             className="flex flex-col cursor-pointer group shrink-0"
           >
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded bg-cyan flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg shadow-cyan/20">
-                <Compass className="text-ocean-950 w-5 h-5" aria-hidden="true" />
-              </div>
+              <img 
+                src="/logo.svg" 
+                alt="Blue Ocean Hub logo" 
+                className="w-8 h-8 group-hover:rotate-12 transition-transform" 
+                width="32" 
+                height="32"
+              />
               <span className="text-lg sm:text-xl font-bold text-white tracking-tight uppercase">BlueOcean<span className="text-cyan">Hub</span></span>
             </div>
             <span className="text-[7.5px] sm:text-[8px] text-slate-300 font-semibold uppercase tracking-[0.3em] sm:tracking-[0.4em] mt-0.5 ml-1 group-hover:text-cyan transition-colors">Strategic Financial Intelligence</span>

@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-compass"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <path d="M8 40c4-4 8-4 12 0s8 4 12 0 8-4 12 0 8 4 12 0" stroke="#64ffda" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M8 48c4-4 8-4 12 0s8 4 12 0 8-4 12 0 8 4 12 0" stroke="#64ffda" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+  <circle cx="32" cy="28" r="14" stroke="#64ffda" stroke-width="2.5"/>
+  <circle cx="32" cy="28" r="10" stroke="#64ffda" stroke-width="1" opacity="0.3"/>
+  <polygon points="32,16 36,28 32,40 28,28" fill="#64ffda"/>
+  <polygon points="32,16 36,28 28,28" fill="#0a192f" opacity="0.3"/>
+  <circle cx="32" cy="14" r="1.5" fill="#64ffda"/>
+  <circle cx="32" cy="42" r="1.5" fill="#64ffda" opacity="0.5"/>
+  <circle cx="18" cy="28" r="1.5" fill="#64ffda" opacity="0.5"/>
+  <circle cx="46" cy="28" r="1.5" fill="#64ffda" opacity="0.5"/>
+  <path d="M24 36L32 28L40 36" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+</svg>
