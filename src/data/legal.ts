@@ -316,6 +316,10 @@ We aim to respond to all professional correspondence within **three business day
 **Blue Ocean Hub does not provide personalized financial advice.** Our mission is strictly educational and institutional. We will not respond to requests for investment "tips," portfolio reviews, or specific financial planning. We encourage all readers to consult with a certified financial professional for their individual needs.
 
 For technical issues regarding site performance or cookie accessibility, please include your browser and device type in your email. We look forward to hearing from the operators building the future of South Asia.
+
+### Business Phone Numbers (CallHippo)
+
+For founders and remote professionals who need a local business phone number in multiple countries, we recommend [CallHippo](https://join.callhippo.com/9ug76tv8mxqb). Get local, toll-free, and mobile numbers in 150+ countries with AI voice agents handling calls 24/7 in 35+ languages. [Sign up here](https://join.callhippo.com/9ug76tv8mxqb).
     `
   },
   {
@@ -473,6 +477,7 @@ Our primary commercial and affiliate partners include, but are not limited to:
 - **Accommodation & Experience Passes**: Expedia, Klook, Go City Passes, WeGoTrip.
 - **Nomad Security & Utility**: NordVPN, World Nomads, Ekta Traveling Insurance, Radical Storage, Wise.
 - **Network Clearinghouses**: Travelpayouts / Emerald Travel (\`emrldtp.cc\`, \`tpk.lu\`, \`tp.media\`).
+- **Travelpayouts Affiliate Link**: [Join Travelpayouts](https://www.travelpayouts.com/?marker=685596) — Earn commissions on travel bookings.
 
 ---
 

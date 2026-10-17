@@ -28,9 +28,25 @@ export default function Newsletter() {
                   Get weekly "Blue Ocean" reports delivered to your inbox. No fluff, just untapped gaps and implementation guides.
                 </p>
                 
-                <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={(e) => {
+                <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={async (e) => {
                   e.preventDefault();
-                  setSubmitted(true);
+                  const form = e.currentTarget;
+                  const formData = new FormData(form);
+                  try {
+                    const res = await fetch("https://api.web3forms.com/submit", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                      body: JSON.stringify({
+                        access_key: "YOUR_WEB3FORMS_KEY",
+                        subject: "New Newsletter Subscription - Blue Ocean Hub",
+                        from_name: "Blue Ocean Hub",
+                        email: formData.get("email"),
+                      }),
+                    });
+                    if (res.ok) setSubmitted(true);
+                  } catch {
+                    setSubmitted(true);
+                  }
                 }}>
                   <input 
                     type="email" 
@@ -50,7 +66,7 @@ export default function Newsletter() {
                 </form>
                 
                 <p className="mt-6 text-xs text-slate-300 uppercase tracking-widest font-semibold">
-                  Join 12,542+ subscribers already getting the edge.
+                  Get weekly strategic intelligence delivered to your inbox.
                 </p>
               </>
             )}

@@ -747,9 +747,25 @@ export default function ArticleView() {
                   </div>
                 ) : (
                   <form 
-                    onSubmit={(e) => {
+                    onSubmit={async (e) => {
                       e.preventDefault();
-                      if (leadEmail) setLeadSubmitted(true);
+                      const form = e.currentTarget;
+                      const formData = new FormData(form);
+                      try {
+                        const res = await fetch("https://api.web3forms.com/submit", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                          body: JSON.stringify({
+                            access_key: "YOUR_WEB3FORMS_KEY",
+                            subject: "New Lead Capture - Blue Ocean Hub",
+                            from_name: "Blue Ocean Hub",
+                            email: formData.get("email"),
+                          }),
+                        });
+                        if (res.ok) setLeadSubmitted(true);
+                      } catch {
+                        setLeadSubmitted(true);
+                      }
                     }}
                     className="flex flex-col sm:flex-row gap-3"
                   >
@@ -773,7 +789,7 @@ export default function ArticleView() {
                 )}
                 <div className="mt-3 text-[10px] text-slate-300 flex items-center gap-2 font-medium">
                   <Shield className="w-3 h-3 text-cyan" />
-                  <span>100% Free. No spam. Join 12,500+ tech founders & remote earners.</span>
+                  <span>100% Free. No spam. Unsubscribe anytime.</span>
                 </div>
               </div>
             </div>
