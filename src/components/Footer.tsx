@@ -99,6 +99,7 @@ export default function Footer() {
               <li><Link to="/page/contact" className="hover:text-cyan transition-colors block">Contact Editorial Desk</Link></li>
               <li><Link to="/page/editorial-policy" className="hover:text-cyan transition-colors block">Editorial Integrity Policy</Link></li>
               <li><Link to="/page/advertise" className="hover:text-cyan transition-colors block text-cyan">Advertise With Us</Link></li>
+              <li><a href="https://beta.publishers.adsterra.com/referral/2insM4HdrF" target="_blank" rel="nofollow noopener" className="hover:text-cyan transition-colors block text-cyan/80">Join Adsterra</a></li>
               <li><Link to="/page/privacy-policy" className="hover:text-cyan transition-colors block">Privacy Disclosures</Link></li>
               <li><Link to="/page/affiliate-disclosure" className="hover:text-cyan transition-colors block text-cyan/90">Affiliate Disclosure</Link></li>
               <li><Link to="/page/gdpr-compliance" className="hover:text-cyan transition-colors block">GDPR Compliance</Link></li>

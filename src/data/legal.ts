@@ -448,6 +448,10 @@ Effective Date: August 29, 2026
 
 At **Blue Ocean Hub** (blueoceanhub.info), transparency, institutional integrity, and reader trust are our highest priorities. In accordance with the **Federal Trade Commission (FTC) 16 CFR Part 255 ("Guides Concerning the Use of Endorsements and Testimonials in Advertising")**, the **UK Advertising Standards Authority (ASA)**, and global compliance regulations, this page outlines our affiliate partnerships, commercial relationships, and monetization practices.
 
+### Adsterra Referral Partnership
+
+Blue Ocean Hub uses [Adsterra](https://beta.publishers.adsterra.com/referral/2insM4HdrF) as our display advertising partner. If you are a publisher or website owner looking to monetize your traffic, we recommend joining Adsterra through our [referral link](https://beta.publishers.adsterra.com/referral/2insM4HdrF). We may receive a referral bonus at no additional cost to you.
+
 ---
 
 ### 1. The Nature of Affiliate Relationships
