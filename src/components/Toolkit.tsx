@@ -191,6 +191,8 @@ export default function Toolkit() {
                       <span className="absolute left-4 top-1/2 -translate-y-1/2 text-cyan font-bold">$</span>
                       <input 
                         type="number" 
+                        id="usd-income-input"
+                        aria-label="Monthly USD Inward Remittance"
                         value={usdIncome}
                         onChange={(e) => setUsdIncome(Math.max(0, Number(e.target.value)))}
                         className="w-full pl-8 pr-4 py-3 bg-ocean-950 border border-ocean-700 rounded-xl text-white font-bold text-lg focus:border-cyan focus:outline-none"

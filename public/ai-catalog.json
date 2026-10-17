@@ -9,10 +9,10 @@
   },
   "entries": [
     {
-      "identifier": "urn:ai:blueoceanhub.info:tools:pseb-tax-estimator",
+      "identifier": "urn:air:blueoceanhub.info:tools:pseb-tax-estimator",
       "displayName": "PSEB Tax & Remittance Optimizer",
       "description": "Interactive calculator and financial model for Pakistani IT exporters, remote workers, and agencies under FBR Section 154A and PSEB tax frameworks.",
-      "type": "application/json",
+      "type": "application/ai-catalog+json",
       "url": "https://blueoceanhub.info/toolkit",
       "representativeQueries": [
         "Calculate PSEB tax savings on IT remittances",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "identifier": "urn:ai:blueoceanhub.info:publications:financial-intel-feed",
+      "identifier": "urn:air:blueoceanhub.info:publications:financial-intel-feed",
       "displayName": "Blue Ocean Hub Financial Intelligence Feed",
       "description": "Institutional-grade financial intelligence reports, corporate structuring guides, cross-border banking insights, and high-yield wealth strategies for emerging markets.",
       "type": "text/markdown",
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "identifier": "urn:ai:blueoceanhub.info:resources:llms-txt",
+      "identifier": "urn:air:blueoceanhub.info:resources:llms-txt",
       "displayName": "Blue Ocean Hub LLMs Resource Index",
       "description": "Standardized LLMs.txt index for large language models, autonomous agents, and search crawlers.",
       "type": "text/markdown",
