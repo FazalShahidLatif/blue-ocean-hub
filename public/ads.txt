@@ -1,3 +1,6 @@
 # Blue Ocean Hub - ads.txt
 # Authorized Digital Sellers
 # Contact: hello@blueoceanhub.info
+
+# Adsterra
+ballisticcomainvitation.com, 18e900a72b10163fd02748af2dead7ab, DIRECT

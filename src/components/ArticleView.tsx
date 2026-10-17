@@ -29,6 +29,7 @@ import {
 import { ARTICLE_INDEX } from "../data/article-index";
 import { LEGAL_PAGES } from "../data/legal";
 import { PILLAR_FAQS } from "../data/faqs";
+import AdsterraSlot from "./AdsterraSlot";
 import FAQSection from "./FAQSection";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
@@ -953,6 +954,12 @@ export default function ArticleView() {
             ))}
           </div>
         )}
+
+        {/* Adsterra Display Ads */}
+        <div className="mt-12 flex flex-col md:flex-row gap-6 items-center justify-center">
+          <AdsterraSlot zone="rectangle" containerId="adsterra-rectangle-article" />
+          <AdsterraSlot zone="skyscraper" containerId="adsterra-skyscraper-article" />
+        </div>
       </div>
     </motion.article>
     </>
