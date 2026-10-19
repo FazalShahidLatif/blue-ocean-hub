@@ -1,3 +1,4 @@
+@import "./brand-kit.css";
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
