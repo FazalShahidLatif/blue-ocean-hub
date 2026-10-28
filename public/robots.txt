@@ -57,6 +57,13 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: /*?search=
+
+# Non-page files (sitemaps, llms.txt, all.txt) - noindex by design, do not crawl
+Disallow: /news-sitemap.xml
+Disallow: /sitemap.xml
+Disallow: /llms.txt
+Disallow: /all.txt
 
 # Sitemaps
 Sitemap: https://blueoceanhub.info/sitemap.xml

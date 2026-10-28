@@ -17,6 +17,8 @@ import { HOMEPAGE_FAQS, PILLAR_FAQS } from "../data/faqs";
 export function getSEOForUrl(urlPath: string) {
   // strip query params or hashes
   const cleanUrl = urlPath.split('?')[0].split('#')[0];
+  // Detect search-parameter URLs so we can noindex them (prevents Google indexing search result pages)
+  const isSearchUrl = urlPath.includes('?search=');
 
   // 1. Home Page
   if (cleanUrl === '/' || cleanUrl === '') {
@@ -85,6 +87,7 @@ export function getSEOForUrl(urlPath: string) {
       description: "Strategic financial intelligence for South Asian entrepreneurs. Expert analysis on PSX stock dividends, dollar-denominated export revenue, and high-yield saving strategies.",
       url: "https://blueoceanhub.info/",
       ogType: "website",
+      robots: isSearchUrl ? "noindex, follow" : undefined,
       jsonLd: homeJsonLd
     };
   }
