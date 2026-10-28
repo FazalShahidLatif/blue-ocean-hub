@@ -58,7 +58,6 @@ interface Route {
 
 async function writeRoute(route: Route, template: string): Promise<boolean> {
   const meta = getSEOForUrl(route.urlPath);
-  if (!meta) return false;
 
   const html = injectMeta(template, meta);
   const dir = path.join(DIST, route.outDir);
