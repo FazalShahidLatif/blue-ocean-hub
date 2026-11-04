@@ -11,15 +11,16 @@
   },
   "routes": [
     {
-      "handle": "filesystem"
-    },
-    {
       "src": "^\\/api\\/.*$",
       "dest": "/api/index.ts"
     },
     {
+      "src": "/(.*)",
+      "dest": "/dist/$1"
+    },
+    {
       "src": ".*",
-      "dest": "/index.html"
+      "dest": "/dist/index.html"
     }
   ],
   "headers": [
