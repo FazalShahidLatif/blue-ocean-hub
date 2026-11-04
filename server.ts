@@ -10,9 +10,8 @@ import { CATEGORIES } from "./src/data/categories";
 import { HOMEPAGE_FAQS, PILLAR_FAQS } from "./src/data/faqs";
 import { getSEOForUrl, injectMeta } from "./src/lib/seo-core";
 
-async function startServer() {
-  const app = express();
-  const PORT = 3000;
+const app = express();
+const PORT = 3000;
 
   // 1. Text Compression Optimization (Brotli, Gzip, Deflate)
   // Compress all HTML documents and text responses without a size threshold
@@ -970,11 +969,12 @@ Language: English
     });
   }
 
+// Export for Vercel serverless
+export default app;
+
+// Only listen when running directly (not on Vercel)
+if (!process.env.VERCEL) {
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });
 }
-
-startServer().catch((err) => {
-  console.error("Failed to start server:", err);
-});
