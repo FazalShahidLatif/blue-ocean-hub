@@ -9,10 +9,13 @@
       "memory": 1024
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/:path*",
-      "destination": "/api/index.ts"
+      "handle": "filesystem"
+    },
+    {
+      "src": "^\\/api\\/.*$",
+      "dest": "/api/index.ts"
     }
   ],
   "headers": [
