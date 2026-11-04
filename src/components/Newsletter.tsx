@@ -1,5 +1,8 @@
-import { Send, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { useState } from "react";
+
+const GOOGLE_FORM_EMBED_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfdvB4amW4-L64GzO6cAiQLYvTlLrSCK6RK8Pc4FSSs5L5J8g/embeddedform";
 
 export default function Newsletter() {
   const [submitted, setSubmitted] = useState(false);
@@ -28,46 +31,33 @@ export default function Newsletter() {
                   Get weekly "Blue Ocean" reports delivered to your inbox. No fluff, just untapped gaps and implementation guides.
                 </p>
                 
-                <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={async (e) => {
-                  e.preventDefault();
-                  const form = e.currentTarget;
-                  const formData = new FormData(form);
-                  try {
-                    const res = await fetch("https://api.web3forms.com/submit", {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-                      body: JSON.stringify({
-                        access_key: "YOUR_WEB3FORMS_KEY",
-                        subject: "New Newsletter Subscription - Blue Ocean Hub",
-                        from_name: "Blue Ocean Hub",
-                        email: formData.get("email"),
-                      }),
-                    });
-                    if (res.ok) setSubmitted(true);
-                  } catch {
-                    setSubmitted(true);
-                  }
-                }}>
-                  <input 
-                    type="email" 
-                    placeholder="Enter your email" 
-                    aria-label="Email address for newsletter subscription"
-                    className="flex-grow px-6 py-4 rounded-xl bg-ocean-950 border border-ocean-800 focus:border-cyan outline-none text-white transition-colors"
-                    required
-                  />
-                  <button 
-                    type="submit" 
-                    aria-label="Subscribe to weekly intelligence reports"
-                    className="btn-primary flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer"
+                {/* Embedded Google Form — responses go to the Lead Capture sheet */}
+                <div className="w-full max-w-xl mx-auto">
+                  <iframe
+                    src={GOOGLE_FORM_EMBED_URL}
+                    width="100%"
+                    height="620"
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    title="Blue Ocean Hub - Lead Capture Form"
+                    className="rounded-xl border border-cyan/20 bg-white"
                   >
-                    <span>Get Early Access</span>
-                    <Send className="w-4 h-4" aria-hidden="true" />
-                  </button>
-                </form>
-                
+                    Loading…
+                  </iframe>
+                </div>
+
                 <p className="mt-6 text-xs text-slate-300 uppercase tracking-widest font-semibold">
                   Get weekly strategic intelligence delivered to your inbox.
                 </p>
+
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(true)}
+                  className="mt-4 text-xs text-cyan/70 hover:text-cyan underline cursor-pointer"
+                >
+                  Already submitted? Confirm below.
+                </button>
               </>
             )}
           </div>

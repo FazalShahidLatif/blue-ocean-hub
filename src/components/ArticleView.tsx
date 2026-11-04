@@ -752,46 +752,16 @@ export default function ArticleView() {
                     <span>Success! Your 2026 Master Compliance PDF blueprint has been dispatched to your inbox.</span>
                   </div>
                 ) : (
-                  <form 
-                    onSubmit={async (e) => {
-                      e.preventDefault();
-                      const form = e.currentTarget;
-                      const formData = new FormData(form);
-                      try {
-                        const res = await fetch("https://api.web3forms.com/submit", {
-                          method: "POST",
-                          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-                          body: JSON.stringify({
-                            access_key: "YOUR_WEB3FORMS_KEY",
-                            subject: "New Lead Capture - Blue Ocean Hub",
-                            from_name: "Blue Ocean Hub",
-                            email: formData.get("email"),
-                          }),
-                        });
-                        if (res.ok) setLeadSubmitted(true);
-                      } catch {
-                        setLeadSubmitted(true);
-                      }
-                    }}
-                    className="flex flex-col sm:flex-row gap-3"
-                  >
-                    <input 
-                      type="email" 
-                      placeholder="Enter your email address" 
-                      value={leadEmail}
-                      onChange={(e) => setLeadEmail(e.target.value)}
-                      required
-                      className="px-4 py-3 bg-ocean-950 border border-ocean-700 rounded-xl text-white text-sm focus:border-cyan focus:outline-none flex-grow"
-                    />
-                    <button 
-                      type="submit" 
-                      aria-label="Download free compliance PDF blueprint"
-                      className="px-6 py-3 bg-cyan text-ocean-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-cyan/90 transition-all flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-cyan/20 cursor-pointer"
+                  <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfdvB4amW4-L64GzO6cAiQLYvTlLrSCK6RK8Pc4FSSs5L5J8g/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Download free compliance PDF blueprint via Google Form"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-cyan text-ocean-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-cyan/90 transition-all shadow-lg shadow-cyan/20 cursor-pointer"
                     >
                       <span>Get Free PDF</span>
                       <Send className="w-4 h-4" aria-hidden="true" />
-                    </button>
-                  </form>
+                    </a>
                 )}
                 <div className="mt-3 text-[10px] text-slate-300 flex items-center gap-2 font-medium">
                   <Shield className="w-3 h-3 text-cyan" />
