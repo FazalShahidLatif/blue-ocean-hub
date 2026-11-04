@@ -78,6 +78,18 @@ def sheets_update(token, sheet_id, range_name, values):
         return None
 
 
+def check_sitemap(token):
+    url = f"https://www.googleapis.com/webmasters/v3/sites/{urllib.parse.quote(GSC_SITE, safe='')}/sitemaps"
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}"})
+    try:
+        resp = urllib.request.urlopen(req, timeout=20)
+        data = json.loads(resp.read().decode())
+        for s in data.get("sitemap", []):
+            log(f"  Sitemap {s.get('path')}: submitted={s.get('lastSubmitted')} downloaded={s.get('lastDownloaded')} errors={s.get('errors')}")
+    except Exception as e:
+        log(f"  Sitemap check failed: {e}")
+
+
 def pull_gsc(token):
     end = datetime.now().strftime("%Y-%m-%d")
     start = (datetime.now() - timedelta(days=28)).strftime("%Y-%m-%d")
@@ -215,6 +227,9 @@ def main():
     # 3. Form responses sync
     count = sync_form_responses(token)
     log(f"  Form responses synced: {count}")
+
+    # 4. Sitemap status
+    check_sitemap(token)
 
     # 4. Update Overview last-run timestamp
     sheets_update(
