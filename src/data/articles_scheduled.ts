@@ -15,38 +15,131 @@ export const ARTICLES_SCHEDULED: Article[] = [
     schema: "Article",
     authorLinkedIn: "https://linkedin.com/company/blue-ocean-hub",
     content: `
-For Pakistani software engineers, agency founders, and digital specialists, taxes in 2026 represent a core business metric. Under the latest Federal Board of Revenue (FBR) finance bills, a single registration mistake can inflate your income tax liability from 0.25% to 1% or higher. Securing active filer status is no longer optional—it is a mandatory survival strategy.
+For Pakistani software engineers, agency founders, and digital specialists, taxes in 2026 are not an afterthought — they are a core business metric. A single registration oversight can inflate your income-tax liability from **0.25% to 1% or higher**. Securing active filer status is no longer optional; it is a survival strategy for anyone earning foreign income.
 
-## 1. The Core Split: 0.25% vs 1% Export Tax Rates
+This guide explains the PSEB registration process, the export-tax split, and how to position yourself correctly with the FBR.
 
-If you export IT or IT-enabled services (ITeS) to clients in North America, Europe, or the Middle East, you are legally entitled to standard export tax benefits. However, the exact rate depends on your active compliance footprint:
+## What you will learn
 
-- **0.25% Flat Tax Rate**: Requires active registration with the **Pakistan Software Export Board (PSEB)** AND active FBR income tax return filings.
-- **1% Export Tax Rate**: Applies to exporters who are registered with the FBR but fail to secure or maintain active PSEB credentials.
+- What PSEB registration actually gives you
+- The real difference between the 0.25% and 1% export-tax rates
+- Step-by-step registration process
+- The documents you need before you start
+- How filer status multiplies your savings beyond export tax
 
-### Tax Rate & Regulatory Requirements Comparison (2026)
+## What is the Pakistan Software Export Board (PSEB)?
 
-| Tax Metric | Fully Compliance Track | Unregistered Exporter Route |
-| :--- | :--- | :--- |
-| **FBR Annual Export Tax Rate**| **0.25%** of gross inflows | **1.00%** of gross inflows |
-| **PSEB Active Registration** | Yes (Renewable annually) | No / Expired Status |
-| **Sales Tax Exemptions** | Excluded under provincial tables | Subject to regional tax claims |
-| **SBP Retained Account Limit** | Retain up to 50% in USD accounts | Subject to immediate conversion |
+The **Pakistan Software Export Board** is the government body under the Ministry of IT and Telecommunication responsible for registering and regulating IT companies and freelancers that export software and IT-enabled services (ITeS).
 
-## 2. Step-by-Step PSEB Registration for Exporters
+Registration with PSEB is the gateway to:
 
-Opening a PSEB account is straightforward and can be completed online within 5 business days:
+- **Preferential export-tax rates** on foreign income.
+- Inclusion in the **FBR Active Taxpayers List (ATL)** as a recognised exporter.
+- Access to government schemes, incubation support, and industry representation.
+- A formal certificate that banks and clients may request.
 
-1. **Submit Basic Profile Details**: Register on the PSEB digital portal using your CNIC, NTN, and corporate bank details.
-2. **Submit Proof of Influx**: Provide bank statements showing at least $1,000 of incoming international remittances from online channels in the past 12 months.
-3. **Pay Registration Fees**: Pay the minor registration fee, which varies depending on whether you register as an individual sole proprietorship or active SECP Private Limited entity.
-4. **Acquire Validation Certificate**: Download the electronic PSEB certificate to submit to your commercial bank partner.
+## The core split: 0.25% vs 1%
 
-## Internal Links
-- Sibling article: [SECP Incorporation Checklist for Agencies](/article/b2b-digital-freelance-agency-registration).
-- Reinvest your tax savings in high-yield [PSX Blue-Chips via our DCA Guide](/article/blue-chip-stocks-dca-calculator).
-- Track global banking options with our [Payoneer vs Wise Cost Comparison](/article/payoneer-vs-wise-pakistan-comparison).
-- Explore general wealth-building resources on the [Blue Ocean Hub Homepage](/).
+If you export IT or ITeS to clients in North America, Europe, or the Middle East, you are entitled to favourable export-tax treatment — **if you are registered and filing correctly**.
+
+| Scenario | Typical export withholding rate |
+|---|---|
+| Registered IT exporter, active filer | ~0.25% |
+| Non-filer or unregistered exporter | ~1% or higher |
+
+On a $10,000 monthly export income, the difference between 0.25% and 1% is roughly **$75 per month, or $900 per year**. Scale that across a growing agency and the gap becomes significant.
+
+The exact rates shift with each federal budget, so confirm the current figures on the official FBR schedule. The structural principle — **registration plus filing equals lower tax** — has remained consistent.
+
+## Step-by-step registration process
+
+### Step 1: Confirm eligibility
+
+You must be exporting software, IT-enabled services, or digital services to clients outside Pakistan. Freelancers, agencies, and product companies all qualify.
+
+### Step 2: Create an account on the PSEB portal
+
+Register on the official PSEB member portal using your CNIC and a valid email address. You will receive a verification link.
+
+### Step 3: Prepare your documentation
+
+Have scanned copies ready of:
+
+- Valid **CNIC** (front and back).
+- **NTN** (National Tax Number) — obtained from the FBR Iris portal.
+- **Bank certificate** confirming your account details.
+- Proof of **export activity**: client contracts, invoices, payment receipts, or a portfolio showing international clients.
+- **Company incorporation documents** if you are registered as a company rather than a sole proprietor.
+- Recent **utility bill** for address verification.
+
+### Step 4: Submit the application
+
+Fill in the online form with your business details, service categories, and export history. Upload the documents and pay any applicable processing fee.
+
+### Step 5: Verification and certification
+
+PSEB reviews the application — typically within a few weeks. Once approved, you receive a membership/registration certificate and become eligible for the preferential export-tax regime.
+
+### Step 6: File your returns annually
+
+Registration alone is not enough. You must file your annual income-tax return and remain on the ATL to keep the lower rate.
+
+## Why filer status matters beyond export tax
+
+Being on the **Active Taxpayers List** changes your financial life in Pakistan in ways that compound:
+
+| Area | Filer treatment | Non-filer treatment |
+|---|---|---|
+| Export income withholding | Lower | Higher |
+| Banking transactions | Standard | Higher withholding |
+| Vehicle purchase | Lower tax | Significantly higher |
+| Property transactions | Lower CVT/stamp duty | Much higher |
+| Dividend and interest income | Lower withholding | Higher withholding |
+
+The message is simple: **file your return every year**, even if you owe nothing. The cost of compliance is negligible compared to the cost of non-compliance.
+
+## Common mistakes
+
+- **Assuming registration is automatic.** You must apply through the portal and maintain the registration.
+- **Missing the annual filing deadline.** Your ATL status lapses if you do not file.
+- **Mixing personal and business income.** Keep separate ledgers and bank flows.
+- **Not keeping export evidence.** Invoices, contracts, and payment receipts should be archived systematically.
+- **Ignoring provincial requirements.** Some provinces have additional levies on services; check your local rules.
+
+## Practical setup recommendations
+
+1. **Open a dedicated business bank account** for export income — it simplifies reconciliation enormously.
+2. **Issue proper invoices** with your NTN and registration number to every foreign client.
+3. **Use a proper accounting tool** or a chartered accountant familiar with export income.
+4. **Set aside a tax reserve** each month so the annual payment never surprises you.
+5. **Keep a digital archive** of every contract, invoice, and payment confirmation.
+
+## Frequently asked questions
+
+**Do freelancers need PSEB registration?**
+Yes. Freelancers exporting IT or ITeS services are eligible and should register to access the lower export-tax rate.
+
+**How long does registration take?**
+Typically a few weeks, depending on document completeness. Incomplete applications are the most common cause of delay.
+
+**Can I register as a sole proprietor?**
+Yes. Both sole proprietors and registered companies can apply; the documentation differs slightly.
+
+**What if I already have an NTN?**
+Your NTN is required for registration. If you do not have one, obtain it from the FBR Iris portal first — it is free and usually issued quickly.
+
+## Internal links
+
+1. See our [Wise vs Payoneer guide](/article/wise-business-vs-payoneer-for-agencies) for receiving foreign payments efficiently.
+2. Explore our [Freelancing category](/freelancing) for more export-income playbooks.
+3. Read our [Capital Gains Tax guide](/article/capital-gain-tax-cgt-shares-real-estate) to understand your investment-side obligations.
+
+## The bottom line
+
+Tax compliance for Pakistani IT exporters is a competitive advantage, not a burden. Register with PSEB, obtain your NTN, file your return every year, and keep meticulous export records. The 0.25% regime is available to everyone who does the paperwork — the only question is whether you claim it.
+
+---
+*This article is for educational and informational purposes only. It does not constitute financial, tax, or legal advice. Tax rates and registration requirements change; verify current rules on the official FBR and PSEB websites and consult a qualified tax adviser.*
 `
   },
   {

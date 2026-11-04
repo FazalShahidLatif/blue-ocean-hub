@@ -724,28 +724,129 @@ Handle global merchant tax compliance using our [Lemon Squeezy vs Paddle MoR rev
     schema: "Article",
     authorLinkedIn: "https://linkedin.com/in/blue-ocean-hub",
     content: `
-For software developers operating from regions where direct Stripe account opening is restricted, Merchant of Record (MoR) platforms—such as Lemon Squeezy, Paddle, and Gumroad—provide a legal gateway to sell software products worldwide.
+Selling software online from Pakistan used to mean fighting payment gateways, registering for VAT in a dozen countries, and watching chargebacks eat your margin. **Merchant of Record (MoR)** platforms removed most of that friction by becoming the legal seller of your product — they handle global tax, compliance, and payment processing while you keep the revenue.
 
-### Payment Gateway vs Merchant of Record (MoR)
+This guide explains how MoR platforms work, compares the leading options, and shows how to set one up as a Pakistani developer or agency.
 
-| Operational Function | Direct Payment Gateway (e.g., Stripe) | Merchant of Record (e.g., Lemon Squeezy / Paddle) |
+## What you will learn
+
+- The difference between a payment gateway and a Merchant of Record
+- How MoR platforms handle global VAT and sales tax
+- Which platform suits which business model
+- Real fee structures and how to compare them
+- How to get paid from Pakistan
+
+## Payment gateway vs Merchant of Record
+
+The distinction matters because it determines who bears legal responsibility for every transaction.
+
+| Function | Payment Gateway (e.g., Stripe) | Merchant of Record (e.g., Lemon Squeezy, Paddle) |
 | :--- | :--- | :--- |
-| Legal Entity on Buyer Receipt | Your own entity registered with Stripe | MoR entity (Lemon Squeezy / Paddle) |
-| Global VAT / Sales Tax Compliance | Merchant must register & remit tax in 50+ countries | MoR automatically collects & remits global sales taxes |
-| Payout Flexibility | Direct local bank deposit (where supported) | Flexible global payouts via Payoneer, Wise, or Wire Transfer |
+| Legal entity on the buyer's receipt | Your own registered entity | The MoR's entity |
+| Global VAT / sales tax compliance | **You** must register and remit in each jurisdiction | **The MoR** calculates, collects, and remits |
+| Chargeback liability | Yours | Shared or absorbed by the MoR |
+| Payout to you | Direct, after processing | Net of fees, on a schedule |
+| Onboarding complexity | High — you become a merchant in every market | Low — one contract covers the world |
 
-### Integrating MoR Webhooks with Next.js SaaS
+In short: with a gateway, **you are the seller**. With an MoR, **the platform is the seller and resells your product to the end customer.**
 
-MoR platforms issue API webhooks (\`order.created\`, \`subscription.updated\`) that trigger automated license key generation and user account feature provisioning inside full-stack web applications.
+## Why this matters from Pakistan
 
-Read complete MoR comparisons in our [Merchant of Record Lemon Squeezy Paddle guide](/article/merchant-of-record-lemon-squeezy-paddle-gumroad).
+Most global payment gateways restrict direct merchant accounts in Pakistan. Even where they are available, the compliance burden of selling to customers in the US, EU, and UK is substantial:
 
-Explore US bank account opening in our [Mercury vs Elevate USD banking guide](/article/mercury-v-elevet-global-usd-accounts).
+- **US sales tax** — economic nexus thresholds in dozens of states.
+- **EU VAT** — registration required once you exceed distance-selling thresholds.
+- **UK VAT** — separate registration and filing obligations.
+- **GST/VAT on digital services** — varying rules across markets.
 
-### Founder Guidelines
-- Use Lemon Squeezy or Paddle as Merchant of Record to handle global VAT/GST sales tax compliance automatically.
-- Connect MoR webhooks to your SaaS database to automate subscription management.
-- Withdraw USD earnings safely into [Elevate Pay or Wise accounts](/article/elevate-wise-stripe-pakistan-remittance).
+An MoR absorbs all of this. You sell to the MoR; the MoR sells to the world. From your side, it is a single payout.
+
+## Platform comparison
+
+### Lemon Squeezy
+- Built specifically for digital products and SaaS.
+- Clean onboarding, strong checkout conversion.
+- Handles global VAT, sales tax, and merchant-of-record compliance.
+- Popular with indie developers and small software businesses.
+
+### Paddle
+- Full-stack MoR with more enterprise-grade tooling.
+- Strong subscription management and dunning (failed-payment recovery).
+- Good fit for B2B SaaS with higher average order values.
+- More established presence in the regulated-software space.
+
+### Gumroad
+- Simplest onboarding, best for creators selling downloads, courses, and memberships.
+- Less flexible for traditional SaaS subscriptions.
+- Very fast setup — you can be live in an afternoon.
+
+**Choosing between them:** if you sell a SaaS subscription with monthly billing, Paddle or Lemon Squeezy. If you sell digital downloads or one-off products, Gumroad is often the fastest path.
+
+## How the money flows
+
+1. A customer buys your product on your website using the MoR's checkout.
+2. The MoR collects the payment, applies the correct tax for the customer's location, and remits it to the relevant authority.
+3. The MoR deducts its fee (typically **5%–8% + a per-transaction charge**).
+4. The remaining balance is paid to you on a regular schedule, usually via bank transfer or PayPal.
+
+Because the MoR absorbs tax compliance, its fee is generally higher than a raw payment gateway — but you save the cost of registering and filing taxes in multiple jurisdictions, which usually outweighs the difference.
+
+## Setting up from Pakistan
+
+The process is straightforward:
+
+1. **Create an account** on your chosen MoR platform.
+2. **Verify your identity** — passport or CNIC, plus proof of address.
+3. **Add a payout method** — a Pakistani bank account (SWIFT/IBAN) or a service like Payoneer/Wise that receives international transfers.
+4. **Integrate the checkout** — most platforms offer a hosted checkout, an embeddable widget, or an API.
+5. **Configure your products** — pricing tiers, currencies, trial periods, and refund policy.
+
+Expect verification to take a few business days. Have your incorporation documents ready if you are operating as a company rather than a sole proprietor.
+
+## Tax considerations for Pakistani sellers
+
+Even when an MoR handles the buyer-side taxes, **your own Pakistani tax obligations remain:**
+
+- Income from foreign sales must be declared to the FBR.
+- Export of services income may qualify for beneficial treatment under export-tax rules.
+- Maintain proper records of all MoR payouts and fee deductions.
+
+An MoR simplifies **buyer-side** compliance; it does not replace your **seller-side** filings. Consult a chartered accountant familiar with export income before scaling.
+
+## Common mistakes
+
+- **Ignoring the fee structure.** A platform charging 5% versus 8% compounds into a meaningful difference at scale.
+- **Not testing the checkout yourself.** Always run a real test purchase before launch.
+- **Assuming MoR covers your taxes.** It covers buyer-side tax only.
+- **Overlooking payout timing.** Some platforms hold funds for a rolling reserve; plan cash flow accordingly.
+- **Neglecting refunds and chargebacks.** Read the platform's policy on who absorbs the cost.
+
+## Frequently asked questions
+
+**Which countries can I be based in?**
+MoR platforms support a broad list of countries, but restrictions vary. Check the provider's supported-country list before committing.
+
+**Can I use my own domain?**
+Yes. All major MoR platforms let you embed their checkout on your own branded site.
+
+**What happens to my customers' data?**
+The MoR becomes the merchant of record, so customer purchase data flows through them. Review their privacy policy to understand what you can still access.
+
+**Can I migrate away later?**
+Yes, though you will need to export customer relationships carefully and ensure you comply with subscription-transfer rules.
+
+## Internal links
+
+1. Read our [Wise vs Payoneer guide](/article/wise-business-vs-payoneer-for-agencies) for receiving international payouts.
+2. Explore our [PSEB registration guide](/article/pseb-registration-tax-filer-guide-2026) for export-income benefits.
+3. See our [Freelancing category](/freelancing) for more payment-infrastructure playbooks.
+
+## The bottom line
+
+A Merchant of Record turns global software selling from a legal maze into a single integration. For Pakistani developers and agencies, the trade-off — a slightly higher transaction fee in exchange for zero multi-jurisdiction tax registration — is almost always worth it. Pick the platform that matches your product type, integrate it, and focus on building rather than filing forms.
+
+---
+*This article is for educational and informational purposes only. It does not constitute financial, tax, or legal advice. Platform fees, supported countries, and regulations change; verify current terms on the provider's official website.*
 `
   }
 ];
