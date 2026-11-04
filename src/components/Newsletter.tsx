@@ -2,7 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
 const GOOGLE_FORM_EMBED_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSfdvB4amW4-L64GzO6cAiQLYvTlLrSCK6RK8Pc4FSSs5L5J8g/embeddedform";
+  "https://docs.google.com/forms/d/e/1FAIpQLSfdvB4amW4-L64GzO6cAiQLYvTlLrSCK6RK8Pc4FSSs5L5J8g/viewform?embedded=true";
 
 export default function Newsletter() {
   const [submitted, setSubmitted] = useState(false);
