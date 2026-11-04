@@ -87,7 +87,7 @@ export function getSEOForUrl(urlPath: string) {
       description: "Strategic financial intelligence for South Asian entrepreneurs. Expert analysis on PSX stock dividends, dollar-denominated export revenue, and high-yield saving strategies.",
       url: "https://blueoceanhub.info/",
       ogType: "website",
-      robots: isSearchUrl ? "noindex, follow" : undefined,
+      robots: "index, follow",
       jsonLd: homeJsonLd
     };
   }
