@@ -83,8 +83,8 @@ export function getSEOForUrl(urlPath: string) {
       }
     ];
     return {
-      title: "Blue Ocean Hub: Personal Wealth Allocation and Dollar Revenue Strategies for South Asian Founders",
-      description: "Strategic financial intelligence for South Asian entrepreneurs. Expert analysis on PSX stock dividends, dollar-denominated export revenue, and high-yield saving strategies.",
+      title: "Blue Ocean Hub: Strategic Finance Intelligence for Founders",
+      description: "Strategic financial intelligence for South Asian founders. PSX dividends, dollar export revenue, passive cashflow systems, and SaaS growth playbooks.",
       url: "https://blueoceanhub.info/",
       ogType: "website",
       robots: "index, follow",

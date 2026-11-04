@@ -25,9 +25,27 @@ import { getSEOForUrl, injectMeta } from "../src/lib/seo-core";
 import { ARTICLES } from "../src/data/articles";
 import { LEGAL_PAGES } from "../src/data/legal";
 import { CATEGORIES } from "../src/data/categories";
+import {
+  getArticle,
+  getLegalPage,
+  renderArticlePage,
+  renderCategoryPage,
+  renderLegalPage,
+  renderToolkitPage,
+  renderFallback,
+} from "./render-content";
 
 const DIST = path.resolve(process.cwd(), "dist");
 const TODAY = new Date().toISOString().split("T")[0];
+const SITE_BASE = "https://blueoceanhub.info";
+
+function escapeHtml(s: string): string {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
 
 /**
  * The exact opening sentences of the batch-generated placeholder bodies.
@@ -54,12 +72,27 @@ interface Route {
   outDir: string;
   /** whether this route should be listed in the generated sitemap */
   inSitemap: boolean;
+  /** pre-rendered page body injected into #root (crawler-visible content) */
+  content?: string;
+}
+
+/**
+ * The Vite build emits an empty `<div id="root"></div>` because the app is
+ * client-rendered. Replace it with the real page content so crawlers get the
+ * article body instead of an empty shell.
+ */
+function injectContent(html: string, content?: string): string {
+  if (!content) return html;
+  const marker = '<div id="root"></div>';
+  if (!html.includes(marker)) return html;
+  return html.replace(marker, `<div id="root">${content}</div>`);
 }
 
 async function writeRoute(route: Route, template: string): Promise<boolean> {
   const meta = getSEOForUrl(route.urlPath);
 
-  const html = injectMeta(template, meta);
+  let html = injectMeta(template, meta);
+  html = injectContent(html, route.content);
   const dir = path.join(DIST, route.outDir);
   await fs.mkdir(dir, { recursive: true });
   await fs.writeFile(path.join(dir, "index.html"), html, "utf-8");
@@ -67,17 +100,81 @@ async function writeRoute(route: Route, template: string): Promise<boolean> {
 }
 
 function buildRoutes(): Route[] {
-  const routes: Route[] = [{ urlPath: "/", outDir: "", inSitemap: true }];
+  const routes: Route[] = [
+    {
+      urlPath: "/",
+      outDir: "",
+      inSitemap: true,
+      content: `
+    <main class="mx-auto max-w-5xl px-6 py-16">
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+          Strategic Financial Intelligence for South Asian Founders
+        </h1>
+        <p class="mt-6 text-lg text-slate-300 leading-relaxed max-w-3xl">
+          Expert analysis on PSX dividends, dollar-denominated export revenue,
+          passive cashflow systems, and SaaS growth playbooks for Pakistan's
+          founder economy.
+        </p>
+      </header>
+      <section aria-label="Featured topics">
+        <h2 class="text-2xl font-bold text-white mb-6">Explore the Hub</h2>
+        <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          ${CATEGORIES.map(
+            (c) => `          <li>
+            <a href="${SITE_BASE}/${c.id}" class="block rounded-xl border border-slate-800 p-6 hover:border-cyan/50 transition-colors">
+              <h3 class="text-lg font-semibold text-white">${escapeHtml(c.seoTitle || c.title)}</h3>
+              <p class="mt-2 text-sm text-slate-400">${escapeHtml(c.seoDescription || c.description || "")}</p>
+            </a>
+          </li>`,
+          ).join("\n")}
+        </ul>
+      </section>
+      <section aria-label="Latest articles" class="mt-16">
+        <h2 class="text-2xl font-bold text-white mb-6">Latest Analysis</h2>
+        <ul class="divide-y divide-slate-800/60">
+          ${ARTICLES.filter((a) => a.content)
+            .slice(0, 12)
+            .map(
+              (a) => `          <li class="py-5">
+            <a href="${SITE_BASE}/article/${a.id}" class="group block">
+              <h3 class="text-xl font-semibold text-white group-hover:text-cyan transition-colors">${escapeHtml(a.title)}</h3>
+              <p class="mt-2 text-sm text-slate-400">${escapeHtml(a.description || "")}</p>
+              <p class="mt-1 text-xs text-slate-500"><time datetime="${a.pubDate}">${a.pubDate}</time></p>
+            </a>
+          </li>`,
+            )
+            .join("\n")}
+        </ul>
+      </section>
+    </main>`,
+    },
+  ];
   const seenIds = new Set<string>();
 
   for (const c of CATEGORIES) {
-    routes.push({ urlPath: `/${c.id}`, outDir: c.id, inSitemap: true });
+    routes.push({
+      urlPath: `/${c.id}`,
+      outDir: c.id,
+      inSitemap: true,
+      content: renderCategoryPage(c.id),
+    });
   }
 
-  routes.push({ urlPath: "/toolkit", outDir: "toolkit", inSitemap: true });
+  routes.push({
+    urlPath: "/toolkit",
+    outDir: "toolkit",
+    inSitemap: true,
+    content: renderToolkitPage(),
+  });
 
   for (const p of LEGAL_PAGES) {
-    routes.push({ urlPath: `/page/${p.id}`, outDir: `page/${p.id}`, inSitemap: true });
+    routes.push({
+      urlPath: `/page/${p.id}`,
+      outDir: `page/${p.id}`,
+      inSitemap: true,
+      content: renderLegalPage(p),
+    });
   }
 
   for (const a of ARTICLES) {
@@ -98,6 +195,7 @@ function buildRoutes(): Route[] {
       urlPath: `/article/${a.id}`,
       outDir: `article/${a.id}`,
       inSitemap: !future && !dup && !isTemplated(a),
+      content: renderArticlePage(a),
     });
   }
 
@@ -139,12 +237,16 @@ ${urls}
 </urlset>`;
 }
 
-function buildNewsSitemap(routes: Route[]): string {
+function buildNewsSitemap(routes: Route[]): string | null {
   const cutoff = new Date(Date.now() - 48 * 60 * 60 * 1000).toISOString().split("T")[0];
   const recent = ARTICLES
     .filter((a) => a.pubDate <= TODAY && a.pubDate >= cutoff)
     .sort((a, b) => (a.pubDate < b.pubDate ? 1 : -1))
     .slice(0, 20);
+
+  // An empty news sitemap is reported as an error in Search Console. Only emit
+  // one when there is genuinely fresh news content.
+  if (recent.length === 0) return null;
 
   const items = recent
     .map((a) => `  <url>
@@ -192,7 +294,12 @@ async function main() {
   // Rewrite the root sitemap + news sitemap from the same route table, so the
   // sitemap can never disagree with what was actually prerendered.
   await fs.writeFile(path.join(DIST, "sitemap.xml"), buildSitemap(routes), "utf-8");
-  await fs.writeFile(path.join(DIST, "news-sitemap.xml"), buildNewsSitemap(routes), "utf-8");
+  const news = buildNewsSitemap(routes);
+  if (news) {
+    await fs.writeFile(path.join(DIST, "news-sitemap.xml"), news, "utf-8");
+  } else {
+    await fs.rm(path.join(DIST, "news-sitemap.xml"), { force: true });
+  }
 
   const inSitemap = routes.filter((r) => r.inSitemap).length;
   const noindex = routes.length - inSitemap;
