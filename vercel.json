@@ -7,6 +7,10 @@
     {
       "src": "api/index.ts",
       "use": "@vercel/node"
+    },
+    {
+      "src": "dist/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -15,8 +19,12 @@
       "dest": "/api/index.ts"
     },
     {
+      "src": "/(.*)",
+      "dest": "/dist/$1"
+    },
+    {
       "src": ".*",
-      "dest": "/index.html"
+      "dest": "/dist/index.html"
     }
   ],
   "headers": [
