@@ -396,6 +396,49 @@ We aim to respond to advertising enquiries within three business days.
     `
   },
   {
+    id: "newsletter",
+    postType: 'page',
+    title: "Blue Ocean Insider — Premium Newsletter",
+    description: "Weekly deep-dive research for founders, freelancers, and investors in South Asia. Free and premium tiers.",
+    metaDescription: "Subscribe to Blue Ocean Insider. Weekly deep-dive research on investing, freelancing, tax, and business setup for South Asian founders. Free and premium tiers.",
+    pubDate: "2026-11-08",
+    author: "Blue Ocean Hub Editorial",
+    category: "Corporate",
+    content: `
+# Blue Ocean Insider — Premium Newsletter
+
+Weekly, implementation-ready research for founders, freelancers, and investors in South Asia. No fluff, no recycled press releases.
+
+## What you get (free tier)
+
+- One deep-dive article every week
+- The Sunday market brief — PSX, FX, and macro in 5 minutes
+- New tool and platform reviews
+- Access to the resource library
+
+## What you get (premium tier)
+
+- Everything in free, plus:
+- Monthly compliance calendar with FBR and PSEB deadlines
+- Quarterly tax-position review templates
+- Direct Q&A with the editorial team
+- Early access to new toolkits and guides
+- Member-only directory of vetted service providers
+
+## Pricing
+
+- **Free** — always free, no credit card
+- **Premium** — $5/month or $48/year
+
+## Subscribe
+
+Drop your email on our [contact page](/page/contact) with the subject "Newsletter" and we will add you to the list. Premium upgrades are handled manually until we have enough volume to automate.
+
+---
+*Newsletter content is editorial and educational. It is not financial, tax, or legal advice.*
+    `
+  },
+  {
     id: "jobs",
     postType: 'page',
     title: "Remote Jobs for Pakistani Professionals",
