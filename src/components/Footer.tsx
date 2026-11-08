@@ -107,6 +107,20 @@ export default function Footer() {
               <li><Link to="/page/terms-of-service" className="hover:text-cyan transition-colors block">Terms of Service</Link></li>
             </ul>
           </div>
+
+          <div className="md:col-span-1">
+            <h2 className="font-bold text-white mb-6 uppercase text-xs tracking-[0.3em]">Work With Us</h2>
+            <ul className="space-y-3.5 text-xs font-semibold tracking-wider text-slate-300">
+              <li><Link to="/page/services" className="hover:text-cyan transition-colors block text-cyan">Consulting &amp; Advisory</Link></li>
+              <li><Link to="/page/products" className="hover:text-cyan transition-colors block text-cyan">Digital Toolkits</Link></li>
+              <li><Link to="/page/advertise" className="hover:text-cyan transition-colors block">Sponsor Content</Link></li>
+              <li><a href="https://www.buymeacoffee.com/" target="_blank" rel="nofollow noopener" className="hover:text-cyan transition-colors block text-cyan/80">Support Independent Publishing</a></li>
+            </ul>
+            <p className="mt-5 text-[11px] text-slate-500 leading-relaxed">
+              Blue Ocean Hub is reader-supported. Advertising, affiliate
+              partnerships, and advisory engagements keep our research free.
+            </p>
+          </div>
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-ocean-800 text-xs text-slate-300 uppercase tracking-widest gap-4">

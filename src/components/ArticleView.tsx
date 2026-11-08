@@ -30,6 +30,7 @@ import { ARTICLE_INDEX } from "../data/article-index";
 import { LEGAL_PAGES } from "../data/legal";
 import { PILLAR_FAQS } from "../data/faqs";
 import AdsterraSlot from "./AdsterraSlot";
+import AffiliateBox from "./AffiliateBox";
 import FAQSection from "./FAQSection";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
@@ -672,6 +673,9 @@ export default function ArticleView() {
                 {article.content!}
               </ReactMarkdown>
             </div>
+
+            {/* CONTEXTUAL AFFILIATE RECOMMENDATIONS */}
+            <AffiliateBox category={'category' in article ? article.category : undefined} />
 
             {/* TACTICAL TOOLKIT INTERLINKING SECTION (HIGH-LEVERAGE SEO ANCHORS) */}
             <div className="my-14 p-6 sm:p-8 rounded-2xl bg-ocean-900/80 border border-cyan/30 shadow-xl">

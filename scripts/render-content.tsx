@@ -94,6 +94,53 @@ ${links}
       </section>`;
 }
 
+function renderAffiliate(category?: string): string {
+  const links: Record<string, { label: string; href: string; note: string }[]> = {
+    Investing: [
+      { label: "Open a CDC / PSX trading account", href: "https://www.arifhabiblimited.com/", note: "Licensed TREC holder" },
+      { label: "Wise — mid-market FX rates", href: "https://wise.com/", note: "Convert export earnings at the real exchange rate" },
+    ],
+    Freelancing: [
+      { label: "Payoneer — receive global payments", href: "https://www.payoneer.com/", note: "Local receiving accounts for US, EU and UK clients" },
+      { label: "Register with PSEB", href: "https://pseb.gov.pk/", note: "Secure the 0.25% export-tax rate" },
+    ],
+    "Passive Income": [
+      { label: "TravelPayouts — travel affiliate stack", href: "https://www.travelpayouts.com/?marker=685596", note: "Earn commission on travel bookings you recommend" },
+      { label: "Wise Business — dollar account", href: "https://wise.com/", note: "Hold and convert USD without bank markup" },
+    ],
+    "Dollar Earning": [
+      { label: "Lemon Squeezy — Merchant of Record", href: "https://www.lemonsqueezy.com/", note: "Sell software globally without multi-country VAT registration" },
+      { label: "CallHippo — virtual business phone", href: "https://join.callhippo.com/9ug76tv8mxqb", note: "Local numbers in 50+ countries" },
+    ],
+    "Saving Money": [
+      { label: "Wise — avoid FX markup", href: "https://wise.com/", note: "Cheapest way to move money in and out of Pakistan" },
+    ],
+  };
+  const list = (category && links[category]) || [
+    { label: "Work with Blue Ocean Hub", href: "https://blueoceanhub.info/page/contact", note: "Consulting, compliance and growth advisory for founders" },
+    { label: "Advertise to our audience", href: "https://blueoceanhub.info/page/advertise", note: "Reach South Asian founders and investors directly" },
+  ];
+  const items = list
+    .map(
+      (l) =>
+        `        <li><a href="${l.href}" target="_blank" rel="nofollow sponsored noopener" class="block rounded-xl border border-slate-800/70 p-4 hover:border-cyan/50 transition-colors"><span class="block text-sm font-semibold text-white">${escapeHtml(l.label)}</span><span class="block text-xs text-slate-400 mt-1">${escapeHtml(l.note)}</span></a></li>`,
+    )
+    .join("\n");
+  return `
+      <aside aria-label="Recommended partners" class="my-14 rounded-2xl border border-cyan/25 bg-ocean-900/70 p-6 sm:p-8">
+        <div class="flex items-start justify-between gap-4 mb-5">
+          <h2 class="text-lg font-bold text-white uppercase tracking-widest">Recommended Partners</h2>
+          <span class="text-[10px] text-slate-400 uppercase tracking-wider whitespace-nowrap">May contain affiliate links</span>
+        </div>
+        <ul class="space-y-4">
+${items}
+        </ul>
+        <p class="mt-5 text-[11px] text-slate-500 leading-relaxed">
+          Blue Ocean Hub may earn a commission when you use these links, at no extra cost to you. Read our <a href="https://blueoceanhub.info/page/affiliate-disclosure" class="text-cyan/80 underline underline-offset-2">full affiliate disclosure</a>.
+        </p>
+      </aside>`;
+}
+
 export function renderArticlePage(article: ArticleLike): string {
   const body = renderMarkdown(article.content || "");
   const cat = findCategory(article.category);
@@ -138,6 +185,8 @@ export function renderArticlePage(article: ArticleLike): string {
           prose-li:text-slate-300 prose-strong:text-white">
           ${body}
         </div>
+
+        ${renderAffiliate(article.category)}
 
         ${
           tags

@@ -396,6 +396,110 @@ We aim to respond to advertising enquiries within three business days.
     `
   },
   {
+    id: "services",
+    postType: 'page',
+    title: "Consulting & Advisory Services",
+    description: "One-to-one mentoring, tax compliance, and business setup advisory for South Asian founders and freelancers.",
+    metaDescription: "Work directly with the Blue Ocean Hub team. 1:1 mentoring, PSEB and FBR compliance support, and freelance business advisory for founders in Pakistan.",
+    pubDate: "2026-11-08",
+    author: "Blue Ocean Hub Advisory",
+    category: "Corporate",
+    content: `
+# Consulting & Advisory Services
+
+Blue Ocean Hub offers direct, one-to-one advisory for founders, freelancers, and operators who want to move faster with professional guidance. Every engagement is practical and implementation-focused — not generic theory.
+
+## What we help with
+
+### 1. Freelance & Agency Advisory
+- Pricing strategy and rate negotiation
+- Positioning and client acquisition
+- Payment infrastructure (Wise, Payoneer, Merchant of Record)
+- Tax registration and export-income compliance
+
+### 2. Business Setup & Compliance
+- PSEB registration and 0.25% export-tax status
+- SECP company incorporation guidance
+- FBR filing and active-taxpayer positioning
+- Banking and remittance structure
+
+### 3. Investment & Capital Markets
+- PSX account setup and portfolio structuring
+- Shariah-compliant screening
+- Retirement and tax-advantaged investment planning
+
+## How engagements work
+
+1. **Discovery call** — a short conversation to define the problem.
+2. **Scope and fixed fee** — clear deliverables agreed upfront, no hourly ambiguity.
+3. **Implementation support** — documented recommendations plus follow-up.
+
+## Who this is for
+
+- Freelancers earning foreign income who want to fix their tax and payment setup
+- Agency founders scaling past their first few clients
+- Operators entering the PSX for the first time
+- Founders considering an international entity structure
+
+## Book a session
+
+Send an enquiry through our [contact page](/page/contact) with a short description of your situation, and we will respond within two business days with available slots and a fixed quote.
+
+---
+*Advisory services are educational and strategic in nature. They do not constitute legal, tax, or investment advice, and we do not act as a registered broker-dealer.*
+    `
+  },
+  {
+    id: "products",
+    postType: 'page',
+    title: "Digital Products & Toolkits",
+    description: "Practical templates, checklists, and toolkits for Pakistani founders — tax, compliance, pricing, and investment.",
+    metaDescription: "Download practical toolkits from Blue Ocean Hub: PSEB compliance checklist, freelance rate calculator, PSX starter guide, and tax planning templates.",
+    pubDate: "2026-11-08",
+    author: "Blue Ocean Hub Products",
+    category: "Corporate",
+    content: `
+# Digital Products & Toolkits
+
+Practical, implementation-ready resources built from the same research that powers our editorial content. Each product is designed to save you hours of guesswork.
+
+## Available Toolkits
+
+### 1. Pakistan Freelancer Compliance Toolkit
+- PSEB registration step-by-step checklist
+- FBR return filing calendar
+- Export-income documentation template
+- Invoice template with NTN and registration fields
+
+### 2. PSX Investor Starter Pack
+- CDC account opening walkthrough
+- Broker comparison worksheet
+- Watchlist and dividend tracker template
+- Shariah screening checklist
+
+### 3. Freelance Rate & Overhead Calculator
+- Spreadsheet model for true hourly rate
+- Overhead category checklist
+- Salary-to-freelance conversion worksheet
+
+### 4. Tax Planning Templates
+- Section 62 / 63 eligibility worksheet
+- Investment holding-period tracker
+- Annual tax position summary
+
+## How delivery works
+
+Products are delivered digitally after checkout. You receive a download link by email along with any updates we publish for that product.
+
+## Request a product
+
+If a toolkit you need is not listed, tell us what you are trying to solve via our [contact page](/page/contact). We prioritise products based on reader demand.
+
+---
+*Digital products are educational resources. They do not constitute legal, tax, or investment advice.*
+    `
+  },
+  {
     id: "affiliate-disclosure",
     postType: 'page',
     title: "Affiliate & Partner Disclosure",
