@@ -396,6 +396,93 @@ We aim to respond to advertising enquiries within three business days.
     `
   },
   {
+    id: "jobs",
+    postType: 'page',
+    title: "Remote Jobs for Pakistani Professionals",
+    description: "Curated remote and freelance opportunities for Pakistani developers, designers, writers, and operators.",
+    metaDescription: "Browse remote jobs and freelance gigs for Pakistani professionals. Vetted opportunities with international clients paying in USD.",
+    pubDate: "2026-11-08",
+    author: "Blue Ocean Hub Jobs",
+    category: "Corporate",
+    content: `
+# Remote Jobs for Pakistani Professionals
+
+A curated board of remote, freelance, and contract opportunities for Pakistani professionals. Every listing is vetted for payment reliability and fair rates.
+
+## Why this board
+
+- **USD-denominated roles** — no PKR-side payment friction
+- **Payment-verified employers** — we check payment history before listing
+- **Direct application** — no intermediary fee, no middleman cut
+- **Updated weekly** — stale listings are removed
+
+## How to apply
+
+Each listing links directly to the employer's application page. We never charge a fee to apply. If a listing asks you for money to apply, report it and we will remove it.
+
+## For employers
+
+If you want to post a role to our audience of South Asian founders, developers, designers, and operators, visit our [advertising page](/page/advertise) for sponsorship options.
+
+## Categories
+
+- Software engineering and DevOps
+- Design and creative
+- Content and copywriting
+- Operations and virtual assistance
+- Finance and accounting
+- Customer support
+- Sales and business development
+
+---
+*Job listings are provided for informational purposes. Blue Ocean Hub is not an employer or recruitment agency and does not guarantee any outcome.*
+    `
+  },
+  {
+    id: "directory",
+    postType: 'page',
+    title: "Business Directory — South Asian Founders",
+    description: "A directory of tools, services, and providers used by South Asian founders and operators.",
+    metaDescription: "Find trusted service providers, tools, and platforms used by South Asian founders. Listed and reviewed by the Blue Ocean Hub editorial team.",
+    pubDate: "2026-11-08",
+    author: "Blue Ocean Hub Directory",
+    category: "Corporate",
+    content: `
+# Business Directory
+
+A curated directory of tools, services, and providers used by South Asian founders and operators. Every entry is reviewed by our editorial team.
+
+## Categories
+
+### Payments & Finance
+- Wise — multi-currency accounts and FX
+- Payoneer — local receiving accounts for global clients
+- Lemon Squeezy — Merchant of Record for software
+- Paddle — full-stack MoR and subscriptions
+- CallHippo — virtual phone numbers in 50+ countries
+
+### Compliance & Legal
+- PSEB — Pakistan Software Export Board registration
+- SECP — company incorporation
+- FBR — tax filing and active taxpayer status
+
+### Investing & Markets
+- CDC — Central Depository Company accounts
+- PSX — Pakistan Stock Exchange
+- Arif Habib Limited — TREC holder and broker
+
+### Travel & Lifestyle
+- TravelPayouts — affiliate travel booking stack
+
+## List your business
+
+If you operate a service or tool that serves South Asian founders and want to be listed, contact us through our [advertising page](/page/advertise). Listings are reviewed for fit and quality before publication.
+
+---
+*Directory entries are editorially reviewed. We may receive compensation from some listed providers, disclosed on our [affiliate disclosure page](/page/affiliate-disclosure).*
+    `
+  },
+  {
     id: "services",
     postType: 'page',
     title: "Consulting & Advisory Services",

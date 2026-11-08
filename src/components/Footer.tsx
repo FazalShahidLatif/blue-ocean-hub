@@ -114,6 +114,8 @@ export default function Footer() {
               <li><Link to="/page/services" className="hover:text-cyan transition-colors block text-cyan">Consulting &amp; Advisory</Link></li>
               <li><Link to="/page/products" className="hover:text-cyan transition-colors block text-cyan">Digital Toolkits</Link></li>
               <li><Link to="/page/advertise" className="hover:text-cyan transition-colors block">Sponsor Content</Link></li>
+              <li><Link to="/page/jobs" className="hover:text-cyan transition-colors block">Remote Jobs</Link></li>
+              <li><Link to="/page/directory" className="hover:text-cyan transition-colors block">Business Directory</Link></li>
               <li><a href="https://www.buymeacoffee.com/" target="_blank" rel="nofollow noopener" className="hover:text-cyan transition-colors block text-cyan/80">Support Independent Publishing</a></li>
             </ul>
             <p className="mt-5 text-[11px] text-slate-500 leading-relaxed">
