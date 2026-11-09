@@ -2,5 +2,22 @@
 # Authorized Digital Sellers
 # Contact: hello@blueoceanhub.info
 
-# Adsterra
+# Adsterra - Display Banners
 ballisticcomainvitation.com, 18e900a72b10163fd02748af2dead7ab, DIRECT
+ballisticcomainvitation.com, 1a3486e574702c647fa882e16155e922, DIRECT
+ballisticcomainvitation.com, 347d90a7831c45b3945479858043a89c, DIRECT
+
+# Adsterra - Popunder
+ballisticcomainvitation.com, 18e900a72b10163fd02748af2dead7ab, DIRECT
+
+# Adsterra - Social Bar
+ballisticcomainvitation.com, 1a3486e574702c647fa882e16155e922, DIRECT
+
+# Adsterra - Native Banners
+ballisticcomainvitation.com, 347d90a7831c45b3945479858043a89c, DIRECT
+
+# Additional Ad Networks
+abscloud.org, 9caafdaa4443ab7a8a02a446911f91d1, DIRECT
+bauval.org, 0f583c6c8bdfe11b2ce6bcb2f06167a2, DIRECT
+bauval.org, 08d32a670141777493407806dde9c4f3, DIRECT
+araplhn.org, c9c5789836e8c5929ef1608c6aa1f8dc, DIRECT
