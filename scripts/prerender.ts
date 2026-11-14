@@ -21,7 +21,7 @@
 
 import fs from "fs/promises";
 import path from "path";
-import { getSEOForUrl, injectMeta } from "../src/lib/seo-core";
+import { getSEOForUrl, injectMeta, isTemplatedArticle } from "../src/lib/seo-core";
 import { ARTICLES } from "../src/data/articles";
 import { LEGAL_PAGES } from "../src/data/legal";
 import { CATEGORIES } from "../src/data/categories";
@@ -48,22 +48,10 @@ function escapeHtml(s: string): string {
 }
 
 /**
- * The exact opening sentences of the batch-generated placeholder bodies.
- * An article whose body starts with one of these carries no unique
- * information, so it must not be advertised in the sitemap until rewritten.
- *
- * Keep in sync with scripts/verify_prerender.py and the project audit —
- * a partial match here means placeholder URLs stay discoverable.
+ * Placeholder detection is shared with src/lib/seo-core.ts so the sitemap
+ * exclusion and the robots directive can never drift apart.
  */
-const PLACEHOLDER_OPENINGS = [
-  "Developing durable financial systems requires disciplined",
-  "Building sustainable financial systems requires structured",
-];
-
-function isTemplated(article: { content?: string }): boolean {
-  const body = (article.content || "").replace(/^\\n/, "").trimStart();
-  return PLACEHOLDER_OPENINGS.some((opening) => body.startsWith(opening));
-}
+const isTemplated = isTemplatedArticle;
 
 interface Route {
   /** URL path, e.g. "/" or "/article/foo" */

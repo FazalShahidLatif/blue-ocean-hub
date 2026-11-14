@@ -27,6 +27,19 @@ export function renderMarkdown(markdown: string): string {
   );
 }
 
+/**
+ * The page template already renders the article title as the single <h1>.
+ * Many source bodies open with a duplicated "# Title" heading, which would
+ * produce a second <h1> on the page. Drop that leading H1 line so the
+ * document has exactly one heading level-1.
+ */
+function stripLeadingH1(markdown: string): string {
+  return markdown
+    .replace(/^\s*\n/, "")
+    .replace(/^#\s+.*(?:\n|$)/, "")
+    .replace(/^\s*\n/, "");
+}
+
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, "&amp;")
@@ -142,7 +155,7 @@ ${items}
 }
 
 export function renderArticlePage(article: ArticleLike): string {
-  const body = renderMarkdown(article.content || "");
+  const body = renderMarkdown(stripLeadingH1(article.content || ""));
   const cat = findCategory(article.category);
   const tags = (article.tags || [])
     .map((t) => `        <span class="text-xs text-slate-400">#${escapeHtml(t)}</span>`)
@@ -211,7 +224,7 @@ export function renderCategoryPage(categoryId: string): string {
   const cat = findCategory(categoryId);
   if (!cat) return renderFallback(categoryId);
 
-  const intro = renderMarkdown(cat.content || "");
+  const intro = renderMarkdown(stripLeadingH1(cat.content || ""));
   const items = ARTICLES.filter((a) => a.category === cat.id && a.content).slice(0, 40);
 
   const list = items
@@ -255,7 +268,7 @@ ${list}
 /* ------------------------------------------------------------------ */
 
 export function renderLegalPage(page: Partial<Article>): string {
-  const body = renderMarkdown(page.content || "");
+  const body = renderMarkdown(stripLeadingH1(page.content || ""));
   return `
     <main class="mx-auto max-w-3xl px-6 py-16">
       <article>

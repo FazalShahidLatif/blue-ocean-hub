@@ -14,6 +14,33 @@ import { LEGAL_PAGES } from "../data/legal";
 import { CATEGORIES } from "../data/categories";
 import { HOMEPAGE_FAQS, PILLAR_FAQS } from "../data/faqs";
 
+/**
+ * The exact opening sentences of the batch-generated placeholder bodies.
+ * An article whose body starts with one of these carries no unique
+ * information, so it must never be indexed — it is excluded from the sitemap
+ * and carries `noindex` so the two signals can never disagree.
+ *
+ * Keep in sync with scripts/prerender.ts.
+ */
+const PLACEHOLDER_OPENINGS = [
+  "Developing durable financial systems requires disciplined",
+  "Building sustainable financial systems requires structured",
+];
+
+/** True when an article body is an unedited batch placeholder. */
+export function isTemplatedArticle(article: { content?: string }): boolean {
+  const body = (article.content || "").replace(/^\\n/, "").trimStart();
+  return PLACEHOLDER_OPENINGS.some((opening) => body.startsWith(opening));
+}
+
+/** Trim a meta description to Google's ~155 character display limit. */
+function clampDescription(desc: string, max = 155): string {
+  if (!desc || desc.length <= max) return desc || "";
+  const cut = desc.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > max - 40 ? cut.slice(0, lastSpace) : cut).trimEnd() + "…";
+}
+
 export function getSEOForUrl(urlPath: string) {
   // strip query params or hashes
   const cleanUrl = urlPath.split('?')[0].split('#')[0];
@@ -104,6 +131,7 @@ export function getSEOForUrl(urlPath: string) {
 
       const todayStr = new Date().toISOString().split("T")[0];
       const isFutureScheduled = article.pubDate > todayStr;
+      const isPlaceholder = isTemplatedArticle(article);
 
       const jsonLdArticle: any = {
         "@context": "https://schema.org",
@@ -192,10 +220,10 @@ export function getSEOForUrl(urlPath: string) {
 
       return {
         title: `${article.title} | Blue Ocean Hub`,
-        description: article.metaDescription || article.description,
+        description: clampDescription(article.metaDescription || article.description),
         url: canonical,
         ogType: "article",
-        robots: isFutureScheduled ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+        robots: isFutureScheduled || isPlaceholder ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
         publishedTime: `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
         modifiedTime: `${isFutureScheduled ? todayStr : article.pubDate}T08:00:00+05:00`,
         author: article.author || "Blue Ocean Hub Editorial",
@@ -265,7 +293,7 @@ export function getSEOForUrl(urlPath: string) {
 
       return {
         title: `${page.title} | Blue Ocean Hub`,
-        description: page.metaDescription || page.description || "",
+        description: clampDescription(page.metaDescription || page.description || ""),
         url: canonical,
         ogType: "website",
         jsonLd: [jsonLdPage, jsonLdBreadcrumb]
@@ -370,7 +398,7 @@ export function getSEOForUrl(urlPath: string) {
 
     return {
       title: `${categoryData.seoTitle} | Blue Ocean Hub`,
-      description: categoryData.seoDescription,
+      description: clampDescription(categoryData.seoDescription),
       url: canonical,
       ogType: "website",
       jsonLd: [jsonLdCollection, jsonLdBreadcrumb]
