@@ -429,7 +429,43 @@ Structure B2B software negotiations with our [Master B2B Software Contract guide
 - Never transfer source code repositories until final invoice payments clear.
 - Include explicit pre-existing IP exclusion clauses in all proposals.
 - Bill foreign clients securely using [Upwork Direct Contracts or Stripe](/article/b2b-upwork-direct-contracts-billing).
-`
+
+
+## Why Agencies Face a Harder Version
+
+A solo developer transfers what they built. An agency transfers work built by employees, contractors, and sometimes subcontractors, using tools and code the agency did not write. Every one of those relationships has to be correct before the agency can transfer anything at all.
+
+## The Chain of Title
+
+Before you can assign intellectual property to a client, you must own it. That means:
+
+- **Employees.** Their contracts must assign work product to the agency.
+- **Contractors.** A contractor agreement without an IP assignment clause leaves the contractor owning what they built. This is the single most common gap.
+- **Subcontractors.** Same rule, one level down, and your obligation to the client does not disappear because a subcontractor failed you.
+- **Third-party components.** Verify the licence permits the client's intended use, including commercial use and redistribution.
+
+## What the Client Actually Needs
+
+Clients rarely need ownership of your internal tooling. They need the delivered system, the right to use and modify it, and confidence that nobody will later claim it infringes. Structure the transfer around those needs rather than around the broadest possible assignment.
+
+## Drafting the Transfer
+
+- Define the deliverables precisely.
+- Assign what you are transferring; licence what you are not.
+- List pre-existing material and the licence granted for it.
+- Confirm the client's right to have a third party maintain the work.
+- State the IP warranty and the remedy if it is breached.
+
+## The Subcontractor Clause
+
+If you use subcontractors, your client contract should not promise more than your subcontractor contracts deliver. Align the assignment, warranty, and indemnity terms down the chain, or you will be the party holding the gap.
+
+## Auditing Before You Bid
+
+Before committing to an assignment-heavy contract, audit your own chain. It is far cheaper to fix a contractor agreement now than to discover the gap during a negotiation you have already priced.
+
+Our [contract negotiation guide](/article/saas-contract-negotiation-ip-protection) covers the clause-level negotiation.
+    `
   },
 
   // --- JULY 19, 2026 (2 needed) ---
@@ -563,7 +599,47 @@ Monetize acquired sites via our [Premium Ad Networks Mediavine & Raptive guide](
 - Always demand direct Google Search Console access before placing acquisition bids.
 - Transact strictly through Escrow.com to protect purchase funds until asset transfer.
 - Scale site yields using our [Niche Content Sites Portfolio guide](/article/global-niche-content-sites-portfolio-building).
-`
+
+
+## The First Question: Is the Cash Flow Real?
+
+Everything else in the due diligence is secondary to this. A website can show impressive traffic and a plausible-looking revenue graph and still be earning almost nothing after costs. Establish the actual seller's disposable earnings — the amount left after hosting, content, software, and the owner's own labour — because that is the number the multiple is applied to.
+
+## Verifying Traffic
+
+- Ask for read-only access to the analytics property, not screenshots.
+- Check the trend over at least twelve months, and look for a single step change.
+- Compare the analytics figure with the Search Console impression data where both exist.
+- Identify where the traffic comes from. A site whose visitors arrive from one source is a site with one point of failure.
+
+## Verifying Revenue
+
+- Ask to see the monetisation dashboard, live, rather than a spreadsheet.
+- Separate advertising revenue from affiliate revenue from product revenue. They have very different stability.
+- Check refund and chargeback rates if the site sells anything.
+- Confirm whether revenue depends on the owner's personal audience or relationships.
+
+## Verifying Costs
+
+A listing rarely shows costs accurately. Build the cost base yourself: hosting and infrastructure, content production, software subscriptions, payment processing, and the owner's time. The gap between "revenue" and "profit" is where most failed acquisitions live.
+
+## The Multiple
+
+Multiples are a shorthand, not a valuation. A high multiple for a site with growing, diversified, durable revenue is defensible. The same multiple for a site with flat revenue from a single source is not. Judge the quality of the earnings before you negotiate the multiple.
+
+## Structuring the Transaction
+
+- Use an escrow service for the funds.
+- Transfer the asset before releasing payment, and confirm you control the domain, the analytics property, the hosting, and the monetisation accounts.
+- Agree in writing what is included: content, email list, social accounts, supplier relationships, and any contractor relationships.
+- Plan the first 90 days before you buy, not after.
+
+## After the Purchase
+
+Most acquired sites decline in the first year. The usual cause is not the algorithm, it is that the new owner stops doing the thing the previous owner was doing, whether that was publishing cadence, outreach, or maintenance. Write down what the owner does weekly, and keep doing it.
+
+Our [niche content sites guide](/article/building-niche-directory-websites-monetetization) covers building from scratch, and the [ad network guide](/article/premium-ad-networks-mediavine-raptive-approval) covers the monetisation side.
+    `
   },
   {
     id: "structuring-equity-profit-sharing-tech-agencies",
@@ -980,7 +1056,36 @@ Structure legal contracts cleanly using our [Master B2B Software Contract guide]
 - Sell paid architecture discovery sprints before quoting full project budgets.
 - Require 50% upfront payment before commencing software development.
 - Collect wire transfers safely via [Exporters FCY Bank Accounts](/article/foreign-currency-account-fca-sbp).
-`
+
+
+## Why the First Deal Is the Hardest
+
+An enterprise buyer you have never worked with has no evidence you can deliver. They have a budget, a problem, and a reason to be cautious. The paid discovery sprint exists to solve this: it gives them a small, bounded way to buy evidence before they commit to a large engagement.
+
+## The Discovery Sprint
+
+A good discovery sprint is short, paid, and produces something the client can use even if they do not hire you. That last point is what makes it honest. You are not doing free work with a fancy name; you are selling a defined deliverable.
+
+Scope it tightly: a fixed number of interviews, a fixed document, a fixed date. Then stop. The temptation to do extra work in a discovery is how it becomes free labour.
+
+## From Sprint to MSA
+
+The master services agreement is the document that lets a larger contract follow without renegotiating everything. Get it right once: the scope mechanism, the change process, the intellectual property position, the liability cap, and the termination terms. After that, individual statements of work become short.
+
+## The Deposit
+
+Asking for a deposit is not a sign of weak salesmanship. It is a filter and a cashflow tool. A client who will not pay a deposit is a client who will not pay the final invoice on time. Set the deposit as a condition of scheduling, not as a negotiable extra.
+
+## Pricing the Engagement
+
+Enterprise work prices on value and risk, not on hours. The questions that set the price: what does delay cost them, what does this replace, and what happens if it fails. The hours are how you deliver, not how you price.
+
+## The Close Itself
+
+Close on the next step, not on the whole relationship. A signed MSA, a scheduled kickoff, a paid deposit — each is a step you can ask for and get. Asking for a three-year commitment in the first conversation is asking for a no.
+
+Read our [enterprise consulting closing guide](/article/closing-enterprise-consulting-contracts) for the full sequence.
+    `
   },
 
   // --- JULY 25, 2026 (2 needed - Today!) ---

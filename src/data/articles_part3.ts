@@ -1522,6 +1522,37 @@ Do not position your agency as a provider of generic data entry services. Instea
 - Combine your outreach with [B2B Lead Generation on LinkedIn for Agencies](/article/linkedin-lead-generation-agencies).
 - Transition your profile safely using [Individual Freelance to Scalable Agency Model](/article/upwork-agency-model-transition).
 - Access comprehensive asset allocation models on the [Blue Ocean Hub Homepage](/).
-`
+
+
+## Why This Model Works
+
+A virtual assistant agency sells a gap: the cost of administrative labour in the client's market versus the cost of the same work done well in yours. The margin lives in that gap, and it only holds if the work is reliable. Reliability, not price, is what retains the client.
+
+## Specialise or Fail
+
+General administrative support competes on price, and price competition against every other provider in the market is a race to the bottom. A specialised offer competes on capability: support for a specific platform, outreach operations for a specific industry, account management for a specific type of business. Specialisation also makes hiring and training easier, because the job is defined.
+
+## Hiring
+
+Hire for reliability before skill. A capable person who disappears is worse than a solid person who communicates. Test for written communication, because most of the work will be asynchronous. Test for judgement, because a VA who escalates everything is a cost and one who escalates nothing is a risk.
+
+## Quality and Replacement
+
+The client's tolerance for a weak VA is low, and their tolerance for being told so is lower. Replace a poor fit quickly and without drama. A client would rather have a short handover and a good replacement than a long period of adequate work.
+
+## Pricing and Packaging
+
+Sell seats or hours in defined blocks rather than open-ended time. A block creates a predictable cost for the client and predictable utilisation for you. It also forces the conversation about what the client actually needs, which is the conversation that prevents churn.
+
+## The Real Risk
+
+The model depends on the client not hiring locally. If the client's needs become specialised enough, or if timezones and collaboration matter enough, they may in-source. The defence is to move up the value chain: from general administration to operations work that requires judgement and context.
+
+## Scaling
+
+Scale by documenting the work before hiring for it. A VA agency that depends on the owner's memory does not scale; one that runs on documented processes does.
+
+See our [agency blueprint](/article/b2b-upwork-agency-scaling) for the wider operating model.
+    `
   }
 ];

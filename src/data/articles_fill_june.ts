@@ -223,7 +223,37 @@ Claim zero-rated tax exemption on agency revenues using our [provincial IT expor
 - Convert individual Upwork profile into an Agency Business account.
 - Add junior developers as agency team members under dedicated hourly contracts.
 - Route foreign revenues safely into [SBP Exporter FCY accounts](/article/foreign-currency-account-fca-sbp).
-`
+
+
+## What an Agency Account Changes
+
+An agency account is not a bigger freelancer profile. It changes who can bid, how work is presented to the client, and how the relationship is managed after the first contract. The upside is access to larger engagements and the ability to staff them. The downside is that the platform now evaluates the agency, not just the individual.
+
+## Setting Up Correctly
+
+- **The profile is the pitch.** Specialisation reads better than range. A profile claiming everything wins nothing.
+- **The owner's history carries weight.** An agency built on a track record starts with evidence; one built on a new account starts without it.
+- **Team members need real profiles.** A client who can see who will do the work is more likely to hire than one who cannot.
+- **Rates should be coherent.** Wildly different rates across team members read as incoherence rather than range.
+
+## The First Engagements
+
+Large contracts rarely go to an agency with no agency history. The practical path is to win a smaller engagement first, deliver it visibly, and let the agency's record build. Agencies that skip this step usually stall at the first large bid.
+
+## Staffing Without Overcommitting
+
+The failure mode is taking on more work than the team can deliver, then delivering all of it badly. Take work you can staff with people you have actually worked with. A smaller engagement delivered well is worth more than a larger one that damages the agency's record.
+
+## Moving Beyond the Platform
+
+Platform work is a channel, not a business. The agencies that survive are the ones that convert platform clients into direct relationships. Do this carefully and within the platform's terms, and never by circumventing a fee you agreed to pay.
+
+## When to Leave the Platform Entirely
+
+Once a direct pipeline exists, the platform fee becomes a cost with no corresponding benefit. The transition is a pipeline question, not a preference.
+
+Read our [agency scaling blueprint](/article/b2b-upwork-agency-scaling) for the wider operating model.
+    `
   },
 
   // --- JUNE 9, 2026 (2 needed) ---
@@ -857,7 +887,43 @@ Structure legal contracts using our [Master B2B Software Contract negotiation gu
 - Proactively identify upcoming technical maintenance needs during initial project delivery.
 - Propose monthly maintenance and feature enhancement retainer packages ($2,000 - $8,000/mo).
 - Process monthly retainer payments automatically via [Upwork Direct Contracts or Stripe](/article/b2b-upwork-direct-contracts-billing).
-`
+
+
+## Why Reporting Retains Clients
+
+Clients do not leave because the work is poor. They leave because they cannot see it. A client who knows what shipped, what is next, and how the budget is being used has no reason to look elsewhere. A client who has to ask is already half-disengaged.
+
+## The Weekly Update
+
+The format matters less than the consistency. A working update is short and has the same shape every time:
+
+- **Shipped.** What was completed since the last update.
+- **In progress.** What is being worked on now.
+- **Next.** What is queued.
+- **Decisions.** Anything the client needs to answer.
+
+Four headings, a few lines each. If it takes you more than fifteen minutes to produce, the format is too heavy.
+
+## The Friday Video
+
+A short recorded walkthrough is disproportionately effective. It takes the same information as a written update and adds a face, a screen, and a tone. It also creates a record the client can forward internally, which is how you become visible to people who are not in your day-to-day thread.
+
+Keep it short. Three minutes of clear beats twenty minutes of thorough.
+
+## Reporting as a Retention Mechanism
+
+The hidden function of a weekly update is that it makes replacement expensive for the client. A new vendor has to learn the codebase, the history, and the context. A vendor who documents the history every week has already banked that switching cost.
+
+## What to Do When Something Goes Wrong
+
+Report the problem in the same update, with what you are doing about it. A client who hears about a problem from you in a routine update trusts you more than a client who hears about it at renewal time. The update is also the place to reset a date you are going to miss, before the miss happens.
+
+## Turning the Update Into a Renewal
+
+Every fourth or eighth update should include a short retrospective: what was achieved over the period, and what the next period should focus on. That is the renewal conversation, and it is far easier when the evidence has been arriving all along.
+
+Our [client retention guide](/article/retaining-high-value-us-clients-retention) covers the wider sequence.
+    `
   },
 
   // --- JUNE 17, 2026 (2 needed) ---
@@ -1070,7 +1136,35 @@ Analyze mutual fund expense structures in our [Pakistani ETFs vs Mutual Funds co
 - Overweight high-yield banking stocks during elevated interest rate environments.
 - Accumulate tech sector exporters to hedge domestic currency devaluation.
 - Automate stock purchases using our [Dollar Cost Averaging (DCA) index guide](/article/dollar-cost-averaging-psx-index-tracker).
-`
+
+
+## How to Read a Sector Before You Weight It
+
+Sector allocation is not a list of preferences. It is a view on which part of the economy earns more than it is priced for, over the period you intend to hold. Three questions answer most of it:
+
+1. **What drives the earnings?** A bank's earnings move with interest rates and government borrowing. A fertilizer producer's move with crop seasons and feedstock pricing. A tech exporter's move with foreign demand and the exchange rate. If you cannot state the driver in one sentence, you do not have a view.
+2. **What is already in the price?** A high dividend yield is not a bargain if the earnings that fund it are falling. A low multiple is not cheap if the multiple has been low for a decade for a reason.
+3. **How does it behave when the rupee moves?** This is the under-appreciated one for a Pakistani portfolio. A devaluation hurts a importer, is neutral to a domestic bank, and helps an exporter with foreign-currency revenue. Your sector mix is, in part, a currency position.
+
+## Building the Weighting
+
+A practical frame is a core and a satellite. The core is the part you expect to hold through a bad year without losing sleep. The satellite is the part you accept may be flat or worse for a long time in exchange for a larger outcome.
+
+- **Core.** Defensive, cash-generative, understandable. The point is that you keep holding it.
+- **Satellite.** Higher variance, higher potential. The point is that you can afford to be wrong about the timing.
+
+The error most investors make is reversing these: a large speculative position they cannot hold, and a small defensive position they sell first in a downturn.
+
+## Rebalancing Across Sectors
+
+Rebalance when a sector's weight has moved far enough to change the risk of the portfolio, not when you have an opinion about the next quarter. A written trigger beats a feeling.
+
+## What This Analysis Cannot Tell You
+
+Sector weights are a starting point, not a stock list. Two companies in the same sector can be excellent and terrible investments at the same time. The work after the sector decision is the individual company: the quality of the balance sheet, the honesty of the reporting, and the price against the cash the business actually produces.
+
+Our [sectoral analysis](/article/psx-sectoral-analysis-banks-fertilizers-tech) is the starting point; the [dividend portfolio guide](/article/psx-dividend-yield-portfolio-2026) is where the cashflow case gets specific.
+    `
   },
   {
     id: "selling-digital-audiobooks-kdp-acx",
@@ -1446,7 +1540,39 @@ Structure legal scope boundaries using our [Master B2B Software Contract guide](
 - Define a single, standardized core agency deliverable (e.g., Full-Stack React/Node Engineering).
 - Set up automated monthly subscription billing via Stripe or Lemon Squeezy.
 - Manage client task queues asynchronously using Trello or Linear.
-`
+
+
+## The Core Move
+
+A productised retainer replaces an open-ended relationship with a defined one. The client knows the price and the scope before they commit. You know the capacity you need to provide. Both sides stop negotiating the same questions every month.
+
+## Defining the Offer
+
+Start from the client's recurring problem, not from your service list. A client with a live product has a recurring problem: the roadmap keeps slipping, small improvements never get done, and the person who built it has moved on. The offer is the answer to that, not a description of your skills.
+
+Write the offer as three sentences: what the client gets, how often, and what it costs. If you need a fourth sentence, the scope is not clear yet.
+
+## Capacity and the Queue
+
+The margin in a retainer comes from controlling the queue. One active request at a time, everything else waiting, is the rule that makes the economics work. Without it you are running a discounted hourly practice with worse cashflow and a monthly invoice.
+
+## Onboarding a Retainer Client
+
+The first two weeks decide whether the retainer lasts. Set the queue up, agree how requests arrive, agree what done means, and deliver the first small thing quickly. A client who has seen something ship in week one renews. A client who is still in a kickoff meeting in week four does not.
+
+## Handling Edge Cases
+
+- **Out of scope.** Say so, quote it separately, do not absorb it silently.
+- **Urgency.** Define what urgent means and how it is raised.
+- **Pauses.** Allow a pause rather than letting the relationship go quiet.
+- **Termination.** Make it easy to leave. A retainer that is hard to exit is one clients avoid starting.
+
+## Reviewing the Offer
+
+After three or four clients, look at the data: which requests consume the capacity, which clients use it lightly, which scope boundaries get argued about. Then change the offer. The first version of a productised service is always wrong in at least one place.
+
+See our [client retention sequence](/article/retaining-high-value-us-clients-retention) for how the first project becomes the retainer.
+    `
   },
 
   // --- JUNE 26, 2026 (2 needed) ---
@@ -1619,7 +1745,37 @@ Protect software IP rights using our [Master B2B Software Contract guide](/artic
 - [Calculating True Freelance Hourly Rates: Factoring Overhead, Health Care, and Downtime Margins](/article/freelance-hourly-rate-overhead-calculator-guide): Verified tactical execution guidelines and market compliance principles.
 - [Protecting Software IP in Offshore Contracts: Non-Competes and Jurisdiction Clauses](/article/intellectual-property-ip-transfer-agreements-agencies): Institutional portfolio allocation and risk-hedging frameworks.
 - [2026 PSEB 0.25% Remittance Tax Savings Estimator](/toolkit#pseb-tax-calculator): Interactive computational engines and statutory models for South Asian operators.
-`
+
+
+## What White-Labelling Actually Is
+
+White-labelling is delivering engineering work under another company's name. The client contracts with them; you build it; the client never knows you exist. It is a volume channel for an agency with delivery capacity and a credibility channel for a firm with clients but no bench.
+
+## Why It Is Attractive
+
+For the delivery partner, it provides work without the cost of sales. For the firm, it provides capacity without permanent headcount. Both sides get something, and the model can be genuinely profitable at scale.
+
+## The Risks
+
+- **No client relationship.** You cannot reference the work, and the client cannot become yours.
+- **Margin compression.** The firm takes a share, so your rate is lower than direct work.
+- **Concentration.** A single partner can be a large share of revenue, and losing them is a crisis.
+- **Quality attribution.** Their name is on it, so their reputation is at risk from your work, and they will supervise accordingly.
+
+## Making It Work
+
+- **Define the work precisely.** Ambiguity in a white-label arrangement becomes a dispute quickly.
+- **Agree on communication.** Who talks to the client, how, and what is said.
+- **Set a quality bar in writing.** Acceptance criteria protect both sides.
+- **Price for the margin you need.** A lower rate is only acceptable if the volume and the sales saving are real.
+- **Diversify.** Treat any single partner as a risk to be managed, not a foundation to be built on.
+
+## The Transition
+
+White-label work is best used as a bridge: it funds the practice while you build a direct pipeline. Agencies that treat it as the permanent model usually discover that their margins and their resilience both erode.
+
+Our [agency scaling blueprint](/article/b2b-upwork-agency-scaling) covers the direct alternative.
+    `
   },
 
   // --- JUNE 28, 2026 (1 needed) ---

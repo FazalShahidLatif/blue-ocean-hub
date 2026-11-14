@@ -265,7 +265,34 @@ To retain enterprise clients long-term, transition to monthly retainer models. S
 - Structure project proposals around business outcomes rather than hourly estimates.
 - Keep Job Success Score (JSS) strictly above 90% by delivering projects on schedule.
 - Minimize foreign remittance conversion fees using our [Elevate Pay vs Wise provider comparison](/article/elevate-wise-stripe-pakistan-remittance).
-`
+
+
+## What the Badge Actually Buys
+
+A platform badge is a filter, not a qualification. It moves your profile into a different search tier and makes some clients more likely to look at you. It does not make clients more likely to hire you, and it does not substitute for a credible profile, a specialisation, or a track record.
+
+## The Real Value
+
+The practical benefits are access to a different pool of work and a signal that reduces the client's screening cost. Both matter most when you are starting, and matter less as your own pipeline grows.
+
+## Qualifying
+
+The thresholds are published by the platform and change. The substance behind them is consistent: a high success score and at least one substantial contract. That means the path to the badge is the same as the path to a working practice — deliver well, communicate clearly, and take on work at a scale that leaves evidence.
+
+## The Score
+
+The job success score reflects client feedback and the outcome of contracts. It is slow to move and quick to damage. Treat it as a constraint on how you take work: a client you cannot satisfy will cost you more in score than the contract is worth.
+
+## Beyond the Badge
+
+Once you have it, the badge stops being the differentiator. Clients at that tier are comparing your proposal, your specialisation, and your understanding of their problem. The work that wins is the same work that won before the badge existed.
+
+## The Honest Calculation
+
+If platform fees and constraints are high, the badge may be worth less than the same effort applied to a direct pipeline. Run the numbers on what a platform client costs you against what a direct client costs you to acquire, and decide on that.
+
+Read our [agency account guide](/article/upwork-agency-account-setup-scaling) for the agency-side equivalent.
+    `
   },
 
   // --- AUGUST 09, 2026 ---

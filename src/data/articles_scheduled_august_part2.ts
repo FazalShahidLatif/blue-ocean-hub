@@ -37,7 +37,34 @@ To handle international billing, agencies use specialized billing tools. Review 
 - Cap subscription intake at 5 active retainer clients per senior engineer.
 - Secure contract agreements using our [Master B2B Software Contract template](/article/saas-contract-negotiation-ip-protection).
 - Utilize [talent arbitrage models](/article/agency-subcontracting-talent-arbitrage) to scale delivery teams locally.
-`
+
+
+## What Productising Actually Means
+
+Productising is not putting a price on a monthly package. It is deciding in advance what is inside the package, what is outside it, and what happens when a client asks for something in the second category. The value to the client is a known price and a known outcome. The value to you is that the work stops being negotiated every month.
+
+## The Three Decisions
+
+1. **Scope.** One thing, clearly bounded. "Ongoing design support" is not a scope. "Up to eight design requests a month, each delivered within three business days" is.
+2. **Queue discipline.** One active request at a time. This is what makes the margin real. Without it, a retainer is just discounted hourly work with worse cashflow.
+3. **Rollover.** Decide whether unused capacity rolls over or expires. Expiring is simpler and protects your margin. Rolling over is kinder and harder to staff.
+
+## Setting the Price
+
+Price from the client's value, not from your hours. A retainer that saves a client a full-time hire is worth a fraction of that hire's cost. A retainer that keeps a product shipping while their team is busy is worth what the delay would cost them. Both are far more than the hours involved.
+
+Then check the arithmetic works for you: the monthly price has to cover the deliverables, the queue management, the inevitable edge cases, and still leave a margin.
+
+## The Renewal Conversation
+
+The renewal is won or lost in the first month, not the last. A client renews when they can see what they got. Send the evidence: what shipped, what was in flight, what is queued, and what you would do next.
+
+## When a Retainer Is the Wrong Model
+
+Not everything should be a retainer. A one-off migration, a defined build, a rescue — these have an end, and pretending otherwise produces a retainer that both sides quietly resent. Sell the project, deliver it well, and offer the retainer for what comes after.
+
+See our [client retention framework](/article/retaining-high-value-us-clients-retention) for the sequence from first project to ongoing engagement.
+    `
   },
   {
     id: "provident-fund-trust-registration-secp",
@@ -250,7 +277,35 @@ To ensure client compliance, combine custom contracts with structured [W-8BEN-E 
 - Never start software development without a signed SOW and advance deposit.
 - Include auto-pause clauses for payments delayed past 10 business days.
 - Use [productized retainer pricing frameworks](/article/productized-design-engineering-retainers) to eliminate scope creep.
-`
+
+
+## The Asymmetry
+
+Software contracts are usually drafted by the party with more leverage, and the intellectual property clauses are where the imbalance does the most damage. The client wants ownership of everything and unlimited rights. You want to keep your tools, limit your exposure, and be paid. Neither side gets everything, but the negotiation is winnable if you know which clauses actually matter.
+
+## The Clauses to Focus On
+
+1. **Assignment versus licence.** Ownership of the delivered work is often less important than the right to use, modify, and maintain it. Push for a broad licence instead of a full assignment where you can.
+2. **Pre-existing IP.** List it, or describe it clearly. Anything not listed is arguable later.
+3. **Feedback and data.** Watch clauses claiming rights over anything derived from the engagement, including your own learnings.
+4. **Indemnity.** A mutual indemnity is normal. An uncapped one-sided indemnity is not.
+5. **Limitation of liability.** A cap tied to the fees paid is standard. No cap is not acceptable.
+6. **Termination.** What happens to delivered work and paid fees if the contract ends early.
+
+## The Negotiation Itself
+
+Negotiate the clause, not the whole document. Most software has a small number of provisions that carry the risk; the rest is boilerplate. Mark up the risky ones, explain the reason for each change in one sentence, and offer a compromise rather than a deletion.
+
+## What You Can Usually Concede
+
+Concede on points that cost you nothing: the governing law if it is a reasonable jurisdiction, the notice period, the requirement to keep records. Bank your concessions for the clauses that matter.
+
+## Before You Sign
+
+Check the IP clause against your own toolkit and your insurance. Signing an assignment of code you do not own, or an indemnity your insurer will not cover, is a decision you cannot undo.
+
+Read our [IP transfer agreements guide](/article/intellectual-property-ip-transfer-agreements) for the ownership mechanics.
+    `
   },
 
   // --- AUGUST 04, 2026 ---

@@ -329,7 +329,41 @@ For larger contracts exceeding $10,000, agencies should transition from escrow t
 - Invoice overseas clients using USD Direct Contracts to ensure payment protection.
 - Download digital payment vouchers to support [zero-rated IT export tax exemptions](/article/freelancer-provincial-sales-tax-exemptions-pra-srb).
 - Transfer cleared funds to local accounts via [optimized foreign remittance channels](/article/payoneer-withdrawal-fee-optimization).
-`
+
+
+## The Two Channels
+
+Platform work and direct client work are different businesses sharing a skill. Platform work is rented distribution: you pay fees and accept constraints in exchange for access to buyers. Direct work is owned distribution: you pay with sales effort and time in exchange for margin, control, and a client relationship you keep.
+
+## The Comparison
+
+| Consideration | Platform | Direct |
+| :--- | :--- | :--- |
+| Client acquisition | Built in, paid per engagement | Your own effort |
+| Fees | Platform takes a share | None, but payment processing applies |
+| Rate | Often compressed | Set by you |
+| Relationship | Platform owns it | You own it |
+| Constraints | Platform terms | Your own contracts |
+| Pipeline risk | Platform can change the rules | Concentration in a few clients |
+
+## Why Keep Platform Work
+
+It is the fastest way to build a track record and a reviews base, and it provides income while a direct pipeline matures. For a new practice it is often the right primary channel, and for an established one it can be a useful supplement.
+
+## Why Move Direct
+
+The fee compounds. A platform share taken every year, on every engagement, is a permanent tax on the practice. Direct work also lets you set the rate, own the relationship, and build something saleable.
+
+## The Transition
+
+The mistake is to switch all at once. Keep the platform income while building the direct pipeline, and reduce platform dependence as direct revenue grows. The moment direct revenue reliably exceeds platform revenue is the moment the balance has shifted.
+
+## Building the Direct Pipeline
+
+The channels that work are the ones you can sustain: a clear specialisation, a body of published work, a network that knows what you do, and a referral motion with existing clients. None of them are fast, and all of them compound.
+
+Our [cold outreach guide](/article/cold-email-outreach-us-b2b-clients) covers one of the direct channels, and our [agency scaling blueprint](/article/b2b-upwork-agency-scaling) covers the operating model.
+    `
   },
 
   // --- JULY 30, 2026 ---
