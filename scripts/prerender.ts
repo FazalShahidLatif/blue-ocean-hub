@@ -211,16 +211,32 @@ function buildSitemap(routes: Route[]): string {
       const freq = r.urlPath === "/" ? "always"
         : r.urlPath.startsWith("/article/") ? "monthly"
         : "weekly";
+      const isArticle = r.urlPath.startsWith("/article/");
+      const isPage = r.urlPath.startsWith("/page/");
+      const imgRel = isArticle
+        ? r.urlPath.slice("/article/".length) + ".jpg"
+        : isPage
+          ? "page/" + r.urlPath.slice("/page/".length) + ".jpg"
+          : null;
+      const imgTitle = isArticle
+        ? ARTICLES.find((a) => `/article/${a.id}` === r.urlPath)?.title || ""
+        : isPage
+          ? LEGAL_PAGES.find((p) => `/page/${p.id}` === r.urlPath)?.title || ""
+          : "";
+      const imageBlock = imgRel
+        ? `\n    <image:image>\n      <image:loc>${xmlEscape(`https://blueoceanhub.info/og-image/${imgRel}`)}</image:loc>\n      <image:title>${xmlEscape(imgTitle)}</image:title>\n    </image:image>`
+        : "";
       return `  <url>
     <loc>${xmlEscape(loc)}</loc>
     <changefreq>${freq}</changefreq>
-    <priority>${priority}</priority>
+    <priority>${priority}</priority>${imageBlock}
   </url>`;
     })
     .join("\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls}
 </urlset>`;
 }

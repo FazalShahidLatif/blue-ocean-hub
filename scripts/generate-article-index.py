@@ -10,25 +10,23 @@ from pathlib import Path
 SRC_DIR = Path("src/data")
 OUTPUT_FILE = SRC_DIR / "article-index.ts"
 
-# Files to scan for articles
-ARTICLE_FILES = [
-    "articles.ts",
-    "articles_part2.ts",
-    "articles_part3.ts",
-    "articles_part4.ts",
-    "articles_part5.ts",
-    "articles_part6.ts",
-    "articles_fill_june.ts",
-    "articles_fill_july_p1.ts",
-    "articles_fill_july_p2.ts",
-    "articles_scheduled.ts",
-    "articles_scheduled_august.ts",
-    "articles_scheduled_august_part2.ts",
-    "articles_scheduled_august_part3.ts",
-    "articles_scheduled_august_part4.ts",
-    "articles_scheduled_september.ts",
-    "articles_travel_monetization.ts",
-]
+
+def discover_article_files() -> list[str]:
+    """Every articles*.ts file except the generated index itself.
+
+    Discovered rather than hard-coded: a hard-coded list silently drops any
+    new content file, leaving its articles out of the client index while they
+    still appear in the sitemap.
+    """
+    names = []
+    for p in sorted(SRC_DIR.glob("articles*.ts")):
+        if p.name == "article-index.ts":
+            continue
+        names.append(p.name)
+    return names
+
+
+ARTICLE_FILES = discover_article_files()
 
 def extract_articles(content: str) -> list[dict]:
     """Extract article metadata from TypeScript file content."""

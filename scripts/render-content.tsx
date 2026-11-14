@@ -251,6 +251,20 @@ ${related
           }
         </header>
 
+        <!-- Hero: the article's own generated share image, also served as the
+             visible banner so the page carries a real, indexable image. -->
+        <figure class="mb-10">
+          <img
+            src="${SITE}/og-image/${article.id}.jpg"
+            alt="${escapeHtml(article.title)}"
+            width="1200"
+            height="630"
+            fetchpriority="high"
+            decoding="async"
+            class="w-full h-auto rounded-2xl border border-slate-800/70"
+          />
+        </figure>
+
         ${inThisGuide}
 
         <div class="markdown-body prose prose-invert prose-cyan max-w-none
@@ -344,6 +358,18 @@ export function renderCategoryPage(categoryId: string): string {
       </header>
       <div class="markdown-body prose prose-invert prose-cyan max-w-none mb-12">${intro}</div>
 
+      <figure class="mb-12">
+        <img
+          src="${SITE}/og-image/${cat.id}.jpg"
+          alt="${escapeHtml(cat.seoTitle || cat.title)}"
+          width="1200"
+          height="630"
+          fetchpriority="high"
+          decoding="async"
+          class="w-full h-auto rounded-2xl border border-slate-800/70"
+        />
+      </figure>
+
       <section aria-label="Start here" class="mb-14">
         <h2 class="text-2xl font-bold text-white mb-6">Start Here</h2>
         <ol class="space-y-4">
@@ -392,6 +418,17 @@ export function renderLegalPage(page: Partial<Article>): string {
             Last updated <time datetime="${escapeHtml(page.pubDate || "")}">${formatDate(page.pubDate || "")}</time>
           </p>
         </header>
+        <figure class="mb-10">
+          <img
+            src="${SITE}/og-image/page/${page.id}.jpg"
+            alt="${escapeHtml(page.title || "")}"
+            width="1200"
+            height="630"
+            fetchpriority="high"
+            decoding="async"
+            class="w-full h-auto rounded-2xl border border-slate-800/70"
+          />
+        </figure>
         <div class="markdown-body prose prose-invert prose-cyan max-w-none
           prose-h2:text-white prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
           prose-p:text-slate-300 prose-p:leading-relaxed
@@ -417,6 +454,18 @@ export function renderToolkitPage(): string {
           and dollar-revenue allocation.
         </p>
       </header>
+
+      <figure class="mb-12">
+        <img
+          src="${SITE}/og-image/toolkit.jpg"
+          alt="Blue Ocean Toolkit"
+          width="1200"
+          height="630"
+          fetchpriority="high"
+          decoding="async"
+          class="w-full h-auto rounded-2xl border border-slate-800/70"
+        />
+      </figure>
 
       <div class="markdown-body prose prose-invert prose-cyan max-w-none mb-12">
         <h2>What This Toolkit Is For</h2>
