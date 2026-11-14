@@ -744,6 +744,36 @@ Reviews appear below once the Trustpilot widget is connected. The widget is load
 
 Google reviews are published against our Google Business Profile and are visible on Google Search and Maps.
 
+## How We Verify a Review
+
+We do not accept reviews by email or through a form on this site. A review is added to this page only when it is publicly visible on Trustpilot or on our Google Business Profile, and we can open the original.
+
+That verification matters for three reasons. First, it means a review we publish is one a reader can independently check. Second, it prevents us from presenting only the reviews we like — the platform, not us, holds the record. Third, it means we cannot quietly remove a negative review, because removing it here leaves it intact on the platform it came from.
+
+## What A Review Changes
+
+A review that identifies a factual error in a guide triggers a correction to that guide. We fix the number, the date, the provider name, or the step that was wrong, and we add a correction note with the date. We do not rewrite the guide to make the review look wrong.
+
+A review that is simply a difference of opinion — a reader who preferred a different broker, a different index fund, a different approach — changes nothing, and we say so if we respond.
+
+A review that is abusive, off-topic, or appears to be from a competitor is reported to the platform under its own rules. We do not ask for it to be taken down, and we do not publish our complaint about it.
+
+## Corrections
+
+If a reader spots an error, the fastest route is the [contact page](/page/contact) with the guide name and the specific claim. We verify against the primary source — the regulator's own notice, the exchange's filing, the provider's published rate — before changing anything. Where the original source has changed since publication, we update the guide and note the date of the change rather than silently rewriting history.
+
+## Frequently Asked Questions
+
+**Can I pay you to publish a review?** No. Reviews are never for sale, and a payment offered for a review is refused and, if the offer came through an agency, noted in our records.
+
+**Do you publish negative reviews?** Yes. Negative reviews are the reason a review page is worth reading. A publication that shows only five-star ratings is showing you its marketing, not its record.
+
+**Will you remove a review I regret?** Not from this site alone — the review lives on Trustpilot or Google, and that platform's own process governs removal. If the review contains a factual error we will correct our own guide and add a response.
+
+**Are reviewers identifiable?** They are identified as they are on the platform they used. We do not add information about a reviewer beyond what is public there.
+
+**Does a review affect whether you cover a provider?** No. An advertiser or affiliate partner is reviewed against the same standard as any other provider. Coverage decisions are made before any commercial relationship is discussed, and a partner that asks for a review in exchange for a benefit is not covered.
+
 ## Our Policy
 
 - Reviews are **not** solicited in exchange for payment, discounts, or favourable coverage.
