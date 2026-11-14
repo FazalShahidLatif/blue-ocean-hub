@@ -12,6 +12,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ARTICLES } from "../src/data/articles";
 import { LEGAL_PAGES } from "../src/data/legal";
+import { REVIEW_PROVIDERS } from "../src/data/reviews";
 import { CATEGORIES } from "../src/data/categories";
 
 const SITE = "https://blueoceanhub.info";
@@ -418,6 +419,38 @@ export function renderLegalPage(page: Partial<Article>): string {
   const related = RELATED_PAGES.filter((p) => p.id !== page.id)
     .map((p) => `<a href="${SITE}/page/${p.id}">${p.label}</a>`)
     .join("");
+
+  // The interactive review panel is client-rendered, so a crawler would
+  // otherwise see nothing. Emit a static equivalent on the reviews page.
+  const reviewsPanel =
+    page.id === "reviews"
+      ? `
+        <section aria-label="Leave a review" class="mt-12 rounded-2xl border border-slate-800/70 bg-slate-900/40 p-8">
+          <h2 class="text-2xl font-bold text-white mb-4">Leave a Review</h2>
+          <p class="text-slate-300 leading-relaxed mb-6">
+            Reviews are published on the platform where you write them. We do not
+            host reviews we cannot verify, and we never edit them.
+          </p>
+          <ul class="grid gap-4 sm:grid-cols-2">
+            <li>
+              <a href="${REVIEW_PROVIDERS.trustpilot.reviewUrl}" target="_blank" rel="nofollow noopener"
+                 class="block rounded-xl border border-slate-800/70 p-5 hover:border-cyan/40 transition-colors">
+                <strong class="block text-white">Review on Trustpilot</strong>
+                <span class="mt-1 block text-sm text-slate-400">Independent, publicly visible, never edited by us.</span>
+              </a>
+            </li>
+            <li>
+              <a href="${REVIEW_PROVIDERS.google.reviewUrl || "https://www.google.com/search?q=Blue+Ocean+Hub+reviews"}"
+                 target="_blank" rel="nofollow noopener"
+                 class="block rounded-xl border border-slate-800/70 p-5 hover:border-cyan/40 transition-colors">
+                <strong class="block text-white">Review on Google</strong>
+                <span class="mt-1 block text-sm text-slate-400">Published on our Google Business Profile, visible in Search and Maps.</span>
+              </a>
+            </li>
+          </ul>
+        </section>`
+      : "";
+
   return `
     <main class="mx-auto max-w-3xl px-6 py-16">
       <article>
@@ -449,6 +482,7 @@ export function renderLegalPage(page: Partial<Article>): string {
           prose-li:text-slate-300 prose-strong:text-white">
           ${body}
         </div>
+        ${reviewsPanel}
         <nav class="mt-12 flex flex-wrap gap-x-6 gap-y-3 border-t border-slate-800 pt-8" aria-label="Related pages">
           ${related}
         </nav>
