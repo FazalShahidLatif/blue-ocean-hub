@@ -451,6 +451,32 @@ In a high-inflation environment, we recommend 50% for needs, 20% for wants, and 
 Use apps like **Nayapay** or **SadaPay** to separate your daily spending from your "war chest."
 
 Explore our guide on [Passive Income](/article/10-passive-income-ideas-pakistan) to turn these savings into a recurring revenue engine.
+
+
+## 4. Build the Buffer Before the Yield
+
+A high-yield parking place is only useful if you do not have to raid it. Before chasing return, separate your cash into two pots: an emergency buffer you never touch, and surplus you intend to deploy. The buffer belongs somewhere instant and boring. The surplus is what goes into the instruments above.
+
+## 5. Match the Instrument to the Horizon
+
+The mistake that costs savers money is not picking the wrong fund, it is picking the wrong horizon. Money you may need inside a year should not be in an equity-linked product. Money you will not touch for five years can carry more volatility and should.
+
+| Horizon | Fits | Does not fit |
+| :--- | :--- | :--- |
+| Under 1 year | Money market fund, T-bills | Equity funds, long deposits |
+| 1 to 3 years | Income funds, short-duration deposits | Volatile equity exposure |
+| 3 to 5 years | Balanced funds, gold, mixed allocation | Single concentrated bets |
+| 5 years and beyond | Equity funds, dividend stocks, pension schemes | Cash, low-yield current accounts |
+
+## 6. What to Watch
+
+- **Real return, not nominal.** A rate that looks attractive but sits below inflation is a loss in purchasing power.
+- **Exit terms.** Some deposits and funds charge for early withdrawal. Check before you commit.
+- **Counterparty.** A return is only as safe as the institution promising it.
+
+## Next Steps
+
+Start by moving idle current-account cash into a money market fund. It is the lowest-friction change with the clearest effect. Then review the allocation table above against your own timeline and rebalance once, not weekly.
     `
   },
   {

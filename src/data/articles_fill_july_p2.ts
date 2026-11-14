@@ -771,7 +771,39 @@ Hedge currency risk using our [PKR Devaluation Hedging strategies guide](/articl
 - Maintain a 6-month personal emergency runway in liquid Money Market Funds.
 - Automate monthly transfers into PSX index tracker funds.
 - Maintain Active Taxpayer status on FBR using our [ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+### Why Founders Need a Different Rule
+
+The 50/30/20 rule was designed for a salaried employee with a stable income. A founder's income is lumpy, their largest asset is often their own company, and their risk capacity is concentrated in one place. Applying an employee rule to a founder's balance sheet produces the wrong answer in both directions.
+
+### The Founder Version
+
+Split the problem in two: the personal balance sheet and the business. The business gets what it needs to reach the next milestone, and no more. The personal side gets a floor that is untouchable by the business.
+
+- **Personal floor.** Enough liquid savings to cover a defined period of personal expenses, held somewhere the business cannot reach.
+- **Deployable surplus.** Capital above the floor, allocated by horizon and risk.
+- **Concentrated position.** Your own equity. Treat it as an illiquid, undiversified holding when you decide how much additional risk to take.
+
+### The Concentration Problem
+
+Founders routinely hold too much of their wealth in their own venture and then add more risk on top. The fix is not to sell the venture, it is to size everything else so that the venture can be a large position without being the whole portfolio.
+
+### A Simple Allocation Frame
+
+| Bucket | Purpose | Character |
+| :--- | :--- | :--- |
+| Floor | Personal runway | Liquid, capital-preserving |
+| Diversified | Long-term growth | Broad, low-cost |
+| Opportunistic | Higher risk, higher potential | Sized to lose |
+| Venture | Your own work | Illiquid, concentrated |
+
+### Rebalancing
+
+Rebalance on a schedule, not on conviction. A founder who rebalances when excited and holds when discouraged has built a system that buys high and freezes low.
+
+See our [tax alpha guide](/article/tax-alpha-strategies) for the holding-period rules that apply to the growth bucket.
+    `
   },
 
   // --- JULY 23, 2026 (2 needed) ---

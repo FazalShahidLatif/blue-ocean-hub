@@ -528,7 +528,33 @@ Transition client relationships into monthly retainers using our [productized te
 - Charge for comprehensive discovery sprints before providing final project quotes.
 - Enforce strict payment terms before releasing production source code.
 - Collect payment safely using [Upwork Direct Contracts escrow billing](/article/b2b-upwork-direct-contracts-billing).
-`
+
+
+### Why Enterprise Deals Are Different
+
+A consumer sale closes on price and urgency. An enterprise sale closes on risk removal. The buyer is not deciding whether your work is good; they are deciding whether they can defend the decision to their own organisation if it goes wrong. Your job in the late stage is to make that defence easy.
+
+### The Objections That Actually Kill Deals
+
+- **Budget.** Real, but usually a timing question rather than a refusal.
+- **Procurement.** A process problem, not a rejection. Help them navigate it.
+- **A competing internal option.** Often the default, not a real competitor.
+- **Unstated doubt about delivery.** The most common killer, and the least likely to be said out loud.
+
+### How to Handle Each
+
+For budget, reframe to the cost of not acting and offer a phased start. For procurement, provide the paperwork they need and nothing more. For the internal option, position as a complement rather than a replacement. For unstated doubt, ask directly and specifically: "what would need to be true for you to be confident in this?"
+
+### The Close
+
+A close is not a trick. It is a clear statement of what happens next: the scope, the start date, the price, and the decision that remains. If you cannot state it in two sentences, the deal is not actually ready.
+
+### After the Signature
+
+The first invoice and the first deliverable set the tone for the whole engagement. Send the invoice immediately, confirm the kickoff in writing, and deliver something small and visible in the first week.
+
+Read our [agency blueprint](/article/b2b-upwork-agency-scaling) for the operational build-out after the contract is signed.
+    `
   },
   {
     id: "provident-fund-vs-gratuity-fund-rules",
@@ -885,7 +911,36 @@ Bypass sales loads on index investments using our [mutual fund front-end load wa
 - Commit to investing a fixed percentage (15% - 20%) of monthly income consistently.
 - Ignore short-term market headlines and maintain multi-year investment horizons.
 - Rebalance portfolio annually into [Shariah-screened equities](/article/shariah-stock-screening-kmi-30-rules).
-`
+
+
+### What Dollar-Cost Averaging Actually Does
+
+Dollar-cost averaging means investing a fixed amount at fixed intervals regardless of price. You buy more units when the price is low and fewer when it is high, so the average cost of your holding lands below the average price over the same period. It does not guarantee a profit and it does not protect you from a falling market. What it removes is the single most expensive decision an investor makes: trying to pick the bottom.
+
+### How It Works on the PSX
+
+Choose an index tracker or a broadly diversified fund, fix an amount you can sustain, and automate the purchase. The discipline matters more than the vehicle. A plan you abandon in a downturn is worse than no plan, because you buy high, stop, and resume only after confidence returns near the top.
+
+### Choosing the Vehicle
+
+- **Index tracker.** Lowest cost, broadest exposure, no manager risk.
+- **Fund of funds.** Broader still, but an extra layer of fees.
+- **Individual stocks.** Not averaging, this is stock picking, and it requires a different process.
+
+### Setting the Rules Before You Start
+
+Write down the amount, the interval, the vehicle, and the review date. Decide in advance what will cause you to change the plan, and what will not. A plan with a written escape clause survives a bad year; an informal one does not.
+
+### Common Failures
+
+- Starting too large and stopping after the first drawdown.
+- Changing vehicles mid-plan, resetting the average cost for no reason.
+- Abandoning the plan at the point where it would have been most valuable.
+
+### Next Steps
+
+Read our [mutual funds guide](/article/investing-mutual-funds-pakistan) for the vehicle comparison, then set the amount at a level you can sustain through two consecutive bad quarters.
+    `
   },
   {
     id: "freelance-rate-calculator-overhead-margin",
@@ -1284,7 +1339,34 @@ Calculate capital gains tax impact using our [Pakistan CGT rates guide](/article
 - Maintain Active Taxpayer status to cap dividend withholding tax at 15%.
 - Set up calendar alerts to reinvest quarterly dividend payouts within 48 hours of credit.
 - Focus reinvestment on [SECP Shariah-screened equities](/article/shariah-stock-screening-kmi-30-rules).
-`
+
+
+### Why Reinvesting Changes the Outcome
+
+A dividend you collect is a dividend you can spend. A dividend you reinvest is a dividend that buys more of the company, which pays more dividends next year, which buys more again. The effect is slow at first and then very large. Long-term holders of dividend payers almost always end up with a materially larger position than they would have by taking the cash.
+
+### How Reinvestment Works on the PSX
+
+Reinvestment on the Pakistan Stock Exchange is typically arranged through your broker or the company's registrar rather than automatically at the exchange level. When a dividend is declared, you elect to direct the payout into additional shares, often at a price set by the company. The mechanics vary by issuer, so read the dividend notice rather than assuming a default.
+
+### When Reinvesting Is the Wrong Call
+
+- When the stock is trading well above the price you would pay for it today.
+- When you need the income to live on.
+- When the dividend itself is unsustainable and being maintained for appearance.
+- When you are concentrating an already-heavy single-stock position.
+
+### How to Evaluate a Dividend Payer
+
+- **Coverage.** Is the dividend paid out of earnings, or out of debt or asset sales?
+- **Consistency.** Has the payout been maintained through a full cycle, including bad years?
+- **Growth.** Is the payout growing with earnings, or merely held flat?
+- **Balance sheet.** Is the company funding the dividend while weakening its own position?
+
+### Next Steps
+
+Start with the companies in our [Shariah screening guide](/article/psx-shariah-screening-kmi30-halal-investing) if compliance matters to you, then check each dividend notice for the reinvestment election deadline. Missing the election is the most common way to lose the benefit.
+    `
   },
   {
     id: "retaining-high-value-us-clients-retention",
@@ -1397,7 +1479,34 @@ Automate global tax handling using our [Lemon Squeezy vs Paddle MoR review](/art
 - Host course video files directly on Lemon Squeezy or unlisted Vimeo portals.
 - Collect course payments globally using Merchant of Record checkouts.
 - Withdraw USD earnings efficiently via [Elevate Pay or Wise US accounts](/article/elevate-wise-stripe-pakistan-remittance).
-`
+
+
+### The Core Difference
+
+Gumroad is a storefront. You bring an audience, list a product, and Gumroad handles checkout and delivery. It is simple, fast to start, and built for individual creators selling to people who already follow them.
+
+Lemon Squeezy is a merchant of record. It sells on your behalf and takes on the tax and VAT burden across jurisdictions. It is built for creators who want to sell globally without registering everywhere.
+
+### How to Choose
+
+| If you... | Prefer |
+| :--- | :--- |
+| Already have an audience and want to start today | Gumroad |
+| Sell to buyers in many countries and want tax handled | Lemon Squeezy |
+| Want the lowest friction and fewest settings | Gumroad |
+| Need subscriptions, EU VAT handling, and invoicing | Lemon Squeezy |
+| Sell a mix of digital and physical goods | Compare both on fees, not features |
+
+### Fees and Pricing
+
+Fee structures change, so check the current published rate on each platform before committing. The decision is rarely about the headline percentage and almost always about what the platform does with the tax you would otherwise handle yourself.
+
+### What Matters More Than the Platform
+
+A course sells because of the audience behind it, not because of the checkout. Whichever platform you choose, the same work applies: a clear promise, a specific outcome, and a way for a buyer to trust that they will get it.
+
+See our [digital products playbook](/article/digital-products-monetization-urdu) for the positioning work that actually drives sales.
+    `
   },
   {
     id: "chrome-extension-monetization-saas",
@@ -1474,7 +1583,30 @@ For treasury cash management, explore our [Islamic Money Market Funds guide](/ar
 - Select fixed-rate or floating-rate Sukuk tenors matching your cashflow needs.
 - Receive semi-annual profit payouts directly into your bank account.
 - Reinvest profit distributions into [KMI-30 Shariah-screened equities](/article/shariah-stock-screening-kmi-30-rules).
-`
+
+
+### What a Sukuk Actually Is
+
+A conventional bond is a debt obligation: you lend money and receive interest. A sukuk is not a debt. It represents ownership in an underlying asset, a pool of assets, or a business activity, and the return comes from the earnings or rental income of that asset. That structural difference is the whole point of the instrument, and it is why sukuk are used by investors who require Shariah compliance.
+
+### Ijarah in Practice
+
+Ijarah is the most common structure for sovereign and corporate sukuk in Pakistan. The issuer transfers ownership of an asset, or the right to its use, to the sukuk holders for a defined period. The issuer leases it back and pays rent, which is the distributable return. At maturity the issuer repurchases at an agreed price. The return is therefore rental yield rather than interest, and the asset backing is what gives the instrument its credit profile.
+
+### What to Check Before Buying
+
+- **Issuer and asset.** Who is issuing, and what exactly backs the sukuk?
+- **Return basis.** Is the distribution fixed, floating, or linked to a benchmark, and how often is it paid?
+- **Tenor and redemption.** When does it mature, and is there a put or call option?
+- **Secondary market.** Can you exit before maturity, and at what cost?
+- **Tax treatment.** How are distributions taxed for your filer status?
+
+### Who This Suits
+
+Sukuk suit an investor seeking income from a sovereign or corporate issuer without interest-bearing exposure. They do not suit someone chasing capital appreciation or someone who needs daily liquidity.
+
+See our [Shariah screening guide](/article/psx-shariah-screening-kmi30-halal-investing) for the equity-side equivalent.
+    `
   },
   {
     id: "intellectual-property-ip-transfer-agreements",
@@ -1708,7 +1840,40 @@ Establish team incentive option pools using our [agency ESOP structuring guide](
 - Establish 4-year vesting schedules with a 1-year cliff for all co-founders.
 - Draft clear buy-sell clauses covering co-founder departures.
 - Distribute profits quarterly based on [talent arbitrage profit margins](/article/agency-subcontracting-talent-arbitrage).
-`
+
+
+### Why the Split Goes Wrong
+
+Most co-founder disputes are not about greed. They are about an agreement that was never written down, or written down too late. Two people start equal, one begins contributing differently, and neither has a framework for the conversation. The relationship degrades before anyone raises it.
+
+### The Variables That Matter
+
+An equal split assumes equal contribution in every dimension. It rarely is. The factors worth weighing:
+
+- **Time.** Full-time versus part-time, now and going forward.
+- **Capital.** Who is putting in money, and how much.
+- **Revenue.** Who brings the clients, and who keeps them.
+- **Capability.** Whose skill is hardest to replace.
+- **Opportunity cost.** What each person gave up to do this.
+
+### Vesting Is Non-Negotiable
+
+Vesting means equity is earned over time. Without it, a co-founder who leaves in month four keeps everything. With it, leaving early costs something. A standard arrangement earns equity monthly over four years with a one-year cliff, meaning nothing vests before the first anniversary.
+
+### The Conversation to Have Early
+
+- What happens if one of us wants out?
+- What happens if one of us is not performing?
+- How do we decide when we disagree?
+- What is each of us responsible for, in writing?
+- What are we each paid, and when does that change?
+
+### Getting It Down
+
+Write the agreement before the work accelerates. It does not need to be long. It needs to cover the five questions above and be signed by both parties. A short agreement both people understand beats a long one nobody reads.
+
+See our [agency blueprint](/article/b2b-upwork-agency-scaling) for how the operating side fits around the ownership side.
+    `
   },
   {
     id: "corporate-credit-card-expense-management",

@@ -308,7 +308,35 @@ Collect payouts globally using [Elevate Pay or Wise US accounts](/article/elevat
 - Build clean, deeply integrated Notion workspace templates for specific niches.
 - Create video walkthroughs demonstrating daily productivity workflows.
 - Process international orders smoothly via [Gumroad and Lemon Squeezy](/article/digital-template-selling-gumroad-etsy).
-`
+
+
+### What Actually Sells
+
+A template sells when it removes a specific, recurring headache for a specific person. "Notion dashboard" is a category. "Weekly review dashboard for a two-person agency that bills by retainer" is a product. The narrower the buyer, the easier the sale, because the buyer can recognise themselves in the description.
+
+### Positioning
+
+Lead with the outcome, not the tool. A buyer does not want a Notion template. They want a week that runs without them chasing status updates. Describe the before and after, and show the inside.
+
+### What to Include
+
+- A clear promise on the first screen.
+- A real, populated example rather than an empty shell.
+- Setup instructions short enough to follow in ten minutes.
+- A stated limit: what this template is not for.
+
+### Pricing
+
+Price against the value of the problem removed, not against the hours you spent building it. A template that saves a business owner five hours a month is worth more than the twenty minutes it takes to install. Test a price, then raise it. A price that is too low reads as low quality.
+
+### Where to Sell
+
+Gumroad is the lowest-friction storefront for an existing audience. See our [Gumroad vs Lemon Squeezy comparison](/article/gumroad-vs-lemon-squeezy-for-course-creators) for the fee and tax differences before choosing.
+
+### The Real Work
+
+The template is maybe a third of the job. The rest is distribution: where your buyers already gather, what they are searching for, and how you show up there.
+    `
   },
 
   // --- JUNE 10, 2026 (2 needed) ---
@@ -436,7 +464,27 @@ For corporate tax filers, see our [SECP Private Limited corporate tax comparison
 - Ensure Unreconciled Amount on FBR Iris equals exactly zero before submitting.
 - Store digital PRCs for all foreign currency transfers.
 - Maintain Active Taxpayer status on FBR using our [ATL benefits article](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+### Filing Guidelines
+
+- Ensure the unreconciled amount on the FBR Iris wealth statement reads zero, or is explained by a documented timing difference.
+- Attach supporting documents for every material inflow: remittance certificates for foreign income, bank certificates for local interest, and registered deeds for property.
+- Reconcile before you file, not after a notice arrives. An audit triggered by a discrepancy is far more expensive than an hour of bookkeeping.
+- Keep a single ledger of inflows and outflows for the tax year so the reconciliation can be reproduced on request.
+
+### Common Triggers for Audit Notices
+
+The most frequent cause of a reconciliation mismatch is foreign remittance. A dollar amount arrives, is converted, and is recorded at the rate on the day it landed, while the certificate records the rate on the day of export realisation. The two rarely agree to the rupee, and the gap reads as unexplained wealth.
+
+The second frequent cause is property. A purchase registered at a value below the market rate, or a transfer between family members, creates an asset with no matching inflow.
+
+### What to Do If You Receive a Notice
+
+Do not ignore it and do not respond with a blanket denial. Identify the specific figure the notice questions, reconcile that line, and respond with the document that explains it. If the discrepancy is genuine and material, correcting it voluntarily is almost always cheaper than contesting it.
+
+See our [freelancer wealth statement guide](/article/fbr-freelancer-wealth-statement-filing-blueprint) for the full filing sequence.
+    `
   },
   {
     id: "value-based-pricing-software-consulting",
@@ -522,7 +570,32 @@ Learn how to optimize stock sales taxes in our [PSX Capital Gains Tax (CGT) guid
 - Open a digital trading account using SECP's centralized KYC portal.
 - Verify CDC sub-account SMS and email trade notifications.
 - Automate monthly stock accumulation using our [DCA index investment strategy](/article/dollar-cost-averaging-psx-index-tracker).
-`
+
+
+### What You Are Actually Choosing
+
+A broker is three things at once: a gateway to the exchange, a custodian of your shares, and the software you will stare at while making decisions. Most selection focuses on the first and ignores the other two. The second is the one that matters if something goes wrong.
+
+### The Criteria That Matter
+
+- **Regulatory standing.** Is the broker licensed and in good standing with the exchange and the regulator?
+- **Custody.** Where are your shares held, and what happens to them if the broker fails?
+- **Platform reliability.** Does it hold up on a heavy trading day, and is there a working order-by-phone fallback?
+- **Fees.** Commission, account charges, and any hidden custody or settlement costs.
+- **Service.** Can you reach a person, and how long does a withdrawal take?
+
+### The Fee Trap
+
+A low headline commission is often offset by account fees, higher settlement costs, or a wider spread on conversion. Compare the total cost of a typical trade, not the advertised rate.
+
+### How to Test Before Committing
+
+Fund a small amount first. Place a real order. Attempt a withdrawal. Time each step. The test costs you a small amount of fees and saves you from discovering a broken process with your full capital at risk.
+
+### Related Guides
+
+Our [CDC account walkthrough](/article/how-to-open-cdc-account-pakistan) covers the account opening sequence, and our [Shariah screening guide](/article/psx-shariah-screening-kmi30-halal-investing) covers compliance screening.
+    `
   },
   {
     id: "curating-and-monetizing-curated-newsletters",
@@ -1163,7 +1236,37 @@ Optimize salaried tax brackets using our [FBR Salaried Tax Slabs optimization gu
 - Invest in SECP-approved VPS funds (e.g., Meezan Tahaffuz Pension Fund) before June 30 fiscal year-end.
 - Submit VPS investment certificates to HR to adjust monthly salary tax deductions.
 - Maintain Active Taxpayer status on FBR using our [ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+### What the Scheme Is
+
+A voluntary pension scheme is a regulated, portable retirement account. Contributions are invested in sub-accounts you choose, and the accumulated balance is available at retirement, with partial withdrawal permitted under conditions set by the rules. The scheme is administered by a licence holder supervised by the regulator.
+
+### Why It Exists in a Tax Plan
+
+The value is not the investment return, it is the tax treatment. Contributions can qualify for a tax credit, and the growth inside the fund is not taxed year by year as it accrues. For a high-earning professional paying tax at the top rate, the credit alone can be worth more than the first year's return.
+
+### Contribution Limits and Timing
+
+The credit is calculated on a capped amount, not on everything you contribute. Contributing more than the cap does not buy more credit, it only adds to the fund. The practical consequence is to contribute up to the cap early in the tax year rather than spreading it.
+
+### Choosing Sub-Accounts
+
+Most schemes let you allocate between equity, debt, and money-market sub-accounts. Apply the same horizon logic you would use anywhere else: match the sub-account to when you expect to need the money.
+
+### What to Check Before You Contribute
+
+- The current credit rate and the capped contribution amount.
+- The licence holder's track record and fee structure.
+- The withdrawal rules and any penalty before retirement age.
+- How the balance is treated if you stop contributing.
+
+### Common Mistake
+
+Treating the scheme as a short-term parking place. It is designed to be illiquid until retirement, and early exit usually costs more than the credit gained.
+
+Read our [PSX investing guide](/article/how-to-invest-in-psx-as-a-beginner-2026) for the equity-side context.
+    `
   },
 
   // --- JUNE 23, 2026 (2 needed) ---
