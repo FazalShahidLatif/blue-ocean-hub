@@ -59,8 +59,11 @@ Disallow: /_next/
 Disallow: /admin/
 Disallow: /*?search=
 
-# Non-page reference files - not meant for search indexing
+# Non-page reference files - not meant for search indexing.
+# llms-full.txt carries the same payload as all.txt, so both are blocked
+# consistently; otherwise one twin is crawlable while the other is not.
 Disallow: /llms.txt
+Disallow: /llms-full.txt
 Disallow: /all.txt
 
 # NOTE: sitemaps are intentionally crawlable. Blocking them prevents Google
