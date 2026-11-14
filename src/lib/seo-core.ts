@@ -13,7 +13,6 @@ import { ARTICLES } from "../data/articles";
 import { LEGAL_PAGES } from "../data/legal";
 import { CATEGORIES } from "../data/categories";
 import { HOMEPAGE_FAQS, PILLAR_FAQS } from "../data/faqs";
-import { hasReviews, aggregateRating } from "../data/reviews";
 
 /**
  * The exact opening sentences of the batch-generated placeholder bodies.
@@ -97,23 +96,7 @@ export function getSEOForUrl(urlPath: string) {
         "masthead": "https://blueoceanhub.info/page/about-us",
         "description": "South Asia's premier strategic financial magazine and intelligence publication. Delivering elite cashflow allocation and currency hedging blueprints."
       },
-      // AggregateRating is emitted ONLY when real, verifiable reviews exist.
-      // No invented scores: Google drops rich results for fabricated ratings.
-      ...(hasReviews() && aggregateRating()
-        ? [{
-            "@context": "https://schema.org",
-            "@type": "NewsMediaOrganization",
-            "name": "Blue Ocean Hub",
-            "url": "https://blueoceanhub.info/",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": aggregateRating()!.ratingValue,
-              "reviewCount": aggregateRating()!.reviewCount,
-              "bestRating": 5,
-              "worstRating": 1
-            }
-          }]
-        : []),
+
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",

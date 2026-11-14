@@ -135,17 +135,7 @@ function buildRoutes(): Route[] {
             .join("\n")}
         </ul>
       </section>
-      <section aria-label="Reader reviews" class="mt-16 rounded-2xl border border-slate-800/70 bg-slate-900/40 p-8">
-        <h2 class="text-2xl font-bold text-white mb-3">Reader Reviews</h2>
-        <p class="text-slate-300 leading-relaxed max-w-3xl">
-          Independent, unedited reader reviews of our guides, collected on
-          third-party platforms. We publish them as written, including the negative ones.
-        </p>
-        <a href="${SITE_BASE}/page/reviews"
-           class="mt-5 inline-block rounded-lg border border-cyan/50 px-5 py-2.5 text-sm font-semibold text-cyan hover:bg-cyan/10 transition-colors">
-          Read reviews and ratings
-        </a>
-      </section>
+
     </main>`,
     },
   ];

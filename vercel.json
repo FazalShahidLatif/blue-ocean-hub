@@ -11,6 +11,11 @@
   },
   "redirects": [
     {
+      "source": "/page/reviews",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/article/capital-gains-tax-optimization-psx-stocks",
       "destination": "/article/capital-gains-tax-psx-optimization",
       "permanent": true
