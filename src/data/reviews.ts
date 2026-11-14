@@ -35,12 +35,12 @@ export interface Review {
  */
 export const REVIEWS: Review[] = [];
 
-/** Business identities for the embedded review widgets. */
+/** Review sources. Google reviews are not collected (no Business Profile). */
 export const REVIEW_PROVIDERS = {
   /**
-   * Trustpilot business unit id and template id. Fill these in from the
-   * Trustpilot business dashboard once the profile is created; the widget
-   * renders a "leave a review" prompt until then.
+   * Trustpilot business unit id and widget template id. Fill these in from the
+   * Trustpilot business dashboard (TrustBox → Widget) once the profile exists.
+   * The widget renders a "leave a review" prompt until a review exists.
    */
   trustpilot: {
     businessUnitId: "",
@@ -48,14 +48,13 @@ export const REVIEW_PROVIDERS = {
     reviewUrl: "https://www.trustpilot.com/review/blueoceanhub.info",
   },
   /**
-   * Google Business Profile place id. Fill this in from the Google Business
-   * Profile manager. A Google review listing requires a verified business
-   * profile; a publication can qualify.
+   * Not collected. Kept as an explicit record of the decision rather than an
+   * empty field, so the reviews page can explain why.
    */
   google: {
-    placeId: "",
-    reviewUrl: "",
-    mapsUrl: "",
+    collected: false,
+    reason:
+      "Google reviews require a verified Business Profile, which we do not maintain for this publication.",
   },
 };
 

@@ -729,26 +729,29 @@ We collect reviews on independent third-party platforms, and we do not edit, fil
 
 ## Where To Review Us
 
-- **Trustpilot** — [blueoceanhub.info on Trustpilot](https://www.trustpilot.com/review/blueoceanhub.info)
-- **Google** — search for Blue Ocean Hub on Google and choose "Write a review"
+**Trustpilot** — [blueoceanhub.info on Trustpilot](https://www.trustpilot.com/review/blueoceanhub.info)
+
+That is the channel we collect and publish reviews through. We do not currently collect Google reviews.
 
 ## Trustpilot
 
 \`div id="trustpilot-review-wrapper"></div\`
 
-Reviews appear below once the Trustpilot widget is connected. The widget is loaded from Trustpilot's own servers and displays unedited reviews.
+The widget below is loaded directly from Trustpilot and displays reviews exactly as they were written there. We do not host, edit, or reorder them.
+
+## Why Trustpilot
+
+It keeps the record off our servers. A review we cannot delete is a review a reader can trust, and it means a negative review stays visible on the platform even if we would rather it were not. We chose that constraint deliberately.
 
 ## Google Reviews
 
-\`div id="google-review-wrapper"></div\`
-
-Google reviews are published against our Google Business Profile and are visible on Google Search and Maps.
+We do not currently collect Google reviews. Google's review system is tied to a verified Business Profile, which requires a registered business presence we do not maintain for this publication. If that changes, this page will say so.
 
 ## How We Verify a Review
 
-We do not accept reviews by email or through a form on this site. A review is added to this page only when it is publicly visible on Trustpilot or on our Google Business Profile, and we can open the original.
+We do not accept reviews by email or through a form on this site. A review is added to this page only when it is publicly visible on Trustpilot and we can open the original.
 
-That verification matters for three reasons. First, it means a review we publish is one a reader can independently check. Second, it prevents us from presenting only the reviews we like — the platform, not us, holds the record. Third, it means we cannot quietly remove a negative review, because removing it here leaves it intact on the platform it came from.
+That verification matters for three reasons. First, it means a review we publish is one a reader can independently check. Second, it prevents us from presenting only the reviews we like — the platform, not us, holds the record. Third, it means we cannot quietly remove a negative review, because removing it here leaves it intact on Trustpilot.
 
 ## What A Review Changes
 
@@ -756,7 +759,7 @@ A review that identifies a factual error in a guide triggers a correction to tha
 
 A review that is simply a difference of opinion — a reader who preferred a different broker, a different index fund, a different approach — changes nothing, and we say so if we respond.
 
-A review that is abusive, off-topic, or appears to be from a competitor is reported to the platform under its own rules. We do not ask for it to be taken down, and we do not publish our complaint about it.
+A review that is abusive, off-topic, or appears to be from a competitor is reported to Trustpilot under its own guidelines. We do not ask for it to be taken down, and we do not publish our complaint about it.
 
 ## Corrections
 
@@ -768,11 +771,13 @@ If a reader spots an error, the fastest route is the [contact page](/page/contac
 
 **Do you publish negative reviews?** Yes. Negative reviews are the reason a review page is worth reading. A publication that shows only five-star ratings is showing you its marketing, not its record.
 
-**Will you remove a review I regret?** Not from this site alone — the review lives on Trustpilot or Google, and that platform's own process governs removal. If the review contains a factual error we will correct our own guide and add a response.
+**Will you remove a review I regret?** Not from this site — the review lives on Trustpilot, and Trustpilot's own process governs removal. If the review contains a factual error we will correct our own guide and add a response.
 
-**Are reviewers identifiable?** They are identified as they are on the platform they used. We do not add information about a reviewer beyond what is public there.
+**Are reviewers identifiable?** They are identified as they are on Trustpilot. We do not add information about a reviewer beyond what is public there.
 
 **Does a review affect whether you cover a provider?** No. An advertiser or affiliate partner is reviewed against the same standard as any other provider. Coverage decisions are made before any commercial relationship is discussed, and a partner that asks for a review in exchange for a benefit is not covered.
+
+**Why not collect reviews on this site?** Because a review we host is a review we can delete. A third-party record we do not control is worth more to a reader than a testimonial page we do.
 
 ## Our Policy
 

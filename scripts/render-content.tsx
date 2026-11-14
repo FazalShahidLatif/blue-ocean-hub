@@ -431,7 +431,7 @@ export function renderLegalPage(page: Partial<Article>): string {
             Reviews are published on the platform where you write them. We do not
             host reviews we cannot verify, and we never edit them.
           </p>
-          <ul class="grid gap-4 sm:grid-cols-2">
+          <ul class="grid gap-4">
             <li>
               <a href="${REVIEW_PROVIDERS.trustpilot.reviewUrl}" target="_blank" rel="nofollow noopener"
                  class="block rounded-xl border border-slate-800/70 p-5 hover:border-cyan/40 transition-colors">
@@ -439,13 +439,9 @@ export function renderLegalPage(page: Partial<Article>): string {
                 <span class="mt-1 block text-sm text-slate-400">Independent, publicly visible, never edited by us.</span>
               </a>
             </li>
-            <li>
-              <a href="${REVIEW_PROVIDERS.google.reviewUrl || "https://www.google.com/search?q=Blue+Ocean+Hub+reviews"}"
-                 target="_blank" rel="nofollow noopener"
-                 class="block rounded-xl border border-slate-800/70 p-5 hover:border-cyan/40 transition-colors">
-                <strong class="block text-white">Review on Google</strong>
-                <span class="mt-1 block text-sm text-slate-400">Published on our Google Business Profile, visible in Search and Maps.</span>
-              </a>
+            <li class="rounded-xl border border-dashed border-slate-800/70 p-5">
+              <strong class="block text-white">Google reviews</strong>
+              <span class="mt-1 block text-sm text-slate-500">Not collected. Google reviews require a verified Business Profile, which we do not maintain for this publication.</span>
             </li>
           </ul>
         </section>`

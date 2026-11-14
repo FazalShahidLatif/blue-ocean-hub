@@ -118,13 +118,13 @@ export default function ReviewWidgets() {
           <div>
             <h3 className="text-white font-bold font-display">Leave a review</h3>
             <p className="text-sm text-slate-400 mt-1">
-              Reviews are published on the platform where you write them. We do not
-              host reviews we cannot verify, and we never edit them.
+              We collect reviews on Trustpilot. We do not host reviews we cannot
+              verify, and we never edit them.
             </p>
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid gap-4">
           <a
             href={REVIEW_PROVIDERS.trustpilot.reviewUrl}
             target="_blank"
@@ -142,26 +142,13 @@ export default function ReviewWidgets() {
               Independent, publicly visible, and never edited by us.
             </p>
           </a>
-          <a
-            href={
-              REVIEW_PROVIDERS.google.reviewUrl ||
-              "https://www.google.com/search?q=Blue+Ocean+Hub+reviews"
-            }
-            target="_blank"
-            rel="nofollow noopener"
-            className="group rounded-xl border border-slate-800/70 bg-ocean-900/60 p-5 hover:border-cyan/40 transition-colors"
-          >
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-white font-bold text-sm">Review on Google</span>
-              <ExternalLink
-                className="w-4 h-4 text-slate-500 group-hover:text-cyan transition-colors"
-                aria-hidden="true"
-              />
-            </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Published on our Google Business Profile and visible in Search and Maps.
+          <div className="rounded-xl border border-dashed border-slate-800/70 p-5">
+            <span className="text-white font-bold text-sm">Google reviews</span>
+            <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
+              Not collected. Google reviews require a verified Business Profile,
+              which we do not maintain for this publication.
             </p>
-          </a>
+          </div>
         </div>
 
         {configured ? (
@@ -170,8 +157,9 @@ export default function ReviewWidgets() {
           <div className="mt-6 rounded-xl border border-dashed border-slate-700 p-4 flex items-start gap-3">
             <ShieldCheck className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" aria-hidden="true" />
             <p className="text-xs text-slate-500 leading-relaxed">
-              The Trustpilot widget activates once the business profile is connected.
-              Reviews written on Trustpilot appear here automatically.
+              The Trustpilot widget appears here once the business profile is
+              connected. Reviews written on Trustpilot display automatically,
+              exactly as written.
             </p>
           </div>
         )}
