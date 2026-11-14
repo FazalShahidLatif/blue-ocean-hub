@@ -402,8 +402,22 @@ ${relatedHtml}
 /* Legal / info pages                                                  */
 /* ------------------------------------------------------------------ */
 
+/* Cross-links between policy pages. The site's nav/footer are rendered by the
+   React app, so these static links are what a crawler sees on a policy page. */
+const RELATED_PAGES = [
+  { id: "editorial-policy", label: "Editorial Integrity Policy" },
+  { id: "cookie-policy", label: "Cookie Policy" },
+  { id: "privacy-policy", label: "Privacy Policy" },
+  { id: "affiliate-disclosure", label: "Affiliate Disclosure" },
+  { id: "advertise", label: "Advertise With Us" },
+  { id: "reviews", label: "Reader Reviews & Ratings" },
+];
+
 export function renderLegalPage(page: Partial<Article>): string {
   const body = renderMarkdown(stripLeadingH1(page.content || ""));
+  const related = RELATED_PAGES.filter((p) => p.id !== page.id)
+    .map((p) => `<a href="${SITE}/page/${p.id}">${p.label}</a>`)
+    .join("");
   return `
     <main class="mx-auto max-w-3xl px-6 py-16">
       <article>
@@ -435,6 +449,9 @@ export function renderLegalPage(page: Partial<Article>): string {
           prose-li:text-slate-300 prose-strong:text-white">
           ${body}
         </div>
+        <nav class="mt-12 flex flex-wrap gap-x-6 gap-y-3 border-t border-slate-800 pt-8" aria-label="Related pages">
+          ${related}
+        </nav>
       </article>
     </main>`;
 }
