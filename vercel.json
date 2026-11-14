@@ -9,6 +9,48 @@
       "memory": 1024
     }
   },
+  "redirects": [
+    {
+      "source": "/article/capital-gains-tax-optimization-psx-stocks",
+      "destination": "/article/capital-gains-tax-psx-optimization",
+      "permanent": true
+    },
+    {
+      "source": "/article/w8bene-tax-forms-us-software-clients",
+      "destination": "/article/w8bene-form-completion-guide-agencies",
+      "permanent": true
+    },
+    {
+      "source": "/article/listed-reit-commercial-yields-analysis",
+      "destination": "/article/reit-commercial-rental-yield-analysis",
+      "permanent": true
+    },
+    {
+      "source": "/article/fbr-filer-vs-non-filer-tax-impacts",
+      "destination": "/article/fbr-active-taxpayer-list-atl-benefits-guide",
+      "permanent": true
+    },
+    {
+      "source": "/article/voluntary-pension-schemes-vps-secp-tax-credit",
+      "destination": "/article/investing-pensions-voluntary-pension-schemes",
+      "permanent": true
+    },
+    {
+      "source": "/article/stripe-atlas-firstbase-incorporation-comparison",
+      "destination": "/article/stripe-atlas-vs-firstbase-delaware-inc",
+      "permanent": true
+    },
+    {
+      "source": "/article/executive-compensation-tax-shielding",
+      "destination": "/article/employee-fringe-benefits-taxation-shield",
+      "permanent": true
+    },
+    {
+      "source": "/article/zero-rated-sales-tax-it-export-invoicing",
+      "destination": "/article/cross-border-invoicing-vat-gst-exemptions",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.txt",
