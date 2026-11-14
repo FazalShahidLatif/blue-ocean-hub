@@ -40,6 +40,29 @@ function stripLeadingH1(markdown: string): string {
     .replace(/^\s*\n/, "");
 }
 
+/** Stable anchor id for a heading's text. */
+function slugify(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+/**
+ * Give every <h2> in the rendered article a stable id and return the heading
+ * texts, so the "In this guide" list can deep-link into the page.
+ */
+function anchorify(html: string): { html: string; headings: string[] } {
+  const headings: string[] = [];
+  const out = html.replace(/<h2>(.*?)<\/h2>/g, (_m, inner: string) => {
+    const text = inner.replace(/<[^>]+>/g, "");
+    const id = slugify(text) || `section-${headings.length + 1}`;
+    headings.push(text);
+    return `<h2 id="${id}">${inner}</h2>`;
+  });
+  return { html: out, headings };
+}
+
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, "&amp;")
@@ -155,11 +178,48 @@ ${items}
 }
 
 export function renderArticlePage(article: ArticleLike): string {
-  const body = renderMarkdown(stripLeadingH1(article.content || ""));
+  const rendered = anchorify(renderMarkdown(stripLeadingH1(article.content || "")));
+  const body = rendered.html;
   const cat = findCategory(article.category);
   const tags = (article.tags || [])
     .map((t) => `        <span class="text-xs text-slate-400">#${escapeHtml(t)}</span>`)
     .join("\n");
+
+  // "In this guide" — the article's own section headings, each linked to the
+  // anchor injected above. Derived from the published content, never invented.
+  const inThisGuide =
+    rendered.headings.length > 1
+      ? `        <nav aria-label="In this guide" class="my-10 rounded-2xl border border-slate-800/70 bg-ocean-900/50 p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-cyan mb-4">In this guide</p>
+          <ol class="space-y-2 text-sm">
+${rendered.headings
+  .map(
+    (h, i) =>
+      `            <li><a href="#${slugify(h) || `section-${i + 1}`}" class="text-slate-300 hover:text-cyan transition-colors">${escapeHtml(h)}</a></li>`,
+  )
+  .join("\n")}
+          </ol>
+        </nav>`
+      : "";
+
+  // Related guides from the same hub, so every article links laterally.
+  const related = ARTICLES.filter(
+    (a) => a.id !== article.id && a.content && a.category === article.category,
+  ).slice(0, 5);
+  const relatedHtml =
+    related.length > 0
+      ? `        <section aria-label="Related guides" class="mt-14 border-t border-slate-800 pt-10">
+          <h2 class="text-2xl font-bold text-white mb-6">Related Guides</h2>
+          <ul class="space-y-4">
+${related
+  .map(
+    (r) => `            <li><a href="${SITE}/article/${r.id}" class="text-cyan underline underline-offset-4 hover:text-cyan/80 font-medium">${escapeHtml(r.title)}</a>
+              <p class="mt-1 text-sm text-slate-400">${escapeHtml(r.description || "")}</p></li>`,
+  )
+  .join("\n")}
+          </ul>
+        </section>`
+      : "";
 
   return `
     <main class="mx-auto max-w-3xl px-6 py-16">
@@ -191,6 +251,8 @@ export function renderArticlePage(article: ArticleLike): string {
           }
         </header>
 
+        ${inThisGuide}
+
         <div class="markdown-body prose prose-invert prose-cyan max-w-none
           prose-h2:text-white prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
           prose-p:text-slate-300 prose-p:leading-relaxed
@@ -211,7 +273,7 @@ ${tags}
         </footer>`
             : ""
         }
-${renderRelated(article)}
+${relatedHtml}
       </article>
     </main>`;
 }
