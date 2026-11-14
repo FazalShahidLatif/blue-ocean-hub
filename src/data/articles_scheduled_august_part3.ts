@@ -444,7 +444,30 @@ To process app payouts efficiently, explore our [Elevate Pay vs Wise payout guid
 - Build utility tools that solve daily user problems with high retention rates.
 - Implement RevenueCat to manage cross-platform App Store and Play Store subscriptions.
 - Reinvest app profits into [digital publishing publishing sites](/article/digital-publishing-ezoic-adsterra-yield).
-`
+
+
+## The Two Revenue Streams
+
+Advertising and in-app purchases are not alternatives so much as different products. Advertising monetises attention: the more time users spend, the more you earn, which pushes toward engagement for its own sake. In-app purchases monetise value delivered: the user pays for something specific, which pushes toward utility. A portfolio of apps lets you test both instead of committing to one.
+
+## Advertising Revenue Reality
+
+Ad revenue per user is small, and the variation between markets is enormous. A user in one country can be worth many times a user in another for the same impression. That means the acquisition channel and the audience market matter as much as the product, and an app built for the wrong market will underperform no matter how well it is made.
+
+## In-App Purchase Design
+
+A purchase should feel like the natural answer to a moment in the product: removing a limitation, unlocking a capability, or saving time. Purchases that feel like a toll on a free product generate resentment and reviews that cost you more than the revenue is worth.
+
+## Portfolio Thinking
+
+A portfolio of small apps spreads risk, but it also spreads attention. The case for a portfolio is that you learn faster and reuse what works. The case against is that three neglected apps earn less than one well-run one. Add a new app when the existing ones are stable, not when they are struggling.
+
+## The Long Game
+
+App revenue compounds slowly and can end suddenly when a platform changes its rules or an algorithm shifts. Treat it as a real but fragile income stream, and do not build a plan that assumes it continues unchanged.
+
+Our [micro-SaaS guide](/article/building-micro-saas-apis-metered-stripe-billing) covers the software side of the same portfolio logic.
+    `
   },
   {
     id: "mutual-funds-front-end-load-waivers",

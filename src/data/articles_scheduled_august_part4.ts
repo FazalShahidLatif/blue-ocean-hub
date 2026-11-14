@@ -220,7 +220,36 @@ Reinvest template earnings into digital publishing assets by reading our [niche 
 - Build specialized templates addressing complex professional workflows.
 - Collect customer emails using free lead-magnet templates.
 - Receive payouts directly via [Elevate Pay or Wise US accounts](/article/elevate-wise-stripe-pakistan-remittance).
-`
+
+
+## Two Very Different Marketplaces
+
+A template storefront and a handmade marketplace are not the same channel. One is a search-driven product listing where the buyer arrives looking for a specific thing; the other is a browsing environment where the buyer is open to discovery. The listing, the imagery, and the pricing that work in one often fail in the other.
+
+## What Sells
+
+A template sells when the buyer can see themselves using it. That means a clear promise, a real preview, and a stated requirement: which tool, which version, which skill level. "Notion template" is not a promise. "Weekly operating review for a two-person agency" is.
+
+## The Listing
+
+- **The first image does most of the work.** It should show the product in use, not a title card.
+- **The description answers the objection.** What is included, what is not, and what the buyer needs to already have.
+- **The price matches the category.** A price far from the category norm reads as either a bargain or a warning.
+
+## Delivery and Expectations
+
+A digital product has no shipping and no returns, which means the buyer's only evidence before purchase is the listing. Over-deliver on the download experience: a clean file, a short instruction, and a way to ask a question.
+
+## The Catalogue Effect
+
+One template earns a little. Twenty templates earn a living, because each one is a separate listing competing for a separate search, and the audience overlaps. The catalogue is the business; the individual product is a lottery ticket.
+
+## Support
+
+Digital products still generate questions. Answer them promptly and use the answers to improve the listing. Every repeated question is a line that should have been in the description.
+
+Our [Notion template playbook](/article/selling-notion-templates-gumroad-etsy-playbook) covers one of the largest categories.
+    `
   },
 
   // --- AUGUST 13, 2026 ---
@@ -589,7 +618,35 @@ Collect payouts globally using [Elevate Pay or Wise US business accounts](/artic
 - Embed affiliate links naturally within in-depth, hands-on tutorial content.
 - Capture reader emails using [Beehiiv newsletter funnels](/article/newsletter-monetization-beehiiv-convertkit).
 - Reinvest recurring affiliate profits into [micro-SaaS acquisitions](/article/micro-saas-stripe-monetization-playbook).
-`
+
+
+## Why Recurring Commission Changes the Economics
+
+A one-time commission pays once. A recurring commission pays for as long as the customer stays, which turns a single referral into an annuity. For a software business, that changes the affiliate relationship from a marketing channel into a distribution partnership, and it changes what you can afford to pay.
+
+## Structuring the Programme
+
+- **Commission rate.** Recurring programmes usually pay less per period than one-time programmes, but they pay indefinitely. Set the rate so that the lifetime value of an affiliate-referred customer justifies the payout.
+- **Cookie and attribution.** Decide what wins when two affiliates refer the same customer, and publish the rule.
+- **Duration.** Paying for the life of the customer is generous and attractive. Paying for a fixed period is more predictable. Both work; ambiguity does not.
+- **Thresholds and timing.** When an affiliate gets paid matters as much as how much.
+
+## The Risks
+
+- **Adversarial affiliates.** Some will use misleading claims, brand bidding, or aggressive tactics that damage your reputation. Write the rules and enforce them.
+- **Attribution leakage.** A customer who already knows your brand may be credited to an affiliate who added nothing. Decide whether that is acceptable.
+- **Support load.** Affiliate-referred customers ask the same questions as everyone else, and the affiliate expects you to handle them.
+
+## Recruiting Affiliates
+
+Your best affiliates are often your best customers. They already understand the product, have an audience, and can speak from experience. Start there before recruiting professional promoters.
+
+## Measuring
+
+Track the lifetime value of affiliate-referred customers against directly acquired ones. If the affiliate channel produces customers who churn faster, the recurring commission may be buying low-quality signups.
+
+Our [SaaS micro-business guide](/article/building-micro-saas-apis-metered-stripe-billing) covers the product side.
+    `
   },
   {
     id: "bank-fixed-deposits-vs-money-market-funds",
@@ -1047,7 +1104,33 @@ To simplify tax handling on API sales, review our [Lemon Squeezy vs Paddle MoR g
 - Package high-demand utility logic into clean REST or GraphQL API endpoints.
 - List APIs on RapidAPI to capture existing developer search traffic instantly.
 - Receive payouts directly into [Elevate Pay or Wise US accounts](/article/elevate-wise-stripe-pakistan-remittance).
-`
+
+
+## The Idea
+
+An API turns a capability into a product: a developer who needs a specific function pays for it rather than building it. The appeal is the price point and the simplicity. A customer can try it for a few dollars, integrate it in an afternoon, and cancel when it stops being useful.
+
+## What Makes an API Sellable
+
+- **A narrow problem.** One job, done reliably, beats a platform.
+- **Clear documentation.** The product is the docs. A developer decides in minutes.
+- **Predictable pricing.** Usage-based is fine if the first tier is cheap enough to try.
+- **Reliability.** An API that fails intermittently is not a product, it is a support burden.
+
+## The Economics
+
+The cost of serving an API is mostly fixed: the infrastructure, the monitoring, the support. Margins improve as usage grows, but the support load grows too, because the smallest customers often ask the most questions. Price so that a low-volume customer still pays for the support they consume.
+
+## Distribution
+
+An API is sold to developers, and developers find tools where other developers talk about them. Marketplaces, directories, and being genuinely useful in the communities where your buyers already are all work better than advertising.
+
+## When It Stops Being Worth It
+
+A single API with modest usage is a small business, not a large one. That is fine, and it is the point. But if the goal is growth, the path is usually more endpoints, a broader platform, or a move up the stack into the application itself.
+
+Our [micro-SaaS guide](/article/building-micro-saas-apis-metered-stripe-billing) covers building and pricing it.
+    `
   },
   {
     id: "dollar-cost-averaging-psx-index-tracker",
@@ -1339,7 +1422,34 @@ Scale recurring software commissions using our [high-ticket SaaS affiliate progr
 - Pick a focused niche with high commercial interest (Fintech, AI, B2B SaaS).
 - Send consistent weekly email updates to build reader trust.
 - Collect subscriber payments globally using [Stripe and Merchant of Record tools](/article/lemon-squeezy-paddle-mor-tax-compliance).
-`
+
+
+## The Platform Decision
+
+The platform you choose determines what you can do later: how you are paid, who owns the list, what the analytics tell you, and how easily you can move. Choose on the things that are hard to change, not on the onboarding experience.
+
+## What to Compare
+
+- **Fees.** A platform fee plus payment processing is the real cost. Compare the total.
+- **Ownership.** You should own the subscriber list and be able to export it.
+- **Monetisation.** Built-in paid subscriptions, or do you need another tool?
+- **Discovery.** Some platforms promote your newsletter to their network. That has real value early and little later.
+- **Deliverability.** The platform's sending reputation affects whether you reach the inbox.
+
+## The Business Model
+
+A newsletter makes money in one of four ways: paid subscriptions, sponsorships, affiliate referrals, or as a channel for something else you sell. They are not equal. A paid list is revenue; a sponsorship is revenue with a cost in editorial independence; an affiliate list is a commission book; and a lead channel is valuable but invisible on the newsletter's own accounts.
+
+## Growing a Paid List
+
+Free-to-paid works when the free edition has a clear boundary the paid one crosses: more depth, more frequency, a private archive, or direct access. A paid tier that is simply the same newsletter without the ads converts poorly, because the reader has not been given a reason.
+
+## Churn
+
+A newsletter loses subscribers when the value-to-clutter ratio shifts. The fix is to make each edition earn its place and to stop sending rather than send filler. A smaller list that opens every edition is worth more than a larger one that has stopped reading.
+
+Our [curated newsletter guide](/article/curating-and-monetizing-curated-newsletters) covers the editorial side.
+    `
   },
   {
     id: "etf-vs-open-end-mutual-funds",
@@ -1640,7 +1750,33 @@ Reinvest book royalties into [faceless YouTube automation channels](/article/you
 - Format book files using KDP Create and Kindle Previewer.
 - Set up Amazon KDP account tax interviews using non-resident TIN details.
 - Receive monthly royalty payouts via [Wise or Elevate Pay US accounts](/article/elevate-wise-stripe-pakistan-remittance).
-`
+
+
+## The Decision: eBook, Audiobook, or Both
+
+An eBook is cheap to produce and easy to deliver. An audiobook commands a higher price and reaches a different buyer, but costs far more to produce. Most first-time publishers start with the eBook, prove the audience exists, and only then invest in audio. Producing audio for a book that has sold twenty copies is capital spent in the wrong order.
+
+## Writing for a Market, Not for Yourself
+
+A book that sells is a book that answers a question a group of people are already asking. That is why a narrow, practical, problem-solving book outsells a broad memoir: the buyer knows exactly what they are getting, and the market can be reached directly.
+
+## Production
+
+- **Editing.** The single highest-return investment. A professionally edited book reads as a different product.
+- **Cover.** It is the advertisement. A cover that looks self-published costs you sales you will never know you lost.
+- **Formatting.** Clean interior, correct table of contents, and a layout that works on a phone as well as a tablet.
+- **Description.** This is sales copy, not a summary. It should name the problem and the outcome.
+
+## Pricing
+
+Price against comparable books in the category, not against your costs. A price far below the category signals low quality and earns the suspicion it was trying to avoid. A price far above it requires the reputation you have not yet built.
+
+## The Long Tail
+
+A self-published book is not a launch, it is an asset. It earns slowly, it compounds with every other title you publish, and it keeps working while you work on something else. That is the actual case for publishing: not a single hit, but a catalogue.
+
+Read our [digital products playbook](/article/digital-products-monetization-urdu) for the wider positioning.
+    `
   },
   {
     id: "psx-dividend-reinvestment-plans-drip",
@@ -1920,7 +2056,34 @@ Build developer API backends using our [API-as-a-Service monetization guide](/ar
 - Build extensions using Manifest V3 standards with React and Tailwind CSS.
 - Integrate ExtensionPay for instant zero-backend Stripe subscription billing.
 - Collect monthly USD subscription revenue via [Elevate Pay or Wise US accounts](/article/elevate-wise-stripe-pakistan-remittance).
-`
+
+
+## Why Extensions Are a Real Business
+
+A browser extension is a small piece of software that lives exactly where your user is working. That proximity is the advantage: no install friction, no app to open, and a problem solved at the moment it appears. It also means the audience is technical, which makes a paid tier plausible in a way it is not for a consumer app.
+
+## The Monetisation Models
+
+- **Freemium.** A useful free tier, a paid tier for power users. The most common and usually the best.
+- **Paid upfront.** Rarely works unless the extension is well known.
+- **Subscription.** Works when the extension delivers ongoing value, not a one-time fix.
+- **Usage-based.** Fair to the user, harder to forecast for you.
+- **B2B.** Selling to companies, not individuals, usually at a much higher price.
+
+## Distribution Is the Problem
+
+The extension marketplace is crowded and discovery is poor. The channels that work are the ones you would use for any product: a specific audience that already gathers somewhere, content that answers the question the extension solves, and a free tier that earns word of mouth.
+
+## Churn and Refunds
+
+Extensions get uninstalled quickly if they stop being useful, and a subscription that renews only while the user remembers the extension exists will churn. The defence is genuine ongoing utility and honest communication about what the paid tier buys.
+
+## Platform Risk
+
+You are building on someone else's store. Read the policies, expect them to change, and keep a direct relationship with your users so a store decision does not end the business.
+
+Our [micro-SaaS playbook](/article/building-micro-saas-apis-metered-stripe-billing) covers the product side.
+    `
   },
   {
     id: "sovereign-sukuk-bonds-ijarah",
@@ -2202,7 +2365,37 @@ Maximize ad yields on acquired sites using our [digital publishing RPM optimizat
 - Verify Google Analytics / Search Console data via direct read-only access.
 - Audit merchant payment processor accounts (Stripe, ad network, Ezoic) via screen shares.
 - Reinvest asset payouts into [micro-SaaS Stripe monetization products](/article/micro-saas-stripe-monetization-playbook).
-`
+
+
+## What You Are Buying
+
+A digital asset is not code, it is a stream of revenue with a history. The code can usually be rebuilt; the traffic, the rankings, the customer list, and the operational history cannot. That is why a small content site with steady earnings sells for a higher multiple than a technically superior product with no audience.
+
+## Where the Value Lives
+
+- **Traffic.** Where it comes from, how durable it is, and whether it depends on one source.
+- **Revenue.** How it is earned, how stable it is, and how much of it survives a change of owner.
+- **Operations.** How much of the business depends on the owner, and how much runs without them.
+- **Transferability.** Whether the asset can actually be handed over.
+
+## The Diligence
+
+Verify the traffic from analytics access, not screenshots. Verify the revenue from the monetisation dashboard. Build the cost base yourself rather than accepting the seller's profit figure. Check the backlink profile for the kind of links that get sites penalised.
+
+## The Multiple
+
+Multiples are a shorthand for quality. A site with diversified, durable, growing revenue earns a higher multiple than one with concentrated, declining, owner-dependent revenue. Paying a high multiple for low-quality earnings is the mistake that loses money.
+
+## After You Buy
+
+Most acquired assets decline in the first year. The cause is usually that the new owner stopped doing something the previous owner did. Write down the weekly and monthly tasks, and keep doing them.
+
+## Selling
+
+The same checklist in reverse. Clean up a year before you list, stabilise revenue, document the operations, and remove the owner dependency. A business that stops when you stop is priced as a job.
+
+Our [website acquisition guide](/article/buying-cash-flowing-websites-flippa-due-diligence) covers the diligence in detail.
+    `
   },
   {
     id: "real-estate-vs-stock-market-returns-30yr",
@@ -2465,7 +2658,34 @@ Build developer APIs using our [API-as-a-Service monetization guide](/article/ap
 - Target specific professional workflows (e.g., legal document summarization, medical transcript formatting).
 - Implement Stripe subscription checkouts for automated monthly billing.
 - Collect USD subscription revenue via [Elevate Pay or Wise US accounts](/article/elevate-wise-stripe-pakistan-remittance).
-`
+
+
+## What "Wrapper" Actually Means Here
+
+A wrapper product builds a focused interface, workflow, or integration on top of a general model, and sells the result to a specific user with a specific job. The model is the raw capability; the wrapper is the product. Most of the value, and most of the defensibility, is in the wrapper.
+
+## Where the Value Is
+
+The model is available to everyone, including your competitors. What you own is the workflow around it: the prompts, the data, the integrations, the output format, and the trust of a specific audience. A wrapper that only reproduces the model's interface is not a product.
+
+## Pricing
+
+Users of AI tooling are used to a subscription and are sensitive to usage. A flat subscription works when usage is predictable; a usage-based or credit model works better when cost varies with the customer's volume. Whichever you choose, make the first tier cheap enough to try, because the product's quality is obvious only after use.
+
+## The Defensibility Question
+
+Be honest about how hard your wrapper is to copy. If the answer is "not very", the strategy is not to build a moat, it is to move fast, own a distribution channel, and build a brand before the copying starts. Speed and audience are the realistic defence.
+
+## Costs
+
+Model usage is a variable cost, and it scales with revenue. That is a good problem, but it means margins can erode if a customer's usage is much heavier than the price assumes. Watch the cost per customer, not only the revenue.
+
+## Distribution
+
+The audience for an AI tool is already gathered in communities, newsletters, and social platforms where tools are shared. Showing the output works better than describing the feature. A demo that produces a real result in front of the buyer is the strongest sales material available.
+
+Our [micro-SaaS guide](/article/building-micro-saas-apis-metered-stripe-billing) covers the operating side.
+    `
   },
   {
     id: "asset-allocation-model-tech-founders",

@@ -197,7 +197,40 @@ To reinvest domain gains into other digital assets, explore our [buying cash-flo
 - [Building High-Ticket Affiliate Websites: Niche Keyword Research and Conversion Blueprints](/article/affiliate-content-empire-amazon-shareasale): Verified tactical execution guidelines and market compliance principles.
 - [Dolmen REIT vs Globe Residency REIT: Analyzing Quarterly Payouts and Asset Backing](/article/reit-commercial-rental-yield-analysis): Institutional portfolio allocation and risk-hedging frameworks.
 - [Strategic Financial Tool Hub & Computational Models](/toolkit): Interactive computational engines and statutory models for South Asian operators.
-`
+
+
+## What a Domain Is Worth
+
+A domain is worth what a buyer will pay for it, which is not the same as what it cost to register. Value comes from a small number of sources: a name a buyer already wants, a keyword someone is searching, a short or memorable string, or a history that search engines recognise. Most domains have none of these, and most domains are worth the registration fee.
+
+## Where the Money Is
+
+The profitable end of the business is not guessing at dictionary words. It is identifying a name a specific buyer needs, before the buyer has found it. That requires understanding a market well enough to know what a company in it would want to be called.
+
+## Appraising Honestly
+
+Be sceptical of automated appraisals. They are generated from comparable sales and keyword data, and they routinely overstate value by an order of magnitude. A domain's value is proven by a sale, not by an estimate.
+
+## Acquisition
+
+- **Expired and dropping names.** A source of names with existing history, and therefore risk.
+- **Direct approaches.** Offering a name to a company that clearly wants it. Works, and is labour-intensive.
+- **Registration.** Registering speculative names is a numbers game with carrying costs, and most names never sell.
+
+## Due Diligence
+
+Check the history before you buy. A name that was previously used for spam, or that has a penalty attached, is worth very little regardless of how good it looks. The search engines remember.
+
+## Selling
+
+A domain sale is a negotiated sale, and the broker or marketplace is the channel. Price it against comparable sales, present it to the buyer who needs it, and be prepared for the gap between your asking price and a realistic offer to be wide.
+
+## The Realistic Outlook
+
+Domain flipping is a small, slow business with a high failure rate, not a quick one. The people who make it work treat it as a brokerage and a market-knowledge business, not as a lottery.
+
+Our [digital asset flipping guide](/article/digital-asset-flipping-flippa-empire-flippers) covers the wider asset market.
+    `
   },
 
   // --- AUGUST 03, 2026 ---
