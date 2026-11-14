@@ -417,6 +417,21 @@ export function renderToolkitPage(): string {
           and dollar-revenue allocation.
         </p>
       </header>
+
+      <div class="markdown-body prose prose-invert prose-cyan max-w-none mb-12">
+        <h2>What This Toolkit Is For</h2>
+        <p>Most financial decisions a founder faces in Pakistan come down to arithmetic that is tedious to do by hand and easy to get wrong. This toolkit exists to do that arithmetic cleanly: to show what a given rate, fee, or holding period actually does to the number you care about, before you commit to it.</p>
+        <p>The models are deliberately simple. Each one asks for the few inputs that drive the result, shows the working, and states its limits. Where a figure depends on a rate set by a regulator or a provider, the model shows the rate it used so you can check it against the current schedule.</p>
+        <h2>How to Use It</h2>
+        <p>Start from the hub that matches your question. Each hub below carries the calculators and planning models relevant to its topic, alongside the guides that explain the reasoning behind them. If you are unsure which hub applies, begin with the question you are trying to answer rather than the tool you think you need.</p>
+        <h2>What the Models Cannot Do</h2>
+        <p>These are planning aids, not advice. They do not know your full position, your jurisdiction's specific treatment, or your appetite for risk. A model that returns a number has done arithmetic, not made a recommendation. Before acting on a result, take it to a qualified professional.</p>
+        <h2>Where the Figures Come From</h2>
+        <p>Rates and thresholds used in the models come from the regulator or provider that sets them: the State Bank of Pakistan and the Federal Board of Revenue for tax and withholding figures, the Pakistan Stock Exchange and the Central Depository Company for market mechanics, and the individual provider for any fee or commission. Where a figure is a market rate that moves daily, the model shows the value it used and the date it was set.</p>
+        <h2>Reporting an Error</h2>
+        <p>If a model returns a result you believe is wrong, tell us which model, which inputs you used, and what you expected. A model that is wrong is worse than no model at all, because it gives a false sense of certainty.</p>
+      </div>
+
       <section aria-label="Calculators">
         <ul class="space-y-6">
           ${CATEGORIES.map(

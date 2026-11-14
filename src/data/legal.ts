@@ -263,6 +263,27 @@ You can change your consent choice at any time by clearing this site's data in y
 ## How to Contact Us About Cookies
 
 Questions about the cookies set by this site, or a request to delete stored data, can be sent to hello@blueoceanhub.info.
+
+
+## The Consent Choice
+
+When you first visit, you are asked whether advertising scripts may load. That choice is stored in your browser's local storage and applies across the site. Clearing the site's data resets the prompt.
+
+## Blocking Scripts
+
+You can block individual scripts with a browser content blocker or with your browser's built-in controls. The article text renders without them. Advertising and analytics do not.
+
+## Consent and Advertising
+
+Adsterra and the additional networks listed in our ads.txt only load after consent. If you decline, no advertising identifier is set by those networks on that visit.
+
+## Consent Records
+
+We do not retain a server-side record of your consent choice. It lives in your browser. If you need to evidence your own choice, your browser's storage for this domain holds it.
+
+## Questions and Complaints
+
+Write to hello@blueoceanhub.info with the subject line "Cookies". If you believe a script is loading without consent, tell us the page and the browser you used.
     `
   },
   {
@@ -492,6 +513,23 @@ We license a limited number of republications each quarter. Send the outlet, the
 ## Mailing Address
 
 Blue Ocean Hub Editorial, Pakistan. We operate as a distributed publication and do not maintain a public walk-in office.
+
+
+## Guidance Before You Send
+
+**Corrections need a citation.** If you are challenging a figure, link the source you believe is correct. A correction backed by a primary document is verified in one pass; a bare disagreement is not actionable.
+
+**Partnership enquiries need a placement.** Tell us which placement you want, the period, and the audience. "I want to advertise" without a placement or period cannot be quoted.
+
+**Advisory enquiries need a problem statement.** A short paragraph on the situation is enough. We will tell you honestly whether it is work we can do or whether you need a different kind of professional.
+
+## What Happens After You Write
+
+Your message is routed to the relevant desk. If it needs research, it joins the queue behind published work. If it is a correction with a citation, it is usually actioned fastest. We do not send automated acknowledgements; the reply you receive is written by a person.
+
+## Alternative Channels
+
+For a privacy request or a data deletion request, use the same address with the subject line "Privacy" and reference your [privacy policy](/page/privacy-policy). For a legal notice, use the subject line "Legal".
     `
   },
   {
@@ -551,6 +589,34 @@ Availability is checked from outside the hosting provider. A page is considered 
 ## Reporting a Problem
 
 If a page fails to load or renders incorrectly for you, tell us through the [contact page](/page/contact) with the URL and what you saw. Include whether the problem persists in a private window, which helps separate a local cache issue from a server fault.
+
+
+## Scope of Monitoring
+
+Monitoring covers three layers:
+
+1. **Availability** — whether the site responds successfully over HTTPS.
+2. **Rendering** — whether a page returns its article body rather than an empty shell.
+3. **Delivery** — whether pages are served from the edge network within a normal time.
+
+A failure at any layer is an incident, even if the site is technically still returning a response.
+
+## Scheduled Maintenance
+
+Deployment windows are the only planned source of interruption. They are short, and where a deployment introduces a fault the previous build is restored rather than fixed forward.
+
+## Historical Transparency
+
+We do not publish a synthetic uptime figure. If you need assurance about reliability for a commercial arrangement, ask and we will tell you what we can substantiate.
+
+## Escalation
+
+For an urgent fault affecting a live page, use the [contact page](/page/contact) with the subject line "Status" and the URL. For a suspected local problem, test in a private window first and tell us what you observed.
+
+
+## Reading This Page
+
+Green means the layer is performing within tolerance. Amber means we are aware of degradation and working on it. Red means a layer is down and readers may be affected. If a layer is not listed, we do not monitor it and we are not claiming anything about it.
     `
   },
   {
@@ -610,6 +676,29 @@ Send the [contact page](/page/contact) subject line "Partnership" with the place
 ## Measurement
 
 Placements are reported with the impressions and clicks recorded by the serving network. We do not report figures we cannot substantiate, and we do not guarantee a specific outcome.
+
+
+## Placement Detail
+
+**Leaderboard (728×90).** Sits at the top of article and hub pages. Best for broad awareness among readers who are already on the site.
+
+**Rectangle (300×250).** Sits within the article body. Best when the offer is relevant to the specific article it appears on.
+
+**Skyscraper (160×600).** Persistent side placement. Best for a longer campaign where repeated exposure matters.
+
+**Sponsored content.** A labelled article produced with our editorial team, published under the same standards as editorial copy and clearly marked as sponsored.
+
+**Directory listing.** A reviewed entry in the business directory, grouped with comparable providers.
+
+**Newsletter mention.** Inclusion in the subscriber edition, subject to inventory.
+
+## Consent and Delivery
+
+Advertising is gated behind the site's consent banner, so a placement only reaches visitors who have accepted advertising scripts. Reporting reflects that, and we do not inflate it.
+
+## Booking
+
+Write to the [contact page](/page/contact) with the subject line "Partnership" and the placement, period, and audience. We reply within three business days with availability and a fixed quote.
     `
   },
   {
@@ -670,6 +759,32 @@ Every edition carries an unsubscribe link at the foot of the message. Unsubscrib
 ## What We Never Do
 
 We do not sell or rent the subscriber list. We do not send third-party promotional mail under our own name. If a message promotes a commercial offer, it is labelled as such.
+
+
+## What the Free Edition Contains
+
+One substantive guide, written to be useful on its own, plus a short brief covering the week's movements in the Pakistan Stock Exchange, the rupee, and any regulatory change that affects a reader's money. No syndicated press releases, no filler.
+
+## What the Premium Edition Contains
+
+Everything in the free edition, plus a monthly compliance calendar listing FBR and PSEB deadlines, quarterly tax-position review templates, and access to the member directory of vetted providers.
+
+## Who It Is For
+
+The newsletter is written for the same reader as the site: a professional in Pakistan earning in rupees, dollars, or both, who wants the arithmetic done and the reasoning explained. It is not a daily digest and it is not a promotional bulletin.
+
+## Deliverability
+
+Add the sending address to your contacts on first receipt. If an edition lands in promotions or spam, marking it as not spam is the single most useful thing you can do for delivery.
+
+
+## Format
+
+The edition arrives as plain, readable email. It is written to be scannable: the lead item first, the brief after, and a single link per item rather than a grid of buttons. If you only have two minutes, the first screen is the whole story.
+
+## Sharing
+
+Forwarding an edition is the most useful way to support the publication. There is no paywall and no gate on the free edition, and a forwarded copy reaches readers who would not otherwise find the site.
     `
   },
   {
@@ -730,6 +845,31 @@ If a listing asks for money, misrepresents the employer, or has gone stale, tell
 ## Posting a Role
 
 Employers can request a listing through the [contact page](/page/contact) with the subject line "Job Listing" and a link to the application page. Listings are reviewed before publication and are free while the board is being established.
+
+
+## Categories We List
+
+- Software engineering, DevOps, and infrastructure
+- Design, product, and creative
+- Content, copywriting, and editorial
+- Operations, virtual assistance, and support
+- Finance, accounting, and bookkeeping
+- Sales, marketing, and business development
+
+## What a Good Listing Looks Like
+
+A listing states the role, the working hours or timezone, the currency and range of pay where the employer will disclose it, and a direct application link. Listings that hide the pay range or route applicants through a chat funnel are declined.
+
+## Frequency
+
+The board is reviewed weekly. Stale listings are removed rather than left up. If a listing you applied to has closed, the employer's page will say so.
+
+
+## A Note on Applications
+
+We never charge applicants and we never ask for a fee to apply. If a listing or a recruiter contacting you about a listing asks for money, that is a red flag and we want to know about it. Report it through the [contact page](/page/contact).
+
+Applications go directly to the employer. We do not collect your CV, we do not forward it, and we do not act as an agent. That keeps the board free of the thing that makes job boards unusable: scraped and resold applicant data.
     `
   },
   {
@@ -791,6 +931,23 @@ Write to the [contact page](/page/contact) with the subject line "Directory" and
 ## Accuracy
 
 Providers change their terms, fees, and coverage frequently. If an entry has gone stale, tell us and we will verify and update it.
+
+
+## How to Use This Directory
+
+Start from the function you need, not from a provider name. Each group below collects providers that do the same kind of job, so you can compare them on the terms that matter for your situation rather than on brand recognition.
+
+## What We Check
+
+For every entry we confirm that the provider's site is live, that its description of its own service is accurate, and that any commercial relationship with us is disclosed. We do not verify claims a provider makes about returns, approval rates, or outcomes, and we say so where it matters.
+
+## Ordering
+
+Entries are grouped by function. Within a group, order reflects our editorial judgement of relevance to this publication's readers, not payment. Sponsored placements are labelled.
+
+## Staying Current
+
+Providers change fees, coverage, and onboarding rules often. If an entry is stale, tell us through the [contact page](/page/contact) and we will verify it against the provider's own published terms.
     `
   },
   {
@@ -865,6 +1022,30 @@ We do not provide personalised investment advice, we do not act as a broker-deal
 ## Starting a Conversation
 
 Use the [contact page](/page/contact) with the subject line "Advisory" and a short description of the situation. We reply within two business days with available slots and a fixed quote.
+
+
+## Who We Work With
+
+- Freelancers earning foreign income who need their tax and payment setup fixed
+- Agency founders scaling past their first few clients
+- Operators entering the Pakistan Stock Exchange for the first time
+- Founders weighing an international entity or payment structure
+
+## What We Do Not Do
+
+We do not act as a broker-dealer, we do not manage portfolios, and we do not prepare filed returns. Where a deliverable requires a licensed professional, we will say so and tell you which kind to engage.
+
+## Typical Engagement Length
+
+Most engagements run between two and six weeks. A single focused question can often be resolved in one working session; a full compliance or pricing review takes longer. The scope we send you states the length.
+
+## Fees
+
+Fees are fixed and agreed before work starts. There is no hourly billing and no success fee, because a success fee would put us on the same side of your decision as a salesperson.
+
+## Confidentiality
+
+Engagement details stay confidential. We do not publish that we worked with you, or anything about the engagement, without your agreement.
     `
   },
   {
@@ -932,6 +1113,25 @@ Templates are educational resources. They are not legal documents, and a templat
 ## Requests
 
 If a toolkit you need is not listed, tell us what you are trying to solve through the [contact page](/page/contact). We prioritise products by reader demand.
+
+
+## What Is in Each Toolkit
+
+**Freelancer Compliance Toolkit** — the PSEB registration sequence as a checklist, an FBR filing calendar, the documentation an exporter should keep for a withholding claim, and an invoice template carrying the fields a Pakistani exporter needs.
+
+**PSX Investor Starter Pack** — the CDC account opening walkthrough, a broker comparison worksheet, a watchlist and dividend tracker, and a Shariah screening checklist aligned to the KMI-30 methodology.
+
+**Freelance Rate and Overhead Calculator** — a spreadsheet model for true hourly rate, an overhead category checklist, and a salary-to-freelance conversion worksheet.
+
+**Tax Planning Templates** — a Section 62 and 63 eligibility worksheet, an investment holding-period tracker, and an annual tax position summary.
+
+## How Updates Work
+
+When a rate or rule changes, the affected product is revised. Buyers receive the revision by email at no additional charge, because a template that has gone stale is worse than none.
+
+## Refunds and Limits
+
+Digital products are delivered on purchase and cannot be returned. If a product is materially not as described, tell us and we will put it right. Nothing in any toolkit is legal, tax, or investment advice.
     `
   },
   {
@@ -985,6 +1185,27 @@ Commercial arrangements do not determine what we publish. A provider paying a co
 ## How to Ask About a Specific Link
 
 If you are unsure whether a given link is commercial, or you believe a disclosure is missing from a page, write to hello@blueoceanhub.info with the page URL.
+
+
+## Which Links Are Commercial
+
+Links to payment services, brokerages, merchant-of-record providers, travel booking stacks, and phone systems may carry a commission. Links to regulators, exchanges, and government bodies do not.
+
+## How to Identify Them
+
+Commercial links carry rel="nofollow sponsored". The page also states near the link that it may be commercial. Where a whole page exists to describe a commercial relationship, the disclosure appears at the top rather than inline.
+
+## Commission and Pricing
+
+A commission does not change the price you pay. It is paid by the provider out of its own margin. If a provider's price were higher because of our commission, we would say so on the page.
+
+## Editorial Independence
+
+Commission rates are not disclosed and do not affect coverage. A provider that pays more is not ranked higher. A provider that pays nothing is not excluded. Where we recommend a provider, the page states the reasons.
+
+## Provider Lists
+
+Our ads.txt file lists the advertising sellers authorised to sell inventory on this site. It is the authoritative list of our advertising relationships.
     `
   }
 ];
