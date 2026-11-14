@@ -90,7 +90,45 @@ Structure high-value client contracts using our [Master B2B Software Contract gu
 - [Building an Upwork Agency: Transitioning from Solo Freelancing to a $30k/mo Software Studio](/article/upwork-agency-account-setup-scaling): Verified tactical execution guidelines and market compliance principles.
 - [Value-Based Pricing for Tech Agencies: Shifting from Hourly Rates to $20k Deliverables](/article/value-based-pricing-software-consulting): Institutional portfolio allocation and risk-hedging frameworks.
 - [2026 PSEB 0.25% Remittance Tax Savings Estimator](/toolkit#pseb-tax-calculator): Interactive computational engines and statutory models for South Asian operators.
-`
+
+
+## The Two Channels, Side by Side
+
+LinkedIn outreach and cold email are not alternatives so much as different motions. LinkedIn is good for a warm, visible, low-volume approach where the prospect can see who you are before you ask. Email is good for volume and for reaching people who are not active on social platforms. Most agencies that succeed at outbound use both, with the same message adapted to each.
+
+## The Profile Is the Funnel
+
+On LinkedIn, the profile does the work before the message does. A prospect who clicks through wants to see a specific person doing a specific thing for a specific kind of client. A profile that reads as a generalist agency generates clicks that do not convert.
+
+## Choosing the Target
+
+Volume is the wrong optimisation. Define the person by the problem they would recognise: role, company size, stack, and a trigger that makes this urgent now. A hundred relevant prospects beat ten thousand plausible ones.
+
+## The Message
+
+The structure that holds up on both channels:
+
+1. A specific observation about their situation.
+2. The problem it implies, in their language.
+3. One line of credible evidence.
+4. A low-friction next step.
+
+Keep it short. A message that requires scrolling is a message that will not be read.
+
+## Volume and Reputation
+
+Sending at scale damages deliverability and, on LinkedIn, the account itself. Warm the channels, keep the volume modest, and monitor replies rather than sends.
+
+## Follow-Up
+
+Most replies come after the second or third touch. Follow up with a new piece of value, not a repeat of the ask. Stop cleanly on a no.
+
+## The Metric
+
+Track replies, not sends. A poor reply rate is a message problem. Good replies and poor conversion is an offer or targeting problem.
+
+Our [cold outreach guide](/article/cold-email-outreach-us-b2b-clients) covers the channel in more detail.
+    `
   },
 
   // --- JUNE 7, 2026 (2 needed) ---
@@ -138,7 +176,38 @@ Review tax shields on sovereign income in our [FBR Active Taxpayer list benefits
 - [Meezan Sovereign Fund vs Meezan Cash Fund: Yield Optimization for Islamic Savings](/article/meezan-sovereign-fund-vs-cash-fund-returns): Verified tactical execution guidelines and market compliance principles.
 - [The 50/30/20 Budgeting Rule in High-Inflation Economies: Financial Structuring in Pakistan](/article/personal-budgeting-50-30-20-rule-pakistan): Institutional portfolio allocation and risk-hedging frameworks.
 - [Global Nomad Travel Logistics & Currency Optimizer](/toolkit#nomad-travel-logistics): Interactive computational engines and statutory models for South Asian operators.
-`
+
+
+## What an Ijarah Sukuk Is
+
+An ijarah sukuk represents ownership of an asset, or the right to its use, and the return comes from the rental income of that asset. The structure avoids interest by making the return a lease payment rather than a coupon. For an investor who requires Shariah compliance, that distinction is the entire point.
+
+## How the Structure Runs
+
+The issuer transfers the asset or its usufruct to the sukuk holders for a defined period, leases it back, and pays rent. At maturity the issuer repurchases at an agreed price. The sovereign version carries the credit of the government that issues it, which is why it is treated as the Shariah-compliant alternative to a treasury bill.
+
+## The Yield
+
+The yield reflects the rental rate and the price paid. Compare it against the conventional sovereign yield of a similar tenor, and against the Shariah-compliant fund alternatives, because the three are not interchangeable and the differences are real.
+
+## What to Check
+
+- **The asset.** What backs the sukuk, and who values it?
+- **The return basis.** Fixed, floating, or benchmark-linked, and how often it is set.
+- **The tenor and redemption.** When it matures and whether there is a put or call.
+- **The secondary market.** Whether you can exit before maturity, and at what cost.
+- **Purification.** Whether a portion of the income is identified and removed.
+
+## Who It Suits
+
+An investor seeking sovereign exposure without interest-bearing instruments, with a horizon that matches the tenor. It does not suit someone seeking capital appreciation or daily liquidity.
+
+## The Honest Comparison
+
+A Shariah-compliant instrument is not automatically better or worse than a conventional one. It is a different instrument with a different risk and return profile, and the right choice depends on both your requirements and your constraints.
+
+Our [sovereign sukuk guide](/article/sovereign-sukuk-bonds-ijarah) covers the structure in more detail.
+    `
   },
   {
     id: "micro-saas-pricing-models-lifetime-vs-subscription",
@@ -407,7 +476,39 @@ Bypass front-end sales loads using our [mutual fund sales load waiver guide](/ar
 - Shift excess emergency capital into Meezan Cash Fund for daily liquidity.
 - Allocate medium-term capital into Meezan Sovereign Fund prior to expected monetary easing.
 - Maintain Active Taxpayer status on FBR using our [ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+## The Two Funds
+
+A sovereign fund holds government-backed instruments. A cash fund holds short-duration money-market instruments, including bank placements. Both are low-volatility, but they are not identical: the sovereign fund's return is driven by government paper, and the cash fund's by a mix that includes bank exposure.
+
+## What Drives the Difference
+
+- **Rate cycle.** When policy rates rise, both tend to benefit, but with a lag that differs by portfolio.
+- **Composition.** A cash fund with bank placements carries bank credit exposure the sovereign fund does not.
+- **Duration.** A slightly longer duration means more sensitivity to rate changes, in both directions.
+- **Fees.** The net return is what matters, and fee differences compound.
+
+## Comparing Properly
+
+Compare over the same period, net of fees, and with the same starting conditions. A fund that outperformed over one quarter may simply have held longer-duration paper into a falling rate. Look at the trend across several periods rather than the single best one.
+
+## The Risk You Are Taking
+
+Neither fund is capital-guaranteed. Both can have a day of negative return, and a cash fund with bank exposure carries credit risk that a sovereign fund does not. The risk is small, but it is not zero, and it is worth knowing which one you hold.
+
+## The Horizon
+
+Both suit short horizons and both suit money you may need soon. Neither suits a long horizon where the return is likely to be exceeded by inflation. Match the instrument to the time you will not need the money.
+
+## Choosing
+
+- If you want the simplest, most direct exposure to government paper, the sovereign fund.
+- If you want a slightly broader short-term portfolio and are comfortable with bank exposure, the cash fund.
+- If you want the lowest cost, compare the net figures rather than the category.
+
+Our [money market guide](/article/islamic-money-market-treasury-funds-guide) covers the Shariah-compliant equivalents.
+    `
   },
   {
     id: "building-micro-saas-with-nextjs-tailwind-stripe",
@@ -770,7 +871,39 @@ Hedge currency devaluation using our [PKR Devaluation Hedging strategy](/article
 - [Investing in Sovereign T-Bills & PIBs: SBP Primary Market Auctions and Investor Portals](/article/sovereign-treasury-bills-pib-direct-investing): Verified tactical execution guidelines and market compliance principles.
 - [FBR Salaried Income Tax Slabs: Structuring Allowances and Claiming Maximum Tax Credits](/article/fbr-salaried-tax-slabs-2026-optimization): Institutional portfolio allocation and risk-hedging frameworks.
 - [Global Nomad Travel Logistics & Currency Optimizer](/toolkit#nomad-travel-logistics): Interactive computational engines and statutory models for South Asian operators.
-`
+
+
+## Where the Rule Comes From
+
+The 50/30/20 rule divides after-tax income into needs, wants, and savings. It is a starting frame, not a law, and it was designed for a salaried household in a stable currency. Applied literally in a high-inflation environment, the savings share quietly disappears.
+
+## Adapting It
+
+The useful adaptation is to fix the savings share first and let the other two absorb the variation. In a high-inflation setting, a savings share of twenty percent of a nominal income can be a real-terms loss. A higher share, even if it means a leaner discretionary budget, is the point of the exercise.
+
+## The Categories in Practice
+
+- **Needs.** Housing, food, utilities, transport, insurance, debt payments. The test is whether you would pay it if you had no income.
+- **Wants.** Everything discretionary. The category is where the adjustment happens when prices rise.
+- **Savings.** The buffer first, then the invested surplus. Paying yourself first means the transfer happens before the month's spending decisions.
+
+## The Bigger Problem
+
+For many households the constraint is not allocation but total. When needs exceed half of income, no rearrangement fixes it, and the honest answer is a different income or a different housing cost rather than a tighter budget. A budget should tell you that, not hide it.
+
+## Making It Stick
+
+- Automate the savings transfer on payday.
+- Review monthly, not daily.
+- Track the categories that actually leak, which are usually two or three, not twenty.
+- Revisit the percentages annually, or when income changes materially.
+
+## What the Rule Cannot Do
+
+It cannot tell you what to invest in, how large a buffer you need, or how to handle a currency that loses purchasing power. It is an allocation discipline, and it works best paired with a plan for what the savings are for.
+
+Our [saving strategies guide](/article/saving-strategies-pakistan-inflation) covers the investment side of the same decision.
+    `
   },
   {
     id: "building-figma-ui-kits-for-sale-globally",
@@ -1053,7 +1186,42 @@ Compare sovereign bonds with Sukuks in our [GOP Ijarah Sukuk auction guide](/art
 - Open an IPS account with your commercial bank to hold sovereign securities.
 - Bid in bi-weekly SBP T-Bill auctions to lock in benchmark yield rates.
 - Maintain Active Taxpayer status on FBR using our [ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+## What a Treasury Bill Is
+
+A treasury bill is a short-term government borrowing instrument, sold at a discount and redeemed at face value. The return is the difference between the two. It is backed by the government that issues it, which is why it is treated as the reference point for risk-free return in its own currency.
+
+## The Tenor
+
+T-bills are issued across short tenors, typically three, six, and twelve months. The shorter the tenor, the sooner your money returns and the less you are exposed to a change in rates. The longer the tenor, the higher the yield usually, and the more you are exposed.
+
+## How They Are Bought
+
+In Pakistan, T-bills are auctioned, and participation is typically through a bank or broker rather than directly as an individual. Ask your bank about the auction schedule and the minimum, because the access route matters as much as the instrument.
+
+## The Return in Practice
+
+The quoted rate is a discount rate, not a simple annual yield, and the actual return depends on the tenor and the price you pay. Compare the net return against the alternatives on the same horizon, after any charges.
+
+## The Case for T-Bills
+
+- Capital preservation is the objective.
+- The horizon is known and short.
+- You want a government-backed instrument.
+
+## The Case Against
+
+- The return may be below inflation, which means a negative real return.
+- The money is committed for the tenor.
+- A rising rate environment means you are locked while new issues pay more.
+
+## Fitting Them Into a Portfolio
+
+T-bills are the liquid, defensive layer. They are not the growth layer. A portfolio that holds them for the floor and equities or other assets for growth is doing two different jobs with two different instruments, which is the point.
+
+Our [inflation hedging guide](/article/pkr-devaluation-hedging-strategies) covers what to do when the currency is the risk.
+    `
   },
   {
     id: "chrome-extension-monetization-playbook-saas",
@@ -2094,7 +2262,38 @@ Bypass front-end sales loads using our [mutual fund sales load waiver guide](/ar
 - Transfer operational PKR cash reserves into Islamic money market funds on digital corporate portals.
 - Maintain a 30-day payroll buffer in instant-access liquid funds.
 - Maintain Active Taxpayer status on FBR using our [ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+## What Makes a Fund Shariah-Compliant
+
+A Shariah-compliant fund holds instruments that avoid interest. That means no conventional bonds, no bank deposits earning a fixed return, and no exposure to businesses whose primary activity is prohibited. The fund is screened against a set of rules, and it is monitored because a compliant portfolio can drift out of compliance as holdings change.
+
+## The Two Screens
+
+- **Activity screen.** Excludes businesses in prohibited sectors and those with prohibited revenue streams above a tolerated threshold.
+- **Financial screen.** Excludes businesses whose debt, cash, or receivables exceed permitted proportions relative to their size. This is the screen most often overlooked, and it is the one that changes most often.
+
+## Why the Debt Ratio Matters
+
+A business that is otherwise permissible can fail the financial screen because it carries too much interest-bearing debt, or holds too much cash in interest-bearing instruments. That is why a fund that was compliant at the start of the quarter may not be at the end, and why purification — the removal of a portion of income attributable to non-compliant sources — exists.
+
+## Purification
+
+If a fund earns income from a source that is not fully compliant, a portion is identified and removed, often directed to charity. This is not a flaw in the structure; it is how the structure handles the reality that perfectly clean income is difficult to achieve.
+
+## Choosing a Fund
+
+- **The screening standard.** Who advises on compliance, and how often is the portfolio reviewed?
+- **The cost.** Management and purification costs affect the net return.
+- **The track record.** Past performance is not a promise, but a long record tells you the process works.
+- **The fit.** A compliant fund is still an investment with risk. Match it to your horizon.
+
+## What It Is Not
+
+A Shariah-compliant fund is not a guarantee of return, and compliance is not a substitute for the ordinary work of assessing risk, cost, and horizon. It is a constraint on the universe of investments, not a recommendation of any particular one.
+
+Our [sovereign sukuk guide](/article/sovereign-sukuk-bonds-ijarah) covers the fixed-income side of the same requirement.
+    `
   },
 
   // --- JUNE 29, 2026 (1 needed) ---

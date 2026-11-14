@@ -300,7 +300,38 @@ Claim IT export 0% tax status with our [PSEB Registration and 0% tax guide](/art
 - Verify your CNIC active status on the FBR ATL online portal.
 - File annual returns prior to statutory deadlines to prevent ATL drop-off.
 - Pay ATL surcharge fees immediately if returning from inactive status.
-`
+
+
+## The Status and What It Changes
+
+Active taxpayer status is a record of whether you have filed. It is not a measure of how much tax you owe, and for many people the practical value is not the tax itself but the withholding rates applied to everyday transactions.
+
+## The Withholding Differential
+
+Where a transaction attracts withholding, the rate is usually higher for a non-filer. That means the same bank transaction, vehicle registration, or property dealing costs more when you are not on the list. Over a year, the differential can exceed the cost of filing.
+
+## Getting on the List
+
+File the return. The status follows from filing and updates as it is processed. If you have missed years, bring them up to date; a gap in the record is harder to resolve than a late filing, and the filing for the earlier years is usually still possible.
+
+## Staying on the List
+
+The status depends on continued filing, so it is a recurring obligation rather than a one-off. Put the date in the calendar and treat it as fixed.
+
+## If Your Income Is Low
+
+The question of whether to file when your income is below the taxable threshold is really a question about whether the withholding savings exceed the cost of filing. For most people they do, and the filing itself is straightforward.
+
+## The Records
+
+Keep the return, the acknowledgement, and the evidence of filing. If the status does not update when expected, those are what you will need.
+
+## The Honest Position
+
+This is a compliance state, not a status symbol. It is worth having because it reduces cost and friction. Nothing about it implies anything beyond whether the return was filed.
+
+Our [tax notice response guide](/article/fbr-tax-notice-response-framework) covers what happens if the authority asks a question.
+    `
   },
   {
     id: "b2b-saas-affiliate-marketing-recurring-commissions",
@@ -637,7 +668,44 @@ Bypass sales loads using our [mutual fund sales load waiver guide](/article/mutu
 - Never buy investment-linked insurance plans through bank sales officers.
 - Buy pure term insurance for family security if needed.
 - Invest wealth directly via AMC mobile apps (iSave, NBP Digital) for 0% load fees.
-`
+
+
+## What Bancassurance Actually Is
+
+Bancassurance is the sale of insurance products through a bank's distribution network. The bank's relationship and branch footprint make it an effective channel, and the products are often packaged alongside a banking relationship, which makes them easy to buy and easy to overlook.
+
+## The Core Difference
+
+An insurance-wrapped investment bundles protection and investment into one product. A direct mutual fund is only the investment. That difference drives everything: the cost structure, the flexibility, the transparency, and the suitability.
+
+## The Cost Problem
+
+Bundled products carry charges at several layers: the insurance component, the fund management, and the distribution. Some charges are visible in the illustration, others are embedded. Over a long holding period, a difference of one or two percent a year in total cost is the difference between a comfortable outcome and a disappointing one.
+
+## Flexibility
+
+A direct fund can usually be redeemed, switched, or reallocated with relative ease. A bundled insurance product often carries surrender charges and a lock-in period, which is the price of the protection element and the distribution commission.
+
+## When the Bundle Makes Sense
+
+- You want the protection element, not only the investment.
+- You will hold for the full term and can absorb the early-year charges.
+- The premium fits your budget without displacing other savings.
+- You have already built an emergency buffer and are investing surplus.
+
+## When the Direct Fund Makes Sense
+
+- You want the investment and do not need the protection.
+- You value flexibility and transparency of cost.
+- You want to control the allocation yourself.
+- You are investing for a specific horizon and want to match it precisely.
+
+## The Questions to Ask
+
+Before buying either, ask: what is the total cost per year, what happens if I stop, what am I actually protected against, and what would I have if I held for ten years. A product that cannot answer those four is not yet understood.
+
+Our [mutual funds guide](/article/investing-mutual-funds-pakistan) covers the direct route.
+    `
   },
   {
     id: "building-micro-saas-apis-metered-stripe-billing",
@@ -793,7 +861,48 @@ Optimize overall salaried tax brackets using our [FBR Salaried Tax Slabs optimiz
 - [Government Sovereign Sukuk Bonds: Risk-Free Shariah-Compliant Fixed Income Securities](/article/government-sovereign-ijarah-sukuk-bonds-guide): Verified tactical execution guidelines and market compliance principles.
 - [The 50/30/20 Asset Allocation Blueprint for Tech Founders: Cash, Equities, and Real Estate](/article/50-30-20-asset-allocation-blueprint-tech-founders): Institutional portfolio allocation and risk-hedging frameworks.
 - [Global Nomad Travel Logistics & Currency Optimizer](/toolkit#nomad-travel-logistics): Interactive computational engines and statutory models for South Asian operators.
-`
+
+
+## The Relief
+
+Health insurance premiums paid by a taxpayer can qualify for a tax deduction subject to a cap and conditions. The value is bounded, and understanding the bound is the point: the relief is a modest offset, not a reason to over-insure.
+
+## Who Can Claim
+
+Generally the taxpayer, for cover on their own life or on specified dependants. The rules set out whose premium qualifies, and a premium paid for someone outside the permitted relationship will not.
+
+## What Qualifies
+
+- A health insurance policy, as distinct from life cover or an investment-linked product.
+- Premium paid during the tax year in question.
+- A policy issued by a recognised insurer.
+- Within the monetary cap.
+
+## What Does Not
+
+- Life insurance premiums.
+- Investment-linked policies where investment dominates.
+- Premiums paid by an employer as a tax-free benefit.
+- Premiums for persons outside the permitted relationship.
+
+## The Cap
+
+The deduction is limited, so a premium above the cap does not buy relief beyond it. If you are deciding between two policies, the relief should not be the deciding factor; the cover should.
+
+## Evidence
+
+Keep the policy schedule and the payment receipt. The claim is only as good as the document behind it.
+
+## The Order of Decisions
+
+1. Decide what cover you need.
+2. Choose the policy that provides it.
+3. Claim the relief if the policy qualifies.
+
+Reversing those steps, and buying for the deduction, is how people end up with cover they do not need and a premium they cannot sustain.
+
+Our [life insurance comparison](/article/life-insurance-vs-mutual-funds-pakistan) covers the protection-versus-investment decision.
+    `
   },
   {
     id: "selling-notion-templates-gumroad-etsy-playbook",

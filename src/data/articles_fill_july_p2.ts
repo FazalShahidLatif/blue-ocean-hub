@@ -509,7 +509,38 @@ Explore broader sovereign Sukuk mechanics in our [Government Sovereign Sukuk Bon
 - [The 50/30/20 Asset Allocation Blueprint for Tech Founders: Cash, Equities, and Real Estate](/article/50-30-20-asset-allocation-blueprint-tech-founders): Verified tactical execution guidelines and market compliance principles.
 - [Meezan Tahaffuz Pension Fund (MTPF): Optimizing Asset Allocation in SECP VPS Accounts](/article/meezan-tahaffuz-pension-fund-vps-allocation): Institutional portfolio allocation and risk-hedging frameworks.
 - [Global Nomad Travel Logistics & Currency Optimizer](/toolkit#nomad-travel-logistics): Interactive computational engines and statutory models for South Asian operators.
-`
+
+
+## The Instrument
+
+A government ijarah sukuk is a sovereign borrowing instrument structured to avoid interest. The government issues sukuk representing an asset or the right to its use, leases it back, and pays rent, which is the return to the holder. It is the Shariah-compliant counterpart to a treasury bill or a sovereign bond.
+
+## Why It Exists
+
+It exists so that investors who cannot hold interest-bearing instruments have access to sovereign credit. That includes institutions with religious constraints and individuals who require compliance. The sovereign issuer gains access to a wider investor base, which is the reason governments issue them.
+
+## The Return
+
+The return is a rental payment, set at issuance or linked to a benchmark depending on the structure. It is not interest, and it behaves differently: the yield reflects the lease rate and the price, and the secondary market price moves with demand.
+
+## What to Check Before Buying
+
+- **The underlying asset** and who values it.
+- **The return basis** and how often it resets.
+- **The tenor** and the redemption terms.
+- **Whether there is a secondary market**, and at what cost you can exit.
+- **The tax treatment** for your filer status.
+
+## Who It Suits
+
+An investor wanting government-backed exposure with a defined tenor and Shariah compliance. It does not suit someone seeking capital appreciation, someone who needs daily liquidity, or someone whose constraint is purely return maximisation.
+
+## Comparing Options
+
+A sovereign sukuk, a treasury bill, a bank deposit, and a Shariah-compliant money market fund all occupy the same broad space with different characteristics. The comparison worth making is on net return, tenor, liquidity, and compliance, not on the label.
+
+Our [sovereign sukuk structure guide](/article/sovereign-sukuk-bonds-ijarah) explains the mechanics.
+    `
   },
   {
     id: "intellectual-property-ip-transfer-agreements-agencies",
@@ -1227,7 +1258,41 @@ Compare VPS with open-end mutual funds in our [Meezan Mutual Funds vs VPS guide]
 - [FBR Tax Filing Blueprint for Salaried IT Professionals: Tax Credits, EPF, and Wealth Statements](/article/fbr-tax-filing-salaried-it-professionals): Verified tactical execution guidelines and market compliance principles.
 - [Islamic Money Market Funds: Parking Startup Cash Reserves with Capital Preservation](/article/islamic-money-market-treasury-funds): Institutional portfolio allocation and risk-hedging frameworks.
 - [Global Nomad Travel Logistics & Currency Optimizer](/toolkit#nomad-travel-logistics): Interactive computational engines and statutory models for South Asian operators.
-`
+
+
+## What a Voluntary Pension Scheme Is
+
+A voluntary pension scheme is a regulated, portable retirement account. You contribute, the contributions are allocated across sub-accounts you choose, and the accumulated balance is available at retirement, with partial withdrawal permitted under the rules. The scheme is administered by an approved institution.
+
+## The Tax Angle
+
+The value is often in the tax treatment rather than the investment return. Contributions can qualify for a credit, and the fund's growth is not taxed year by year as it accrues. For a higher-rate taxpayer, the credit alone can be worth more than the first year's return.
+
+## The Cap
+
+The credit applies to a capped contribution, not to everything you pay in. Contributing beyond the cap buys no additional credit; it only adds to the fund. The practical consequence is to contribute up to the cap early in the tax year rather than spreading it.
+
+## Allocating the Sub-Accounts
+
+Most schemes let you choose between equity, debt, and money-market sub-accounts. Apply the same horizon logic you would use anywhere: the longer until you need the money, the more equity you can hold; the shorter, the more liquid and stable.
+
+## Shariah Compliance
+
+A compliant scheme invests only in permissible instruments and is screened and monitored. If compliance is a requirement rather than a preference, check the screening standard and how often the portfolio is reviewed.
+
+## Withdrawal
+
+The scheme is designed to be illiquid until retirement. Early exit usually costs more than the credit gained, so treat the contribution as committed.
+
+## Checking the Details
+
+- The current credit rate and cap.
+- The institution's track record and fee structure.
+- The sub-account options and their costs.
+- The withdrawal and retirement rules.
+
+Our [pension scheme guide](/article/secp-voluntarily-pension-schemes-tax-rebates) covers the general structure.
+    `
   },
   {
     id: "closing-high-ticket-enterprise-software-retainers",

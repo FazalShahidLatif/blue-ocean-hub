@@ -841,7 +841,38 @@ Before storing cash inside a digital wallet, audit their transaction limits and 
 - Settle larger client agreements utilizing [UK Ltd and Wise Borderless Systems](/article/uk-ltd-transferwise-business).
 - Find general business and passive growth guidelines on the [Blue Ocean Hub Homepage](/).
 - Compare other payout gateways in [Payoneer vs Wise Pakistan Comparison](/article/payoneer-vs-wise-pakistan-comparison).
-`
+
+
+## What a Wallet Is For
+
+A digital wallet is a transaction tool, not an investment. Its value is in moving money quickly, paying for things without cash, and separating spending from savings. Treating it as a store of value is the mistake: balances earn nothing and are exposed to the same inflation as cash.
+
+## The Limits
+
+Wallets operate under regulatory limits on balance, transaction size, and monthly volume, and the limits differ by verification level. If you hit a limit, the usual route is fuller verification. Check the current limits before you rely on a wallet for a large payment.
+
+## The Costs
+
+Moving money into and out of a wallet is where the cost sits. Some transfers are free, others carry a fee, and the fee structure differs between providers. A wallet that is free to pay with may not be free to withdraw from.
+
+## The Separation
+
+The most useful habit is to keep the wallet for spending and the account for saving. A wallet holding a month of spending is a working balance; a wallet holding your savings is a savings account paying nothing.
+
+## Security
+
+A wallet is a target. Enable every available control: biometric unlock, transaction limits, notifications on every payment, and a separate device where possible. Treat the recovery process as critical, because losing access to a wallet is losing the money in it.
+
+## Choosing
+
+Compare on what you will actually do: how you fund it, how you pay, how you withdraw, and what each step costs. The brand matters less than the flow.
+
+## The Wider Point
+
+A wallet is one layer of a cash system. The system works when the layers have distinct jobs: a transaction account for spending, a liquid buffer for the short term, and invested assets for the longer term.
+
+Our [personal runway guide](/article/personal-runway-emergency-fund-slicing) covers the buffer.
+    `
   },
   {
     id: "personal-runway-emergency-fund-slicing",
@@ -877,7 +908,36 @@ A robust emergency fund balancing liquidity and inflation protection uses two di
 - Review startup cash management inside [Corporate Runway Protection for Digital Agencies](/article/corporate-runway-cash-reserves-usd).
 - Build digital passive income utilizing our [Top 10 Passive Cashflow Ideas in Pakistan](/article/10-passive-income-ideas-pakistan).
 - Download our emergency planning spreadsheets from our [Blue Ocean Hub Homepage](/).
-`
+
+
+## What the Runway Is For
+
+A personal runway is the money that keeps your life running if your income stops. It is not an investment and it is not a buffer for opportunities. It is the thing that lets you make a decision, including the decision to leave a bad situation, without panic.
+
+## How Much
+
+The usual frame is months of essential expenditure, not of income. The difference matters: if your income is lumpy, a runway measured in months of income will be far too small. Count rent or mortgage, food, utilities, insurance, transport, and debt payments. Exclude the discretionary.
+
+The right number depends on how long it would take you to replace the income. A salaried employee needs less than a freelancer with two clients, who needs less than a founder with none.
+
+## Where It Lives
+
+The runway must be liquid and it must not be exposed to a market fall at the moment you need it. That rules out equity, and it argues against anything with a lock-in or a surrender penalty. A money market fund or a savings account is the usual answer, and the modest return is the price of the protection.
+
+## Slicing It
+
+If the full runway is intimidating, build it in slices. The first slice is the one that stops a surprise expense becoming debt: a single month of essentials. The second brings you to three. The third to six. Each slice is a finished, meaningful milestone rather than a fraction of a distant target.
+
+## Rebuilding
+
+The runway gets spent, and that is what it is for. The mistake is treating a drawdown as a failure and not rebuilding. Automate the rebuild the same way you automated the build.
+
+## The Interaction With Debt
+
+If you have expensive debt, the runway and the debt compete for the same money. A small runway plus a fast debt payoff is usually better than a large runway plus a persistent high-interest balance. Run the arithmetic on the rate you are paying against the rate you would earn.
+
+Our [saving strategies guide](/article/saving-strategies-pakistan-inflation) covers the allocation order.
+    `
   },
   {
     id: "employee-fringe-benefits-taxation-shield",
@@ -914,7 +974,39 @@ You can structure your payroll to categorize portions of overall compensation in
 - File your corporate papers with [SECP Incorporation for Freelance Agencies](/article/b2b-digital-freelance-agency-registration).
 - Manage foreign earnings safely with [Repatriating Global USD Revenue legally into Pakistan](/article/repatriating-usd-revenue-legal-framework).
 - Check standard financial systems on the [Blue Ocean Hub Homepage](/).
-`
+
+
+## What a Fringe Benefit Is
+
+A fringe benefit is a non-cash benefit provided to an employee: a vehicle, housing, a utility allowance, a contribution to a fund, or similar. It is real compensation, and it is taxed, but the way it is taxed differs from salary, and some benefits are structured to be taxed less heavily than the equivalent cash.
+
+## Why It Matters
+
+If your employer offers a choice between a cash allowance and a benefit, the after-tax value is what should decide it. The gross figure can be misleading: a benefit taxed at a flat rate may be worth more than the same amount as salary taxed at your marginal rate, or less, depending on your situation.
+
+## The General Principles
+
+- **Some benefits are taxed at a flat rate**, others are added to income.
+- **Some are exempt up to a limit**, and the limit matters.
+- **The valuation** of a benefit is set by rule, not by your cost.
+- **Employer-provided** benefits may have different treatment from an allowance you arrange yourself.
+
+## The Decisions
+
+- Take the benefit if the after-tax value exceeds the cash and you would spend on it anyway.
+- Do not take a benefit you do not need because it looks tax-efficient; the tax saving on something you would not have bought is not a saving.
+- Check whether a benefit is a substitute for a salary increase; a benefit can be withdrawn more easily than a salary.
+
+## The Records
+
+Keep the letters and the payroll records showing how the benefit was valued. If the authority asks, the valuation is the thing that will be questioned.
+
+## Getting Advice
+
+Because the treatment depends on your marginal rate and the specific benefit, a short conversation with a tax professional can be worth more than the general rule. This is one of the cases where the specific answer genuinely differs by person.
+
+Our [tax deduction guide](/article/health-insurance-tax-deductions-pakistan) covers the personal deductions on the other side.
+    `
   },
   {
     id: "estonia-eresidency-south-asian-founders",

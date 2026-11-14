@@ -175,7 +175,43 @@ To protect personal wealth declarations, ensure all bank accounts, mutual fund i
 1. Submit VPS investment certificates to your HR payroll department before June 30 to claim instant monthly salary tax reductions.
 2. Maintain [FBR Active Taxpayer List (ATL) status](/article/fbr-active-taxpayer-list-atl-benefits) to avoid 100% penalty surcharges on banking transactions.
 3. Keep digital receipts for all [NPO charitable donations](/article/tax-shielding-charitable-donations-fbr) to secure tax liability rebates.
-`
+
+
+## Why IT Professionals File Differently
+
+A salaried employee's tax is usually handled by withholding, and the annual return can feel like a formality. For an IT professional it often is not: many have foreign-sourced income, freelance engagements, or employer benefits that change the picture. The return is where those pieces come together.
+
+## The Components
+
+- **Salary.** As reported by the employer, with the perquisites and benefits added.
+- **Other income.** Freelance work, foreign income, and any income outside the employment.
+- **Deductions.** The ones that apply to you, claimed with evidence.
+- **Withholding already paid.** Credited against the final liability.
+
+## The Withholding Gap
+
+If your employer withheld at a rate that does not match your final liability, the return is where the difference is settled. For someone with income from several sources, the withheld amount frequently falls short.
+
+## Foreign Income
+
+Foreign-sourced income is declared as such, supported by the documentation that arrived with the funds. It is not merged into salary, and the treatment is not the same. Getting the classification right is the difference between a correct return and a notice.
+
+## Benefits
+
+Employer-provided benefits are taxed by rule, and the valuation is set by the rules rather than by what the benefit cost you. A vehicle, housing, or a utility allowance may be taxed at a figure that surprises you.
+
+## Filing
+
+- Gather the employer's certificate, the bank statements, and the evidence for every deduction.
+- Reconcile before filing, not after.
+- File on time, and keep the acknowledgement.
+
+## If You Are Behind
+
+Bring the years up to date. A voluntary catch-up is cheaper than a compelled one, and the longer the gap the harder the explanation.
+
+Our [wealth statement guide](/article/fbr-section-211-wealth-statement-reconciliation) covers the reconciliation that trips most filers.
+    `
   },
 
   // --- JULY 28, 2026 ---

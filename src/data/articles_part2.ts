@@ -737,7 +737,41 @@ Before signing multi-year Takaful programs, understand these critical structural
 
 ---
 *Disclaimer: Early termination of multiyear savings plans leads to steep surrender charge reductions on your principal wealth capital.*
-`
+
+
+## What Takaful Is
+
+Takaful is a Shariah-compliant alternative to conventional insurance, structured as a cooperative arrangement in which participants contribute to a pooled fund that meets the losses of those who suffer a defined event. The key differences from conventional insurance are the ownership of the pool, the absence of interest-bearing investment, and the treatment of the operator's fee.
+
+## How It Differs in Practice
+
+- **Contribution, not premium.** Participants contribute to a shared fund.
+- **Surplus.** Any surplus in the pool may be distributed to participants rather than retained as profit.
+- **Operator model.** The operator is usually paid a fee rather than taking the underwriting risk.
+- **Investment.** The pool is invested in compliant instruments.
+
+## The Savings Element
+
+Many takaful products combine protection with a savings or investment component, so a portion of the contribution accumulates over time. That makes them comparable to the bundled insurance-and-investment products, with the same cost and liquidity questions.
+
+## The Questions to Ask
+
+- What is the total contribution, and how much of it is allocated to the pool versus the savings component?
+- What is the fee structure, and when is it charged?
+- What happens if I stop contributing?
+- What is the surplus history, if it is disclosed?
+- What is actually covered, and what is excluded?
+
+## The Cost Comparison
+
+As with conventional bundled products, the early years are heavily charged, and surrender values are often well below contributions. Compare the outcome over the full term, and compare the protection element against standalone alternatives.
+
+## The Honest Position
+
+Takaful is a compliance-driven choice, and for a person who requires Shariah compliance it is the answer rather than an option. The ordinary questions still apply: is the cover adequate, is the cost reasonable, and is the commitment one you can sustain.
+
+Our [life insurance comparison](/article/life-insurance-vs-mutual-funds-pakistan) covers the protection-versus-investment trade-off.
+    `
   },
   {
     id: "inflation-hedging-physical-gold-vs-digital",
@@ -816,7 +850,38 @@ To secure operations, divide corporate asset allocations into three safe capital
 
 ---
 *Disclaimer: Treasury structures require approval from corporate boards. Ensure setups align with all FBR and SECP corporate disclosures.*
-`
+
+
+## What a Corporate Runway Is
+
+A corporate runway is the period a company can operate on its cash if revenue stopped. It is the difference between choosing your next step and having it chosen for you, and it is the number a founder should know without looking.
+
+## Why It Is Different From a Personal Buffer
+
+A personal buffer protects your life. A corporate runway protects your options. The two interact: a company with no runway forces the founder to take a salary-driven decision, and a founder with no personal buffer cannot afford a company with no revenue. Weakness in one makes the other worse.
+
+## How Much
+
+Count months of essential company spend: payroll, rent, infrastructure, and the commitments you cannot cancel. Exclude discretionary spend you would cut immediately. Then compare against the realistic time to replace revenue, not the optimistic time.
+
+The number depends on the business. A services business with two clients needs less runway than a product business pre-launch, because the path to revenue is shorter.
+
+## Holding It
+
+- **Currency.** If your costs are in rupees, hold rupees. If you have dollar commitments, hold the matching currency. A runway in the wrong currency is a runway with an unhedged loss in it.
+- **Liquidity.** The runway must be available the day it is needed, so it belongs in liquid instruments, not equity.
+- **Separation.** Keep it in the company's accounts and treat it as reserved. A runway that is spent on a growth experiment is not a runway.
+
+## The Discipline
+
+Review the runway monthly. A company that watches it weekly in a crisis and never in calm has the wrong habit. The number should inform decisions before the decisions become urgent.
+
+## Rebuilding
+
+Runway is consumed by losses, and that is what it is for. The mistake is not consuming it, it is failing to rebuild it when the company returns to stability.
+
+Our [personal runway guide](/article/personal-runway-emergency-fund-slicing) covers the founder-side equivalent.
+    `
   },
   {
     id: "wyoming-vs-delaware-llc-nonresident",

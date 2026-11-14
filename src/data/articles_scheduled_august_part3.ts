@@ -360,7 +360,42 @@ For physical asset allocation, explore historical return benchmarks in our [10-y
 - Maintain at least 30% - 50% of liquid net worth in USD-pegged or real assets.
 - Export services globally to generate organic foreign currency cashflows.
 - Reinvest local currency cash into [sovereign T-Bills](/article/sovereign-t-bills-pib-auction-yields) to offset inflation.
-`
+
+
+## What You Are Actually Hedging
+
+A devaluation is a fall in the purchasing power of the rupee against other currencies. You cannot hedge it by holding rupees in a different account. A hedge has to be an asset whose value rises, or holds, when the rupee falls.
+
+## The Available Instruments
+
+- **Foreign-currency accounts.** Hold dollars or another currency. Simple, and the balance is directly exposed to the rate.
+- **Dollar-denominated investments.** Sovereign and corporate instruments issued in foreign currency.
+- **Equity exposure to exporters.** Companies that earn in dollars and spend in rupees benefit from a weaker rupee, so their earnings translate into more rupees.
+- **Gold.** Historically the most accessible hedge for a Pakistani household, and priced internationally.
+- **Foreign platforms.** Accessible but subject to regulatory constraints, and worth understanding before relying on them.
+
+## What Does Not Work
+
+- A rupee fixed deposit at a high rate. If the rate is below the rate of devaluation, the real return is negative however the nominal figure looks.
+- A dollar-linked product that converts back automatically at a fixed rate you did not choose.
+- Holding cash in rupees and assuming a rising interest rate protects you.
+
+## The Horizon Problem
+
+Hedging only makes sense over a horizon long enough for the hedge to work. A currency position held for a month is a speculation; held for a decade, it is a store of purchasing power. Match the instrument to the horizon, and do not judge a hedge on a short period.
+
+## The Cost of Hedging
+
+Every hedge has a cost. A foreign-currency account has conversion spreads. Gold has a spread and no yield. Exporter equity carries full equity risk. The question is not which hedge is free, but which cost you are willing to pay for the protection you want.
+
+## A Simple Frame
+
+- **Short horizon, certainty needed.** Rupees, liquid.
+- **Medium horizon, some tolerance.** Gold and diversified funds.
+- **Long horizon, purchasing power the goal.** Foreign currency, exporter equity, and diversified assets.
+
+Our [saving strategies guide](/article/saving-strategies-pakistan-inflation) covers the allocation logic.
+    `
   },
   {
     id: "foreign-currency-account-fca-sbp",

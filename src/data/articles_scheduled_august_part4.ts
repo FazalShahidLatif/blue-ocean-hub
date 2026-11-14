@@ -111,7 +111,42 @@ To eliminate sales commissions on investments, see our [mutual fund front-end lo
 - Avoid mixing life insurance policies with long-term wealth accumulation plans.
 - Purchase standalone pure term insurance if family dependents require financial coverage.
 - Deploy long-term capital directly into [SECP Shariah-screened equities](/article/shariah-stock-screening-kmi-30-rules).
-`
+
+
+## The Product and the Investment
+
+A life insurance policy, particularly an investment-linked one, combines a protection element with an investment element. A mutual fund is only the investment. Comparing them requires separating the two, because the insurance component is doing a job the fund cannot do, and the fund is doing a job the insurance component does expensively.
+
+## The Cost Difference
+
+The investment element inside an insurance product carries charges that a direct fund does not: the cost of the protection, the distribution commission, and the allocation structure in the early years. The consequence is that in the first years a large part of what you pay is not invested, which is why surrender values are often far below the premiums paid early on.
+
+## The Protection Question
+
+If you need life cover, the cover is worth buying. The question is whether to buy it bundled with an investment or separately. Term cover provides protection at a much lower cost than a bundled policy, and the difference can be invested directly.
+
+## The Flexibility Question
+
+A direct fund can be reallocated, redeemed, or switched. A bundled policy is illiquid in the early years and penalised for exit. If your horizon or your circumstances may change, that illiquidity has a real cost.
+
+## When the Bundle Suits
+
+- You want the cover and will hold the full term.
+- The discipline of a forced, long-term commitment is worth something to you.
+- You have already maxed out simpler, cheaper routes.
+
+## When the Direct Fund Suits
+
+- You want the investment and can arrange protection separately.
+- You value transparency of cost and flexibility of allocation.
+- You are investing for a defined horizon and want to match it.
+
+## The Calculation Worth Doing
+
+Take the premium, subtract the cost of equivalent term cover, and invest the remainder in a direct fund. Compare the outcome after ten years with the policy's projected value. The comparison is not exact, because projections are not promises, but the gap is usually large enough to be decisive.
+
+Our [tax deduction guide](/article/health-insurance-tax-deductions-pakistan) covers what insurance premiums can and cannot offset.
+    `
   },
 
   // --- AUGUST 12, 2026 ---
@@ -499,7 +534,44 @@ For liquidity-focused cash management, review our [Islamic Money Market Funds gu
 - Maximize Behbood certificate limits for eligible family members (senior citizens/widows).
 - General investors should compare CDNS yields against [Shariah-compliant mutual funds](/article/meezan-mutual-funds-vs-vps-tax-rebate).
 - Maintain [FBR Active Taxpayer status](/article/fbr-active-taxpayer-list-atl-benefits) to minimize withholding tax deductions.
-`
+
+
+## What the Scheme Is
+
+National Savings is a government-run savings scheme offering instruments with published returns, typically with a fixed tenor and a defined profit rate. It is accessible, government-backed, and designed to be simple, which is why it is a default choice for many households.
+
+## The Appeal
+
+- Government backing.
+- A published return that is easy to understand.
+- Accessibility through a wide network of offices and banks.
+- Denominations that suit small savers.
+
+## The Trade-offs
+
+- **Tenor and encashment.** Instruments are usually held to maturity for the full return, and early encashment can reduce the profit.
+- **Rate versus inflation.** The published rate may be below inflation, which means a negative real return.
+- **Rate resets.** A new issue may carry a different rate from the one you hold, so the return you are getting is not necessarily the return available today.
+- **Liquidity.** These are savings instruments, not current accounts.
+
+## Who They Suit
+
+- A saver who values government backing over maximum return.
+- Someone building a first buffer who wants simplicity and discipline.
+- A person who will not need the money before maturity.
+
+## Who Should Look Elsewhere
+
+- A saver with a long horizon who can tolerate volatility and wants a better real return.
+- Someone who may need the money early and would incur an encashment penalty.
+- A saver whose primary concern is beating currency devaluation, which a rupee instrument cannot do.
+
+## The Comparison Worth Doing
+
+Compare the net return after any encashment terms against a money market fund and against the current inflation figure. The instrument that looks best on the published rate is not always the best after the terms are applied.
+
+Our [inflation hedging guide](/article/pkr-devaluation-hedging-strategies) covers the currency side of the same decision.
+    `
   },
   {
     id: "remotask-toptal-turing-developer-vetting",
@@ -1312,7 +1384,42 @@ For individual salaried workers, review our [FBR tax filing blueprint for IT pro
 - Structure employee salary slips to include 10% tax-exempt medical allowances.
 - Procure group health insurance policies from SECP-licensed insurers.
 - Maintain Active Taxpayer status using our [FBR ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+## Why Insurance Appears in a Tax Guide
+
+Health insurance is one of the few personal expenditures that can reduce a tax bill, because a premium paid for coverage is treated as an allowable expense up to a limit. The value is real but bounded, and it is worth understanding before you buy a policy for the deduction rather than the cover.
+
+## The Deduction
+
+The rule allows a deduction for health insurance premium paid, subject to a cap and to conditions about who is insured and what the policy covers. The cap means the deduction is a fraction of the premium, not the whole amount, and the policy must generally be one that provides health cover rather than investment returns.
+
+## The Order of Decisions
+
+Buy insurance for the cover, then claim the deduction if the policy qualifies. Buying a larger policy than you need because the deduction offsets it is a decision that makes sense only if the cover was worth having anyway.
+
+## What Qualifies
+
+- A health insurance policy, as distinct from a life or investment-linked policy.
+- Premium paid by the taxpayer for the taxpayer's own cover or that of dependants, within the rules.
+- A policy issued by a recognised insurer.
+
+## What Does Not
+
+- Life insurance premiums, unless the policy is specifically structured as health cover.
+- Investment-linked policies where the dominant element is investment.
+- Premiums paid by an employer that are already a tax-free benefit.
+
+## Keeping the Records
+
+Keep the policy document and the payment evidence. A deduction that cannot be substantiated is a deduction you will lose if asked.
+
+## The Broader Point
+
+Insurance is a risk transfer, not an investment. Its value is in the event you do not want to happen, and the tax treatment is a modest offset rather than a reason to hold a policy you do not need.
+
+Our [life insurance comparison](/article/life-insurance-vs-mutual-funds-pakistan) covers the protection-versus-investment question.
+    `
   },
   {
     id: "uk-ltd-company-setup-non-residents",
@@ -1644,7 +1751,39 @@ For salaried workers, consult our [FBR salaried tax filing blueprint](/article/f
 - Ensure charitable donations are made via crossed bank cheques or online banking transfers (Cash donations do not qualify for tax credits).
 - Verify the receiving institution holds an active FBR Section 2(36) approval certificate.
 - Maintain [FBR Active Taxpayer status](/article/fbr-active-taxpayer-list-atl-benefits) to process rebates smoothly.
-`
+
+
+## What Is Deductible
+
+A donation to an approved charitable cause can reduce taxable income, subject to limits and conditions. The relief is real but capped, and the cap means a donation above it does not buy additional relief. Knowing the cap tells you the maximum useful donation, which is a planning number rather than a moral one.
+
+## The Conditions
+
+- **Approved recipient.** The donee must be one the rules recognise. A donation to an unapproved body does not qualify, however worthy.
+- **Evidence.** A receipt from the donee, and in some cases a specific form of it.
+- **The cap.** Relief is limited to a proportion of income or of the donation, whichever applies.
+- **The form of payment.** Cash, banking channel, or in-kind may be treated differently.
+
+## What Does Not Work
+
+- A donation made for the purpose of obtaining a benefit, such as a school fee or a hospital service, is generally not a donation.
+- A donation to a foreign charity, unless specifically recognised.
+- A donation without a receipt that the donee can reissue.
+
+## The Honest Calculation
+
+Give because the cause is worth supporting, then claim the relief if it applies. Giving an amount you would not otherwise give, because the relief offsets part of it, is a decision that can make sense at the margin, but it is not a reason to give.
+
+## Planning
+
+If you intend to donate, the timing matters: a donation in one tax year versus the next can change the relief if your income differs between them. A large donation in a high-income year is usually more valuable than the same donation in a low one.
+
+## Records
+
+Keep the receipt, note the donee's approval status, and record the payment channel. A relief that cannot be evidenced is a relief you will lose if asked.
+
+Our [tax notice response guide](/article/fbr-tax-notice-response-framework) covers responding if a claim is queried.
+    `
   },
   {
     id: "payoneer-withdrawal-fee-optimization",
@@ -1952,7 +2091,34 @@ Retain foreign currency under SBP rules using [SBP Exporter FCY accounts](/artic
 - Always route foreign client payments through official banking or SBP-registered fintech channels.
 - Download digital PRCs for every incoming transfer and archive them with annual tax files.
 - File annual returns using our [FBR freelancer tax filing blueprint](/article/fbr-tax-filing-salaried-it-professionals).
-`
+
+
+## What the Scheme Does
+
+Pakistan operates incentive schemes to encourage inward remittances through banking channels. The logic is that a remittance routed through a bank is recorded, is available to the financial system, and can be verified, and the incentive is the state's payment for that behaviour.
+
+## Why It Matters to You
+
+If you earn in foreign currency and repatriate it, the scheme may change the effective rate you receive. Over a year of regular inflows, the difference between an incentive-bearing channel and one without it can be material, which is why it belongs in a guide about net proceeds.
+
+## The Conditions
+
+Schemes carry conditions and the conditions change. They typically relate to the channel used, the nature of the income, the documentation, and the timing. A scheme that applies to one type of inflow may not apply to another, so check the current circular against your specific income.
+
+## Documentation
+
+The usual requirement is proof that the inflow is what it claims to be: a remittance certificate, a contract, an invoice, or a payment processor statement. Keep these from the outset. Reconstructing them later is possible and slow.
+
+## Compliance First
+
+An incentive is not a reason to route money in a way that does not match the underlying reality. The documentation has to describe what actually happened. If the scheme does not fit your income, the correct answer is the ordinary channel and the ordinary rate.
+
+## The Current Position
+
+Schemes are revised, extended, and allowed to lapse. Check the current position before relying on one; the difference between an expired scheme and a live one is the difference between a benefit and a problem.
+
+Our [remittance channel comparison](/article/elevate-wise-stripe-pakistan-remittance) covers the costs that sit alongside the incentive.
+    `
   },
   {
     id: "gumroad-vs-lemon-squeezy-for-course-creators",
@@ -2260,7 +2426,45 @@ Ensure personal asset declarations match return records using our [FBR wealth st
 - Never ignore FBR notices; ex-parte orders carry heavy financial penalties.
 - Archive all bank maintenance certificates, PRCs, and expense receipts for 6 years.
 - Maintain Active Taxpayer status via our [FBR ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+## What a Notice Is
+
+A tax notice is a request for information or an explanation, not an assessment. That distinction matters, because the correct response is a documented answer to the specific point raised, not an argument and not silence. Treating a notice as an attack usually produces a worse outcome than treating it as a process.
+
+## Why They Are Issued
+
+Notices are often generated automatically when figures do not reconcile: income recorded in a different year than the funds arrived, a deduction claimed without matching evidence, a withholding figure that disagrees with the payer's filing, or a simple arithmetic error. Many are not accusations.
+
+## The Response Framework
+
+1. **Read the specific point.** Identify the exact figure, period, and provision the notice questions.
+2. **Gather the evidence.** The document that explains the figure, not a narrative about your general compliance.
+3. **Respond to that point.** Answer it directly, with the evidence attached.
+4. **Correct if it is right.** If the notice is correct, fix the return. A voluntary correction is cheaper than a compelled one.
+5. **Meet the deadline.** An unanswered notice escalates; an answered one usually does not.
+
+## What Not to Do
+
+- Do not ignore it.
+- Do not respond with a general denial.
+- Do not offer an explanation the documents do not support.
+- Do not wait for the deadline and then ask for an extension without a reason.
+
+## If the Notice Is Wrong
+
+Then the response is evidence. Identify the discrepancy, show the document that resolves it, and ask for the notice to be withdrawn. Keep the tone factual; the person reading it is doing a job.
+
+## If the Notice Is Right
+
+Then the response is a correction. Say so, file it, pay what is due, and put the process in place that prevents a repeat. The cost of a corrected return is almost always less than the cost of contesting a correct one.
+
+## After the Response
+
+Whatever the outcome, the notice is information about a weakness in the process. Fix the process, because the same weakness will produce the next notice.
+
+Our [Section 111 guide](/article/fbr-section-111-unexplained-income-notices) covers the most common notice type.
+    `
   },
   {
     id: "gcc-saas-monetization-uae-entity",
@@ -2544,7 +2748,42 @@ Open US corporate banking using our [Wyoming US LLC setup guide](/article/us-llc
 - Audit monthly agency software subscriptions and cancel unused licenses.
 - Issue vendor-specific virtual cards with hard monthly spending caps.
 - Deduct all corporate software expenses against annual [FBR corporate income returns](/article/corporate-wealth-statement-filing-guide).
-`
+
+
+## The Problem With a Shared Card
+
+A corporate card shared across a team creates three problems: no per-person or per-vendor limit, no clean attribution of spend, and a single point of compromise. The fix is not a stricter policy, it is a card structure that makes the right behaviour easy.
+
+## Virtual Cards
+
+A virtual card per person, project, or vendor gives a spend cap, a single point of cancellation, and a record that is trivially attributable. The operational gain is not only security: it is that cancelling a subscription becomes a one-click action rather than a card replacement affecting twenty services.
+
+## The FX Question
+
+A local card used for dollar subscriptions pays a foreign transaction margin on every charge, every month. A multi-currency account holding dollars and converting near the market rate removes most of that. Across a meaningful software spend, the difference is larger than many of the subscriptions.
+
+## Building the Policy
+
+- One card per person or vendor, with a cap at the expected spend.
+- A named owner and a documented renewal date for each.
+- A quarterly review asking, per card: is this still used, and is the price still right?
+- A separate card for one-off purchases, so a compromise has bounded exposure.
+- An expense process that does not require anyone to float a personal payment for long.
+
+## Attribution
+
+Every charge should be answerable in seconds: which team, which vendor, which card, what for. That answer matters at tax time, at audit time, and whenever a number is questioned.
+
+## Reconciliation
+
+Reconcile monthly, not annually. A discrepancy found in month one is a query; found in month twelve, it is a problem with no records behind it.
+
+## Choosing the Provider
+
+Compare on the things that affect you: the FX margin, the card management interface, the quality of the transaction feed, and whether the statements are usable for your accounting. The brand matters least.
+
+Our [corporate banking guide](/article/corporate-bank-account-opening-pkr-fcy-pakistan) covers the account structure behind the cards.
+    `
   },
   {
     id: "stripe-radar-fraud-protection-saas",
