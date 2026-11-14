@@ -45,7 +45,42 @@ Secure 0% corporate export tax credits using our [PSEB Registration tax guide](/
 - [SBP Remittance Incentive Scheme: Tax Exemptions and Bank Cashbacks on Foreign Inflows](/article/state-bank-remittance-incentive-scheme-guide): Verified tactical execution guidelines and market compliance principles.
 - [Responding to FBR Section 122 Audit Notices: Audit Preparation and Legal Safeguards](/article/fbr-section-122-tax-audit-response-framework): Institutional portfolio allocation and risk-hedging frameworks.
 - [Global Nomad Travel Logistics & Currency Optimizer](/toolkit#nomad-travel-logistics): Interactive computational engines and statutory models for South Asian operators.
-`
+
+
+## Why the Obligations Catch Founders
+
+Forming a company is a one-time task. Complying with it is a recurring one, and the recurrence is what founders underestimate. A private limited company has filings, meetings, and records to maintain whether or not it trades, and the penalties for missing them accrue regardless of whether the business had a good year.
+
+## The Recurring Obligations
+
+- **Annual return.** Confirms the company's details and is filed with the registry.
+- **Financial statements.** Prepared annually; audit requirements depend on the company's size and type.
+- **Tax filings.** Corporate return, and withholding obligations where the company made payments subject to withholding.
+- **Board and shareholder records.** Meetings held, resolutions passed, and minutes kept.
+- **Registered office and registrations.** Kept current.
+
+## The Calendar
+
+The obligations run on different cycles, and the cycles do not align. Build a single calendar with every deadline on it, owned by one person, with a reminder ahead of the date rather than on it. A missed filing discovered after the deadline is a different and more expensive problem than one caught in advance.
+
+## The Records
+
+Keep the statutory records in one place: incorporation documents, share register, director records, minutes, and the correspondence with the registry. When a question arises, the answer should be findable in minutes.
+
+## Withholding
+
+A company that pays for services, rent, or certain other items is often required to withhold tax on the payment and file the corresponding statement. This is separate from the company's own tax return and is the obligation most often missed by founder-led companies.
+
+## What Happens If You Slip
+
+Late filings attract penalties, and in some cases the company's status is affected. The remedy is usually to regularise, which costs more than compliance would have. A company that cannot keep its filings current is a company that is quietly accumulating a liability.
+
+## Getting Help
+
+A company secretary or a corporate service provider is cheaper than the penalties. For a small company, the decision is usually to outsource the compliance and focus the founder's time on the business.
+
+Read our [single member company guide](/article/secp-single-member-company-smc-guide) for the structure-level decision.
+    `
   },
   {
     id: "building-micro-saas-tools-for-figma-community",
@@ -304,7 +339,34 @@ Learn FCY account rules in our [SBP Foreign Currency Account (FCA) guide](/artic
 - Always instruct foreign clients to include "IT / Software Export Services" in bank wire transaction memo lines.
 - Download digital PRCs for all foreign incoming wire transfers from commercial bank portals.
 - Maintain Active Taxpayer status on FBR using our [ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+## What the Scheme Is For
+
+Pakistan runs incentive schemes aimed at encouraging inward remittances through banking channels rather than informal ones. The rationale is straightforward: a remittance through a bank is recorded, is available to the financial system, and can be verified. The incentive is the state's way of paying for that behaviour.
+
+## Why It Matters to a Freelancer
+
+If you earn in foreign currency and repatriate it, the scheme may change the effective rate you receive. The difference between an incentive-bearing channel and one without it can be material over a year, which is why this appears in a guide about net proceeds rather than in a general interest roundup.
+
+## The Conditions
+
+Incentive schemes come with conditions, and the conditions change. Typically they relate to the channel used, the nature of the income, the documentation supporting it, and the timing. A scheme you assume applies may not apply to your specific income type.
+
+## Documentation
+
+The common requirement is proof that the inflow is what it claims to be: an export realisation certificate, a contract, an invoice, or a payment processor statement. Keep these from the start. Reconstructing them later is possible but slow.
+
+## Compliance First
+
+An incentive is not a reason to route money in a way that does not match the underlying reality. The documentation has to describe what actually happened. If the scheme does not fit your income, the correct answer is to use the normal channel and accept the ordinary rate.
+
+## Checking the Current Position
+
+Schemes are revised, extended, and allowed to lapse. Before you rely on one, check the current circular rather than a summary of an older one. The difference between an expired scheme and a live one is the difference between a benefit and a problem.
+
+Read our [remittance comparison](/article/elevate-wise-stripe-pakistan-remittance) for the channel-level costs that sit alongside the incentive.
+    `
   },
   {
     id: "selling-notion-and-figma-templates-gumroad-vs-lemon-squeezy",
@@ -769,7 +831,37 @@ Set up global USD accounts for agencies using our [Mercury vs Elevate banking gu
 - Issue vendor-specific virtual cards for every software subscription.
 - Set strict monthly spend caps on each virtual card.
 - Pay USD subscriptions from USD accounts to eliminate 4% foreign exchange conversion markups.
-`
+
+
+## The Problem With One Card
+
+A single corporate card funding twenty subscriptions creates three problems at once. There is no per-vendor limit, so a price increase or a rogue charge is invisible until the statement. There is no clean way to cancel one vendor without touching the card and breaking the others. And if the card is compromised, every vendor on it is exposed.
+
+## What Virtual Cards Solve
+
+A virtual card per vendor gives you a spend cap, a single point of cancellation, and a record that is trivially attributable. The operational benefit is not the security, though that is real. It is that the cancellation of a vendor becomes a one-click action rather than a half-day project.
+
+## The FX Question
+
+This is where the decision is often made. A local card used for dollar subscriptions pays a foreign transaction margin that compounds across every subscription, every month. A multi-currency account holding dollars and converting at a near-market rate removes most of that. Across a meaningful software spend, the difference is larger than most of the subscriptions themselves.
+
+## Building the Policy
+
+- One virtual card per vendor, with a cap at the expected monthly charge.
+- A named owner for each card, and a documented renewal date.
+- A quarterly review that asks, for each card: is this still used, and is the price still right?
+- A separate card for one-off purchases, so a single compromise has bounded exposure.
+
+## Cancellation Hygiene
+
+Vendors are good at making cancellation difficult. Keep a register of how each subscription is cancelled, including the steps and any retention offer. A vendor that requires a phone call to cancel is a vendor worth reviewing on principle.
+
+## The Audit Trail
+
+When the finance question arrives, the answer should be instant: which team, which vendor, which card, what charge. Virtual cards make that answer available; a shared physical card does not.
+
+Read our [corporate banking guide](/article/corporate-bank-account-opening-pkr-fcy-pakistan) for the account side.
+    `
   },
 
   // --- JULY 22, 2026 (2 needed) ---
@@ -1164,6 +1256,37 @@ Protect foreign remittances against audit using our [FBR Section 111 Unexplained
 - Download digital PRCs for every incoming foreign transfer from commercial bank apps.
 - Reconcile Iris wealth statements to ensure unreconciled balance equals exactly zero.
 - Maintain Active Taxpayer status on FBR using our [ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+## The Filing Year for a Freelancer
+
+A freelancer's tax year does not match the rhythm of employment. There is no single salary, no employer withholding, and often no month in which the income looks like a salary. That makes the annual filing feel alien, but the structure is simple once it is laid out: income, expenses you are allowed to deduct, tax on the result, and a wealth statement explaining the year's movements.
+
+## Income
+
+Foreign-sourced income from software and IT services is declared as such, under the code that matches the nature of the service, and is supported by the documentation the remittance arrived with. Local income is declared separately. The two are not interchangeable.
+
+## What You Can Deduct
+
+The general rule is that expenses must be wholly and exclusively for the business. For a freelancer that usually includes software, hardware, a proportion of connectivity, professional fees, and the cost of winning work. It does not include your time, and it rarely includes expenses that have a personal element unless that element is small and clearly separated.
+
+## The Wealth Statement
+
+This is the part freelancers get wrong. It is not a list of assets. It is a reconciliation: opening position, plus inflows, minus outflows, equals closing position. A gap between the two sides is a notice waiting to be issued.
+
+## Active Taxpayer Status
+
+Being on the active taxpayer list matters because it changes the withholding rate applied to a range of transactions. Losing it because a return was not filed is an avoidable cost.
+
+## If You Are Starting Late
+
+Bring the filings up to date before a notice forces the order. A voluntary catch-up is cheaper than a compelled one.
+
+## Getting Help
+
+A professional who handles foreign-sourced income will pay for themselves in the first year. The cost of getting the first return wrong is usually higher than the cost of getting it right.
+
+Read our [reconciliation guide](/article/fbr-section-211-wealth-statement-reconciliation) for the arithmetic.
+    `
   }
 ];

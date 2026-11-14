@@ -494,7 +494,49 @@ Protect foreign inflows against audit using our [FBR Section 111 Unexplained Inc
 - Download annual Payment Realization Certificates (PRCs) from commercial banks.
 - Complete wealth reconciliation calculation before submitting on Iris.
 - Verify Active Taxpayer List (ATL) status post-filing.
-`
+
+
+## Why the Wealth Statement Is Where Freelancers Fail
+
+A freelancer's income tax return is often straightforward. The wealth statement is not, because it asks you to explain the movement of everything you own across the year, and freelance income arrives irregularly, from several sources, in different currencies, through different channels.
+
+The result is a gap between what you declared and what your assets show, and that gap is what triggers a notice.
+
+## Building the Reconciliation
+
+Work from the formula rather than from memory:
+
+**Opening wealth + total inflows − total outflows = closing wealth**
+
+Then populate each term from a document:
+
+- **Inflows.** Bank statements, remittance certificates, payment processor statements, invoices paid.
+- **Outflows.** Living expenses, tax paid, transfers, asset purchases.
+- **Assets.** Bank balances, property, vehicles, investments at year end.
+
+The point is that every rupee of change has a source or a destination. If it does not, that is the line to investigate.
+
+## Currency
+
+Foreign income creates a second problem: the amount you earned in dollars and the amount that arrived in rupees are different numbers on different dates. Pick a convention, apply it consistently, and document it. A consistent convention that is explained beats an inconsistent one that happens to be more favourable.
+
+## Common Mismatches
+
+- Remittances recorded at a different rate or date than the certificate.
+- A payment processor balance that is an asset you never declared.
+- A property or vehicle purchased during the year with no matching inflow.
+- A loan or family transfer that looks like income.
+
+## If You Are Behind
+
+Filing late is usually better than not filing, and correcting a return is usually cheaper than responding to a notice. If you have years outstanding, bring them up to date before a notice forces the order.
+
+## Getting Help
+
+A tax professional who understands foreign-sourced income is worth the fee. The cost of the advice is small next to the cost of a disputed assessment.
+
+Read our [Section 211 reconciliation guide](/article/fbr-section-211-wealth-statement-reconciliation) for the arithmetic in detail.
+    `
   },
 
   // --- JULY 11, 2026 (2 needed) ---

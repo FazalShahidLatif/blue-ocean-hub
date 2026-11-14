@@ -151,7 +151,38 @@ For foreign currency retention, explore our [SBP Exporter FCY account guide](/ar
 - Issue foreign invoices clearly stating international client business details.
 - Store official PRC vouchers alongside all foreign invoice records.
 - Complete annual [FBR corporate wealth declarations](/article/corporate-wealth-statement-filing-guide).
-`
+
+
+## The Question That Decides Everything
+
+Who is your customer, where are they established, and what are they buying? The answer determines whether a value-added tax applies, who remits it, and whether the supply is zero-rated, exempt, or outside the scope entirely. Getting this wrong is expensive in both directions: charging tax that was not due loses you the sale, and not charging tax that was due creates a liability.
+
+## The Place of Supply
+
+Most VAT and GST systems tax a supply where the customer is established, not where the seller is. For services, the rules are more specific and vary by jurisdiction. Digital services, in particular, are frequently subject to special rules that apply regardless of the seller's location.
+
+## Business Customer Versus Consumer
+
+Many systems reverse the charge for business customers: the customer accounts for the tax rather than the seller charging it. That requires validating the customer's registration, because an invalid number does not make the supply zero-rated.
+
+For consumers, the seller generally charges and remits.
+
+## Exempt Versus Zero-Rated
+
+These look similar and behave differently. A zero-rated supply is taxable at a nil rate, and the seller can usually recover related input tax. An exempt supply is outside the tax, and the related input tax is generally not recoverable. The distinction changes your margin, not only your compliance.
+
+## Invoicing Requirements
+
+A cross-border invoice often needs specific content: the customer's registration number, a note identifying the tax treatment, and sometimes a reference to the relevant provision. Missing content can turn a correctly zero-rated supply into a disputed one.
+
+## Records
+
+Keep the evidence that supports the treatment: contracts, customer registration evidence, proof of delivery, and the records that show where the service was consumed. A tax authority asking about a cross-border supply will ask for exactly these.
+
+## Getting It Right
+
+If you sell across several jurisdictions, the compliance burden is real and recurring. A merchant of record absorbs it for a fee; a tax registration absorbs it for less but takes your time. Our [merchant of record guide](/article/merchant-of-record-lemon-squeezy-paddle-guide) sets out the trade-off.
+    `
   },
   {
     id: "digital-template-selling-gumroad-etsy",
@@ -478,7 +509,46 @@ For tax compliance on remote earnings, consult our [FBR freelancer tax filing bl
 - Practice Data Structures & Algorithms on LeetCode (Medium/Hard) prior to applying.
 - Build production-ready open-source projects demonstrating architectural clean code patterns.
 - Protect earnings under SBP rules using [SBP Foreign Currency Accounts](/article/foreign-currency-account-fca-sbp).
-`
+
+
+## What Each Platform Actually Sells
+
+Platforms in this space differ less on the vetting they claim and more on where the vetting happens. Some screen the talent before listing them. Others screen the client before allowing a contract. Some do neither and let the market decide. Knowing which is which tells you where your risk sits.
+
+## The Screening Claims
+
+A platform that vets developers in advance is selling you reduced search cost. A platform that vets clients is selling you reduced payment and scope risk. Both are valuable, and they are not the same product.
+
+The practical test is not the marketing page. It is what happens when something goes wrong.
+
+## The Real Cost Difference
+
+Curated platforms charge more, and they charge more for a reason: the screening, the matching, and the dispute handling have to be paid for. Whether that premium is worth it depends on what you are buying. For a well-defined, bounded task, a curated platform can be cheaper in total because you spend less time filtering. For ongoing, evolving work, the calculus is less clear.
+
+## How to Vet Regardless of Platform
+
+Never rely on the platform's vetting alone. Run your own:
+
+- A short paid trial task, real and bounded.
+- A technical conversation with a specific problem, not a general interview.
+- A reference check on comparable work.
+- A small first contract before a large one.
+
+The trial task is the single highest-signal step. It costs little and reveals more than any profile.
+
+## Red Flags
+
+- Unwillingness to do a paid trial.
+- A portfolio that cannot be discussed in detail.
+- Rates far outside the market without a clear reason.
+- Pressure to move off the platform immediately.
+
+## Structuring the Engagement
+
+Start small, define the deliverable precisely, agree the acceptance criteria in writing, and pay on evidence. A platform's escrow and dispute process only help if the work was defined well enough to dispute.
+
+Our [white-label engineering guide](/article/agency-subcontracting-white-label-engineering) covers the multi-party case.
+    `
   },
 
   // --- AUGUST 15, 2026 ---
@@ -1198,7 +1268,37 @@ To collect payments without forming overseas companies, explore our [Lemon Squee
 - Form a UK Ltd company online via Companies House or authorized formation agents.
 - Open a Wise Business account using your UK company registration documents.
 - Process payouts to local accounts via [Elevate Pay or Wise remittance routes](/article/elevate-wise-stripe-pakistan-remittance).
-`
+
+
+## Why a UK Company
+
+A UK limited company is a familiar, inexpensive, and well-understood vehicle for a non-resident founder. It is straightforward to form, it has no minimum share capital requirement, and it is accepted by payment processors, clients, and marketplaces in a way that fewer jurisdictions are. For a freelancer or small software business selling internationally, it can be the simplest way to look credible and to get paid.
+
+## The Trade-offs
+
+- **You will have ongoing compliance.** Annual confirmation statements, accounts, and tax filings, whether or not the company trades.
+- **You will need a UK registered address and a resident director may be required** depending on the bank and the structure.
+- **You will be taxed where you are tax resident as well as where the company is.** A UK company does not by itself move your personal tax position.
+- **Banking is the hard part.** Not every UK bank will onboard a non-resident director, and the alternatives vary in cost and reliability.
+
+## The Formation Sequence
+
+Choose the name, confirm the share structure, appoint the director and company secretary if required, register with Companies House, register for the relevant taxes, and then solve banking. The first four steps are fast and cheap. The last one is where most founders lose time.
+
+## Banking Options
+
+High-street banks, digital banks, and specialist non-resident providers each have different requirements. Expect to provide proof of identity, proof of address, and evidence of the business. Compare on whether they will actually onboard you, not on the fee schedule.
+
+## Is It Right for You
+
+A UK company suits a founder selling to UK or EU clients, using UK payment infrastructure, or wanting a recognisable entity quickly. It suits less well a founder whose market and residence are both elsewhere and who has no need of the UK specifically.
+
+## Alternatives Worth Considering
+
+A merchant of record avoids the entity entirely for digital sales. A US LLC is the alternative if the target market is North America. Choose against where your customers are, not against the jurisdiction you have read about.
+
+Our [merchant of record guide](/article/merchant-of-record-lemon-squeezy-paddle-guide) covers the no-entity route.
+    `
   },
   {
     id: "newsletter-monetization-beehiiv-convertkit",
@@ -1472,7 +1572,37 @@ Download official PRC vouchers to support [zero-rated IT export tax status](/art
 - Avoid using Payoneer prepaid debit cards at domestic ATMs due to high foreign currency conversion surcharges.
 - Route payouts through digital USD accounts to minimize FX markup.
 - Retain foreign currency in [SBP Exporter FCY accounts](/article/foreign-currency-account-fca-sbp).
-`
+
+
+## Where the Money Actually Goes
+
+A payment processor's headline rate is rarely the cost you pay. The total is the conversion margin, the withdrawal fee, any fixed charge per transaction, and the difference between the rate you were quoted and the rate you received. Two providers with similar headline rates can differ materially once all four are counted.
+
+## The Conversion Margin
+
+This is usually the largest component and the least visible. A margin applied to the midpoint exchange rate is a cost you cannot see on a receipt, because the receipt shows a converted amount rather than a fee. Compare providers on the rate they actually deliver for your amount, on your day, not on the advertised rate.
+
+## Fixed Fees
+
+A small fixed charge per withdrawal is trivial on a large payment and significant on a small one. If you receive many small payments, batching withdrawals can be worth more than negotiating a better rate.
+
+## Timing
+
+Holding a balance and converting when the rate is favourable is a real option with some providers and not with others. If your provider converts automatically on receipt, you have no timing control at all, and the rate you receive is the rate on the day the payer sent the money.
+
+## Choosing for Your Situation
+
+- **Large, infrequent payments.** The conversion margin dominates.
+- **Many small payments.** Fixed fees and batching dominate.
+- **Irregular timing.** Withdrawal flexibility matters more than a fraction of a percent.
+- **Need for local documentation.** Some providers issue the certificates a tax authority will accept and others do not.
+
+## The Documentation Angle
+
+If you are declaring foreign-sourced income, the withdrawal record and the certificate matter as much as the rate. A provider that cannot produce the right document costs you more than the margin it saves you.
+
+Our [remittance comparison](/article/elevate-wise-stripe-pakistan-remittance) compares the major channels side by side.
+    `
   },
   {
     id: "audiobook-and-ebook-self-publishing-kdp",
@@ -2005,7 +2135,34 @@ To sell software globally without forming foreign companies, explore our [Lemon 
 - Select a UAE Free Zone offering instant digital company setup.
 - Open a digital business account with Wio Bank using your UAE Emirates ID.
 - Process local currency transfers via [SBP Exporter FCY account rules](/article/foreign-currency-account-fca-sbp).
-`
+
+
+## Why the Gulf
+
+The Gulf markets combine high budgets, a genuine appetite for digital transformation, and a relative shortage of local delivery capacity. For a software business, that combination means pricing power that is hard to find elsewhere. The obstacle is that selling into the region without a presence is slower and more fragile than selling with one.
+
+## The Free Zone Option
+
+A free zone entity is usually the practical route for a foreign-owned software or consulting business. It permits full foreign ownership, provides a visa route for staff, and handles much of the administrative overhead. The trade-off is that a free zone entity typically trades with other businesses rather than directly with the local government on the same terms as a mainland entity.
+
+## Choosing the Jurisdiction
+
+The UAE alone has many free zones, and they differ on cost, on the activities they licence, on the visa allocation, and on the physical presence they require. Saudi Arabia has its own routes. Choosing on the cheapest licence fee is a mistake; choosing on the activity you actually carry out, and the customers you actually serve, is not.
+
+## The Real Costs
+
+Licence, visa, office, and registered agent fees recur every year. Budget for the second year, not only the first, because the first year is often discounted and the second is not.
+
+## Selling After Setup
+
+An entity gets you to the table; it does not win the work. The Gulf rewards relationships, local references, and patience. Price for a long sales cycle in the first year and a shorter one after.
+
+## Alternatives
+
+If you are not ready for an entity, a reseller, a local partner, or a merchant-of-record arrangement can get you selling sooner. Our [merchant of record guide](/article/merchant-of-record-lemon-squeezy-paddle-guide) covers the lightest version of this.
+
+Read our [GCC incorporation routing guide](/article/gcc-saas-market-incorporation-routing) for the jurisdiction comparison.
+    `
   },
   {
     id: "digital-asset-flipping-flippa-empire-flippers",
@@ -2233,7 +2390,42 @@ Explore Merchant of Record alternatives in our [Lemon Squeezy vs Paddle MoR revi
 - Enable 3D Secure (3DS) authentication across all international card checkouts.
 - Set up automated webhook alerts to catch dispute notices instantly.
 - Process payouts securely using [Elevate Pay or Wise US accounts](/article/elevate-wise-stripe-pakistan-remittance).
-`
+
+
+## Why Fraud Configuration Is Not Set-and-Forget
+
+Fraud rules tuned at launch decay. Attack patterns change, your product mix changes, and a rule that was blocking ten percent of orders when you sold one thing may block thirty percent when you sell another. Review the rules against real disputes on a fixed schedule, not when a spike forces you to.
+
+## The Two Errors
+
+**Blocking too much.** Every blocked genuine sale is revenue you never see and a customer who may not return. Aggressive rules look safe on a dashboard and expensive on a P&L.
+
+**Blocking too little.** Every chargeback costs the dispute fee plus the lost revenue, and a high dispute rate risks the processing relationship itself. The cost of a dispute is far higher than the cost of a false block.
+
+The job is to find the line, and the line moves.
+
+## Reading the Signals
+
+Risk signals are clues, not verdicts. A high-risk score from a customer with a verified email, a matching billing address, and a purchase history is a different case from the same score on a brand-new account with a mismatched address. Configure rules that combine signals rather than rules that act on one.
+
+## Card Testing
+
+Card testing is automated and cheap for the attacker: try many cards in small amounts until one works. It often shows up as a burst of small declines from a narrow set of characteristics. Blocking it is one of the highest-value rules because the activity is unambiguously hostile.
+
+## 3D Secure
+
+Strong customer authentication shifts the liability for fraud in many cases and is required in some jurisdictions. The trade-off is friction at checkout. Use it selectively, on the transactions that warrant it, rather than applying it to everything.
+
+## Handling Disputes
+
+A dispute is not only a cost, it is information. Track the reason codes and the products they cluster around. A dispute pattern concentrated on one product usually points to a description or expectation problem, not a fraud problem.
+
+## When to Escalate
+
+If your dispute rate is rising, or a processor has flagged the account, treat it as a business risk rather than a settings problem. Respond with evidence and with the changes you have made, not with an apology.
+
+Our [merchant of record guide](/article/merchant-of-record-lemon-squeezy-paddle-guide) covers the option of moving this burden to a third party.
+    `
   },
   {
     id: "ai-tool-wrapper-saas-monetization",

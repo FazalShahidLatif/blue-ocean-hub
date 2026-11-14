@@ -1242,7 +1242,42 @@ Claim zero-rated sales tax on IT exports using our [provincial IT export sales t
 - Prepare certified copies of all SECP incorporation forms.
 - Request simultaneous opening of corporate PKR account and Exporters FCY account.
 - Retain official State Bank Payment Realization Certificates (PRCs) for all incoming wire transfers.
-`
+
+
+## Why Paired Accounts
+
+A business earning in dollars but spending in rupees needs both. A rupee account handles local costs, tax, and payroll. A foreign currency account holds export earnings and lets you choose when to convert. Running everything through one account means converting at the bank's moment, not yours.
+
+## The Documentation
+
+Banks ask for a predictable set of documents, and the request is usually repeated in slightly different form. Have a complete, certified pack ready rather than assembling it in response to each request:
+
+- Certificate of incorporation
+- Memorandum and articles
+- Registered directors and shareholding
+- Board resolution authorising the account
+- Tax registration
+- Proof of registered business address
+- Identification of every person with signing authority
+
+## The Address Question
+
+Banks apply know-your-customer rules to the business address, and a mismatch between the registered address and the operating address is a common cause of delay. Decide what address you will present and make sure the documents agree with it.
+
+## Authorised Signatories
+
+Banks will ask who can operate the account and will want evidence of the authority granted. Agree the signing structure internally before you apply, because changing it later means another resolution and another visit.
+
+## After the Account Opens
+
+The work does not end at opening. Expect a period of restricted activity while the relationship beds in, and ask up front about transfer limits, cutoff times, and the process for a large or unusual payment. Discovering these on the day you need to move money is expensive.
+
+## Choosing a Bank
+
+Compare on the things that will actually affect you: the cost of a dollar inward remittance, the conversion spread, the reliability of the online banking, and the quality of the relationship manager. The brand is the least of it.
+
+Our [remittance guide](/article/elevate-wise-stripe-pakistan-remittance) covers moving money in and out once the accounts exist.
+    `
   },
   {
     id: "b2b-cold-email-copywriting-frameworks",
@@ -1700,7 +1735,47 @@ Audit defense procedures are detailed in our [FBR Audit Notice Response framewor
 - Always request official PRCs from commercial banks for all incoming foreign wires.
 - Never ignore FBR Iris portal notices; file formal responses prior to deadlines.
 - Maintain Active Taxpayer status on FBR using our [ATL benefits guide](/article/fbr-active-taxpayer-list-atl-benefits).
-`
+
+
+## What the Notice Actually Means
+
+An unexplained income notice is not an assessment. It is a request for an explanation of a figure that does not reconcile with what you declared. That distinction matters, because the correct response is a documented reconciliation, not an argument and not silence.
+
+## Why They Are Issued
+
+The system compares what you declared against what third parties reported, against banking data, and against your own previous filings. A mismatch generates a notice automatically. The most common causes are not evasion:
+
+- Income recorded in a different tax year than the year it arrived.
+- A remittance recorded at a rate or date that does not match the certificate.
+- An asset acquired during the year with no matching declared inflow.
+- A family transfer or a loan that reads as income.
+- A simple arithmetic error in the reconciliation.
+
+## The Response
+
+1. Identify the specific figure the notice questions.
+2. Reconstruct that line from documents.
+3. Respond with the document that explains it, not with a general denial.
+4. Correct the return if the notice is right.
+
+Doing this once, properly, is cheaper than doing it twice poorly.
+
+## What Not to Do
+
+- Do not ignore it. A notice that is not answered becomes an assessment.
+- Do not respond with a blanket denial. It does not resolve the discrepancy and it signals that you have not looked.
+- Do not construct an explanation that the documents do not support. If the explanation is not true, it will not survive a second question.
+
+## If the Notice Is Correct
+
+Then the position is to correct it. A voluntary correction, made before an assessment, is almost always cheaper than a contested one, and it is the difference between a compliance matter and a penalty matter.
+
+## Preventing the Next One
+
+The fix is the same as the response: reconcile before you file, keep the documents, and make the convention you use consistent across years. A filer who reconciles annually does not get surprises.
+
+Read our [wealth statement reconciliation guide](/article/fbr-section-211-wealth-statement-reconciliation) for the mechanics.
+    `
   },
   {
     id: "agency-subcontracting-white-label-engineering",

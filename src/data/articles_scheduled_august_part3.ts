@@ -134,7 +134,36 @@ To process payments globally without US incorporation, explore our [Lemon Squeez
 - Select Delaware C-Corp via Stripe Atlas if actively raising institutional US venture capital.
 - Select Wyoming LLC via Firstbase if building a bootstrapped cash-flowing micro-SaaS.
 - Complete annual IRS filings using [W-8BEN-E foreign entity forms](/article/w8bene-form-completion-guide-agencies).
-`
+
+
+## What You Are Actually Buying
+
+Both services bundle formation, registration, and onboarding into one flow. What you are really paying for is not the paperwork; it is the speed of getting a bank account and the partner credits that offset the fee. Compare the credits against the software you actually use, not the headline value.
+
+## Choosing the Entity
+
+The entity decision matters more than the platform.
+
+- **Delaware C-Corporation** is the default for companies raising US venture capital. Investors expect it, and the documentation for preferred stock exists.
+- **LLC** is simpler and more flexible for a company that is not raising institutional capital, and can be taxed in different ways.
+- **Wyoming LLC** is sometimes cheaper to form and maintain, and is a reasonable choice where Delaware's specific advantages do not apply.
+
+Forming the wrong entity and converting later is expensive and sometimes disruptive to cap table and contracts. Decide before you form.
+
+## The Bank Account Question
+
+A US entity without a US bank account is only half useful. Check which banking partners each service currently offers, because partnerships change. Also check whether you can access the account from Pakistan, what the minimum balance requirements are, and what the monthly fees are after any introductory period.
+
+## After Incorporation
+
+Formation is the easy part. The ongoing obligations are the ones that catch founders out: registered agent fees, annual franchise tax, information returns, and a separate set of books for the entity. Budget for these before you form, not after the first invoice arrives.
+
+## For a Non-US Founder Specifically
+
+A US entity adds a layer of compliance in a country where you do not live. Weigh the benefit — access to US customers, US payment processing, US investors — against the cost and complexity. If none of those apply, a US entity may be solving a problem you do not have.
+
+Read our [merchant of record guide](/article/merchant-of-record-lemon-squeezy-paddle-guide) for the alternative of selling globally without forming a US entity.
+    `
   },
   {
     id: "reit-commercial-rental-yield-analysis",
