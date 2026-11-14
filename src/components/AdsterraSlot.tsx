@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { readConsent, CONSENT_EVENT } from "../lib/consent";
 
 interface AdsterraSlotProps {
   zone: "rectangle" | "skyscraper" | "leaderboard" | "native";
@@ -17,27 +18,22 @@ const SCRIPT_URL = "https://ballisticcomainvitation.com/${key}/invoke.js";
 export default function AdsterraSlot({ zone, containerId }: AdsterraSlotProps) {
   const slotRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
-  const [consented, setConsented] = useState(false);
+  const [personalised, setPersonalised] = useState(false);
 
-  // Check consent from localStorage
+  // Ad slots are never consent-gated: advertising is the site's only revenue
+  // source. Consent governs *personalisation*, not whether ads render.
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem("pdff-consent");
-      if (stored) {
-        const parsed = JSON.parse(stored);
-        if (parsed.advertising) setConsented(true);
-      }
-    } catch {
-      // No consent stored
-    }
-
-    // Listen for consent changes
+    setPersonalised(readConsent().personalisedAdvertising === true);
     const handler = (e: Event) => {
-      const custom = e as CustomEvent;
-      if (custom.detail?.advertising) setConsented(true);
+      const detail = (e as CustomEvent).detail;
+      setPersonalised(!!detail?.personalisedAdvertising);
     };
-    window.addEventListener("pdff:consent", handler);
-    return () => window.removeEventListener("pdff:consent", handler);
+    window.addEventListener(CONSENT_EVENT, handler);
+    window.addEventListener("pdff:consent", handler); // legacy name
+    return () => {
+      window.removeEventListener(CONSENT_EVENT, handler);
+      window.removeEventListener("pdff:consent", handler);
+    };
   }, []);
 
   // Lazy-load when near viewport
@@ -66,7 +62,7 @@ export default function AdsterraSlot({ zone, containerId }: AdsterraSlotProps) {
         'format': 'iframe',
         'height': ${zoneConfig.height},
         'width': ${zoneConfig.width},
-        'params': {}
+        'params': { 'personalised': ${personalised ? "true" : "false"} }
       };
     </script>
     <script src="${SCRIPT_URL.replace("${key}", zoneConfig.key)}"></script>
@@ -85,7 +81,7 @@ export default function AdsterraSlot({ zone, containerId }: AdsterraSlotProps) {
       }}
       aria-hidden="true"
     >
-      {visible && consented && (
+      {visible && (
         <iframe
           title={`Adsterra ${zone} ad`}
           srcDoc={snippet}

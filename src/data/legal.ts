@@ -232,6 +232,18 @@ We use cookies to:
 - Remember your cookie preferences across browsing sessions
 - Support essential site functionality
 - Understand how visitors interact with our content (aggregated, non-identifiable usage data)
+- Personalise advertising, **only if you opt in**
+
+## 2a. Advertising Is Never Gated
+
+Advertising and affiliate links are how this publication is funded, so **they are never blocked pending a cookie choice**. Advertising displays on every visit.
+
+What your choice controls is the *type* of advertising:
+
+- **If you decline personalisation**, you see contextual advertising only. Ads are selected from the topic of the page you are reading, with no behavioural profile built from your browsing.
+- **If you accept personalisation**, advertising partners may use information about your visits to select ads we think are more relevant.
+
+No personal data is sold. Affiliate links are ordinary links and are unaffected by your cookie choice.
 
 ## 3. Managing Cookie Preferences
 
@@ -694,11 +706,62 @@ Placements are reported with the impressions and clicks recorded by the serving 
 
 ## Consent and Delivery
 
-Advertising is gated behind the site's consent banner, so a placement only reaches visitors who have accepted advertising scripts. Reporting reflects that, and we do not inflate it.
+Advertising is **never gated** behind the site's consent banner. Placements reach every visitor, so reporting reflects genuine delivery and we have no reason to inflate it. The cookie notice governs analytics and ad personalisation only — see the [cookie policy](/page/cookie-policy).
 
 ## Booking
 
 Write to the [contact page](/page/contact) with the subject line "Partnership" and the placement, period, and audience. We reply within three business days with availability and a fixed quote.
+    `
+  },
+  {
+    id: "reviews",
+    postType: 'page',
+    title: "Reader Reviews & Ratings",
+    description: "Verified reviews from readers on Trustpilot and Google, plus how to leave a review.",
+    metaDescription: "Read verified reader reviews of Blue Ocean Hub on Trustpilot and Google, and leave your own review. Independent, unedited, and linked to the original platform.",
+    pubDate: "2026-11-15",
+    author: "Blue Ocean Hub Editorial",
+    category: "Corporate",
+    content: `
+# Reader Reviews & Ratings
+
+We collect reviews on independent third-party platforms, and we do not edit, filter, or rewrite them. Every review published here links back to the platform where it was originally posted.
+
+## Where To Review Us
+
+- **Trustpilot** — [blueoceanhub.info on Trustpilot](https://www.trustpilot.com/review/blueoceanhub.info)
+- **Google** — search for Blue Ocean Hub on Google and choose "Write a review"
+
+## Trustpilot
+
+\`div id="trustpilot-review-wrapper"></div\`
+
+Reviews appear below once the Trustpilot widget is connected. The widget is loaded from Trustpilot's own servers and displays unedited reviews.
+
+## Google Reviews
+
+\`div id="google-review-wrapper"></div\`
+
+Google reviews are published against our Google Business Profile and are visible on Google Search and Maps.
+
+## Our Policy
+
+- Reviews are **not** solicited in exchange for payment, discounts, or favourable coverage.
+- We do **not** edit or delete a negative review.
+- We may respond publicly to a review to address a factual error, and we do so once.
+- A review we believe breaches the platform's own rules is reported to that platform, not removed by us.
+- Editorial coverage is never conditional on a review.
+
+## Why Reviews Matter Here
+
+This publication makes claims about rates, taxes, and providers. A reader who has used our guides has information we do not, and that is worth more than a testimonial we wrote ourselves.
+
+## Commercial Independence
+
+Reviews do not affect coverage. An advertiser or affiliate partner is reviewed by the same standard as any other provider, and a partner that asks for a review in exchange for a benefit is not covered.
+
+---
+*To add a review you have already written on Trustpilot or Google to this page, contact us at hello@blueoceanhub.info with the link. We verify it on the platform before publishing.*
     `
   },
   {
