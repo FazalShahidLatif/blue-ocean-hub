@@ -35,6 +35,29 @@ All content is authored or reviewed by contributors with direct experience in fi
 ## Contact
 
 For editorial inquiries, partnership opportunities, or other professional questions, please contact us at the email address provided in the footer of this page.
+
+
+## What We Publish
+
+Blue Ocean Hub publishes five editorial categories, each maintained as a dedicated hub:
+
+- **Passive Income** — cashflow systems, dividend strategy, REITs, digital products, and alternative yield for salaried professionals and founders.
+- **Investing** — Pakistan Stock Exchange research, CDC and brokerage setup, mutual funds, pension schemes, and capital-gains tax planning.
+- **Freelancing** — platform selection, pricing, contracts, client retention, and the operational build-out of a solo practice into an agency.
+- **Saving Money** — inflation hedging, banking and FX cost reduction, and tax rebate optimisation.
+- **Dollar Earning** — USD-denominated revenue, merchant-of-record structures, and cross-border payment infrastructure.
+
+## How We Research
+
+Every guide is built from primary sources where they exist: the State Bank of Pakistan and SECP publications, exchange filings, broker documentation, and the published schedules of the Federal Board of Revenue. Where a figure is time-sensitive — an exchange rate, a tax rate, a fee — we date-stamp it in the article and review it on publication.
+
+## What We Do Not Do
+
+Blue Ocean Hub is an independent media house. We are not a registered financial advisor, broker-dealer, law firm, or tax practice. Nothing published here is personalised advice, and a reader acting on general information should take it to a licensed professional in their own jurisdiction.
+
+## Corrections
+
+If you believe something we have published is wrong, tell us. Corrections are handled through our [contact page](/page/contact) and, once verified, are applied to the article with the revision noted rather than silently overwritten.
     `
   },
   {
@@ -74,6 +97,29 @@ We will add correction notices to articles where significant errors are identifi
 ## 6. Transparency
 
 We publish this editorial policy openly and update it when our standards evolve. Readers with questions about our editorial processes may contact us at the email address published on this site.
+
+
+## Editorial Principles
+
+**Accuracy before speed.** A guide is published when its claims are checkable, not when a competitor has already published. Where sources conflict, we say so and explain the conflict.
+
+**Disclosure of interest.** Where a guide links to a service that pays a commission, the page carries an affiliate disclosure. Commercial relationships never determine whether a provider is covered or how it is ranked.
+
+**Primary sources.** Figures on returns, tax rates, and fees come from the issuing institution or regulator. Secondary summaries are used only when the primary document is unavailable, and are labelled as such.
+
+## Corrections Policy
+
+Corrections fall into three tiers:
+
+1. **Material errors** — a wrong rate, date, or rule that changes a reader's decision. Fixed immediately, with the correction noted at the top of the article.
+2. **Clarity errors** — ambiguous or outdated phrasing that does not change the conclusion. Fixed in the next scheduled review.
+3. **Disputed interpretation** — where reasonable analysts differ. We add the alternative reading rather than deleting the original.
+
+To request a correction, use the [contact page](/page/contact) with the subject line "Correction" and a link to the specific passage.
+
+## Commercial Independence
+
+Advertising and sponsorship are sold separately from editorial. Sponsored content is labelled at the top of the page. Sponsors do not review or approve editorial copy before publication, and they do not have a right of veto over anything we publish about them.
     `
   },
   {
@@ -126,6 +172,39 @@ We may update this Privacy Policy from time to time. Changes will be reflected o
 ## 6. Third-Party Links
 
 Our website may contain links to external websites. We are not responsible for the privacy practices of those websites. We encourage you to review the privacy policies of any third-party sites you visit.
+
+
+## Information We Collect
+
+**Information you give us.** When you submit a lead form, newsletter signup, or contact request, we collect the details you enter — typically a name, an email address, and any message text. We collect nothing beyond what you type.
+
+**Information collected automatically.** Like most sites, we log server request data: the page requested, the time, the referring address, and a browser user-agent string. We use this to keep the site available and to understand which content is being read.
+
+**Cookies.** The site stores a consent preference in your browser's local storage so that advertising and analytics scripts respect your choice. See our [cookie policy](/page/cookie-policy) for the full list.
+
+## How We Use Information
+
+We use the information we hold to deliver the pages you request, to send newsletters you have subscribed to, to respond to enquiries, and to understand aggregate readership patterns. We do not sell personal information. We do not build advertising profiles for third parties.
+
+## Third-Party Processors
+
+Pages on this site load scripts from advertising and analytics providers listed in our ads.txt and cookie policy. Those providers may receive request data when their scripts load. The specific domains are enumerated in the [cookie policy](/page/cookie-policy).
+
+## Data Retention and Your Rights
+
+Lead and newsletter records are retained while the mailing list is active and deleted on request. You may request a copy of the personal information we hold about you, ask for it to be corrected, or ask for it to be deleted, by writing to hello@blueoceanhub.info. We action verifiable requests within 30 days.
+
+## International Transfers
+
+Our infrastructure is hosted outside Pakistan. Submitting information to this site therefore involves a cross-border transfer. By using the site you consent to that transfer.
+
+## Children
+
+This publication is written for working professionals. It is not directed at children and we do not knowingly collect information from anyone under 16.
+
+## Changes to This Policy
+
+If this policy changes materially, the revised version is published on this page with an updated date. Continued use of the site after publication constitutes acceptance of the revision.
     `
   },
   {
@@ -167,6 +246,23 @@ You can also control cookies through your browser settings. Most browsers allow 
 ## 4. Updating This Policy
 
 We may update this Cookie Policy periodically to reflect changes in our technology or legal obligations. Updated versions will be published on this page with a revised effective date.
+
+
+## Cookie Types We Use
+
+**Necessary.** The site stores a single local-storage key recording your advertising consent choice. Without it, the site cannot remember your preference between visits. It contains no personal information and is never transmitted.
+
+**Analytics.** If you consent, we load analytics scripts that record aggregate page views and referral sources. The data is used to decide which topics to cover next. It is not used to build an advertising profile.
+
+**Advertising.** If you consent, advertising partners set identifiers necessary to serve and measure the adverts shown on the page. The specific domains are listed in our ads.txt file.
+
+## Your Choices
+
+You can change your consent choice at any time by clearing this site's data in your browser, which resets the preference prompt. You can also block individual scripts through your browser or a content blocker; the site remains readable without them.
+
+## How to Contact Us About Cookies
+
+Questions about the cookies set by this site, or a request to delete stored data, can be sent to hello@blueoceanhub.info.
     `
   },
   {
@@ -225,6 +321,35 @@ We may update these Terms from time to time. Updated terms will be posted on thi
 ## 9. Contact Information
 
 If you have questions about these Terms, please contact us at the email address published on this site.
+
+
+## Acceptance of These Terms
+
+By accessing blueoceanhub.info you agree to these terms. If you do not agree, do not use the site.
+
+## The Service
+
+Blue Ocean Hub is a digital publication. We provide articles, guides, and calculators for general information. We do not provide financial, legal, tax, or investment advice, and nothing on the site should be relied on as a substitute for advice from a licensed professional in your jurisdiction.
+
+## Intellectual Property
+
+All original text, graphics, and code on this site are the property of Blue Ocean Hub unless otherwise credited. You may quote short passages with a link back to the source page. You may not republish an article in full, in print or online, without written permission.
+
+## Acceptable Use
+
+You agree not to misuse the site: no automated scraping at a rate that degrades service for others, no attempt to bypass access controls, no submission of content you do not have the right to submit, and no use of the contact channels to send unlawful or deceptive material.
+
+## External Links
+
+The site links to third-party services, brokers, and regulators. Those sites are governed by their own terms. We do not endorse them and are not responsible for their content, accuracy, or conduct. Where a link is an affiliate link, the page discloses it.
+
+## Liability
+
+The site is provided "as is". To the extent permitted by law, we exclude liability for any loss arising from reliance on the content, including investment loss. Nothing in these terms limits liability that cannot be limited by law.
+
+## Changes
+
+We may revise these terms. The current version is always the one published on this page.
     `
   },
   {
@@ -279,6 +404,31 @@ If you believe your privacy rights have been violated, you have the right to lod
 ## 7. Contact
 
 For questions about this GDPR Compliance Statement or to exercise your rights, please contact us at the email address published on this site.
+
+
+## Who Controls Your Data
+
+Blue Ocean Hub is the controller for the personal information collected through this site. You can reach the responsible party at hello@blueoceanhub.info.
+
+## Legal Bases
+
+For each category of data we rely on one of the following: your consent (newsletter and advertising preferences), legitimate interest (site security and aggregate readership analysis), and compliance with a legal obligation (records we are required to retain).
+
+## Your Rights
+
+Under the GDPR you have the right to access the personal data we hold about you, to have it corrected, to have it erased, to restrict or object to processing, and to data portability. You also have the right to withdraw consent at any time, which does not affect processing already carried out.
+
+## How to Exercise a Right
+
+Write to hello@blueoceanhub.info with the right you are exercising. We verify the request before acting on it and respond within one month. If you are unsatisfied with our response you may complain to your local supervisory authority.
+
+## Cross-Border Transfer
+
+Our hosting and delivery infrastructure is located outside Pakistan. Where personal data is transferred outside the jurisdiction in which it was collected, we rely on the safeguards available under the GDPR for such transfers.
+
+## Records
+
+We retain personal data no longer than necessary for the purpose it was collected, and in any case no longer than the periods set out in our [privacy policy](/page/privacy-policy).
     `
   },
   {
@@ -323,6 +473,25 @@ We aim to respond to all professional inquiries within three business days of re
 ## Business Hours
 
 We receive and respond to inquiries during standard business hours (Pakistan Standard Time). For urgent matters, please use the email channels listed above.
+
+
+## Editorial Team
+
+- **Newsroom** — story suggestions, corrections, and press releases. Subject line: "Editorial".
+- **Research Desk** — questions about a specific figure, rate, or rule cited in an article. Subject line: "Research".
+- **Partnerships** — advertising, sponsorship, syndication, and directory listings. Subject line: "Partnership".
+
+## Before You Write
+
+To help us answer, include the page URL, the specific passage or figure in question, and the source you believe contradicts it. Corrections that arrive with a verifiable citation are actioned fastest.
+
+## Syndication and Republishing
+
+We license a limited number of republications each quarter. Send the outlet, the intended audience, and whether the use is commercial. Full-article republication without a licence is not permitted under our [terms of service](/page/terms-of-service).
+
+## Mailing Address
+
+Blue Ocean Hub Editorial, Pakistan. We operate as a distributed publication and do not maintain a public walk-in office.
     `
   },
   {
@@ -357,6 +526,31 @@ If you are experiencing technical issues with the website, or if you notice cont
 ## Updates
 
 This page will be reviewed and updated as operational conditions change. We publish updates on this page when there are significant changes to the operational status of our systems.
+
+
+## What This Page Covers
+
+This page reports the operational state of the publication's public infrastructure: the website itself, the build and publishing pipeline, and the delivery of pages to readers.
+
+## Current Status
+
+All public systems are operational. The site is served over HTTPS with a valid certificate, and pages are delivered from a global edge network.
+
+## Incident History
+
+There are no ongoing incidents. Historical downtime, where it has occurred, has been limited to deployment windows and has not exceeded the tolerance described below.
+
+## Tolerance and Response
+
+We target page availability of 99.9% measured monthly. If a deployment introduces a rendering fault, the previous build is restored while the fault is investigated.
+
+## How We Verify
+
+Availability is checked from outside the hosting provider. A page is considered degraded if it fails to return a successful response or if its rendered content is missing the article body.
+
+## Reporting a Problem
+
+If a page fails to load or renders incorrectly for you, tell us through the [contact page](/page/contact) with the URL and what you saw. Include whether the problem persists in a private window, which helps separate a local cache issue from a server fault.
     `
   },
   {
@@ -393,6 +587,29 @@ Advertising materials must comply with applicable advertising standards and regu
 ## Response Time
 
 We aim to respond to advertising enquiries within three business days.
+
+
+## Who Reads This Site
+
+The readership is concentrated among professionals in Pakistan and the wider South Asian market who are making decisions about money: salaried employees starting to invest, freelancers formalising their practice, agency founders, and operators evaluating financial infrastructure. Traffic arrives primarily through search, which means readers arrive with a specific question already in mind.
+
+## What We Offer
+
+**Display placements.** Leaderboard, rectangle, and skyscraper positions on article and hub pages, served through our advertising stack and gated behind the site's consent banner.
+
+**Sponsored content.** A labelled article or hub placement produced with the editorial team. Sponsors do not hold approval rights over copy.
+
+**Directory listings.** An entry in the business directory, reviewed for fit before publication.
+
+**Newsletter placement.** A mention in the subscriber edition, subject to available inventory.
+
+## How to Start
+
+Send the [contact page](/page/contact) subject line "Partnership" with the placement you are interested in, the period, and the audience you are trying to reach. We reply within three business days with availability and a fixed quote. Pricing is set per placement and period; there is no subscription.
+
+## Measurement
+
+Placements are reported with the impressions and clicks recorded by the serving network. We do not report figures we cannot substantiate, and we do not guarantee a specific outcome.
     `
   },
   {
@@ -436,6 +653,23 @@ Drop your email on our [contact page](/page/contact) with the subject "Newslette
 
 ---
 *Newsletter content is editorial and educational. It is not financial, tax, or legal advice.*
+
+
+## What Arrives, and How Often
+
+The free edition carries one deep-dive guide and a short market brief, published on a weekly cycle. The premium edition adds a compliance calendar with FBR and PSEB deadlines, quarterly tax-position templates, and a member directory.
+
+## How to Subscribe
+
+Send your email address through the [contact page](/page/contact) with the subject line "Newsletter". Free subscriptions are confirmed immediately. Premium upgrades are arranged manually while volume is low.
+
+## How to Unsubscribe
+
+Every edition carries an unsubscribe link at the foot of the message. Unsubscribing removes you from the list; it does not delete records we are required to retain, which are handled under the [privacy policy](/page/privacy-policy).
+
+## What We Never Do
+
+We do not sell or rent the subscriber list. We do not send third-party promotional mail under our own name. If a message promotes a commercial offer, it is labelled as such.
     `
   },
   {
@@ -479,6 +713,23 @@ If you want to post a role to our audience of South Asian founders, developers, 
 
 ---
 *Job listings are provided for informational purposes. Blue Ocean Hub is not an employer or recruitment agency and does not guarantee any outcome.*
+
+
+## How Listings Work
+
+Each listing links directly to the employer's own application page. We do not act as an intermediary, we do not charge applicants, and we do not take a placement fee.
+
+## Vetting
+
+Before a role appears, we check that the employer pays in a convertible currency, that the application route is public, and that the listing does not ask the applicant for an upfront fee. Listings that fail any of these are declined.
+
+## Reporting a Bad Listing
+
+If a listing asks for money, misrepresents the employer, or has gone stale, tell us through the [contact page](/page/contact) and we will review and remove it.
+
+## Posting a Role
+
+Employers can request a listing through the [contact page](/page/contact) with the subject line "Job Listing" and a link to the application page. Listings are reviewed before publication and are free while the board is being established.
     `
   },
   {
@@ -523,6 +774,23 @@ If you operate a service or tool that serves South Asian founders and want to be
 
 ---
 *Directory entries are editorially reviewed. We may receive compensation from some listed providers, disclosed on our [affiliate disclosure page](/page/affiliate-disclosure).*
+
+
+## How Entries Are Chosen
+
+The directory lists providers that a reader of this publication is likely to use: payment and FX services, compliance and registration bodies, brokerage and depository access, and travel booking. Entries are grouped by function so a reader can compare like with like.
+
+## Editorial Review
+
+Each entry is checked for a working public site, a clear description of what the provider does, and a disclosed commercial relationship where one exists. A listing is a review, not an endorsement.
+
+## Listing Your Business
+
+Write to the [contact page](/page/contact) with the subject line "Directory" and a link to the service. We review for fit and reply within three business days. There is a charge for sponsored placement; editorial listings are free while the directory is being built out.
+
+## Accuracy
+
+Providers change their terms, fees, and coverage frequently. If an entry has gone stale, tell us and we will verify and update it.
     `
   },
   {
@@ -577,6 +845,26 @@ Send an enquiry through our [contact page](/page/contact) with a short descripti
 
 ---
 *Advisory services are educational and strategic in nature. They do not constitute legal, tax, or investment advice, and we do not act as a registered broker-dealer.*
+
+
+## Engagement Structure
+
+Work begins with a short discovery call to define the problem. We then send a fixed scope with deliverables and a fee agreed before work starts. There is no open-ended hourly billing.
+
+## What a Typical Engagement Covers
+
+- A review of the current position, with the constraints stated plainly.
+- A written set of recommendations, ordered by impact and effort.
+- A working session to implement the first recommendation.
+- A follow-up review after a defined period.
+
+## What We Decline
+
+We do not provide personalised investment advice, we do not act as a broker-dealer, and we do not guarantee a specific commercial outcome. Where a problem needs a licensed professional, we will say so and name the kind of professional to seek.
+
+## Starting a Conversation
+
+Use the [contact page](/page/contact) with the subject line "Advisory" and a short description of the situation. We reply within two business days with available slots and a fixed quote.
     `
   },
   {
@@ -627,6 +915,23 @@ If a toolkit you need is not listed, tell us what you are trying to solve via ou
 
 ---
 *Digital products are educational resources. They do not constitute legal, tax, or investment advice.*
+
+
+## How the Toolkits Are Built
+
+Each toolkit is assembled from the same research as our editorial guides. The compliance checklists mirror the steps described in the relevant articles; the calculators implement the arithmetic shown in them. Where a toolkit and an article cover the same ground, the article explains the reasoning and the toolkit does the arithmetic.
+
+## Delivery
+
+Products are delivered as digital downloads. After checkout you receive a download link by email, and any update we publish to that product is sent to the same address.
+
+## Accuracy and Limits
+
+Templates are educational resources. They are not legal documents, and a template should be reviewed by a professional before it is relied on in a transaction. Tax and regulatory figures embedded in a toolkit reflect the rates published at the time of writing and should be re-checked against the current schedule.
+
+## Requests
+
+If a toolkit you need is not listed, tell us what you are trying to solve through the [contact page](/page/contact). We prioritise products by reader demand.
     `
   },
   {
@@ -664,6 +969,22 @@ Where we participate in partner or affiliate programs, we disclose the nature of
 ## 5. Questions
 
 If you have questions about our affiliate relationships or commercial partnerships, please contact us at the email address published on this site.
+
+## Where the Links Are
+
+Affiliate and partner links appear in article pages, hub pages, the business directory, and some promotional material. They are marked with rel="nofollow sponsored" so that both readers and search engines can identify them.
+
+## What We Earn
+
+In some cases we receive a commission when a reader uses one of these links. The commission comes out of the provider's margin; it does not change the price the reader pays. The rate varies by provider and is not disclosed publicly.
+
+## What It Does Not Change
+
+Commercial arrangements do not determine what we publish. A provider paying a commission is neither a requirement for coverage nor a guarantee of it, and commission rates do not affect how a provider is ranked or described. Where we recommend a provider we do so on the merits we can state on the page.
+
+## How to Ask About a Specific Link
+
+If you are unsure whether a given link is commercial, or you believe a disclosure is missing from a page, write to hello@blueoceanhub.info with the page URL.
     `
   }
 ];

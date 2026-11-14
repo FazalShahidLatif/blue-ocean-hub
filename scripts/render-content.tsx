@@ -225,7 +225,12 @@ export function renderCategoryPage(categoryId: string): string {
   if (!cat) return renderFallback(categoryId);
 
   const intro = renderMarkdown(stripLeadingH1(cat.content || ""));
-  const items = ARTICLES.filter((a) => a.category === cat.id && a.content).slice(0, 40);
+  // Category ids are slugs ("passive-income") while article.category holds the
+  // display name ("Passive Income"). Normalise both sides or the hub renders
+  // an almost-empty list — the same normalisation CategoryPage.tsx uses.
+  const items = ARTICLES.filter(
+    (a) => a.content && a.category.toLowerCase().replace(/\s+/g, "-") === cat.id,
+  ).slice(0, 40);
 
   const list = items
     .map(
@@ -243,6 +248,28 @@ export function renderCategoryPage(categoryId: string): string {
     )
     .join("\n");
 
+  // "Start here" reading path: the three most recent substantive guides in
+  // this hub, each with the reason a reader would start with it. Derived from
+  // the real article records, never invented.
+  const startHere = items.slice(0, 3);
+  const startHereHtml = startHere
+    .map(
+      (a, i) => `        <li class="rounded-xl border border-slate-800/70 p-5">
+          <p class="text-xs font-semibold uppercase tracking-widest text-cyan mb-2">Step ${i + 1}</p>
+          <a href="${SITE}/article/${a.id}" class="text-white font-semibold hover:text-cyan transition-colors">${escapeHtml(a.title)}</a>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">${escapeHtml(a.description || "")}</p>
+        </li>`,
+    )
+    .join("\n");
+
+  // Related hubs: every other category, so the hub graph is fully connected.
+  const related = CATEGORIES.filter((c) => c.id !== cat.id);
+  const relatedHtml = related
+    .map(
+      (c) => `        <li><a href="${SITE}/${c.id}" class="text-cyan hover:underline underline-offset-4">${escapeHtml(c.title)}</a></li>`,
+    )
+    .join("\n");
+
   return `
     <main class="mx-auto max-w-4xl px-6 py-16">
       <header class="mb-12 border-b border-slate-800 pb-10">
@@ -254,10 +281,30 @@ export function renderCategoryPage(categoryId: string): string {
         </p>
       </header>
       <div class="markdown-body prose prose-invert prose-cyan max-w-none mb-12">${intro}</div>
+
+      <section aria-label="Start here" class="mb-14">
+        <h2 class="text-2xl font-bold text-white mb-6">Start Here</h2>
+        <ol class="space-y-4">
+${startHereHtml}
+        </ol>
+        <p class="mt-5 text-sm text-slate-400 leading-relaxed">
+          New to this hub? Work through these three guides in order. Each one
+          builds on the last, and each links onward to the deeper articles in
+          the list below.
+        </p>
+      </section>
+
       <section aria-label="Articles">
         <h2 class="text-2xl font-bold text-white mb-6">Latest Articles</h2>
         <ul class="divide-y divide-slate-800/60">
 ${list}
+        </ul>
+      </section>
+
+      <section aria-label="Related hubs" class="mt-14 border-t border-slate-800 pt-10">
+        <h2 class="text-2xl font-bold text-white mb-6">Explore Other Hubs</h2>
+        <ul class="grid sm:grid-cols-2 gap-3 text-slate-300">
+${relatedHtml}
         </ul>
       </section>
     </main>`;
